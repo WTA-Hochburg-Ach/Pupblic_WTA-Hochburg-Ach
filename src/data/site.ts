@@ -87,11 +87,11 @@ export const contactData = {
     split: ['+43 650', '4600020'],
   },
   socialinstagram: {
-    href: 'https://www.instagram.com/aikido.hochburg.ach/',
+    href: 'https://www.instagram.com/aikido_hochburg_ach?igsh=NXQ5dnpqMGphZndt',
     label: 'Instagram',
   },
   socialfacebook: {
-    href: 'https://www.facebook.com/aikido.hochburg.ach/',
+    href: 'https://www.facebook.com/share/1QDmhZywhG/?mibextid=wwXIfr',
     label: 'Facebook',
   },
 };
