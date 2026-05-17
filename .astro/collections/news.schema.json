@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "preview": {
+      "type": "string"
+    },
+    "type": {
+      "default": "news",
+      "type": "string",
+      "enum": [
+        "news",
+        "event"
+      ]
+    },
+    "location": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "people": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "display": {
+      "default": "page",
+      "type": "string",
+      "enum": [
+        "modal",
+        "page"
+      ]
+    },
+    "color": {
+      "default": "moss",
+      "type": "string",
+      "enum": [
+        "moss",
+        "sage",
+        "gold"
+      ]
+    },
+    "pdfs": {
+      "type": "object",
+      "properties": {
+        "de": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "date"
+  ]
+}
