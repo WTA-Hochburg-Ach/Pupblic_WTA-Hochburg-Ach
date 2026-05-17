@@ -19,9 +19,11 @@ const {
 
 const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : null;
 const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
+const siteTitle = siteMeta.browserName;
+const documentTitle = title === siteMeta.name ? siteTitle : `${title} | ${siteTitle}`;
 ---
 
-<html lang="de">
+<html lang="de" data-page-title={title} data-site-title={siteTitle}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,16 +31,18 @@ const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
   <meta name="color-scheme" content="light dark" />
   <meta name="keywords" content="Aikido, Dojo, Kampfkunst, Braunau, Training, Hochburg-Ach" />
   <meta name="author" content={siteMeta.name} />
+  <meta name="application-name" content={siteTitle} />
+  <meta name="apple-mobile-web-app-title" content={siteTitle} />
 
   <meta property="og:type" content="website" />
   {canonicalURL && <meta property="og:url" content={canonicalURL} />}
-  <meta property="og:title" content={title} />
+  <meta property="og:title" content={documentTitle} />
   <meta property="og:description" content={description} />
   <meta property="og:locale" content="de_DE" />
 
-  <link rel="icon" type="image/svg+xml" href={withBasePath(baseUrl, 'favicon.svg')} />
+  <link rel="icon" type="image/svg+xml" href={withBasePath(baseUrl, 'images/logo/logo_light.png')} />
 
-  <title>{title}</title>
+  <title>{documentTitle}</title>
   {canonicalURL && <link rel="canonical" href={canonicalURL} />}
 
   <script is:inline define:vars={{ baseUrl }}>

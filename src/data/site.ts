@@ -1,6 +1,7 @@
 export const siteMeta = {
   name: 'Wanomichi Takemusu Aikido Hochburg-Ach',
   shortName: 'Aikido Hochburg-Ach',
+  browserName: 'WTA-Hochburg-Ach',
   legalName: 'Wanomichi Takemusu Aikido Hochburg-Ach',
   description:
     'Traditionelles Aikido in Duttendorf mit regelmaessigem Training, Lehrgaengen und einem offenen Vereinsleben.',

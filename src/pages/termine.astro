@@ -87,7 +87,9 @@ const calendarEvents = events.map((entry) => {
 
           return (
             <article class:list={['feature-card', 'event-highlight-card', `tone-${entry.data.color}`]}>
-              <span class="event-date">{formatDateRange(entry.data.date, entry.data.endDate)}</span>
+              <span class="event-date" data-date-start={entry.data.date.toISOString()} data-date-end={entry.data.endDate?.toISOString() ?? ''}>
+                {formatDateRange(entry.data.date, entry.data.endDate)}
+              </span>
               <h3>{entry.data.title}</h3>
               {entry.data.location && <p class="event-location">{entry.data.location}</p>}
               <p>{entry.data.preview}</p>
@@ -146,7 +148,9 @@ const calendarEvents = events.map((entry) => {
 
               return (
               <article class:list={['calendar-detail-card', `tone-${entry.data.color}`]}>
-                <span class="event-date">{formatDateRange(entry.data.date, entry.data.endDate)}</span>
+                <span class="event-date" data-date-start={entry.data.date.toISOString()} data-date-end={entry.data.endDate?.toISOString() ?? ''}>
+                  {formatDateRange(entry.data.date, entry.data.endDate)}
+                </span>
                 <h4>{entry.data.title}</h4>
                 <dl>
                   <div>
@@ -242,7 +246,9 @@ const calendarEvents = events.map((entry) => {
         return (
         <article class:list={['timeline-event', 'news-card', `tone-${entry.data.color}`]}>
           <div class="news-card-tags">
-            <span class="event-date">{formatDateRange(entry.data.date, entry.data.endDate)}</span>
+            <span class="event-date" data-date-start={entry.data.date.toISOString()} data-date-end={entry.data.endDate?.toISOString() ?? ''}>
+              {formatDateRange(entry.data.date, entry.data.endDate)}
+            </span>
             <span class="news-mode-tag">{entry.data.display === 'page' ? 'Seite' : 'Popup'}</span>
           </div>
           <h3>{entry.data.title}</h3>
@@ -297,17 +303,38 @@ const calendarEvents = events.map((entry) => {
 </BaseLayout>
 
 <script is:inline define:vars={{ baseUrl }}>
+  const appWindow = window;
   const modal = document.getElementById('news-modal');
   const modalTitle = document.getElementById('modal-title');
   const modalDate = document.getElementById('modal-date');
   const modalBody = document.getElementById('modal-body');
+
+  function translate(key, fallback, dataset = {}) {
+    return appWindow.i18n?.t(key, fallback, dataset) ?? fallback;
+  }
+
+  function getLocale() {
+    return appWindow.i18n?.getLocale?.() ?? 'de-DE';
+  }
+
+  function formatLocalizedDate(date, options) {
+    return new Date(date).toLocaleDateString(getLocale(), options);
+  }
+
+  function formatDisplayRange(startDate, endDate) {
+    if (appWindow.i18n?.formatDateRange) {
+      return appWindow.i18n.formatDateRange(startDate, endDate || undefined);
+    }
+
+    return formatModalDate(startDate, endDate);
+  }
 
   function formatModalDate(startDate, endDate) {
     const start = new Date(startDate);
     const end = endDate ? new Date(endDate) : null;
 
     if (!endDate || Number.isNaN(end?.getTime())) {
-      return start.toLocaleDateString('de-DE', {
+      return formatLocalizedDate(start, {
         year: 'numeric',
         month: 'long',
         day: 'numeric',
@@ -316,10 +343,14 @@ const calendarEvents = events.map((entry) => {
 
     const sameMonth = start.getFullYear() === end.getFullYear() && start.getMonth() === end.getMonth();
     if (sameMonth) {
-      return `${start.getDate()}.-${end.getDate()}. ${start.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })}`;
+      if (getLocale().startsWith('en')) {
+        return `${start.getDate()}-${end.getDate()} ${formatLocalizedDate(start, { month: 'long', year: 'numeric' })}`;
+      }
+
+      return `${start.getDate()}.-${end.getDate()}. ${formatLocalizedDate(start, { month: 'long', year: 'numeric' })}`;
     }
 
-    return `${start.toLocaleDateString('de-DE')} - ${end.toLocaleDateString('de-DE')}`;
+    return `${formatLocalizedDate(start, { year: 'numeric', month: 'long', day: 'numeric' })} - ${formatLocalizedDate(end, { year: 'numeric', month: 'long', day: 'numeric' })}`;
   }
 
   async function openNewsModal(trigger) {
@@ -334,7 +365,9 @@ const calendarEvents = events.map((entry) => {
 
     modalTitle.textContent = title;
     modalDate.textContent = formatModalDate(date, endDate);
-    modalBody.innerHTML = '<div class="loader">Laden...</div>';
+    modal.dataset.activeDate = date;
+    modal.dataset.activeEndDate = endDate || '';
+    modalBody.innerHTML = `<div class="loader">${translate('events.modal_loading', 'Laden...')}</div>`;
     modalBody.classList.remove('content-visible');
     modal.classList.add('show');
     modal.setAttribute('aria-hidden', 'false');
@@ -349,16 +382,16 @@ const calendarEvents = events.map((entry) => {
       const actions = [];
 
       if (news.pdfs?.de) {
-        actions.push(`<a href="${news.pdfs.de}" class="button button-primary" target="_blank" rel="noopener">PDF Deutsch</a>`);
+        actions.push(`<a href="${news.pdfs.de}" class="button button-primary" target="_blank" rel="noopener">${translate('events.pdf_de', 'PDF Deutsch')}</a>`);
       }
 
       if (news.pdfs?.en) {
-        actions.push(`<a href="${news.pdfs.en}" class="button button-outline" target="_blank" rel="noopener">PDF English</a>`);
+        actions.push(`<a href="${news.pdfs.en}" class="button button-outline" target="_blank" rel="noopener">${translate('events.pdf_en', 'PDF English')}</a>`);
       }
 
       if (news.pdfs?.de || news.pdfs?.en) {
         const previewHref = news.pdfs?.de || news.pdfs?.en;
-        actions.push(`<a href="${previewHref}" class="button button-outline" target="_blank" rel="noopener">Vorschau</a>`);
+        actions.push(`<a href="${previewHref}" class="button button-outline" target="_blank" rel="noopener">${translate('events.preview', 'Vorschau')}</a>`);
       }
 
       modalBody.innerHTML = `
@@ -369,7 +402,7 @@ const calendarEvents = events.map((entry) => {
       modalBody.classList.add('content-visible');
     } catch (error) {
       console.error(error);
-      modalBody.innerHTML = '<p>Der Inhalt konnte gerade nicht geladen werden.</p>';
+      modalBody.innerHTML = `<p>${translate('events.modal_error', 'Der Inhalt konnte gerade nicht geladen werden.')}</p>`;
       modalBody.classList.add('content-visible');
     }
   }
@@ -403,6 +436,11 @@ const calendarEvents = events.map((entry) => {
     const calendar = document.querySelector('[data-calendar]');
     if (!calendar) return;
 
+    if (calendar.dataset.bound === 'true') {
+      calendar._renderCalendar?.();
+      return;
+    }
+
     const events = JSON.parse(calendar.getAttribute('data-events') || '[]');
     const initial = JSON.parse(calendar.getAttribute('data-initial') || '{}');
     const monthSelect = calendar.querySelector('[data-calendar-month]');
@@ -418,9 +456,6 @@ const calendarEvents = events.map((entry) => {
       return;
     }
 
-    const monthNames = Array.from({ length: 12 }, (_, month) =>
-      new Date(2026, month, 1).toLocaleDateString('de-DE', { month: 'long' }),
-    );
     const eventYears = events.flatMap((event) => [
       new Date(event.start).getFullYear(),
       new Date(event.end).getFullYear(),
@@ -433,9 +468,6 @@ const calendarEvents = events.map((entry) => {
     let viewMonth = Number.isInteger(initial.month) ? Number(initial.month) : new Date().getMonth();
     let selectedDate = new Date(initial.selectedDate || new Date());
 
-    monthSelect.innerHTML = monthNames
-      .map((name, index) => `<option value="${index}">${escapeHtml(name)}</option>`)
-      .join('');
     yearSelect.innerHTML = Array.from({ length: maxYear - minYear + 1 }, (_, index) => minYear + index)
       .map((year) => `<option value="${year}">${year}</option>`)
       .join('');
@@ -456,7 +488,7 @@ const calendarEvents = events.map((entry) => {
 
     function renderDetails() {
       const dayEvents = eventsForDate(selectedDate);
-      const dateText = selectedDate.toLocaleDateString('de-DE', {
+      const dateText = formatLocalizedDate(selectedDate, {
         weekday: 'long',
         day: 'numeric',
         month: 'long',
@@ -465,34 +497,38 @@ const calendarEvents = events.map((entry) => {
 
       detailTitle.textContent = dateText;
       selectedLabel.textContent = dayEvents.length > 0
-        ? `${dayEvents.length} Termin${dayEvents.length > 1 ? 'e' : ''} an diesem Tag`
-        : 'Kein Termin an diesem Tag';
+        ? translate(
+            dayEvents.length > 1 ? 'events.detail_count_other' : 'events.detail_count_one',
+            dayEvents.length > 1 ? `${dayEvents.length} Termine an diesem Tag` : '1 Termin an diesem Tag',
+            { count: String(dayEvents.length) },
+          )
+        : translate('events.detail_none', 'Kein Termin an diesem Tag');
 
       if (dayEvents.length === 0) {
-        detailList.innerHTML = '<p class="calendar-empty-state">An diesem Tag ist kein Termin eingetragen.</p>';
+        detailList.innerHTML = `<p class="calendar-empty-state">${translate('events.empty_day', 'An diesem Tag ist kein Termin eingetragen.')}</p>`;
         return;
       }
 
       detailList.innerHTML = dayEvents.map((event) => {
         const pdfButtons = [
-          event.pdfs?.de ? `<a href="${event.pdfs.de}" class="mini-action" target="_blank" rel="noopener">PDF DE</a>` : '',
-          event.pdfs?.en ? `<a href="${event.pdfs.en}" class="mini-action" target="_blank" rel="noopener">PDF EN</a>` : '',
+          event.pdfs?.de ? `<a href="${event.pdfs.de}" class="mini-action" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_short_de', 'PDF DE'))}</a>` : '',
+          event.pdfs?.en ? `<a href="${event.pdfs.en}" class="mini-action" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_short_en', 'PDF EN'))}</a>` : '',
           event.pdfs?.de || event.pdfs?.en
-            ? `<a href="${event.pdfs.de || event.pdfs.en}" class="mini-action" target="_blank" rel="noopener">Vorschau</a>`
+            ? `<a href="${event.pdfs.de || event.pdfs.en}" class="mini-action" target="_blank" rel="noopener">${escapeHtml(translate('events.preview', 'Vorschau'))}</a>`
             : '',
         ].join('');
         const primaryAction = event.display === 'page'
-          ? `<a class="read-more-btn" href="${event.href}">Seite oeffnen</a>`
-          : `<button class="read-more-btn" type="button" data-modal-trigger data-slug="${event.slug}" data-title="${escapeHtml(event.title)}" data-date="${event.start}" data-end-date="${event.hasEnd ? event.end : ''}">Details</button>`;
+          ? `<a class="read-more-btn" href="${event.href}">${escapeHtml(translate('events.open_page', 'Seite oeffnen'))}</a>`
+          : `<button class="read-more-btn" type="button" data-modal-trigger data-slug="${event.slug}" data-title="${escapeHtml(event.title)}" data-date="${event.start}" data-end-date="${event.hasEnd ? event.end : ''}">${escapeHtml(translate('events.details', 'Details'))}</button>`;
 
         return `
           <article class="calendar-detail-card tone-${event.color}">
-            <span class="event-date">${escapeHtml(event.dateLabel)}</span>
+            <span class="event-date">${escapeHtml(formatDisplayRange(event.start, event.hasEnd ? event.end : ''))}</span>
             <h4>${escapeHtml(event.title)}</h4>
             <dl>
-              <div><dt>Zeit</dt><dd>${escapeHtml(event.time)}</dd></div>
-              <div><dt>Ort</dt><dd>${escapeHtml(event.location || 'wird bekanntgegeben')}</dd></div>
-              <div><dt>Personen</dt><dd>${escapeHtml(event.people?.join(', ') || 'WTA Hochburg-Ach')}</dd></div>
+              <div><dt>${escapeHtml(translate('events.time', 'Zeit'))}</dt><dd>${escapeHtml(event.time)}</dd></div>
+              <div><dt>${escapeHtml(translate('events.place', 'Ort'))}</dt><dd>${escapeHtml(event.location || translate('events.tba', 'wird bekanntgegeben'))}</dd></div>
+              <div><dt>${escapeHtml(translate('events.people', 'Personen'))}</dt><dd>${escapeHtml(event.people?.join(', ') || 'WTA Hochburg-Ach')}</dd></div>
             </dl>
             ${event.preview ? `<p>${escapeHtml(event.preview)}</p>` : ''}
             <div class="calendar-card-actions">${primaryAction}${pdfButtons}</div>
@@ -506,10 +542,17 @@ const calendarEvents = events.map((entry) => {
       const firstWeekday = (firstDay.getDay() + 6) % 7;
       const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
       const todayKey = toDateKey(new Date());
+      const monthNames = Array.from({ length: 12 }, (_, month) =>
+        formatLocalizedDate(new Date(2026, month, 1), { month: 'long' }),
+      );
+
+      monthSelect.innerHTML = monthNames
+        .map((name, index) => `<option value="${index}">${escapeHtml(name)}</option>`)
+        .join('');
 
       monthSelect.value = String(viewMonth);
       yearSelect.value = String(viewYear);
-      label.textContent = firstDay.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' });
+      label.textContent = formatLocalizedDate(firstDay, { month: 'long', year: 'numeric' });
 
       const cells = [];
 
@@ -524,7 +567,14 @@ const calendarEvents = events.map((entry) => {
         const hasMore = dayEvents.length > 4 ? `<span class="event-more">+${dayEvents.length - 4}</span>` : '';
         const isSelected = toDateKey(date) === toDateKey(selectedDate);
         const isToday = toDateKey(date) === todayKey;
-        const ariaLabel = `${date.toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}${dayEvents.length ? `, ${dayEvents.length} Termin${dayEvents.length > 1 ? 'e' : ''}` : ', kein Termin'}`;
+        const eventLabel = dayEvents.length
+          ? translate(
+              dayEvents.length > 1 ? 'events.aria_count_other' : 'events.aria_count_one',
+              dayEvents.length > 1 ? `${dayEvents.length} Termine` : '1 Termin',
+              { count: String(dayEvents.length) },
+            )
+          : translate('events.aria_none', 'kein Termin');
+        const ariaLabel = `${formatLocalizedDate(date, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}, ${eventLabel}`;
 
         cells.push(`
           <button
@@ -593,6 +643,8 @@ const calendarEvents = events.map((entry) => {
       if (trigger) openNewsModal(trigger);
     });
 
+    calendar._renderCalendar = renderCalendar;
+    calendar.dataset.bound = 'true';
     renderCalendar();
   }
 
@@ -610,6 +662,14 @@ const calendarEvents = events.map((entry) => {
     if (event.key === 'Escape') {
       closeNewsModal();
     }
+  });
+
+  document.addEventListener('languageChanged', () => {
+    if (modal?.classList.contains('show') && modalDate?.textContent && modalDate.textContent !== '') {
+      modalDate.textContent = formatModalDate(modal.dataset.activeDate, modal.dataset.activeEndDate);
+    }
+
+    initCalendar();
   });
 </script>
 

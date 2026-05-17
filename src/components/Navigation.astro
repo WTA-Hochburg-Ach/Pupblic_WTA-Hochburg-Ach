@@ -4,7 +4,7 @@ import { getBaseUrl, isCurrentSitePath, normalizeSitePath, withBasePath } from '
 
 const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
 const currentPath = normalizeSitePath(Astro.url.pathname, baseUrl);
-const logoLight = withBasePath(baseUrl, 'images/logo/logo_light.svg');
+const logoLight = withBasePath(baseUrl, 'images/logo/logo_light.png');
 const logoDark = withBasePath(baseUrl, 'images/logo/logo_dark.svg');
 
 const fallbackLabels = {
@@ -20,7 +20,13 @@ const fallbackLabels = {
 
 <div class="utility-bar">
   <div class="utility-inner">
-    <button class="theme-btn" id="theme-toggle" type="button" aria-label="Farbschema wechseln">
+    <button
+      class="theme-btn"
+      id="theme-toggle"
+      type="button"
+      aria-label="Farbschema wechseln"
+      data-i18n-attr="aria-label:common.theme_toggle"
+    >
       <span class="theme-track" aria-hidden="true">
         <span class="theme-thumb">
           <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -39,36 +45,12 @@ const fallbackLabels = {
       </span>
     </button>
 
-    <div class="lang-selector">
-      <button class="lang-btn" type="button" aria-label="Sprache aendern" aria-expanded="false">
-        <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="9" />
-          <path d="M3 12h18" />
-          <path d="M12 3a14 14 0 0 1 0 18" />
-          <path d="M12 3a14 14 0 0 0 0 18" />
-        </svg>
-        <span class="lang-copy">
-          <strong data-current-lang>DE</strong>
-          <span data-i18n="common.language">Sprache</span>
-        </span>
-        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-      </button>
-
-      <div class="lang-dropdown">
-        <a href="#" class="lang-option" data-lang="de">
-          <span>Deutsch</span>
-          <span>DE</span>
-        </a>
-        <a href="#" class="lang-option" data-lang="en">
-          <span>English</span>
-          <span>EN</span>
-        </a>
-        <a href="#" class="lang-option" data-lang="fr">
-          <span>Francais</span>
-          <span>FR</span>
-        </a>
+    <div class="lang-selector" role="group" aria-label="Sprache waehlen" data-i18n-attr="aria-label:common.language_toggle">
+      <span class="lang-selector-label" data-i18n="common.language">Sprache</span>
+      <div class="lang-toggle">
+        <button class="lang-option" type="button" data-lang="de">DE</button>
+        <button class="lang-option" type="button" data-lang="en">EN</button>
+        <button class="lang-option" type="button" data-lang="fr">FR</button>
       </div>
     </div>
   </div>
@@ -76,7 +58,7 @@ const fallbackLabels = {
 
 <nav class="nav">
   <div class="nav-inner">
-    <a href={withBasePath(baseUrl, siteLinks.home)} class="logo">
+    <a href={withBasePath(baseUrl, siteLinks.home)} class="logo" translate="no">
       <span class="logo-mark" aria-hidden="true">
         <img src={logoLight} alt="" class="theme-logo theme-logo-light" />
         <img src={logoDark} alt="" class="theme-logo theme-logo-dark" />
@@ -88,7 +70,13 @@ const fallbackLabels = {
       </span>
     </a>
 
-    <button class="menu-toggle" type="button" aria-label="Menue oeffnen" aria-expanded="false">
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Menue oeffnen"
+      aria-expanded="false"
+      data-i18n-attr="aria-label:common.menu_open"
+    >
       <span class="hamburger"></span>
     </button>
 
@@ -137,8 +125,6 @@ const fallbackLabels = {
   const themeLabel = document.querySelector('[data-theme-label]');
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
-  const langBtn = document.querySelector('.lang-btn');
-  const langDropdown = document.querySelector('.lang-dropdown');
   const nav = document.querySelector('.nav');
 
   function updateNavState() {
@@ -150,11 +136,6 @@ const fallbackLabels = {
     navLinks?.classList.remove('open');
     menuToggle?.classList.remove('open');
     menuToggle?.setAttribute('aria-expanded', 'false');
-  }
-
-  function closeLanguageMenu() {
-    langDropdown?.classList.remove('show');
-    langBtn?.setAttribute('aria-expanded', 'false');
   }
 
   function updateThemeUi(theme: string) {
@@ -196,15 +177,7 @@ const fallbackLabels = {
     });
   });
 
-  langBtn?.addEventListener('click', (event) => {
-    event.stopPropagation();
-    langDropdown?.classList.toggle('show');
-    langBtn?.setAttribute('aria-expanded', String(langDropdown?.classList.contains('show')));
-  });
-
   document.addEventListener('click', (event) => {
-    closeLanguageMenu();
-
     if (!(event.target instanceof Node)) {
       return;
     }
@@ -216,7 +189,6 @@ const fallbackLabels = {
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-      closeLanguageMenu();
       closeMenu();
     }
   });

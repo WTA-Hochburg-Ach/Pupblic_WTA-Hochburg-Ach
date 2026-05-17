@@ -29,7 +29,9 @@ const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
     </p>
 
     <div class="news-header-meta">
-      <span class="event-date">{formatDateRange(entry.data.date, entry.data.endDate)}</span>
+      <span class="event-date" data-date-start={entry.data.date.toISOString()} data-date-end={entry.data.endDate?.toISOString() ?? ''}>
+        {formatDateRange(entry.data.date, entry.data.endDate)}
+      </span>
       <span class:list={['entry-type', entry.data.type === 'event' ? 'entry-type-event' : 'entry-type-news']}>
         {entry.data.type === 'event' ? 'Termin' : 'Aktuelles'}
       </span>
