@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
+    "dev": "node ./scripts/dev.mjs",
+    "translate": "node ./scripts/translate-i18n.mjs",
     "clean": "node ./scripts/clean-build.mjs",
     "check": "astro check",
     "generate:brochures": "node ./scripts/generate-brochures.mjs",
-    "build": "npm run clean && npm run generate:brochures && astro build",
+    "build": "npm run clean && npm run generate:brochures && npm run translate && astro build",
     "preview": "astro preview",
     "worker:dev": "npm run build && wrangler dev",
     "worker:deploy": "npm run build && wrangler deploy"
