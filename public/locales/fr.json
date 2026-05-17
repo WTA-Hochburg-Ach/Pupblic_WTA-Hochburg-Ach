@@ -25,14 +25,14 @@
       "_source": "Dunkel"
     },
     "menu_open": {
-      "text": "Ouvrir le menu",
-      "_source": "Menue oeffnen"
+      "text": "Menü oeffnen",
+      "_source": "Menü oeffnen"
     }
   },
   "nav": {
     "about": {
-      "text": "A propos",
-      "_source": "Ueber uns"
+      "text": "Über uns",
+      "_source": "Über uns"
     },
     "about_summary": {
       "text": "Club, lieu, cours d essai et enseignant.",
@@ -71,8 +71,8 @@
       "_source": "Galerie"
     },
     "gallery_summary": {
-      "text": "Photos, retrospectives et impressions du dojo.",
-      "_source": "Bilder, Rueckblicke und Impressionen aus dem Dojo."
+      "text": "Bilder, Rückblicke und Impressionen aus dem Dojo.",
+      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
     },
     "links": {
       "text": "Liens",
@@ -105,8 +105,8 @@
       "_source": "Aktuelles & Termine"
     },
     "event_overview": {
-      "text": "Vue des evenements",
-      "_source": "Terminuebersicht"
+      "text": "Terminübersicht",
+      "_source": "Terminübersicht"
     },
     "legal_and_privacy": {
       "text": "Mentions legales & confidentialite",
@@ -205,6 +205,10 @@
     "foto-galerie": {
       "text": "Galerie photo",
       "_source": "Foto-Galerie"
+    },
+    "über-uns": {
+      "text": "Ueber uns",
+      "_source": "Ueber uns"
     }
   },
   "events": {
@@ -411,8 +415,8 @@
       "_source": "Aktuelles & Termine"
     },
     "Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
-      "text": "Toutes les entrees sont classees chronologiquement par date. Les evenements menent a leur brochure ou a une page detaillee, les breves restent compactes et rapides a lire.",
-      "_source": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
+      "text": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
+      "_source": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
     },
     "Alle Rechte vorbehalten.": {
       "text": "Alle Rechte vorbehalten.",
@@ -467,8 +471,8 @@
       "_source": "Athaler Strasse 1, 5122 Duttendorf"
     },
     "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain.": {
-      "text": "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain.",
-      "_source": "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain."
+      "text": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain.",
+      "_source": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain."
     },
     "Balance und Stabilitaet": {
       "text": "Equilibre et stabilite",
@@ -651,8 +655,8 @@
       "_source": "Deutsch"
     },
     "Deutsche Ausschreibung fuer die intensive Trainingswoche in Birach.": {
-      "text": "Deutsche Ausschreibung fuer die intensive Trainingswoche in Birach.",
-      "_source": "Deutsche Ausschreibung fuer die intensive Trainingswoche in Birach."
+      "text": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach.",
+      "_source": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach."
     },
     "Deutschland": {
       "text": "Allemagne",
@@ -2073,6 +2077,58 @@
     "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
       "text": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
       "_source": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
+    },
+    "Abgerundet wird das Training durch Buki Waza, also das üben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar.": {
+      "text": "Abgerundet wird das Training durch Buki Waza, also das üben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar.",
+      "_source": "Abgerundet wird das Training durch Buki Waza, also das üben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar."
+    },
+    "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt für viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren.": {
+      "text": "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt für viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren.",
+      "_source": "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt für viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren."
+    },
+    "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain.": {
+      "text": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain.",
+      "_source": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain."
+    },
+    "Bilder, Rückblicke und Impressionen aus dem Dojo.": {
+      "text": "Bilder, Rückblicke und Impressionen aus dem Dojo.",
+      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
+    },
+    "Der Verein wurde am 10. Februar 2026 gegründet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.": {
+      "text": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.",
+      "_source": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur."
+    },
+    "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, praeziser Trainingskultur.": {
+      "text": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, praeziser Trainingskultur.",
+      "_source": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, praeziser Trainingskultur."
+    },
+    "Deutsche Ausschreibung für die intensive Trainingswoche in Birach.": {
+      "text": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach.",
+      "_source": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach."
+    },
+    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geoeffnet werden.": {
+      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geoeffnet werden.",
+      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geoeffnet werden."
+    },
+    "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen.": {
+      "text": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen.",
+      "_source": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen."
+    },
+    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geoeffnet werden.": {
+      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden.",
+      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden."
+    },
+    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen.": {
+      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen.",
+      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen."
+    },
+    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.": {
+      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt öffnen.",
+      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt öffnen."
+    },
+    "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen RÜckblicken und Kontext zu den jeweiligen Veranstaltungen.": {
+      "text": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen.",
+      "_source": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen."
     }
   },
   "attr": {
