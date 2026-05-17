@@ -8,9 +8,9 @@ order: 1
 
   <div class="hero-content">
     <h1>Wanomichi Takemusu<br />Aikido<br />Hochburg-Ach</h1>
-    <p>Traditionelles Aikido in Duttendorf. Offen fuer Einsteiger:innen, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.</p>
+    <p>Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.</p>
     <div class="hero-cta-group">
-      <a href="ueber-uns" class="button button-primary">Ueber uns</a>
+      <a href="ueber-uns" class="button button-primary">Über uns</a>
       <a href="kontakt" class="button button-secondary">Kontakt</a>
     </div>
   </div>
@@ -35,18 +35,23 @@ order: 1
 
 <section class="content-block-spacious">
   <h2>Woher kommt Aikido?</h2>
-  <p class="lead-text">Aikido wurde von Ueshiba Morihei entwickelt und verbindet Kampfkunst, Koerperarbeit und einen Weg der inneren Haltung.</p>
-  <p>O-Sensei Ueshiba Morihei (1883 bis 1969) hat Aikido ab den 1920er Jahren aus verschiedenen traditionellen Budo- und Jujutsu-Schulen heraus entwickelt. Die heute bekannte Form entstand nicht auf einmal, sondern durch jahrzehntelanges Training, Forschen und Verfeinern.</p>
-  <p>Wesentlich ist die Idee, einen Angriff nicht hart gegen hart zu stoppen, sondern ihn aufzunehmen, umzulenken und in eine kreisfoermige Bewegung zu ueberfuehren. Dadurch entsteht Kontrolle ohne unnoetige Haerte.</p>
-  <p>Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt fuer viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren.</p>
+  <p class="lead-text">Aikido ist eine japanische Kampfkunst, die von O’Sensei Ueshiba Morihei (*1883,+1969) um 1920 entwickelt wurde und die er bis zu seinem Tod 1969 stetig weiterentwickelt hat. <br> 
+  O’Sensei hat in seinem Leben unterschiedliche Kampfschulen gemeistert. Unter anderem Sumo, Jūjutsu (Yagyu-ryū und Daitō-ryū), Kenjutsu, Judo, Bajonett und Speerkampf. Die Körper Techniken des Aikido basieren hauptsächlich auf den Formen des Yagyu-ryū und Daitō-ryū Jūjutsu, in denen O’Sensei ein Diplom erhielt. Im Laufe der Zeit änderte O’Sensei die Form von der geradlinigen hin zur kreisförmigen Aufnahme der Angriffe und ergänzte die Techniken um Aspekte des Kotodama. Wodurch die Wurzeln des Aikido geboren wurden, die um 1922 unter dem Namen Aiki-Bujutsu bekannt wurden. <br> 
+  Ein klassisches Prinzip aus dem Jūjutsu, dass das Weiche das Harte besiegt, wurde durch O’Sensei in einer abgewandelten Form ins Aikido übernommen. Dabei wurde aus „Wenn du geschoben wirst, ziehe zurück; wenn du gezogen wirst, schiebe vorwärts“ dann das um die Kreisbewegung ergänzte „Wenn du geschoben wirst, drehe dich und weiche aus; wenn du gezogen wirst, trete kreisförmig ein“. <br> 
+  Die Idee der kreisförmigen Bewegungen ermöglicht es, körperlich überlegene Gegner zu kontrollieren. Wie bei einer Kugel ist das Zentrum stabil und die Bewegung entsteht aus dem Ruhepunkt. Diese kreisförmige Bewegung kann jede Gegenkraft durch Techniken aus ihrem Zentrum heraus umlenken und damit neutralisieren. <br> 
+  Nach Jahren intensiven Trainings und einigen persönlichen Erfahrungen, änderte O’Sensei den Namen Aiki-Bujutsu (der sich hauptsächlich auf das technische Können bezieht), im Jahr 1925 auf Aiki-Budō (Dō bedeutet, dass es sich vor allem auch um philosophische Prinzipien handelt). Um 1942 beschloss O’Sensei sein System Aikido (Weg der Harmonie und Liebe) zu nennen. <br> 
+  In zunehmendem Alter verschob sich der Fokus von O’Sensei weg von der Wildheit und Kraft hin zur liebenden Natur des Aikido (Das Schriftzeichen Ai, das Harmonie bedeutet, klingt gleich, wie das Schriftzeichen für Liebe. Mit zunehmendem Alter hat O’Sensei die Gleichheit dieser beiden Bedeutungen betont). 
+</p>
 </section>
 
 <section class="content-block-spacious">
   <h2>Was ist Aikido?</h2>
-  <p class="lead-text">Aikido ist eine japanische Kampfkunst, in der Bewegung, Timing und Koerperzentrum wichtiger sind als Kraft oder Konkurrenz.</p>
-  <p>Im Training arbeiten wir mit Partneruebungen, Falltechnik, Hebeln, Wuerfen und klaren Grundformen. Angriffe werden nicht frontal geblockt, sondern ueber Linien, Winkel und Kreisbewegungen aufgenommen.</p>
-  <p>Abgerundet wird das Training durch Buki Waza, also das Ueben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar.</p>
-  <p>Unser Dojo orientiert sich an der Lehre von Saito Morihiro Sensei und pflegt eine ruhige, konzentrierte Trainingskultur ohne Leistungsdruck.</p>
+  <p class="lead-text">Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. <br> 
+  Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde. <br> 
+  Die Angriffe werden durch Kreisbewegungen umgelenkt anstelle sich ihnen direkt entgegenzustellen und auf Konfrontation zu gehen. Zudem beinhaltet das Körper-Technik-Programm (taijutsu) auch viele Verhebelungen. Dies ermöglicht es, körperlich überlegene Gegner zu kontrollieren. <br> 
+  Ziel ist es, dass weder dem Angreifer (uke, der Gebende), noch dem Angegriffenen (nage, der Empfangende) Schaden entsteht. <br> 
+  Abgerundet wird das Training, das der Lehre von Saito Morihiro Sensei folgt, durch das Waffentraining (buki waza). Indem man den Umgang mit dem Holzschwert (ken) im Aikiken, dem Holzstab (jo) im Aikijo und dem Holzmesser (tanto) erlernt, lernt man seinen Körper besser kennen. 
+</p>
 </section>
 
 <section class="suitability-section">
