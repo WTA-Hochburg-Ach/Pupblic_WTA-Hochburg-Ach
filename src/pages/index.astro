@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+const pages = await getCollection('pages');
+const page = pages.find(p => p.id === 'index');
+
+if (!page) {
+  throw new Error(`Index page not found, pages: ${JSON.stringify(pages.map((item) => ({ id: item.id })))}`);
+}
+
+const { Content } = await render(page);
+---
+
+<BaseLayout title={page.data.title}>
+  <Content />
+</BaseLayout>

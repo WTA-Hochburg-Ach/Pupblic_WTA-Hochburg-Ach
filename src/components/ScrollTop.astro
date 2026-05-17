@@ -1,0 +1,58 @@
+<button id="scrollTop" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 5l-6 6M12 5l6 6M12 5v14" />
+  </svg>
+</button>
+
+<style>
+#scrollTop {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(49, 86, 62, 0.32);
+  background: rgba(255, 255, 255, 0.72);
+  color: #1a2b22;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(45, 90, 74, 0.3);
+  z-index: 1000;
+}
+
+#scrollTop svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#scrollTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#scrollTop:hover {
+  transform: translateY(-3px);
+  background: rgba(169, 195, 170, 0.9);
+  box-shadow: 0 6px 20px rgba(45, 90, 74, 0.4);
+}
+</style>
+
+<script is:inline>
+  const btn = document.getElementById('scrollTop');
+
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 400);
+  });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
