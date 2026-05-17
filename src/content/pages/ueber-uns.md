@@ -32,12 +32,6 @@ order: 4
   </div>
 </section>
 
-<section class="content-block-spacious">
-  <h2>Probetraining</h2>
-  <p>Ein Probetraining ist nach kurzer Anmeldung jederzeit moeglich.</p>
-  <p>Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Fuer das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.</p>
-  <p><a href="kontakt" class="button button-primary">Kontakt aufnehmen</a></p>
-</section>
 
 <section class="content-block-spacious">
   <h2>Trainer</h2>

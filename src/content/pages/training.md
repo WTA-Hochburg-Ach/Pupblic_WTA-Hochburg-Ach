@@ -15,6 +15,14 @@ order: 3
   <p>Ergaenzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar.</p>
 </section>
 
+<section class="content-block-spacious">
+  <h2>Probetraining</h2>
+  <p>Ein Probetraining ist nach kurzer Anmeldung jederzeit moeglich.</p>
+  <p>Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Fuer das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.</p>
+  <p><a href="kontakt" class="button button-primary">Kontakt aufnehmen</a></p>
+</section>
+
+
 <section class="schedule-section">
   <h2>Trainingszeiten</h2>
   <div class="training-schedule">
