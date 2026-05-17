@@ -5,11 +5,11 @@ order: 5
 
 <section class="content-block-spacious">
   <h1>Trainingsplan</h1>
-  <p class="lead-text">Unsere regulaeren Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt.</p>
+  <p class="lead-text">Unsere regulären Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt.</p>
 </section>
 
 <section class="schedule-section">
-  <h2>Wochenuebersicht</h2>
+  <h2>Wochenübersicht</h2>
   <div class="training-schedule">
     <ul>
       <li><span class="day">Montag</span> <span class="time">18:00 - 19:30</span> <span class="level">Training</span></li>

@@ -5,20 +5,20 @@ order: 3
 
 <section class="content-block-spacious">
   <h1>Training</h1>
-  <p class="lead-text">Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Koerperarbeit, Aufmerksamkeit und Waffentraining.</p>
+  <p class="lead-text">Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Körperarbeit, Aufmerksamkeit und Waffentraining.</p>
 </section>
 
 <section class="content-block-spacious">
   <h2>Was erwartet dich?</h2>
-  <p>Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er ueber Winkel, Distanz und Kreisbewegungen aufgenommen.</p>
-  <p>Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Haerte einzusetzen.</p>
-  <p>Ergaenzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar.</p>
+  <p>Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.</p>
+  <p>Zum Training gehören Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnötige Härte einzusetzen.</p>
+  <p>Ergänzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar.</p>
 </section>
 
 <section class="content-block-spacious">
   <h2>Probetraining</h2>
-  <p>Ein Probetraining ist nach kurzer Anmeldung jederzeit moeglich.</p>
-  <p>Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Fuer das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.</p>
+  <p>Ein Probetraining ist nach kurzer Anmeldung jederzeit möglich.</p>
+  <p>Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen können. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.</p>
   <p><a href="kontakt" class="button button-primary">Kontakt aufnehmen</a></p>
 </section>
 

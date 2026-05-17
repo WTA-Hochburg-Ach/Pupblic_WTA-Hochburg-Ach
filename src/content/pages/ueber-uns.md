@@ -1,12 +1,12 @@
 ---
-title: Ueber uns
+title: Über uns
 order: 4
 ---
 
 <section class="content-block-spacious">
-  <h1>Ueber uns</h1>
-  <p class="lead-text">Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.</p>
-  <p>Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain gepraegt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte.</p>
+  <h1>Über uns</h1>
+  <p class="lead-text">Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur.</p>
+  <p>Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte.</p>
 </section>
 
 <section class="content-block-spacious">
@@ -15,8 +15,8 @@ order: 4
     <div class="map-copy">
       <h3>Mehrzweckhalle der neuen Mittelschule</h3>
       <p>Athaler Strasse 1<br />5122 Duttendorf</p>
-      <p>Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen.</p>
-      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Athaler%20Strasse%201%2C%205122%20Duttendorf" target="_blank" rel="noopener noreferrer" class="button button-outline">In Google Maps oeffnen</a></p>
+      <p>Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt öffnen.</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Athaler%20Strasse%201%2C%205122%20Duttendorf" target="_blank" rel="noopener noreferrer" class="button button-outline">In Google Maps öffnen</a></p>
     </div>
     <div class="map-frame">
       <iframe
@@ -51,5 +51,5 @@ order: 4
 
 <section class="content-block-spacious">
   <h2>Etikette</h2>
-  <p>Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte gruessen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen.</p>
+  <p>Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte grüssen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen.</p>
 </section>
