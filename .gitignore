@@ -1,0 +1,4 @@
+node_modules/
+.astro/
+Thumbs.db
+.DS_Store

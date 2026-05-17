@@ -1,0 +1,27 @@
+{
+  "name": "aikido-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "clean": "node ./scripts/clean-build.mjs",
+    "check": "astro check",
+    "generate:brochures": "node ./scripts/generate-brochures.mjs",
+    "build": "npm run clean && npm run generate:brochures && astro build",
+    "preview": "astro preview",
+    "worker:dev": "npm run build && wrangler dev",
+    "worker:deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "astro": "^6.2.1",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.14.1"
+  },
+  "dependencies": {
+    "astro-icon": "^1.1.5",
+    "lucide": "^1.14.0",
+    "lucide-react": "^1.14.0",
+    "lucide-static": "^1.14.0"
+  }
+}

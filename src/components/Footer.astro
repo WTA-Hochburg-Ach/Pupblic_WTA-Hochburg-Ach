@@ -1,0 +1,127 @@
+---
+import {
+  contactData,
+  footerLinks,
+  footerSocialLinks,
+  partnerLinks,
+  siteLegal,
+  siteMeta,
+  venue,
+} from '../data/site';
+import { getBaseUrl, withBasePath } from '../lib/site';
+import SocialIcon from './SocialIcon.astro';
+
+const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
+const currentYear = new Date().getFullYear();
+
+const footerLabelFallbacks = {
+  'nav.about': 'Ueber uns',
+  'nav.training': 'Training',
+  'nav.schedule': 'Trainingsplan',
+  'nav.contact': 'Kontakt',
+  'footer.news_and_events': 'Aktuelles & Termine',
+  'footer.event_overview': 'Terminuebersicht',
+  'nav.gallery': 'Galerie',
+  'footer.legal_and_privacy': 'Impressum & Datenschutz',
+};
+
+const footerTitleFallbacks = {
+  'footer.dojo_title': 'WTA Hochburg-Ach',
+  'footer.updates_title': 'Aktuelles',
+};
+---
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-grid">
+      {footerLinks.map((section) => (
+        <div class="footer-section">
+          <h4 data-i18n={section.titleKey}>
+            {footerTitleFallbacks[section.titleKey as keyof typeof footerTitleFallbacks]}
+          </h4>
+
+          <ul>
+            {section.items.map((item) => (
+              <li>
+                <a href={withBasePath(baseUrl, item.href)} data-i18n={item.labelKey}>
+                  {footerLabelFallbacks[item.labelKey as keyof typeof footerLabelFallbacks]}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      <div class="footer-section">
+        <h4 data-i18n="footer.contact_title">Kontakt</h4>
+        <ul>
+          <li><a href={`mailto:${contactData.email}`}>{contactData.email}</a></li>
+          <li><a href={contactData.phone.href}>{contactData.phone.compact}</a></li>
+          <li data-i18n="footer.address_line1">{venue.street}</li>
+          <li data-i18n="footer.address_line2">{venue.postalCode} {venue.city}</li>
+        </ul>
+
+        <div class="footer-social">
+          {footerSocialLinks.map((item) => (
+            <a
+              href={item.href}
+              aria-label={item.label}
+              target={item.external || item.href.startsWith('http') ? '_blank' : undefined}
+              rel={item.external || item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+            >
+              <SocialIcon icon={item.icon as 'lucide:mail' | 'lucide:phone' | 'lucide:instagram' | 'lucide:facebook' | 'lucide:map-pin'} />
+            </a>
+          ))}
+        </div>
+
+        <div class="footer-network">
+          <p>Netzwerk</p>
+          <ul>
+            {partnerLinks.map((item) => (
+              <li>
+                <a href={item.href} target="_blank" rel="noopener noreferrer">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img src={withBasePath(baseUrl, 'assets/brush.svg')} alt="" class="footer-brush" />
+
+  <div class="footer-bottom">
+    <p data-i18n="footer.copyright" data-year={currentYear}>
+      Copyright {currentYear} {siteLegal.copyrightOwner}. {siteLegal.copyrightNotice}
+    </p>
+    <p class="footer-tagline">
+      <span data-i18n="footer.tagline">Aikido - der Weg der Harmonie</span>
+      <span class="footer-separator" aria-hidden="true"> | </span>
+      <span>{siteMeta.shortName}</span>
+    </p>
+  </div>
+</footer>
+
+<style>
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social svg {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.footer-social a:hover svg {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.footer-separator {
+  color: var(--color-text-muted);
+}
+</style>

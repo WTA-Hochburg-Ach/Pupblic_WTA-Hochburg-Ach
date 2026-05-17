@@ -1,0 +1,1072 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import {
+  formatDateRange,
+  getNewsSlug,
+  isEvent,
+  sortByDateAscending,
+} from '../lib/news';
+import { getBaseUrl, withBasePath, withOptionalBasePath } from '../lib/site';
+
+const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
+const events = sortByDateAscending((await getCollection('news')).filter(isEvent));
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+function includesDate(date: Date, startDate: Date, endDate?: Date) {
+  const target = new Date(date);
+  const start = new Date(startDate);
+  const end = new Date(endDate ?? startDate);
+
+  target.setHours(12, 0, 0, 0);
+  start.setHours(0, 0, 0, 0);
+  end.setHours(23, 59, 59, 999);
+
+  return target >= start && target <= end;
+}
+
+function buildDetailLabel(date: Date) {
+  return date.toLocaleDateString('de-DE', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
+const initialEntry = events.find((entry) => entry.data.date.getTime() >= today.getTime()) ?? events[0];
+const initialDate = initialEntry?.data.date ?? today;
+const initialLabel = buildDetailLabel(initialDate);
+const initialDayEvents = events.filter((entry) => includesDate(initialDate, entry.data.date, entry.data.endDate));
+const initialCalendar = {
+  year: initialDate.getFullYear(),
+  month: initialDate.getMonth(),
+  selectedDate: initialDate.toISOString(),
+};
+const upcomingHighlights = events.filter((entry) => entry.data.date.getTime() >= today.getTime()).slice(0, 3);
+
+const calendarEvents = events.map((entry) => {
+  const slug = getNewsSlug(entry);
+
+  return {
+  slug,
+  href: withBasePath(baseUrl, `news/${slug}`),
+  title: entry.data.title,
+  preview: entry.data.preview ?? '',
+  start: entry.data.date.toISOString(),
+  end: entry.data.endDate?.toISOString() ?? entry.data.date.toISOString(),
+  hasEnd: Boolean(entry.data.endDate),
+  dateLabel: formatDateRange(entry.data.date, entry.data.endDate),
+  location: entry.data.location ?? '',
+  time: entry.data.time ?? 'siehe Ausschreibung',
+  people: entry.data.people ?? [],
+  display: entry.data.display,
+  color: entry.data.color,
+  pdfs: {
+    de: withOptionalBasePath(baseUrl, entry.data.pdfs?.de ?? ''),
+    en: withOptionalBasePath(baseUrl, entry.data.pdfs?.en ?? ''),
+  },
+  };
+});
+---
+
+<BaseLayout title="Termine">
+  <section class="content-block-spacious news-page-intro">
+    <h1>Termine</h1>
+    <p class="lead-text">Kalender, Timeline und Ausschreibungen fuer Lehrgaenge und besondere Trainings findest du gesammelt auf dieser Seite.</p>
+    <p>Klicke auf einen markierten Tag. Die passende Terminbeschreibung oeffnet sich sofort links, ohne dass die Seite neu geladen werden muss.</p>
+  </section>
+
+  {upcomingHighlights.length > 0 && (
+    <section class="content-block-spacious event-highlight-section">
+      <h2>Als Naechstes</h2>
+      <div class="feature-grid event-highlight-grid">
+        {upcomingHighlights.map((entry) => {
+          const slug = getNewsSlug(entry);
+
+          return (
+            <article class:list={['feature-card', 'event-highlight-card', `tone-${entry.data.color}`]}>
+              <span class="event-date">{formatDateRange(entry.data.date, entry.data.endDate)}</span>
+              <h3>{entry.data.title}</h3>
+              {entry.data.location && <p class="event-location">{entry.data.location}</p>}
+              <p>{entry.data.preview}</p>
+              <div class="calendar-card-actions">
+                {entry.data.display === 'page' ? (
+                  <a class="read-more-btn" href={withBasePath(baseUrl, `news/${slug}`)}>Zur Ausschreibung</a>
+                ) : (
+                  <button
+                    class="read-more-btn"
+                    type="button"
+                    data-modal-trigger
+                    data-slug={slug}
+                    data-title={entry.data.title}
+                    data-date={entry.data.date.toISOString()}
+                    data-end-date={entry.data.endDate?.toISOString() ?? ''}
+                  >
+                    Schnellansicht
+                  </button>
+                )}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  )}
+
+  <section class="content-block-spacious">
+    <h2>Kalender</h2>
+
+    <div
+      class="calendar-app"
+      data-calendar
+      data-events={JSON.stringify(calendarEvents)}
+      data-initial={JSON.stringify(initialCalendar)}
+    >
+      <aside class="calendar-detail-panel">
+        <p class="calendar-detail-kicker">Termin Details</p>
+        <h3 data-detail-title>{initialLabel}</h3>
+        <p class="calendar-detail-summary" data-calendar-selected>
+          {initialDayEvents.length > 0
+            ? `${initialDayEvents.length} Termin${initialDayEvents.length > 1 ? 'e' : ''} an diesem Tag`
+            : 'Kein Termin an diesem Tag'}
+        </p>
+
+        <div class="calendar-legend" aria-label="Kalenderfarben">
+          <span><i class="event-dot tone-moss"></i>Lehrgang</span>
+          <span><i class="event-dot tone-sage"></i>Training</span>
+          <span><i class="event-dot tone-gold"></i>Besonderes Event</span>
+        </div>
+
+        <div class="calendar-detail-list" data-detail-list>
+          {initialDayEvents.length > 0 ? (
+            initialDayEvents.map((entry) => {
+              const slug = getNewsSlug(entry);
+
+              return (
+              <article class:list={['calendar-detail-card', `tone-${entry.data.color}`]}>
+                <span class="event-date">{formatDateRange(entry.data.date, entry.data.endDate)}</span>
+                <h4>{entry.data.title}</h4>
+                <dl>
+                  <div>
+                    <dt>Zeit</dt>
+                    <dd>{entry.data.time ?? 'siehe Ausschreibung'}</dd>
+                  </div>
+                  <div>
+                    <dt>Ort</dt>
+                    <dd>{entry.data.location ?? 'wird bekanntgegeben'}</dd>
+                  </div>
+                  <div>
+                    <dt>Personen</dt>
+                    <dd>{entry.data.people?.join(', ') ?? 'WTA Hochburg-Ach'}</dd>
+                  </div>
+                </dl>
+                {entry.data.preview && <p>{entry.data.preview}</p>}
+                <div class="calendar-card-actions">
+                  {entry.data.display === 'page' ? (
+                    <a class="read-more-btn" href={withBasePath(baseUrl, `news/${slug}`)}>Seite oeffnen</a>
+                  ) : (
+                    <button
+                      class="read-more-btn"
+                      type="button"
+                      data-modal-trigger
+                      data-slug={slug}
+                      data-title={entry.data.title}
+                      data-date={entry.data.date.toISOString()}
+                      data-end-date={entry.data.endDate?.toISOString() ?? ''}
+                    >
+                      Details
+                    </button>
+                  )}
+
+                  {entry.data.pdfs?.de && (
+                    <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} target="_blank" rel="noopener">PDF DE</a>
+                  )}
+                  {entry.data.pdfs?.en && (
+                    <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} target="_blank" rel="noopener">PDF EN</a>
+                  )}
+                  {(entry.data.pdfs?.de || entry.data.pdfs?.en) && (
+                    <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs?.de || entry.data.pdfs?.en || '')} target="_blank" rel="noopener">Vorschau</a>
+                  )}
+                </div>
+              </article>
+              );
+            })
+          ) : (
+            <p class="calendar-empty-state">An diesem Tag ist kein Termin eingetragen.</p>
+          )}
+        </div>
+      </aside>
+
+      <article class="calendar-panel">
+        <header class="calendar-toolbar">
+          <button class="calendar-nav-btn" type="button" data-calendar-prev aria-label="Vorheriger Monat">&lt;</button>
+
+          <div class="calendar-current">
+            <div class="calendar-selects">
+              <select id="calendar-month-select" data-calendar-month aria-label="Monat auswaehlen"></select>
+              <select id="calendar-year-select" data-calendar-year aria-label="Jahr auswaehlen"></select>
+            </div>
+            <h3 data-calendar-label></h3>
+            <p>Markierte Tage enthalten einen oder mehrere Termine.</p>
+          </div>
+
+          <div class="calendar-toolbar-actions">
+            <button class="calendar-utility-btn" type="button" data-calendar-today>Heute</button>
+            <button class="calendar-nav-btn" type="button" data-calendar-next aria-label="Naechster Monat">&gt;</button>
+          </div>
+        </header>
+
+        <div class="calendar-weekdays">
+          <span>Mo</span>
+          <span>Di</span>
+          <span>Mi</span>
+          <span>Do</span>
+          <span>Fr</span>
+          <span>Sa</span>
+          <span>So</span>
+        </div>
+
+        <div class="calendar-days" data-calendar-days></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-block-spacious">
+    <h2>Timeline</h2>
+    <div class="horizontal-timeline news-rail">
+      {events.map((entry) => {
+        const slug = getNewsSlug(entry);
+
+        return (
+        <article class:list={['timeline-event', 'news-card', `tone-${entry.data.color}`]}>
+          <div class="news-card-tags">
+            <span class="event-date">{formatDateRange(entry.data.date, entry.data.endDate)}</span>
+            <span class="news-mode-tag">{entry.data.display === 'page' ? 'Seite' : 'Popup'}</span>
+          </div>
+          <h3>{entry.data.title}</h3>
+          {entry.data.location && <p class="event-location">{entry.data.location}</p>}
+          <p>{entry.data.preview}</p>
+          <div class="timeline-actions">
+            {entry.data.display === 'page' ? (
+              <a class="read-more-btn" href={withBasePath(baseUrl, `news/${slug}`)}>Seite oeffnen</a>
+            ) : (
+              <button
+                class="read-more-btn"
+                type="button"
+                data-modal-trigger
+                data-slug={slug}
+                data-title={entry.data.title}
+                data-date={entry.data.date.toISOString()}
+                data-end-date={entry.data.endDate?.toISOString() ?? ''}
+              >
+                Popup oeffnen
+              </button>
+            )}
+
+            {entry.data.pdfs?.de && (
+              <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} target="_blank" rel="noopener">PDF DE</a>
+            )}
+            {entry.data.pdfs?.en && (
+              <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} target="_blank" rel="noopener">PDF EN</a>
+            )}
+            {(entry.data.pdfs?.de || entry.data.pdfs?.en) && (
+              <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs?.de || entry.data.pdfs?.en || '')} target="_blank" rel="noopener">Vorschau</a>
+            )}
+          </div>
+        </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <div id="news-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-content">
+      <button class="modal-close" type="button" data-modal-close>&times;</button>
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <span id="modal-date"></span>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <div class="loader">Laden...</div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script is:inline define:vars={{ baseUrl }}>
+  const modal = document.getElementById('news-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDate = document.getElementById('modal-date');
+  const modalBody = document.getElementById('modal-body');
+
+  function formatModalDate(startDate, endDate) {
+    const start = new Date(startDate);
+    const end = endDate ? new Date(endDate) : null;
+
+    if (!endDate || Number.isNaN(end?.getTime())) {
+      return start.toLocaleDateString('de-DE', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+    }
+
+    const sameMonth = start.getFullYear() === end.getFullYear() && start.getMonth() === end.getMonth();
+    if (sameMonth) {
+      return `${start.getDate()}.-${end.getDate()}. ${start.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })}`;
+    }
+
+    return `${start.toLocaleDateString('de-DE')} - ${end.toLocaleDateString('de-DE')}`;
+  }
+
+  async function openNewsModal(trigger) {
+    const slug = trigger.getAttribute('data-slug');
+    const title = trigger.getAttribute('data-title');
+    const date = trigger.getAttribute('data-date');
+    const endDate = trigger.getAttribute('data-end-date');
+
+    if (!slug || !title || !date || !modal || !modalBody || !modalTitle || !modalDate) {
+      return;
+    }
+
+    modalTitle.textContent = title;
+    modalDate.textContent = formatModalDate(date, endDate);
+    modalBody.innerHTML = '<div class="loader">Laden...</div>';
+    modalBody.classList.remove('content-visible');
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    try {
+      const response = await fetch(`${baseUrl}news/${slug}.json`);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      const news = await response.json();
+      const actions = [];
+
+      if (news.pdfs?.de) {
+        actions.push(`<a href="${news.pdfs.de}" class="button button-primary" target="_blank" rel="noopener">PDF Deutsch</a>`);
+      }
+
+      if (news.pdfs?.en) {
+        actions.push(`<a href="${news.pdfs.en}" class="button button-outline" target="_blank" rel="noopener">PDF English</a>`);
+      }
+
+      if (news.pdfs?.de || news.pdfs?.en) {
+        const previewHref = news.pdfs?.de || news.pdfs?.en;
+        actions.push(`<a href="${previewHref}" class="button button-outline" target="_blank" rel="noopener">Vorschau</a>`);
+      }
+
+      modalBody.innerHTML = `
+        ${news.location ? `<p class="modal-location">${news.location}</p>` : ''}
+        ${actions.length > 0 ? `<div class="modal-actions">${actions.join('')}</div>` : ''}
+        <div class="prose-lg">${news.content}</div>
+      `;
+      modalBody.classList.add('content-visible');
+    } catch (error) {
+      console.error(error);
+      modalBody.innerHTML = '<p>Der Inhalt konnte gerade nicht geladen werden.</p>';
+      modalBody.classList.add('content-visible');
+    }
+  }
+
+  function closeNewsModal() {
+    if (!modal || !modalBody) {
+      return;
+    }
+
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    modalBody.classList.remove('content-visible');
+    document.body.style.overflow = '';
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, (character) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;',
+    }[character]));
+  }
+
+  function toDateKey(date) {
+    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+  }
+
+  function initCalendar() {
+    const calendar = document.querySelector('[data-calendar]');
+    if (!calendar) return;
+
+    const events = JSON.parse(calendar.getAttribute('data-events') || '[]');
+    const initial = JSON.parse(calendar.getAttribute('data-initial') || '{}');
+    const monthSelect = calendar.querySelector('[data-calendar-month]');
+    const yearSelect = calendar.querySelector('[data-calendar-year]');
+    const todayButton = calendar.querySelector('[data-calendar-today]');
+    const label = calendar.querySelector('[data-calendar-label]');
+    const selectedLabel = calendar.querySelector('[data-calendar-selected]');
+    const daysContainer = calendar.querySelector('[data-calendar-days]');
+    const detailTitle = calendar.querySelector('[data-detail-title]');
+    const detailList = calendar.querySelector('[data-detail-list]');
+
+    if (!monthSelect || !yearSelect || !label || !selectedLabel || !daysContainer || !detailTitle || !detailList) {
+      return;
+    }
+
+    const monthNames = Array.from({ length: 12 }, (_, month) =>
+      new Date(2026, month, 1).toLocaleDateString('de-DE', { month: 'long' }),
+    );
+    const eventYears = events.flatMap((event) => [
+      new Date(event.start).getFullYear(),
+      new Date(event.end).getFullYear(),
+    ]);
+    const currentYear = new Date().getFullYear();
+    const minYear = Math.min(...eventYears, currentYear) - 1;
+    const maxYear = Math.max(...eventYears, currentYear) + 1;
+
+    let viewYear = Number(initial.year) || new Date().getFullYear();
+    let viewMonth = Number.isInteger(initial.month) ? Number(initial.month) : new Date().getMonth();
+    let selectedDate = new Date(initial.selectedDate || new Date());
+
+    monthSelect.innerHTML = monthNames
+      .map((name, index) => `<option value="${index}">${escapeHtml(name)}</option>`)
+      .join('');
+    yearSelect.innerHTML = Array.from({ length: maxYear - minYear + 1 }, (_, index) => minYear + index)
+      .map((year) => `<option value="${year}">${year}</option>`)
+      .join('');
+
+    function eventsForDate(date) {
+      return events.filter((event) => {
+        const start = new Date(event.start);
+        const end = new Date(event.end);
+        const target = new Date(date);
+
+        start.setHours(0, 0, 0, 0);
+        end.setHours(23, 59, 59, 999);
+        target.setHours(12, 0, 0, 0);
+
+        return target >= start && target <= end;
+      });
+    }
+
+    function renderDetails() {
+      const dayEvents = eventsForDate(selectedDate);
+      const dateText = selectedDate.toLocaleDateString('de-DE', {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      });
+
+      detailTitle.textContent = dateText;
+      selectedLabel.textContent = dayEvents.length > 0
+        ? `${dayEvents.length} Termin${dayEvents.length > 1 ? 'e' : ''} an diesem Tag`
+        : 'Kein Termin an diesem Tag';
+
+      if (dayEvents.length === 0) {
+        detailList.innerHTML = '<p class="calendar-empty-state">An diesem Tag ist kein Termin eingetragen.</p>';
+        return;
+      }
+
+      detailList.innerHTML = dayEvents.map((event) => {
+        const pdfButtons = [
+          event.pdfs?.de ? `<a href="${event.pdfs.de}" class="mini-action" target="_blank" rel="noopener">PDF DE</a>` : '',
+          event.pdfs?.en ? `<a href="${event.pdfs.en}" class="mini-action" target="_blank" rel="noopener">PDF EN</a>` : '',
+          event.pdfs?.de || event.pdfs?.en
+            ? `<a href="${event.pdfs.de || event.pdfs.en}" class="mini-action" target="_blank" rel="noopener">Vorschau</a>`
+            : '',
+        ].join('');
+        const primaryAction = event.display === 'page'
+          ? `<a class="read-more-btn" href="${event.href}">Seite oeffnen</a>`
+          : `<button class="read-more-btn" type="button" data-modal-trigger data-slug="${event.slug}" data-title="${escapeHtml(event.title)}" data-date="${event.start}" data-end-date="${event.hasEnd ? event.end : ''}">Details</button>`;
+
+        return `
+          <article class="calendar-detail-card tone-${event.color}">
+            <span class="event-date">${escapeHtml(event.dateLabel)}</span>
+            <h4>${escapeHtml(event.title)}</h4>
+            <dl>
+              <div><dt>Zeit</dt><dd>${escapeHtml(event.time)}</dd></div>
+              <div><dt>Ort</dt><dd>${escapeHtml(event.location || 'wird bekanntgegeben')}</dd></div>
+              <div><dt>Personen</dt><dd>${escapeHtml(event.people?.join(', ') || 'WTA Hochburg-Ach')}</dd></div>
+            </dl>
+            ${event.preview ? `<p>${escapeHtml(event.preview)}</p>` : ''}
+            <div class="calendar-card-actions">${primaryAction}${pdfButtons}</div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function renderCalendar() {
+      const firstDay = new Date(viewYear, viewMonth, 1);
+      const firstWeekday = (firstDay.getDay() + 6) % 7;
+      const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+      const todayKey = toDateKey(new Date());
+
+      monthSelect.value = String(viewMonth);
+      yearSelect.value = String(viewYear);
+      label.textContent = firstDay.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' });
+
+      const cells = [];
+
+      for (let index = 0; index < firstWeekday; index += 1) {
+        cells.push('<div class="calendar-day calendar-day-muted" aria-hidden="true"></div>');
+      }
+
+      for (let day = 1; day <= daysInMonth; day += 1) {
+        const date = new Date(viewYear, viewMonth, day);
+        const dayEvents = eventsForDate(date);
+        const bars = dayEvents.slice(0, 4).map((event) => `<span class="event-bar tone-${event.color}"></span>`).join('');
+        const hasMore = dayEvents.length > 4 ? `<span class="event-more">+${dayEvents.length - 4}</span>` : '';
+        const isSelected = toDateKey(date) === toDateKey(selectedDate);
+        const isToday = toDateKey(date) === todayKey;
+        const ariaLabel = `${date.toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}${dayEvents.length ? `, ${dayEvents.length} Termin${dayEvents.length > 1 ? 'e' : ''}` : ', kein Termin'}`;
+
+        cells.push(`
+          <button
+            class="calendar-day ${dayEvents.length ? 'calendar-day-active' : ''} ${isSelected ? 'calendar-day-selected' : ''} ${isToday ? 'calendar-day-today' : ''}"
+            type="button"
+            data-date="${date.toISOString()}"
+            aria-label="${escapeHtml(ariaLabel)}"
+            aria-pressed="${isSelected}"
+          >
+            <span class="calendar-day-number">${day}</span>
+            <span class="event-bars">${bars}${hasMore}</span>
+          </button>
+        `);
+      }
+
+      daysContainer.innerHTML = cells.join('');
+      renderDetails();
+    }
+
+    function setMonth(year, month) {
+      viewYear = year;
+      viewMonth = month;
+
+      if (viewMonth < 0) {
+        viewMonth = 11;
+        viewYear -= 1;
+      }
+
+      if (viewMonth > 11) {
+        viewMonth = 0;
+        viewYear += 1;
+      }
+
+      selectedDate = new Date(viewYear, viewMonth, Math.min(selectedDate.getDate(), new Date(viewYear, viewMonth + 1, 0).getDate()));
+      renderCalendar();
+    }
+
+    function jumpToDate(date) {
+      selectedDate = new Date(date);
+      viewYear = selectedDate.getFullYear();
+      viewMonth = selectedDate.getMonth();
+      renderCalendar();
+    }
+
+    calendar.querySelector('[data-calendar-prev]')?.addEventListener('click', () => setMonth(viewYear, viewMonth - 1));
+    calendar.querySelector('[data-calendar-next]')?.addEventListener('click', () => setMonth(viewYear, viewMonth + 1));
+    monthSelect.addEventListener('change', () => setMonth(viewYear, Number(monthSelect.value)));
+    yearSelect.addEventListener('change', () => setMonth(Number(yearSelect.value), viewMonth));
+    todayButton?.addEventListener('click', () => jumpToDate(new Date()));
+    daysContainer.addEventListener('click', (event) => {
+      if (!(event.target instanceof Element)) {
+        return;
+      }
+
+      const button = event.target.closest('[data-date]');
+      if (!button) return;
+      selectedDate = new Date(button.getAttribute('data-date'));
+      renderCalendar();
+    });
+    detailList.addEventListener('click', (event) => {
+      if (!(event.target instanceof Element)) {
+        return;
+      }
+
+      const trigger = event.target.closest('[data-modal-trigger]');
+      if (trigger) openNewsModal(trigger);
+    });
+
+    renderCalendar();
+  }
+
+  document.querySelectorAll('[data-modal-trigger]').forEach((trigger) => {
+    trigger.addEventListener('click', () => openNewsModal(trigger));
+  });
+
+  initCalendar();
+
+  document.querySelectorAll('[data-modal-close]').forEach((closeButton) => {
+    closeButton.addEventListener('click', closeNewsModal);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeNewsModal();
+    }
+  });
+</script>
+
+<style>
+.news-page-intro {
+  padding-bottom: 0;
+}
+
+.event-highlight-section {
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+.event-highlight-grid {
+  align-items: stretch;
+}
+
+.event-highlight-card {
+  border-left: 4px solid transparent;
+}
+
+.calendar-app {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.calendar-panel,
+.calendar-detail-panel {
+  padding: 1.45rem;
+  border-radius: 30px;
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.calendar-detail-panel {
+  position: sticky;
+  top: 12rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent), var(--gradient-card);
+}
+
+.calendar-panel {
+  background: var(--color-surface);
+}
+
+.calendar-toolbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-current {
+  text-align: center;
+}
+
+.calendar-current h3 {
+  margin: 0.45rem 0 0.2rem;
+}
+
+.calendar-current p,
+.calendar-detail-kicker,
+.calendar-detail-summary {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.calendar-detail-kicker {
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.calendar-detail-summary {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border-light);
+  color: var(--color-text-secondary);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.calendar-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.event-dot {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.calendar-selects,
+.calendar-toolbar-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.calendar-selects select,
+.calendar-nav-btn,
+.calendar-utility-btn {
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-button-ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.calendar-selects select {
+  min-height: 2.6rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 800;
+}
+
+.calendar-nav-btn,
+.calendar-utility-btn {
+  min-height: 3rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.calendar-nav-btn {
+  width: 3rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.calendar-utility-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 800;
+}
+
+.calendar-nav-btn:hover,
+.calendar-nav-btn:focus-visible,
+.calendar-utility-btn:hover,
+.calendar-utility-btn:focus-visible,
+.calendar-selects select:focus-visible {
+  transform: translateY(-2px);
+  background: var(--color-button-hover-fill);
+  border-color: var(--color-button-hover-border);
+  color: var(--color-button-hover-ink);
+  box-shadow: var(--shadow-md);
+}
+
+.calendar-weekdays,
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.calendar-weekdays {
+  margin-bottom: 0.6rem;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.calendar-day {
+  display: grid;
+  align-content: space-between;
+  min-height: 7.2rem;
+  padding: 0.72rem;
+  border-radius: 18px;
+  background: rgba(54, 88, 66, 0.04);
+  border: 1px solid transparent;
+  color: var(--color-primary-dark);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.calendar-day:hover,
+.calendar-day:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(86, 112, 79, 0.24);
+  background: rgba(86, 112, 79, 0.08);
+}
+
+.calendar-day-muted {
+  cursor: default;
+  background: transparent;
+}
+
+.calendar-day-active {
+  background: rgba(49, 86, 62, 0.08);
+  border-color: rgba(49, 86, 62, 0.16);
+}
+
+.calendar-day-selected {
+  outline: 3px solid rgba(188, 162, 112, 0.4);
+  background: rgba(188, 162, 112, 0.15);
+}
+
+.calendar-day-today .calendar-day-number {
+  display: inline-grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--color-primary-dark);
+  color: var(--color-surface-strong);
+}
+
+.calendar-day-number {
+  font-size: 0.94rem;
+  font-weight: 900;
+}
+
+.event-bars {
+  display: grid;
+  gap: 0.22rem;
+}
+
+.event-bar {
+  display: block;
+  width: 100%;
+  height: 0.36rem;
+  border-radius: 999px;
+}
+
+.event-more {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-text-muted);
+}
+
+.calendar-detail-list {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.calendar-detail-card {
+  padding: 1.1rem;
+  border-radius: 20px;
+  background: var(--color-surface-strong);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.calendar-detail-card h4 {
+  margin: 0.8rem 0 0.75rem;
+  color: var(--color-primary-dark);
+}
+
+.calendar-detail-card dl {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0 0 0.85rem;
+}
+
+.calendar-detail-card dl div {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 0.65rem;
+}
+
+.calendar-detail-card dt {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.calendar-detail-card dd {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.calendar-detail-card p,
+.calendar-empty-state {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.calendar-card-actions,
+.timeline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 0.95rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.mini-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-button-border);
+  background: transparent;
+  color: var(--color-button-ink);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.mini-action:hover,
+.mini-action:focus-visible {
+  transform: translateY(-2px);
+  background: var(--color-button-hover-fill);
+  border-color: var(--color-button-hover-border);
+  color: var(--color-button-hover-ink);
+  box-shadow: var(--shadow-md);
+}
+
+.news-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.news-mode-tag {
+  display: inline-flex;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(188, 162, 112, 0.15);
+  color: var(--color-primary-dark);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.event-location {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.modal-location {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-event.tone-moss,
+.calendar-detail-card.tone-moss,
+.event-highlight-card.tone-moss {
+  border-left: 4px solid #56704f;
+}
+
+.timeline-event.tone-sage,
+.calendar-detail-card.tone-sage,
+.event-highlight-card.tone-sage {
+  border-left: 4px solid #90a388;
+}
+
+.timeline-event.tone-gold,
+.calendar-detail-card.tone-gold,
+.event-highlight-card.tone-gold {
+  border-left: 4px solid #bca270;
+}
+
+.event-dot.tone-moss,
+.event-bar.tone-moss {
+  background: #56704f;
+}
+
+.event-dot.tone-sage,
+.event-bar.tone-sage {
+  background: #90a388;
+}
+
+.event-dot.tone-gold,
+.event-bar.tone-gold {
+  background: #bca270;
+}
+
+@media (max-width: 960px) {
+  .calendar-app {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-detail-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-current {
+    order: -1;
+  }
+
+  .calendar-toolbar-actions {
+    justify-content: stretch;
+  }
+
+  .calendar-nav-btn,
+  .calendar-utility-btn {
+    width: 100%;
+    border-radius: 999px;
+  }
+
+  .calendar-weekdays,
+  .calendar-days {
+    gap: 0.28rem;
+  }
+
+  .calendar-day {
+    min-height: 4.8rem;
+    padding: 0.45rem;
+    border-radius: 14px;
+  }
+
+  .calendar-detail-card dl div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .calendar-card-actions > *,
+  .timeline-actions > *,
+  .modal-actions > * {
+    width: 100%;
+  }
+}
+</style>
