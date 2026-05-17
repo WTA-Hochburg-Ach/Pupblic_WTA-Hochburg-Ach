@@ -12,7 +12,7 @@ order: 10
       <span class="event-date">Deutsch</span>
       <h3>Lehrgang Hochburg-Ach</h3>
       <p>Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain.</p>
-      <a href="downloads/lehrgang-hochburg-ach-de.pdf" class="button button-primary">PDF oeffnen</a>
+      <a href="downloads/lehrgang-hochburg-ach-de.pdef" class="button button-primary">PDF oeffnen</a>
     </article>
 
     <article class="feature-card">
