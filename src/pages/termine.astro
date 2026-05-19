@@ -74,13 +74,13 @@ const calendarEvents = events.map((entry) => {
 <BaseLayout title="Termine">
   <section class="content-block-spacious news-page-intro">
     <h1>Termine</h1>
-    <p class="lead-text">Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.</p>
-    <p>Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss.</p>
+    <p class="lead-text">Kalender, Timeline und Ausschreibungen fuer Lehrgaenge und besondere Trainings findest du gesammelt auf dieser Seite.</p>
+    <p>Klicke auf einen markierten Tag. Die passende Terminbeschreibung oeffnet sich sofort links, ohne dass die Seite neu geladen werden muss.</p>
   </section>
 
   {upcomingHighlights.length > 0 && (
     <section class="content-block-spacious event-highlight-section">
-      <h2>Als Nächstes</h2>
+      <h2>Als Naechstes</h2>
       <div class="feature-grid event-highlight-grid">
         {upcomingHighlights.map((entry) => {
           const slug = getNewsSlug(entry);
@@ -169,7 +169,7 @@ const calendarEvents = events.map((entry) => {
                 {entry.data.preview && <p>{entry.data.preview}</p>}
                 <div class="calendar-card-actions">
                   {entry.data.display === 'page' ? (
-                    <a class="read-more-btn" href={withBasePath(baseUrl, `news/${slug}`)}>Seite öffnen</a>
+                    <a class="read-more-btn" href={withBasePath(baseUrl, `news/${slug}`)}>Seite oeffnen</a>
                   ) : (
                     <button
                       class="read-more-btn"
@@ -209,8 +209,8 @@ const calendarEvents = events.map((entry) => {
 
           <div class="calendar-current">
             <div class="calendar-selects">
-              <select id="calendar-month-select" data-calendar-month aria-label="Monat auswählen"></select>
-              <select id="calendar-year-select" data-calendar-year aria-label="Jahr auswählen"></select>
+              <select id="calendar-month-select" data-calendar-month aria-label="Monat auswaehlen"></select>
+              <select id="calendar-year-select" data-calendar-year aria-label="Jahr auswaehlen"></select>
             </div>
             <h3 data-calendar-label></h3>
             <p>Markierte Tage enthalten einen oder mehrere Termine.</p>
@@ -218,7 +218,7 @@ const calendarEvents = events.map((entry) => {
 
           <div class="calendar-toolbar-actions">
             <button class="calendar-utility-btn" type="button" data-calendar-today>Heute</button>
-            <button class="calendar-nav-btn" type="button" data-calendar-next aria-label="Nächster Monat">&gt;</button>
+            <button class="calendar-nav-btn" type="button" data-calendar-next aria-label="Naechster Monat">&gt;</button>
           </div>
         </header>
 
@@ -237,6 +237,55 @@ const calendarEvents = events.map((entry) => {
     </div>
   </section>
 
+  <section class="content-block-spacious">
+    <h2>Timeline</h2>
+    <div class="horizontal-timeline news-rail">
+      {events.map((entry) => {
+        const slug = getNewsSlug(entry);
+
+        return (
+        <article class:list={['timeline-event', 'news-card', `tone-${entry.data.color}`]}>
+          <div class="news-card-tags">
+            <span class="event-date" data-date-start={entry.data.date.toISOString()} data-date-end={entry.data.endDate?.toISOString() ?? ''}>
+              {formatDateRange(entry.data.date, entry.data.endDate)}
+            </span>
+            <span class="news-mode-tag">{entry.data.display === 'page' ? 'Seite' : 'Popup'}</span>
+          </div>
+          <h3>{entry.data.title}</h3>
+          {entry.data.location && <p class="event-location">{entry.data.location}</p>}
+          <p>{entry.data.preview}</p>
+          <div class="timeline-actions">
+            {entry.data.display === 'page' ? (
+              <a class="read-more-btn" href={withBasePath(baseUrl, `news/${slug}`)}>Seite oeffnen</a>
+            ) : (
+              <button
+                class="read-more-btn"
+                type="button"
+                data-modal-trigger
+                data-slug={slug}
+                data-title={entry.data.title}
+                data-date={entry.data.date.toISOString()}
+                data-end-date={entry.data.endDate?.toISOString() ?? ''}
+              >
+                Popup oeffnen
+              </button>
+            )}
+
+            {entry.data.pdfs?.de && (
+              <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} target="_blank" rel="noopener">PDF DE</a>
+            )}
+            {entry.data.pdfs?.en && (
+              <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} target="_blank" rel="noopener">PDF EN</a>
+            )}
+            {(entry.data.pdfs?.de || entry.data.pdfs?.en) && (
+              <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs?.de || entry.data.pdfs?.en || '')} target="_blank" rel="noopener">Vorschau</a>
+            )}
+          </div>
+        </article>
+        );
+      })}
+    </div>
+  </section>
 
   <div id="news-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
     <div class="modal-backdrop" data-modal-close></div>
@@ -469,7 +518,7 @@ const calendarEvents = events.map((entry) => {
             : '',
         ].join('');
         const primaryAction = event.display === 'page'
-          ? `<a class="read-more-btn" href="${event.href}">${escapeHtml(translate('events.open_page', 'Seite öffnen'))}</a>`
+          ? `<a class="read-more-btn" href="${event.href}">${escapeHtml(translate('events.open_page', 'Seite oeffnen'))}</a>`
           : `<button class="read-more-btn" type="button" data-modal-trigger data-slug="${event.slug}" data-title="${escapeHtml(event.title)}" data-date="${event.start}" data-end-date="${event.hasEnd ? event.end : ''}">${escapeHtml(translate('events.details', 'Details'))}</button>`;
 
         return `

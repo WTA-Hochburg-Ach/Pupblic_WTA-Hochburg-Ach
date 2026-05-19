@@ -25,13 +25,13 @@
       "_source": "Dunkel"
     },
     "menu_open": {
-      "text": "Menue oeffnen",
+      "text": "Ouvrir le menu",
       "_source": "Menue oeffnen"
     }
   },
   "nav": {
     "about": {
-      "text": "Ueber uns",
+      "text": "A propos",
       "_source": "Ueber uns"
     },
     "about_summary": {
@@ -71,7 +71,7 @@
       "_source": "Galerie"
     },
     "gallery_summary": {
-      "text": "Bilder, Rueckblicke und Impressionen aus dem Dojo.",
+      "text": "Photos, retrospectives et impressions du dojo.",
       "_source": "Bilder, Rueckblicke und Impressionen aus dem Dojo."
     },
     "links": {
@@ -105,7 +105,7 @@
       "_source": "Aktuelles & Termine"
     },
     "event_overview": {
-      "text": "Terminuebersicht",
+      "text": "Vue des evenements",
       "_source": "Terminuebersicht"
     },
     "legal_and_privacy": {
@@ -205,10 +205,6 @@
     "foto-galerie": {
       "text": "Galerie photo",
       "_source": "Foto-Galerie"
-    },
-    "über-uns": {
-      "text": "Ueber uns",
-      "_source": "Ueber uns"
     }
   },
   "events": {
@@ -415,7 +411,7 @@
       "_source": "Aktuelles & Termine"
     },
     "Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
-      "text": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
+      "text": "Toutes les entrees sont classees chronologiquement par date. Les evenements menent a leur brochure ou a une page detaillee, les breves restent compactes et rapides a lire.",
       "_source": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
     },
     "Alle Rechte vorbehalten.": {
@@ -1631,8 +1627,8 @@
       "_source": "Trotz sorgfaeltiger inhaltlicher Kontrolle uebernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
     },
     "Ueber uns": {
-      "text": "Über uns",
-      "_source": "Über uns"
+      "text": "A propos de nous",
+      "_source": "Ueber uns"
     },
     "Unser Dojo orientiert sich an der Lehre von Saito Morihiro Sensei und pflegt eine ruhige, konzentrierte Trainingskultur ohne Leistungsdruck.": {
       "text": "Notre dojo suit l enseignement de Saito Morihiro Sensei et cultive une pratique calme et concentree sans pression de performance.",
@@ -1885,278 +1881,6 @@
     "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. br Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.": {
       "text": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. br Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.",
       "_source": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. br Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde."
-    },
-    "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, präziser Trainingskultur.": {
-      "text": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, präziser Trainingskultur.",
-      "_source": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, präziser Trainingskultur."
-    },
-    "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte.": {
-      "text": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte.",
-      "_source": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte."
-    },
-    "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte grüssen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen.": {
-      "text": "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte grüssen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen.",
-      "_source": "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte grüssen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen."
-    },
-    "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur.": {
-      "text": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur.",
-      "_source": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur."
-    },
-    "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt oeffnen.": {
-      "text": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt oeffnen.",
-      "_source": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt oeffnen."
-    },
-    "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt öffnen.": {
-      "text": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt öffnen.",
-      "_source": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt öffnen."
-    },
-    "In Google Maps öffnen": {
-      "text": "In Google Maps öffnen",
-      "_source": "In Google Maps öffnen"
-    },
-    "Wochenübersicht": {
-      "text": "Wochenübersicht",
-      "_source": "Wochenübersicht"
-    },
-    "Unsere regulären Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt.": {
-      "text": "Unsere regulären Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt.",
-      "_source": "Unsere regulären Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt."
-    },
-    "Ergänzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar.": {
-      "text": "Ergänzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar.",
-      "_source": "Ergänzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar."
-    },
-    "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.": {
-      "text": "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.",
-      "_source": "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen."
-    },
-    "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.": {
-      "text": "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.",
-      "_source": "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen."
-    },
-    "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.": {
-      "text": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.",
-      "_source": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken."
-    },
-    "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.": {
-      "text": "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.",
-      "_source": "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen."
-    },
-    "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen können. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.": {
-      "text": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen können. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.",
-      "_source": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen können. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken."
-    },
-    "Ein Probetraining ist nach kurzer Anmeldung jederzeit möglich.": {
-      "text": "Ein Probetraining ist nach kurzer Anmeldung jederzeit möglich.",
-      "_source": "Ein Probetraining ist nach kurzer Anmeldung jederzeit möglich."
-    },
-    "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Körperarbeit, Aufmerksamkeit und Waffentraining.": {
-      "text": "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Körperarbeit, Aufmerksamkeit und Waffentraining.",
-      "_source": "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Körperarbeit, Aufmerksamkeit und Waffentraining."
-    },
-    "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.": {
-      "text": "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.",
-      "_source": "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen."
-    },
-    "Zum Training gehören Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.": {
-      "text": "Zum Training gehören Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.",
-      "_source": "Zum Training gehören Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen."
-    },
-    "Zum Training gehören Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnötige Härte einzusetzen.": {
-      "text": "Zum Training gehören Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnötige Härte einzusetzen.",
-      "_source": "Zum Training gehören Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnötige Härte einzusetzen."
-    },
-    "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten.": {
-      "text": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten.",
-      "_source": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten."
-    },
-    "Fördert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.": {
-      "text": "Fördert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.",
-      "_source": "Fördert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung."
-    },
-    "Fördert Körperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.": {
-      "text": "Fördert Körperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.",
-      "_source": "Fördert Körperbewusstsein, Praesenz und eine klare, aufrechte Bewegung."
-    },
-    "Spannend für Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition.": {
-      "text": "Spannend für Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition.",
-      "_source": "Spannend für Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition."
-    },
-    "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren über-uns- und Kontaktseiten.": {
-      "text": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren über-uns- und Kontaktseiten.",
-      "_source": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren über-uns- und Kontaktseiten."
-    },
-    "Für wen ist Aikido?": {
-      "text": "Für wen ist Aikido?",
-      "_source": "Für wen ist Aikido?"
-    },
-    "Aikido ist für Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit.": {
-      "text": "Aikido ist für Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit.",
-      "_source": "Aikido ist für Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit."
-    },
-    "Ideal für alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen.": {
-      "text": "Ideal für alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen.",
-      "_source": "Ideal für alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen."
-    },
-    "84577 Tüssling": {
-      "text": "84577 Tüssling",
-      "_source": "84577 Tüssling"
-    },
-    "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
-      "text": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
-      "_source": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
-    },
-    "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
-      "text": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
-      "_source": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
-    },
-    "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.": {
-      "text": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.",
-      "_source": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet."
-    },
-    "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die übermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.": {
-      "text": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die übermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.",
-      "_source": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die übermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet."
-    },
-    "Trotz sorgfültiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
-      "text": "Trotz sorgfültiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
-      "_source": "Trotz sorgfültiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
-    },
-    "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
-      "text": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
-      "_source": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
-    },
-    "Österreich": {
-      "text": "Österreich",
-      "_source": "Österreich"
-    },
-    "84503 Altötting": {
-      "text": "84503 Altötting",
-      "_source": "84503 Altötting"
-    },
-    "Trainingsort öffnen": {
-      "text": "Trainingsort öffnen",
-      "_source": "Trainingsort öffnen"
-    },
-    "Route öffnen": {
-      "text": "Route öffnen",
-      "_source": "Route öffnen"
-    },
-    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt öffnen.": {
-      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt öffnen.",
-      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt öffnen."
-    },
-    "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss.": {
-      "text": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss.",
-      "_source": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss."
-    },
-    "Seite öffnen": {
-      "text": "Seite öffnen",
-      "_source": "Seite öffnen"
-    },
-    "Popup öffnen": {
-      "text": "Popup öffnen",
-      "_source": "Popup öffnen"
-    },
-    "Kalender, Timeline und Ausschreibungen fuer Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.": {
-      "text": "Kalender, Timeline und Ausschreibungen fuer Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.",
-      "_source": "Kalender, Timeline und Ausschreibungen fuer Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite."
-    },
-    "Als Nächstes": {
-      "text": "Als Nächstes",
-      "_source": "Als Nächstes"
-    },
-    "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.": {
-      "text": "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.",
-      "_source": "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite."
-    },
-    "Kurze Neuigkeiten, kommende Lehrgaenge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.": {
-      "text": "Kurze Neuigkeiten, kommende Lehrgaenge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.",
-      "_source": "Kurze Neuigkeiten, kommende Lehrgaenge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht."
-    },
-    "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
-      "text": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
-      "_source": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
-    },
-    "Abgerundet wird das Training durch Buki Waza, also das üben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar.": {
-      "text": "Abgerundet wird das Training durch Buki Waza, also das üben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar.",
-      "_source": "Abgerundet wird das Training durch Buki Waza, also das üben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar."
-    },
-    "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt für viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren.": {
-      "text": "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt für viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren.",
-      "_source": "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt für viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren."
-    },
-    "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain.": {
-      "text": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain.",
-      "_source": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain."
-    },
-    "Bilder, Rückblicke und Impressionen aus dem Dojo.": {
-      "text": "Bilder, Rückblicke und Impressionen aus dem Dojo.",
-      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
-    },
-    "Der Verein wurde am 10. Februar 2026 gegründet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.": {
-      "text": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.",
-      "_source": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur."
-    },
-    "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, praeziser Trainingskultur.": {
-      "text": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, praeziser Trainingskultur.",
-      "_source": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, praeziser Trainingskultur."
-    },
-    "Deutsche Ausschreibung für die intensive Trainingswoche in Birach.": {
-      "text": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach.",
-      "_source": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach."
-    },
-    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geoeffnet werden.": {
-      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geoeffnet werden.",
-      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geoeffnet werden."
-    },
-    "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen.": {
-      "text": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen.",
-      "_source": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen."
-    },
-    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geoeffnet werden.": {
-      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden.",
-      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden."
-    },
-    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen.": {
-      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen.",
-      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen."
-    },
-    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.": {
-      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.",
-      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen."
-    },
-    "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen RÜckblicken und Kontext zu den jeweiligen Veranstaltungen.": {
-      "text": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen.",
-      "_source": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen."
-    },
-    "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt.": {
-      "text": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt.",
-      "_source": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt."
-    },
-    "Whatsapp": {
-      "text": "Whatsapp",
-      "_source": "Whatsapp"
-    },
-    "WhatsApp": {
-      "text": "WhatsApp",
-      "_source": "WhatsApp"
-    },
-    "WhatsApp anrufen": {
-      "text": "WhatsApp anrufen",
-      "_source": "WhatsApp anrufen"
-    },
-    "WhatsApp schreiben": {
-      "text": "WhatsApp schreiben",
-      "_source": "WhatsApp schreiben"
-    },
-    "WA": {
-      "text": "WA",
-      "_source": "WA"
-    },
-    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden.": {
-      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden.",
-      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden."
     }
   },
   "attr": {
