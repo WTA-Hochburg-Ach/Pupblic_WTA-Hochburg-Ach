@@ -14,23 +14,6 @@ order: 1
       <a href="kontakt" class="button button-secondary">Kontakt</a>
     </div>
   </div>
-
-  <div class="hero-decoration">
-    <div class="hero-quote">
-      <div class="hero-quote-line">
-        <span class="hero-quote-jp" aria-hidden="true">静</span>
-        <p class="hero-quote-text">Ruhe</p>
-      </div>
-      <div class="hero-quote-line">
-        <span class="hero-quote-jp" aria-hidden="true">動</span>
-        <p class="hero-quote-text">Bewegung</p>
-      </div>
-      <div class="hero-quote-line">
-        <span class="hero-quote-jp" aria-hidden="true">在</span>
-        <p class="hero-quote-text">Praesenz</p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class="content-block-spacious">

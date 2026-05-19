@@ -49,25 +49,6 @@ const recentNews = newestEntries.filter((item) => {
     )}
   </section>
 
-  {featuredEvents.length > 0 && (
-    <section class="content-block-spacious">
-      <h2>Kommende Termine</h2>
-      <div class="feature-grid featured-event-grid">
-        {featuredEvents.map((item) => (
-          <article class:list={['feature-card', 'featured-event-card', `tone-${item.data.color}`]}>
-            <span class="event-date" data-date-start={item.data.date.toISOString()} data-date-end={item.data.endDate?.toISOString() ?? ''}>
-              {formatDateRange(item.data.date, item.data.endDate)}
-            </span>
-            <h3>{item.data.title}</h3>
-            {item.data.location && <p class="event-location">{item.data.location}</p>}
-            <p>{item.data.preview}</p>
-            <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiter lesen</a>
-          </article>
-        ))}
-      </div>
-    </section>
-  )}
-
   <section class="content-block-spacious">
     <h2>Chronik</h2>
     <div class="chronicle-list">

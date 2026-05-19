@@ -237,55 +237,6 @@ const calendarEvents = events.map((entry) => {
     </div>
   </section>
 
-  <section class="content-block-spacious">
-    <h2>Timeline</h2>
-    <div class="horizontal-timeline news-rail">
-      {events.map((entry) => {
-        const slug = getNewsSlug(entry);
-
-        return (
-        <article class:list={['timeline-event', 'news-card', `tone-${entry.data.color}`]}>
-          <div class="news-card-tags">
-            <span class="event-date" data-date-start={entry.data.date.toISOString()} data-date-end={entry.data.endDate?.toISOString() ?? ''}>
-              {formatDateRange(entry.data.date, entry.data.endDate)}
-            </span>
-            <span class="news-mode-tag">{entry.data.display === 'page' ? 'Seite' : 'Popup'}</span>
-          </div>
-          <h3>{entry.data.title}</h3>
-          {entry.data.location && <p class="event-location">{entry.data.location}</p>}
-          <p>{entry.data.preview}</p>
-          <div class="timeline-actions">
-            {entry.data.display === 'page' ? (
-              <a class="read-more-btn" href={withBasePath(baseUrl, `news/${slug}`)}>Seite öffnen</a>
-            ) : (
-              <button
-                class="read-more-btn"
-                type="button"
-                data-modal-trigger
-                data-slug={slug}
-                data-title={entry.data.title}
-                data-date={entry.data.date.toISOString()}
-                data-end-date={entry.data.endDate?.toISOString() ?? ''}
-              >
-                Popup öffnen
-              </button>
-            )}
-
-            {entry.data.pdfs?.de && (
-              <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} target="_blank" rel="noopener">PDF DE</a>
-            )}
-            {entry.data.pdfs?.en && (
-              <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} target="_blank" rel="noopener">PDF EN</a>
-            )}
-            {(entry.data.pdfs?.de || entry.data.pdfs?.en) && (
-              <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs?.de || entry.data.pdfs?.en || '')} target="_blank" rel="noopener">Vorschau</a>
-            )}
-          </div>
-        </article>
-        );
-      })}
-    </div>
-  </section>
 
   <div id="news-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
     <div class="modal-backdrop" data-modal-close></div>

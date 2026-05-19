@@ -41,9 +41,9 @@ const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encode
         </article>
 
         <article class="contact-card">
-          <div class="contact-icon">Ort</div>
-          <h3>Trainingsort</h3>
-          <p>{venue.name}<br />{venue.street}<br />{venue.postalCode} {venue.city}</p>
+          <div class="contact-icon">WA</div>
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/${contactData.phone.compact.replace(/\D/g, '')}" target="_blank" rel="noopener noreferrer" class="contact-link">WhatsApp schreiben</a></p>
         </article>
       </div>
     </section>
@@ -97,12 +97,6 @@ const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encode
           </iframe>
         </div>
       </div>
-    </section>
-
-    <section class="content-block-spacious closing-panel">
-      <h2>Schreib uns</h2>
-      <p>Wenn du bei einem Training vorbeischauen oder Fragen zu Lehrgaengen hast, melde dich einfach direkt per E-Mail.</p>
-      <p><a href={`mailto:${contactData.email}`} class="button button-primary">{contactData.email}</a></p>
     </section>
   </div>
 </BaseLayout>
