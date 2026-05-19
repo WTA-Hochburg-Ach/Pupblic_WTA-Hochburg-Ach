@@ -92,21 +92,10 @@ await translateQueued();
 await refreshWatchedFiles();
 const refreshTimer = setInterval(refreshWatchedFiles, 3000);
 
-const astroExecutable = process.platform === 'win32'
-  ? path.join(rootDir, 'node_modules', '.bin', 'astro.cmd')
-  : path.join(rootDir, 'node_modules', '.bin', 'astro');
-
-const astroSpawnCommand = process.platform === 'win32'
-  ? process.env.comspec || 'cmd.exe'
-  : astroExecutable;
-const astroSpawnArgs = process.platform === 'win32'
-  ? ['/c', astroExecutable, 'dev']
-  : ['dev'];
-
-const astro = spawn(astroSpawnCommand, astroSpawnArgs, {
+const astro = spawn('astro', ['dev'], {
   cwd: rootDir,
   stdio: 'inherit',
-  shell: false,
+  shell: process.platform === 'win32',
 });
 
 function shutdown(signal) {
