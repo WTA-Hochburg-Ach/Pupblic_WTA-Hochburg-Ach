@@ -25,14 +25,14 @@
       "_source": "Dunkel"
     },
     "menu_open": {
-      "text": "Menü oeffnen",
-      "_source": "Menü oeffnen"
+      "text": "Menue oeffnen",
+      "_source": "Menue oeffnen"
     }
   },
   "nav": {
     "about": {
-      "text": "Über uns",
-      "_source": "Über uns"
+      "text": "Ueber uns",
+      "_source": "Ueber uns"
     },
     "about_summary": {
       "text": "Club, venue, trial training and trainer.",
@@ -71,8 +71,8 @@
       "_source": "Galerie"
     },
     "gallery_summary": {
-      "text": "Bilder, Rückblicke und Impressionen aus dem Dojo.",
-      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
+      "text": "Bilder, Rueckblicke und Impressionen aus dem Dojo.",
+      "_source": "Bilder, Rueckblicke und Impressionen aus dem Dojo."
     },
     "links": {
       "text": "Links",
@@ -105,8 +105,8 @@
       "_source": "Aktuelles & Termine"
     },
     "event_overview": {
-      "text": "Terminübersicht",
-      "_source": "Terminübersicht"
+      "text": "Terminuebersicht",
+      "_source": "Terminuebersicht"
     },
     "legal_and_privacy": {
       "text": "Legal notice & privacy",
@@ -415,8 +415,8 @@
       "_source": "Aktuelles & Termine"
     },
     "Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
-      "text": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
-      "_source": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
+      "text": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
+      "_source": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
     },
     "Alle Rechte vorbehalten.": {
       "text": "Alle Rechte vorbehalten.",
@@ -471,8 +471,8 @@
       "_source": "Athaler Strasse 1, 5122 Duttendorf"
     },
     "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain.": {
-      "text": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain.",
-      "_source": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain."
+      "text": "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain.",
+      "_source": "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain."
     },
     "Balance und Stabilitaet": {
       "text": "Balance and stability",
@@ -655,8 +655,8 @@
       "_source": "Deutsch"
     },
     "Deutsche Ausschreibung fuer die intensive Trainingswoche in Birach.": {
-      "text": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach.",
-      "_source": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach."
+      "text": "Deutsche Ausschreibung fuer die intensive Trainingswoche in Birach.",
+      "_source": "Deutsche Ausschreibung fuer die intensive Trainingswoche in Birach."
     },
     "Deutschland": {
       "text": "Germany",
@@ -2123,8 +2123,8 @@
       "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen."
     },
     "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.": {
-      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt öffnen.",
-      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt öffnen."
+      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.",
+      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen."
     },
     "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen RÜckblicken und Kontext zu den jeweiligen Veranstaltungen.": {
       "text": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen.",
@@ -2153,6 +2153,10 @@
     "WA": {
       "text": "WA",
       "_source": "WA"
+    },
+    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden.": {
+      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden.",
+      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden."
     }
   },
   "attr": {
