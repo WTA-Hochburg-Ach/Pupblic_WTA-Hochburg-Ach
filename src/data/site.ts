@@ -30,25 +30,25 @@ export const navItems = [
     href: siteLinks.about,
     labelKey: 'nav.about',
     summaryKey: 'nav.about_summary',
-    summary: 'Verein, Trainingsort, Probetraining und Trainer.',
+    summary: 'Trainer, Ettikette.',
   },
   {
     href: siteLinks.training,
     labelKey: 'nav.training',
     summaryKey: 'nav.training_summary',
-    summary: 'Aikido, Waffentraining und Trainingsaufbau.',
+    summary: 'Was erwartet dich? Probetraining, Trainingszeiten, Trainingsort ',
   },
   {
     href: siteLinks.events,
     labelKey: 'nav.events',
     summaryKey: 'nav.events_summary',
-    summary: 'Kalender, Timeline, Ausschreibungen und PDF-Downloads.',
+    summary: 'Als Nächstes und Kalender.',
   },
   {
     href: siteLinks.news,
     labelKey: 'nav.news',
     summaryKey: 'nav.news_summary',
-    summary: 'Kurze Neuigkeiten und die chronologische Historie.',
+    summary: 'Kurze Neuigkeiten und Chronik.',
   },
   {
     href: siteLinks.gallery,
@@ -60,7 +60,7 @@ export const navItems = [
     href: siteLinks.links,
     labelKey: 'nav.links',
     summaryKey: 'nav.links_summary',
-    summary: 'Partnerdojos, Netzwerk und hilfreiche Empfehlungen.',
+    summary: '',
   },
   {
     href: siteLinks.contact,

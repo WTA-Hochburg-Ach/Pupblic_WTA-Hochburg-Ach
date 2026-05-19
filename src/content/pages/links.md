@@ -33,4 +33,6 @@ order: 8
       <p><a href="https://www.aikido-ampertal.de/" target="_blank" rel="noopener noreferrer">https://www.aikido-ampertal.de/</a></p>
     </article>
   </div>
+
+  href: siteLinks.downloads,
 </section>

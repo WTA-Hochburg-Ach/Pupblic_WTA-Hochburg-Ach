@@ -14,8 +14,6 @@ order: 1
       <a href="kontakt" class="button button-secondary">Kontakt</a>
     </div>
   </div>
-  <div class="hero-image">
-    <img src="images/hero/hero-image-1.jpg" alt="Aikido Training im Dojo" loading="lazy" />
 </section>
 
 <section class="content-block-spacious">
