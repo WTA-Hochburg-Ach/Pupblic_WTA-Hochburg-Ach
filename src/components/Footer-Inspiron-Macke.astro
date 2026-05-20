@@ -15,12 +15,12 @@ const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
 const currentYear = new Date().getFullYear();
 
 const footerLabelFallbacks = {
-  'nav.about': 'Ueber uns',
+  'nav.about': 'über uns',
   'nav.training': 'Training',
   'nav.schedule': 'Trainingsplan',
   'nav.contact': 'Kontakt',
   'footer.news_and_events': 'Aktuelles & Termine',
-  'footer.event_overview': 'Terminuebersicht',
+  'footer.event_overview': 'Terminübersicht',
   'nav.gallery': 'Galerie',
   'footer.legal_and_privacy': 'Impressum & Datenschutz',
 };
@@ -69,7 +69,7 @@ const footerTitleFallbacks = {
               target={item.external || item.href.startsWith('http') ? '_blank' : undefined}
               rel={item.external || item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
             >
-              <SocialIcon icon={item.icon as 'lucide:mail' | 'lucide:phone' | 'lucide:message-circle' | 'lucide:instagram' | 'lucide:facebook' | 'lucide:map-pin'} />
+              <SocialIcon icon={item.icon as 'lucide:mail' | 'lucide:phone' | 'lucide:instagram' | 'lucide:facebook' | 'lucide:map-pin'} />
             </a>
           ))}
         </div>

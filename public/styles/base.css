@@ -340,7 +340,7 @@ img {
   max-width: 48rem;
   margin: 0 auto 1.8rem;
   text-align: center;
-  font-size: 1.26rem;
+  font-size: 2.33rem;
   color: var(--color-text-secondary);
 }
 
@@ -734,8 +734,8 @@ img {
   .content p,
   .content li,
   .content blockquote {
-    font-size: 1rem;
-    line-height: 1.72;
+    font-size: 1.56rem;
+    line-height: 2.12;
   }
 
   .hero {

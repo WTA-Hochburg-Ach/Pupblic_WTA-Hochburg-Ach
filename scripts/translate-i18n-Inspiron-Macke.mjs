@@ -69,9 +69,6 @@ function shouldCollectText(value) {
   if (/^(https?:|mailto:|tel:|\/|#|\.|_|\{|\[|\(|\)|'|"|,|import |export )/.test(text)) return false;
   if (/^(class|id|href|src|rel|type|data-|aria-|const|let|var)\b/.test(text)) return false;
   if (/^(common|nav|footer|meta|events|text|attr)\./.test(text)) return false;
-  if (/\b(entry|item|linkedNews|baseUrl)\b/.test(text)) return false;
-  if (/[?.]{2}|=>|\|\||&&|\?\?/.test(text)) return false;
-  if (/\bwith[A-Z]\w+\(/.test(text)) return false;
   if (/\.(astro|css|js|ts|svg|png|jpe?g|webp|pdf|md|json|mjs)\b/i.test(text)) return false;
   if (/[{}<>=;`]/.test(text)) return false;
   if (/['"]\s*:/.test(text) || /:\s*['"]/.test(text)) return false;

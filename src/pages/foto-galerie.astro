@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { galleryEntries, sortGalleryNewestFirst } from '../data/gallery';
+import { formatDate, getNewsSlug } from '../lib/news';
+import { getBaseUrl, withBasePath, withOptionalBasePath } from '../lib/site';
+
+const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
+const newsEntries = await getCollection('news');
+const newsBySlug = new Map(newsEntries.map((entry) => [getNewsSlug(entry), entry]));
+const entries = sortGalleryNewestFirst(galleryEntries).map((entry) => {
+  const linkedNews = entry.newsSlug ? newsBySlug.get(entry.newsSlug) : undefined;
+  const date = linkedNews?.data.date ?? new Date(entry.date);
+
+  return {
+    ...entry,
+    date,
+    title: linkedNews?.data.title ?? entry.title,
+    description: entry.description || linkedNews?.data.preview || '',
+    eventHref: entry.newsSlug ? withBasePath(baseUrl, `news/${entry.newsSlug}`) : '',
+    galleryHref: withOptionalBasePath(baseUrl, entry.galleryHref ?? ''),
+    coverImage: withOptionalBasePath(baseUrl, entry.coverImage ?? ''),
+  };
+});
+---
+
+<BaseLayout title="Foto-Galerie">
+  <section class="content-block-spacious gallery-intro">
+    <h1>Foto-Galerie</h1>
+    <p class="lead-text">Rueckblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.</p>
+  </section>
+
+  <section class="content-block-spacious gallery-list-section">
+    <h2>Galerien & Ausschreibungen</h2>
+
+    <div class="gallery-list">
+      {entries.map((entry) => (
+        <article class:list={['gallery-row', !entry.coverImage && 'gallery-row-no-cover']}>
+          {entry.coverImage && (
+            <a class="gallery-cover" href={entry.galleryHref || entry.eventHref} aria-label={`${entry.title} oeffnen`}>
+              <img src={entry.coverImage} alt="" loading="lazy" />
+            </a>
+          )}
+
+          <div class="gallery-row-copy">
+            <span class="event-date">{formatDate(entry.date)}</span>
+            <h3>{entry.title}</h3>
+            {entry.description && <p>{entry.description}</p>}
+          </div>
+
+          <div class="gallery-row-actions">
+            {entry.eventHref && (
+              <a class="read-more-btn" href={entry.eventHref}>Ausschreibung</a>
+            )}
+
+            {entry.galleryHref ? (
+              <a class="mini-action" href={entry.galleryHref}>Fotogalerie</a>
+            ) : (
+              <span class="gallery-pending">Galerie folgt</span>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.gallery-intro {
+  padding-bottom: 0;
+}
+
+.gallery-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.gallery-row {
+  display: grid;
+  grid-template-columns: minmax(0, 12rem) minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.25rem;
+  border-radius: 18px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-row-no-cover {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.gallery-cover {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 0;
+  background: var(--color-bg-secondary);
+}
+
+.gallery-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-row-copy h3 {
+  margin: 0.65rem 0 0.45rem;
+}
+
+.gallery-row-copy p {
+  margin: 0;
+}
+
+.gallery-row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.gallery-row-actions .read-more-btn {
+  margin-top: 0;
+}
+
+.gallery-pending {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(86, 112, 79, 0.08);
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .gallery-row {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-cover {
+    width: min(100%, 24rem);
+  }
+
+  .gallery-row-actions {
+    justify-content: stretch;
+  }
+
+  .gallery-row-actions > * {
+    width: 100%;
+  }
+}
+</style>

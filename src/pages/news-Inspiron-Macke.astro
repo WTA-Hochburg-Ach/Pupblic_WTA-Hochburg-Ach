@@ -6,6 +6,7 @@ import { getBaseUrl, withBasePath } from '../lib/site';
 
 const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
 const entries = await getCollection('news');
+const allEntries = sortByDateAscending(entries);
 const newestEntries = sortByDateDescending(entries);
 const today = new Date();
 today.setHours(23, 59, 59, 999);
@@ -19,17 +20,13 @@ const recentNews = newestEntries.filter((item) => {
   const itemDate = item.data.date.getTime();
   return isNews(item) && itemDate >= sevenDaysAgo.getTime() && itemDate <= today.getTime();
 });
-const pastEvents = sortByDateDescending(entries.filter((item) => {
-  const eventEnd = item.data.endDate ?? item.data.date;
-  return isEvent(item) && eventEnd.getTime() < startOfToday.getTime();
-}));
 ---
 
 <BaseLayout title="Aktuelles & Termine">
   <section class="content-block-spacious news-page-intro">
     <h1>Aktuelles & Termine</h1>
-    <p class="lead-text">Kurze Neuigkeiten, kommende Lehrgaenge und die gesamte Chronik findest du hier in einer gemeinsamen Uebersicht.</p>
-    <p>Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.</p>
+    <p class="lead-text">Kurze Neuigkeiten, kommende Lehrgaenge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.</p>
+    <p>Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.</p>
   </section>
 
   <section class="content-block-spacious">
@@ -52,55 +49,34 @@ const pastEvents = sortByDateDescending(entries.filter((item) => {
     )}
   </section>
 
-  {featuredEvents.length > 0 && (
-    <section class="content-block-spacious">
-      <h2>Kommende Termine</h2>
-      <div class="feature-grid featured-event-grid">
-        {featuredEvents.map((item) => (
-          <article class:list={['feature-card', 'featured-event-card', `tone-${item.data.color}`]}>
-            <span class="event-date" data-date-start={item.data.date.toISOString()} data-date-end={item.data.endDate?.toISOString() ?? ''}>
-              {formatDateRange(item.data.date, item.data.endDate)}
-            </span>
-            <h3>{item.data.title}</h3>
-            {item.data.location && <p class="event-location">{item.data.location}</p>}
-            <p>{item.data.preview}</p>
-            <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiter lesen</a>
-          </article>
-        ))}
-      </div>
-    </section>
-  )}
-
   <section class="content-block-spacious">
     <h2>Chronik</h2>
-    {pastEvents.length > 0 ? (
-      <div class="chronicle-list">
-        {pastEvents.map((item) => (
-          <article class:list={['chronicle-card', `tone-${item.data.color}`]}>
-            <div>
-              <div class="chronicle-meta">
-                <span class="event-date" data-date-start={item.data.date.toISOString()} data-date-end={item.data.endDate?.toISOString() ?? ''}>
-                  {formatDateRange(item.data.date, item.data.endDate)}
-                </span>
-                <span class="entry-type entry-type-event">Termin</span>
-              </div>
-
-              <div class="chronicle-copy">
-                <h3>{item.data.title}</h3>
-                {item.data.location && <p class="event-location">{item.data.location}</p>}
-                <p>{item.data.preview}</p>
-              </div>
+    <div class="chronicle-list">
+      {allEntries.map((item) => (
+        <article class:list={['chronicle-card', `tone-${item.data.color}`]}>
+          <div>
+            <div class="chronicle-meta">
+              <span class="event-date" data-date-start={item.data.date.toISOString()} data-date-end={item.data.endDate?.toISOString() ?? ''}>
+                {formatDateRange(item.data.date, item.data.endDate)}
+              </span>
+              <span class:list={['entry-type', item.data.type === 'event' ? 'entry-type-event' : 'entry-type-news']}>
+                {item.data.type === 'event' ? 'Termin' : 'Aktuelles'}
+              </span>
             </div>
 
-            <div class="chronicle-actions">
-              <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiter lesen</a>
+            <div class="chronicle-copy">
+              <h3>{item.data.title}</h3>
+              {item.data.location && <p class="event-location">{item.data.location}</p>}
+              <p>{item.data.preview}</p>
             </div>
-          </article>
-        ))}
-      </div>
-    ) : (
-      <p class="archive-note">Es gibt noch keine vergangenen Termine in der Chronik.</p>
-    )}
+          </div>
+
+          <div class="chronicle-actions">
+            <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiter lesen</a>
+          </div>
+        </article>
+      ))}
+    </div>
   </section>
 </BaseLayout>
 

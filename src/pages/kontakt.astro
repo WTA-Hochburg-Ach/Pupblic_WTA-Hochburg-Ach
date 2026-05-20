@@ -20,7 +20,7 @@ const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encode
       <div class="quick-contact-actions">
         <a href={`mailto:${contactData.email}`} class="button button-primary">E-Mail schreiben</a>
         <a href={contactData.phone.href} class="button button-outline">Anrufen</a>
-        <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" class="button button-outline">Route oeffnen</a>
+        <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" class="button button-outline">Route öffnen</a>
       </div>
     </section>
 
@@ -41,9 +41,9 @@ const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encode
         </article>
 
         <article class="contact-card">
-          <div class="contact-icon">Ort</div>
-          <h3>Trainingsort</h3>
-          <p>{venue.name}<br />{venue.street}<br />{venue.postalCode} {venue.city}</p>
+          <div class="contact-icon">WA</div>
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/${contactData.phone.compact.replace(/\D/g, '')}" target="_blank" rel="noopener noreferrer" class="contact-link">WhatsApp schreiben</a></p>
         </article>
       </div>
     </section>
@@ -81,8 +81,8 @@ const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encode
       <div class="map-panel">
         <div class="map-copy">
           <h3>{venue.name}</h3>
-          <p>Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen.</p>
-          <p><a href={googleMapsLink} target="_blank" rel="noopener noreferrer" class="button button-primary">In Google Maps oeffnen</a></p>
+          <p>Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt öffnen.</p>
+          <p><a href={googleMapsLink} target="_blank" rel="noopener noreferrer" class="button button-primary">In Google Maps öffnen</a></p>
         </div>
 
         <div class="map-frame">
@@ -97,12 +97,6 @@ const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encode
           </iframe>
         </div>
       </div>
-    </section>
-
-    <section class="content-block-spacious closing-panel">
-      <h2>Schreib uns</h2>
-      <p>Wenn du bei einem Training vorbeischauen oder Fragen zu Lehrgaengen hast, melde dich einfach direkt per E-Mail.</p>
-      <p><a href={`mailto:${contactData.email}`} class="button button-primary">{contactData.email}</a></p>
     </section>
   </div>
 </BaseLayout>

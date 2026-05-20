@@ -6,7 +6,7 @@ export async function getStaticPaths() {
   const pages = await getCollection('pages');
 
   return pages
-    .filter((page) => page.id && page.id !== 'index')
+    .filter((page) => page.id && !['index', 'foto-galerie', 'impressum'].includes(page.id))
     .map((page) => ({
       params: { slug: page.id },
       props: {},

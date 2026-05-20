@@ -10,13 +10,6 @@ export const siteMeta = {
 export const siteLegal = {
   copyrightOwner: siteMeta.legalName,
   copyrightNotice: 'Alle Rechte vorbehalten.',
-  registrationNumber: '1580789299',
-  liabilityNotice:
-    'Trotz sorgfaeltiger inhaltlicher Kontrolle uebernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.',
-  privacyNotice:
-    'Diese Webseite dient der Information ueber den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.',
-  copyrightText:
-    'Die Inhalte dieser Webseite, einschliesslich Texte, Gestaltung und bereitgestellte Dokumente, unterliegen dem Urheberrecht, soweit nicht anders gekennzeichnet.',
 };
 
 export const siteLinks = {
@@ -32,48 +25,30 @@ export const siteLinks = {
   legal: 'impressum',
 };
 
-export const fontRecommendations = [
-  {
-    name: 'Fraunces',
-    role: 'Hauptschrift fuer Ueberschriften',
-    href: 'https://fonts.google.com/specimen/Fraunces',
-  },
-  {
-    name: 'Cormorant Garamond',
-    role: 'Klassische Alternative',
-    href: 'https://fonts.google.com/specimen/Cormorant+Garamond',
-  },
-  {
-    name: 'Libre Baskerville',
-    role: 'Ruhige, gut lesbare Alternative',
-    href: 'https://fonts.google.com/specimen/Libre+Baskerville',
-  },
-];
-
 export const navItems = [
   {
     href: siteLinks.about,
     labelKey: 'nav.about',
     summaryKey: 'nav.about_summary',
-    summary: 'Verein, Trainingsort, Probetraining und Trainer.',
+    summary: 'Trainer, Ettikette.',
   },
   {
     href: siteLinks.training,
     labelKey: 'nav.training',
     summaryKey: 'nav.training_summary',
-    summary: 'Aikido, Waffentraining und Trainingsaufbau.',
+    summary: 'Was erwartet dich? Probetraining, Trainingszeiten, Trainingsort ',
   },
   {
     href: siteLinks.events,
     labelKey: 'nav.events',
     summaryKey: 'nav.events_summary',
-    summary: 'Kalender, Timeline, Ausschreibungen und PDF-Downloads.',
+    summary: 'Als Nächstes und Kalender.',
   },
   {
     href: siteLinks.news,
     labelKey: 'nav.news',
     summaryKey: 'nav.news_summary',
-    summary: 'Kurze Neuigkeiten und die chronologische Historie.',
+    summary: 'Kurze Neuigkeiten und Chronik.',
   },
   {
     href: siteLinks.gallery,
@@ -85,7 +60,7 @@ export const navItems = [
     href: siteLinks.links,
     labelKey: 'nav.links',
     summaryKey: 'nav.links_summary',
-    summary: 'Partnerdojos, Netzwerk und hilfreiche Empfehlungen.',
+    summary: '',
   },
   {
     href: siteLinks.contact,
@@ -94,20 +69,6 @@ export const navItems = [
     summary: 'Ansprechpartner, Adresse, Telefon und Anfahrt.',
   },
 ];
-
-export const navSummaryFallbacks = Object.fromEntries(
-  navItems.map((item) => [item.href, item.summary]),
-) as Record<string, string>;
-
-export function summarizeHeadings(markdown = '', fallback = '') {
-  const markdownHeadings = Array.from(markdown.matchAll(/^##\s+(.+)$/gm), (match) => match[1]);
-  const htmlHeadings = Array.from(markdown.matchAll(/<h2[^>]*>(.*?)<\/h2>/gis), (match) => match[1]);
-  const headings = [...markdownHeadings, ...htmlHeadings]
-    .map((heading) => heading.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim())
-    .filter(Boolean);
-
-  return headings.length > 0 ? headings.join(', ') : fallback;
-}
 
 export const venue = {
   name: 'Mehrzweckhalle der neuen Mittelschule',
@@ -124,11 +85,6 @@ export const contactData = {
     href: 'tel:+436504600020',
     compact: '+43 650 4600020',
     split: ['+43 650', '4600020'],
-  },
-  whatsapp: {
-    href: 'https://wa.me/436504600020',
-    label: 'WhatsApp Christian',
-    phoneLabel: '+43 650 4600020',
   },
   socialinstagram: {
     href: 'https://www.instagram.com/aikido_hochburg_ach?igsh=NXQ5dnpqMGphZndt',
@@ -149,11 +105,11 @@ export const boardMembers = [
     country: 'Oesterreich',
     phoneLabel: '+43 650 / 4600020',
     phoneHref: 'tel:+436504600020',
-    splitPhone: true,
+    splitPhone: false,
     email: contactData.email,
   },
   {
-    role: '2. Vorstand',
+    role: 'Obmann Stellvertreterin',
     name: 'Karin Sturm',
     street: 'Sternstrasse 11',
     cityLine: '84577 Tuessling',
@@ -164,8 +120,8 @@ export const boardMembers = [
     email: contactData.email,
   },
   {
-    role: 'Kassier',
-    name: 'Sandra Solaja-Pelzer',
+    role: 'Kassierin',
+    name: 'Sandra Šolaja-Pelzer',
     street: 'Franziskanerstrasse 2',
     cityLine: '84503 Altoetting',
     country: 'Deutschland',
@@ -257,12 +213,6 @@ export const footerSocialLinks = [
     label: 'Telefon',
     href: contactData.phone.href,
     icon: 'lucide:phone',
-  },
-  {
-    label: contactData.whatsapp.label,
-    href: contactData.whatsapp.href,
-    icon: 'lucide:message-circle',
-    external: true,
   },
   {
     label: 'Instagram',
