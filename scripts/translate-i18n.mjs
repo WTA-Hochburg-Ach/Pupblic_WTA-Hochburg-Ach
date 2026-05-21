@@ -20,10 +20,13 @@ const targetLanguages = Object.fromEntries(
 
 let warnedMissingApiKey = false;
 
-function readEnvFile() {
-  return fs
-    .readFile(path.join(rootDir, '.env'), 'utf8')
-    .then((content) => {
+async function readEnvFile() {
+  const envFiles = ['.env', 'deepl.env'];
+
+  await Promise.all(
+    envFiles.map((fileName) => fs
+      .readFile(path.join(rootDir, fileName), 'utf8')
+      .then((content) => {
       content.split(/\r?\n/).forEach((line) => {
         const trimmed = line.trim();
         if (!trimmed || trimmed.startsWith('#') || !trimmed.includes('=')) {
@@ -38,8 +41,9 @@ function readEnvFile() {
           process.env[key] = value;
         }
       });
-    })
-    .catch(() => {});
+      })
+      .catch(() => {})),
+  );
 }
 
 async function readJson(filePath, fallback = {}) {
@@ -81,6 +85,8 @@ function shouldCollectText(value) {
   if (/\.(astro|css|js|ts|svg|png|jpe?g|webp|pdf|md|json|mjs)\b/i.test(text)) return false;
   if (/[{}<>=;`]/.test(text)) return false;
   if (/['"]\s*:/.test(text) || /:\s*['"]/.test(text)) return false;
+  if (/\b[a-z0-9]+-[a-z0-9-]+\b/i.test(text) && !/\s/.test(text)) return false;
+  if (/^[a-z0-9_-]+(?:\s+[a-z0-9_-]+)+$/i.test(text)) return false;
   if (/^[\w-]+:[\w-]+$/.test(text)) return false;
   if (/^[a-z0-9_-]+$/.test(text)) return false;
   if (/^[A-Za-z0-9_-]{18,}$/.test(text)) return false;
@@ -131,26 +137,6 @@ function collectYamlStrings(content, set) {
   });
 }
 
-function collectQuotedStrings(content, set) {
-  const stripped = content
-    .replace(/import[\s\S]*?;$/gm, '')
-    .replace(/from\s+['"][^'"]+['"]/g, '')
-    .replace(/class:list=\{[\s\S]*?\}/g, '');
-
-  const pattern = /(['"`])((?:\\.|(?!\1).){2,500})\1/g;
-  let match;
-
-  while ((match = pattern.exec(stripped))) {
-    const value = match[2]
-      .replace(/\\n/g, ' ')
-      .replace(/\\'/g, "'")
-      .replace(/\\"/g, '"')
-      .replace(/`/g, '');
-
-    addCandidate(set, value);
-  }
-}
-
 function collectHtmlText(content, set) {
   const stripped = content
     .replace(/^---[\s\S]*?---/, '')
@@ -195,7 +181,15 @@ async function syncGermanSourceTexts(de) {
   de.attr = isPlainObject(de.attr) ? de.attr : {};
 
   const texts = await collectSourceTexts();
+  let removed = 0;
   let added = 0;
+
+  for (const key of Object.keys(de.text)) {
+    if (!shouldCollectText(key)) {
+      delete de.text[key];
+      removed += 1;
+    }
+  }
 
   for (const text of texts) {
     if (!(text in de.text)) {
@@ -210,7 +204,11 @@ async function syncGermanSourceTexts(de) {
     console.log(`[i18n] ${added} neue deutsche Texte in src/locales/de.json aufgenommen.`);
   }
 
-  return added;
+  if (removed > 0) {
+    console.log(`[i18n] ${removed} technische Texte aus src/locales/de.json entfernt.`);
+  }
+
+  return added + removed;
 }
 
 function getTargetRecord(value) {
@@ -225,7 +223,20 @@ function getTargetRecord(value) {
   return null;
 }
 
-function collectMissingTranslations(source, target, trail = [], missing = []) {
+function shouldRefreshUntranslatedRecord(source, record) {
+  if (!record || record.text !== source) return false;
+  if (record._target) return false;
+  if (!/[A-Za-zÄÖÜäöüß]/.test(source)) return false;
+
+  const shortTechnicalOrBrand = /^(Aikido|WTA|PDF|DE|EN|FR|JA|\d|[A-Z0-9\s/+-]+$)/;
+  if (shortTechnicalOrBrand.test(source) && source.split(/\s+/).length <= 2) {
+    return false;
+  }
+
+  return true;
+}
+
+function collectMissingTranslations(source, target, trail = [], missing = [], lang = 'de') {
   for (const [key, value] of Object.entries(source)) {
     if (key.startsWith('_')) continue;
 
@@ -234,7 +245,7 @@ function collectMissingTranslations(source, target, trail = [], missing = []) {
     if (typeof value === 'string') {
       const record = getTargetRecord(target?.[key]);
 
-      if (!record || record._source !== value || !record.text) {
+      if (!record || record._source !== value || !record.text || (lang !== 'de' && shouldRefreshUntranslatedRecord(value, record))) {
         missing.push({ path: nextTrail, source: value });
       }
 
@@ -242,7 +253,7 @@ function collectMissingTranslations(source, target, trail = [], missing = []) {
     }
 
     if (isPlainObject(value)) {
-      collectMissingTranslations(value, isPlainObject(target?.[key]) ? target[key] : {}, nextTrail, missing);
+      collectMissingTranslations(value, isPlainObject(target?.[key]) ? target[key] : {}, nextTrail, missing, lang);
     }
   }
 
@@ -261,6 +272,25 @@ function setNestedRecord(target, trail, record) {
   });
 
   cursor[trail.at(-1)] = record;
+}
+
+function pruneTechnicalTextEntries(locale, lang) {
+  if (!isPlainObject(locale.text)) return 0;
+
+  let removed = 0;
+
+  for (const key of Object.keys(locale.text)) {
+    if (!shouldCollectText(key)) {
+      delete locale.text[key];
+      removed += 1;
+    }
+  }
+
+  if (removed > 0) {
+    console.log(`[i18n] ${lang}: ${removed} technische Texte entfernt.`);
+  }
+
+  return removed;
 }
 
 function deeplEndpoint() {
@@ -286,7 +316,6 @@ async function translateBatch(texts, targetLang) {
   }
 
   const body = new URLSearchParams();
-  body.set('auth_key', apiKey);
   body.set('source_lang', 'DE');
   body.set('target_lang', targetLang);
   body.set('preserve_formatting', '1');
@@ -295,6 +324,7 @@ async function translateBatch(texts, targetLang) {
   const response = await fetch(deeplEndpoint(), {
     method: 'POST',
     headers: {
+      authorization: `DeepL-Auth-Key ${apiKey}`,
       'content-type': 'application/x-www-form-urlencoded',
     },
     body,
@@ -310,11 +340,12 @@ async function translateBatch(texts, targetLang) {
 }
 
 async function translateMissingForLanguage(de, target, lang, targetLang) {
-  const missing = collectMissingTranslations(de, target);
+  const removed = pruneTechnicalTextEntries(target, lang);
+  const missing = collectMissingTranslations(de, target, [], [], lang);
 
   if (missing.length === 0) {
     console.log(`[i18n] ${lang}: alles aktuell.`);
-    return false;
+    return removed > 0;
   }
 
   console.log(`[i18n] ${lang}: ${missing.length} fehlende/geänderte Texte.`);
@@ -328,6 +359,7 @@ async function translateMissingForLanguage(de, target, lang, targetLang) {
       setNestedRecord(target, item.path, {
         text: translated[chunkIndex] ?? item.source,
         _source: item.source,
+        _target: targetLang,
       });
     });
   }
