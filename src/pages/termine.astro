@@ -458,11 +458,6 @@ const calendarEvents = events.map((entry) => {
       detailList.innerHTML = dayEvents.map((event) => {
         const pdfButton = event.pdfs?.de
           ? `<a href="${event.pdfs.de}" class="pdf-download-btn" target="_blank" rel="noopener">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <path d="M7 10l5 5 5-5" />
-                <path d="M12 15V3" />
-              </svg>
               ${escapeHtml(translate('events.pdf_de', 'PDF Deutsch'))}
             </a>`
           : '';
@@ -964,7 +959,6 @@ const calendarEvents = events.map((entry) => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.48rem;
   min-height: 2.9rem;
   padding: 0.6rem 1rem;
   border-radius: 999px;
@@ -976,12 +970,6 @@ const calendarEvents = events.map((entry) => {
   text-decoration: none;
   box-shadow: var(--shadow-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-.pdf-download-btn svg {
-  width: 1rem;
-  height: 1rem;
-  flex: 0 0 auto;
 }
 
 .pdf-download-btn:hover,
