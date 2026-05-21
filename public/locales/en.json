@@ -2209,6 +2209,18 @@
     "Sandra Solaja-Pelzer Franziskanerstrasse 2 84503 Altötting Deutschland": {
       "text": "Sandra Solaja-Pelzer Franziskanerstrasse 2 84503 Altötting Deutschland",
       "_source": "Sandra Solaja-Pelzer Franziskanerstrasse 2 84503 Altötting Deutschland"
+    },
+    "Under Cons": {
+      "text": "Under Cons",
+      "_source": "Under Cons"
+    },
+    "Under Construction": {
+      "text": "Under Construction",
+      "_source": "Under Construction"
+    },
+    "In Entwicklung": {
+      "text": "In Entwicklung",
+      "_source": "In Entwicklung"
     }
   },
   "attr": {
