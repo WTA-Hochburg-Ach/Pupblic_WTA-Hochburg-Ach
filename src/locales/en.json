@@ -71,8 +71,8 @@
       "_source": "Galerie"
     },
     "gallery_summary": {
-      "text": "Bilder, Rueckblicke und Impressionen aus dem Dojo.",
-      "_source": "Bilder, Rueckblicke und Impressionen aus dem Dojo."
+      "text": "Bilder, Rückblicke und Impressionen aus dem Dojo.",
+      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
     },
     "links": {
       "text": "Links",
@@ -168,7 +168,7 @@
     },
     "ueber-uns": {
       "text": "About us",
-      "_source": "Ueber uns"
+      "_source": "Über uns"
     },
     "training": {
       "text": "Training",
@@ -207,8 +207,8 @@
       "_source": "Foto-Galerie"
     },
     "über-uns": {
-      "text": "Ueber uns",
-      "_source": "Ueber uns"
+      "text": "Über uns",
+      "_source": "Über uns"
     }
   },
   "events": {
@@ -402,9 +402,9 @@
       "text": "Aikido, Waffentraining und Trainingsaufbau.",
       "_source": "Aikido, Waffentraining und Trainingsaufbau."
     },
-    "Aktuell gibt es keine Kurzmeldung aus den letzten sieben Tagen. Aeltere Beitraege stehen unten in der Chronik.": {
+    "Aktuell gibt es keine Kurzmeldung aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.": {
       "text": "There is currently no short update from the last seven days. Older entries can be found below in the archive.",
-      "_source": "Aktuell gibt es keine Kurzmeldung aus den letzten sieben Tagen. Aeltere Beitraege stehen unten in der Chronik."
+      "_source": "Aktuell gibt es keine Kurzmeldung aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik."
     },
     "Aktuelles": {
       "text": "Update",
@@ -490,9 +490,9 @@
       "text": "Movement without pressure",
       "_source": "Bewegung ohne Druck"
     },
-    "Bilder, Rueckblicke und Impressionen aus dem Dojo.": {
-      "text": "Bilder, Rueckblicke und Impressionen aus dem Dojo.",
-      "_source": "Bilder, Rueckblicke und Impressionen aus dem Dojo."
+    "Bilder, Rückblicke und Impressionen aus dem Dojo.": {
+      "text": "Bilder, Rückblicke und Impressionen aus dem Dojo.",
+      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
     },
     "Birach": {
       "text": "Birach",
@@ -634,9 +634,9 @@
       "text": "Coming next",
       "_source": "Demnaechst geplant"
     },
-    "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen.": {
+    "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen.": {
       "text": "The training venue is in Duttendorf in the municipality of Hochburg-Ach. You can open the route directly in Google Maps.",
-      "_source": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen."
+      "_source": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen."
     },
     "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.": {
       "text": "The club was founded on 10 February 2026 and stands for traditional Aikido with a calm, precise training culture.",
@@ -666,17 +666,17 @@
       "text": "Tue",
       "_source": "Di"
     },
-    "Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geoeffnet oder heruntergeladen werden.": {
+    "Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geöffnet oder heruntergeladen werden.": {
       "text": "The brochure is already linked in German and English and can be opened or downloaded directly as a PDF.",
-      "_source": "Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geoeffnet oder heruntergeladen werden."
+      "_source": "Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geöffnet oder heruntergeladen werden."
     },
-    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden.": {
-      "text": "The brochure is available as a PDF in German and English. You can open it directly in the browser via preview.",
-      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden."
+    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden.": {
+      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden.",
+      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden."
     },
-    "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen.": {
-      "text": "The gallery is currently being curated. As soon as the first photo sets are ready, you will find them collected here with short recaps and context for the respective events.",
-      "_source": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen."
+    "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen.": {
+      "text": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen.",
+      "_source": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen."
     },
     "Die gesuchte Seite existiert nicht oder wurde verschoben.": {
       "text": "The page you are looking for does not exist or has been moved.",
@@ -686,9 +686,9 @@
       "text": "Die gesuchte Seite konnte nicht gefunden werden.",
       "_source": "Die gesuchte Seite konnte nicht gefunden werden."
     },
-    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen.": {
-      "text": "The hall is in Duttendorf in the municipality of Hochburg-Ach. You can open the route directly in Google Maps.",
-      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen."
+    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen.": {
+      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen.",
+      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen."
     },
     "Die Inhalte dieser Webseite, einschliesslich Texte, Gestaltung und bereitgestellte Dokumente, unterliegen dem Urheberrecht, soweit nicht anders gekennzeichnet.": {
       "text": "The contents of this website, including texts, design and provided documents, are subject to copyright unless stated otherwise.",
@@ -750,9 +750,9 @@
       "text": "A trial class is possible at any time after a short registration.",
       "_source": "Ein Probetraining ist nach kurzer Anmeldung jederzeit moeglich."
     },
-    "Einblicke ins Dojo, in Lehrgaenge und in unser gemeinsames Training.": {
+    "Einblicke ins Dojo, in Lehrgänge und in unser gemeinsames Training.": {
       "text": "Insights into the dojo, seminars and our training together.",
-      "_source": "Einblicke ins Dojo, in Lehrgaenge und in unser gemeinsames Training."
+      "_source": "Einblicke ins Dojo, in Lehrgänge und in unser gemeinsames Training."
     },
     "email: contactData.email,": {
       "text": "email: contactData.email,",
@@ -1054,9 +1054,9 @@
       "text": "Calendar",
       "_source": "Kalender"
     },
-    "Kalender, Timeline und Ausschreibungen fuer Lehrgaenge und besondere Trainings findest du gesammelt auf dieser Seite.": {
-      "text": "Calendar, timeline and brochures for seminars and special training sessions are collected on this page.",
-      "_source": "Kalender, Timeline und Ausschreibungen fuer Lehrgaenge und besondere Trainings findest du gesammelt auf dieser Seite."
+    "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.": {
+      "text": "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.",
+      "_source": "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite."
     },
     "Kalender, Timeline, Ausschreibungen und PDF-Downloads.": {
       "text": "Kalender, Timeline, Ausschreibungen und PDF-Downloads.",
@@ -1086,9 +1086,9 @@
       "text": "Kein Termin an diesem Tag",
       "_source": "Kein Termin an diesem Tag"
     },
-    "Klicke auf einen markierten Tag. Die passende Terminbeschreibung oeffnet sich sofort links, ohne dass die Seite neu geladen werden muss.": {
-      "text": "Click on a marked day. The matching event description opens immediately on the left without reloading the page.",
-      "_source": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung oeffnet sich sofort links, ohne dass die Seite neu geladen werden muss."
+    "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss.": {
+      "text": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss.",
+      "_source": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss."
     },
     "Kommende Termine": {
       "text": "Upcoming events",
@@ -1110,9 +1110,9 @@
       "text": "Kurze Neuigkeiten und die chronologische Historie.",
       "_source": "Kurze Neuigkeiten und die chronologische Historie."
     },
-    "Kurze Neuigkeiten, kommende Lehrgaenge und die gesamte Chronik findest du hier in einer gemeinsamen Uebersicht.": {
+    "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Uebersicht.": {
       "text": "Short news items, upcoming seminars and the full history are collected here in one overview.",
-      "_source": "Kurze Neuigkeiten, kommende Lehrgaenge und die gesamte Chronik findest du hier in einer gemeinsamen Uebersicht."
+      "_source": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Uebersicht."
     },
     "Kurzmeldungen": {
       "text": "Brief updates",
@@ -1126,9 +1126,9 @@
       "text": "languageChanged",
       "_source": "languageChanged"
     },
-    "Lehrgaenge": {
+    "Lehrgänge": {
       "text": "Seminars",
-      "_source": "Lehrgaenge"
+      "_source": "Lehrgänge"
     },
     "Lehrgang": {
       "text": "Seminar",
@@ -1406,9 +1406,9 @@
       "text": "Open route",
       "_source": "Route oeffnen"
     },
-    "Rueckblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden.": {
+    "Rückblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden.": {
       "text": "Recaps of seminars, guest instructors and special weekends.",
-      "_source": "Rueckblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden."
+      "_source": "Rückblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden."
     },
     "Ruhe": {
       "text": "Calm",
@@ -1574,9 +1574,9 @@
       "text": "Tradition",
       "_source": "Tradition"
     },
-    "Traditionelles Aikido in Duttendorf mit regelmaessigem Training, Lehrgaengen und einem offenen Vereinsleben.": {
-      "text": "Traditionelles Aikido in Duttendorf mit regelmaessigem Training, Lehrgaengen und einem offenen Vereinsleben.",
-      "_source": "Traditionelles Aikido in Duttendorf mit regelmaessigem Training, Lehrgaengen und einem offenen Vereinsleben."
+    "Traditionelles Aikido in Duttendorf mit regelmäßigem Training, Lehrgängen und einem offenen Vereinsleben.": {
+      "text": "Traditionelles Aikido in Duttendorf mit regelmäßigem Training, Lehrgängen und einem offenen Vereinsleben.",
+      "_source": "Traditionelles Aikido in Duttendorf mit regelmäßigem Training, Lehrgängen und einem offenen Vereinsleben."
     },
     "Traditionelles Aikido in Duttendorf. Offen fuer Einsteiger:innen, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
       "text": "Traditional Aikido in Duttendorf. Open to beginners, returning students and everyone looking for movement, focus and calm practice together.",
@@ -1630,7 +1630,7 @@
       "text": "Despite careful checking of content, we accept no liability for the content of external links. The operators of the linked pages are solely responsible for their content.",
       "_source": "Trotz sorgfaeltiger inhaltlicher Kontrolle uebernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
     },
-    "Ueber uns": {
+    "Über uns": {
       "text": "Über uns",
       "_source": "Über uns"
     },
@@ -1734,9 +1734,9 @@
       "text": "Weitere Formulare und vereinsinterne Unterlagen koennen bei Bedarf direkt ueber das Dojo angefragt werden.",
       "_source": "Weitere Formulare und vereinsinterne Unterlagen koennen bei Bedarf direkt ueber das Dojo angefragt werden."
     },
-    "Wenn du bei einem Training vorbeischauen oder Fragen zu Lehrgaengen hast, melde dich einfach direkt per E-Mail.": {
+    "Wenn du bei einem Training vorbeischauen oder Fragen zu Lehrgängen hast, melde dich einfach direkt per E-Mail.": {
       "text": "If you would like to visit a training session or have questions about seminars, simply contact us directly by email.",
-      "_source": "Wenn du bei einem Training vorbeischauen oder Fragen zu Lehrgaengen hast, melde dich einfach direkt per E-Mail."
+      "_source": "Wenn du bei einem Training vorbeischauen oder Fragen zu Lehrgängen hast, melde dich einfach direkt per E-Mail."
     },
     "Wenn du ein Probetraining machen moechtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten.": {
       "text": "If you would like to try a training session, just send us a short message. You can find the venue, the process and first notes on our About and Contact pages.",
@@ -1833,10 +1833,6 @@
     "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
       "text": "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
       "_source": "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen."
-    },
-    "Über uns": {
-      "text": "Über uns",
-      "_source": "Über uns"
     },
     "Aikido ist eine japanische Kampfkunst, die von O’Sensei Ueshiba Morihei (*1883,+1969) um 1920 entwickelt wurde und die er bis zu seinem Tod 1969 stetig weiterentwickelt hat.": {
       "text": "Aikido ist eine japanische Kampfkunst, die von O’Sensei Ueshiba Morihei (*1883,+1969) um 1920 entwickelt wurde und die er bis zu seinem Tod 1969 stetig weiterentwickelt hat.",
@@ -2042,13 +2038,9 @@
       "text": "Route öffnen",
       "_source": "Route öffnen"
     },
-    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt öffnen.": {
-      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt öffnen.",
-      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt öffnen."
-    },
-    "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss.": {
-      "text": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss.",
-      "_source": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss."
+    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.": {
+      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.",
+      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen."
     },
     "Seite öffnen": {
       "text": "Seite öffnen",
@@ -2058,21 +2050,13 @@
       "text": "Popup öffnen",
       "_source": "Popup öffnen"
     },
-    "Kalender, Timeline und Ausschreibungen fuer Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.": {
-      "text": "Kalender, Timeline und Ausschreibungen fuer Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.",
-      "_source": "Kalender, Timeline und Ausschreibungen fuer Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite."
-    },
     "Als Nächstes": {
       "text": "Als Nächstes",
       "_source": "Als Nächstes"
     },
-    "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.": {
-      "text": "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.",
-      "_source": "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite."
-    },
-    "Kurze Neuigkeiten, kommende Lehrgaenge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.": {
-      "text": "Kurze Neuigkeiten, kommende Lehrgaenge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.",
-      "_source": "Kurze Neuigkeiten, kommende Lehrgaenge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht."
+    "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.": {
+      "text": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.",
+      "_source": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht."
     },
     "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
       "text": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
@@ -2090,10 +2074,6 @@
       "text": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain.",
       "_source": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain."
     },
-    "Bilder, Rückblicke und Impressionen aus dem Dojo.": {
-      "text": "Bilder, Rückblicke und Impressionen aus dem Dojo.",
-      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
-    },
     "Der Verein wurde am 10. Februar 2026 gegründet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.": {
       "text": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.",
       "_source": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur."
@@ -2106,29 +2086,13 @@
       "text": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach.",
       "_source": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach."
     },
-    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geoeffnet werden.": {
-      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geoeffnet werden.",
-      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geoeffnet werden."
-    },
-    "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen.": {
-      "text": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen.",
-      "_source": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen."
-    },
-    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geoeffnet werden.": {
-      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden.",
-      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden."
-    },
-    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen.": {
-      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen.",
-      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Ueber Google Maps kannst du die Route direkt oeffnen."
-    },
-    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.": {
-      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.",
-      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen."
+    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geöffnet werden.": {
+      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geöffnet werden.",
+      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geöffnet werden."
     },
     "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen RÜckblicken und Kontext zu den jeweiligen Veranstaltungen.": {
-      "text": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen.",
-      "_source": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen."
+      "text": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen.",
+      "_source": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen."
     },
     "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt.": {
       "text": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt.",
@@ -2153,10 +2117,6 @@
     "WA": {
       "text": "WA",
       "_source": "WA"
-    },
-    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden.": {
-      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden.",
-      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden."
     },
     "Ausschreibung": {
       "text": "Ausschreibung",
@@ -2186,9 +2146,9 @@
       "text": "linkedNews?.data.title ?? entry.title,",
       "_source": "linkedNews?.data.title ?? entry.title,"
     },
-    "Rueckblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.": {
-      "text": "Rueckblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.",
-      "_source": "Rueckblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt."
+    "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.": {
+      "text": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.",
+      "_source": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt."
     },
     "WhatsApp:": {
       "text": "WhatsApp:",
@@ -2221,6 +2181,10 @@
     "Weiterlesen": {
       "text": "Weiterlesen",
       "_source": "Weiterlesen"
+    },
+    "Es gibt noch keine vergangenen Beiträge in der Chronik.": {
+      "text": "Es gibt noch keine vergangenen Beiträge in der Chronik.",
+      "_source": "Es gibt noch keine vergangenen Beiträge in der Chronik."
     }
   },
   "attr": {

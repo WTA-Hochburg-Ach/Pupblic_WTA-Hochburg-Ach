@@ -13,15 +13,23 @@ const startOfToday = new Date(today);
 startOfToday.setHours(0, 0, 0, 0);
 const sevenDaysAgo = new Date(today);
 sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
 const recentNews = newestEntries.filter((item) => {
   const itemDate = item.data.date.getTime();
   return isNews(item) && itemDate >= sevenDaysAgo.getTime() && itemDate <= today.getTime();
 });
-const pastEvents = sortByDateDescending(entries.filter((item) => {
+
+const olderNews = entries.filter((item) => {
+  const itemDate = item.data.date.getTime();
+  return isNews(item) && itemDate < sevenDaysAgo.getTime();
+});
+
+const pastEvents = entries.filter((item) => {
   const eventEnd = item.data.endDate ?? item.data.date;
   return isEvent(item) && eventEnd.getTime() < startOfToday.getTime();
-})).slice(0, 7);
-const recentNewsAndAllEvents = sortByDateDescending([...recentNews, ...pastEvents]).slice(0, 7);
+});
+
+const chronicleEntries = sortByDateDescending([...olderNews, ...pastEvents]).slice(0, 7);
 ---
 
 <BaseLayout title="Aktuelles & Termine">
@@ -53,16 +61,18 @@ const recentNewsAndAllEvents = sortByDateDescending([...recentNews, ...pastEvent
 
   <section class="content-block-spacious">
     <h2>Chronik</h2>
-    {pastEvents.length > 0 ? (
+    {chronicleEntries.length > 0 ? (
       <div class="chronicle-list">
-        {pastEvents.map((item) => (
+        {chronicleEntries.map((item) => (
           <article class:list={['chronicle-card', `tone-${item.data.color}`]}>
             <div>
               <div class="chronicle-meta">
                 <span class="event-date" data-date-start={item.data.date.toISOString()} data-date-end={item.data.endDate?.toISOString() ?? ''}>
                   {formatDateRange(item.data.date, item.data.endDate)}
                 </span>
-                <span class="entry-type entry-type-event">Termin</span>
+                <span class:list={['entry-type', isEvent(item) ? 'entry-type-event' : 'entry-type-news']}>
+                  {isEvent(item) ? 'Termin' : 'News'}
+                </span>
               </div>
 
               <div class="chronicle-copy">
@@ -79,7 +89,7 @@ const recentNewsAndAllEvents = sortByDateDescending([...recentNews, ...pastEvent
         ))}
       </div>
     ) : (
-      <p class="archive-note">Es gibt noch keine vergangenen Termine in der Chronik.</p>
+      <p class="archive-note">Es gibt noch keine vergangenen Beiträge in der Chronik.</p>
     )}
   </section>
 </BaseLayout>

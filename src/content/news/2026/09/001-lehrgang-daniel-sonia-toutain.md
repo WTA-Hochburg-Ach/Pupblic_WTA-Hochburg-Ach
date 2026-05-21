@@ -20,4 +20,4 @@ Am 12. und 13. September 2026 findet in Hochburg-Ach ein Lehrgang mit Daniel und
 
 Trainiert wird in der Mehrzweckhalle der neuen Mittelschule in Duttendorf.
 
-Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Ueber die Vorschau kann sie direkt im Browser geoeffnet werden.
+Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden.

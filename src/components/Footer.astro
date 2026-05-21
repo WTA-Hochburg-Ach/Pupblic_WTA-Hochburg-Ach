@@ -57,6 +57,11 @@ const footerTitleFallbacks = {
         <ul>
           <li><a href={`mailto:${contactData.email}`}>{contactData.email}</a></li>
           <li><a href={contactData.phone.href}>{contactData.phone.compact}</a></li>
+          <li>
+            <a href={contactData.whatsapp.href} target="_blank" rel="noopener noreferrer">
+              WhatsApp: {contactData.whatsapp.phoneLabel}
+            </a>
+          </li>
           <li data-i18n="footer.address_line1">{venue.street}</li>
           <li data-i18n="footer.address_line2">{venue.postalCode} {venue.city}</li>
         </ul>

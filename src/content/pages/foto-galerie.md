@@ -5,8 +5,8 @@ order: 6
 
 <section class="content-block-spacious">
   <h1>Foto-Galerie</h1>
-  <p class="lead-text">Einblicke ins Dojo, in Lehrgaenge und in unser gemeinsames Training.</p>
-  <p>Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rueckblicken und Kontext zu den jeweiligen Veranstaltungen.</p>
+  <p class="lead-text">Einblicke ins Dojo, in Lehrgänge und in unser gemeinsames Training.</p>
+  <p>Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen.</p>
 </section>
 
 <section class="content-block-spacious">
@@ -17,8 +17,8 @@ order: 6
       <p>Momentaufnahmen aus regulaeren Einheiten und Grundlagenarbeit.</p>
     </article>
     <article class="feature-card">
-      <h3>Lehrgaenge</h3>
-      <p>Rueckblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden.</p>
+      <h3>Lehrgänge</h3>
+      <p>Rückblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden.</p>
     </article>
     <article class="feature-card">
       <h3>Vereinsleben</h3>

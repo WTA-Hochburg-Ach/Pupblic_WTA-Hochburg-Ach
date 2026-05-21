@@ -27,7 +27,7 @@ const entries = sortGalleryNewestFirst(galleryEntries).map((entry) => {
 <BaseLayout title="Foto-Galerie">
   <section class="content-block-spacious gallery-intro">
     <h1>Foto-Galerie</h1>
-    <p class="lead-text">Rueckblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.</p>
+    <p class="lead-text">Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.</p>
   </section>
 
   <section class="content-block-spacious gallery-list-section">
@@ -35,12 +35,17 @@ const entries = sortGalleryNewestFirst(galleryEntries).map((entry) => {
 
     <div class="gallery-list">
       {entries.map((entry) => (
-        <article class:list={['gallery-row', !entry.coverImage && 'gallery-row-no-cover']}>
-          {entry.coverImage && (
-            <a class="gallery-cover" href={entry.galleryHref || entry.eventHref} aria-label={`${entry.title} oeffnen`}>
+        <article class="gallery-row">
+          <a class="gallery-cover" href={entry.galleryHref || entry.eventHref} aria-label={`${entry.title} öffnen`}>
+            {entry.coverImage ? (
               <img src={entry.coverImage} alt="" loading="lazy" />
-            </a>
-          )}
+            ) : (
+              <div class="gallery-cover-fallback">
+                <img src={withBasePath(baseUrl, 'wta-logo.svg')} alt="" class="fallback-logo" loading="lazy" />
+              </div>
+            )}
+            <div class="gallery-cover-overlay"></div>
+          </a>
 
           <div class="gallery-row-copy">
             <span class="event-date">{formatDate(entry.date)}</span>
@@ -72,38 +77,77 @@ const entries = sortGalleryNewestFirst(galleryEntries).map((entry) => {
 
 .gallery-list {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .gallery-row {
   display: grid;
-  grid-template-columns: minmax(0, 12rem) minmax(0, 1fr) auto;
-  gap: 1.25rem;
+  grid-template-columns: minmax(0, 14rem) minmax(0, 1fr) auto;
+  gap: 1.5rem;
   align-items: center;
-  padding: 1.25rem;
-  border-radius: 18px;
+  padding: 1.5rem;
+  border-radius: 24px;
   background: var(--color-surface);
   border: 1px solid var(--color-border-light);
   box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.gallery-row-no-cover {
-  grid-template-columns: minmax(0, 1fr) auto;
+.gallery-row:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .gallery-cover {
+  position: relative;
   display: block;
   aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 0;
+  border-radius: 16px;
   background: var(--color-bg-secondary);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .gallery-cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-row:hover .gallery-cover img {
+  transform: scale(1.05);
+}
+
+.gallery-cover-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-bg-secondary), var(--color-border-light));
+}
+
+.fallback-logo {
+  width: 45%;
+  height: auto;
+  opacity: 0.15;
+  object-fit: contain;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.gallery-row:hover .fallback-logo {
+  opacity: 0.25;
+  transform: scale(1.1);
+}
+
+.gallery-cover-overlay {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  pointer-events: none;
 }
 
 .gallery-row-copy h3 {
@@ -142,10 +186,12 @@ const entries = sortGalleryNewestFirst(galleryEntries).map((entry) => {
 @media (max-width: 900px) {
   .gallery-row {
     grid-template-columns: 1fr;
+    padding: 1.25rem;
   }
 
   .gallery-cover {
-    width: min(100%, 24rem);
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 
   .gallery-row-actions {

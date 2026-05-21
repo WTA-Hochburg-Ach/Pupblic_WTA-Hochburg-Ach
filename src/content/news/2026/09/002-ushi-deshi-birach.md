@@ -20,4 +20,4 @@ Vom 14. bis 18. September 2026 findet in Birach ein Ushi Deshi mit Daniel und So
 
 Geplant ist eine intensive Trainingswoche mit taeglichen Einheiten und gemeinsamer Zeit vor Ort.
 
-Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geoeffnet oder heruntergeladen werden.
+Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geöffnet oder heruntergeladen werden.

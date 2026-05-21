@@ -7,10 +7,16 @@ const sourceLocaleDir = path.join(rootDir, 'src', 'locales');
 const publicLocaleDir = path.join(rootDir, 'public', 'locales');
 const sourceLocalePath = path.join(sourceLocaleDir, 'de.json');
 
-const targetLanguages = {
-  en: 'EN-US',
-  fr: 'FR',
-};
+const { activeLanguages } = await import('../src/data/site.ts');
+
+const targetLanguages = Object.fromEntries(
+  activeLanguages
+    .filter((lang) => lang !== 'de')
+    .map((lang) => {
+      if (lang === 'en') return ['en', 'EN-US'];
+      return [lang, lang.toUpperCase()];
+    }),
+);
 
 let warnedMissingApiKey = false;
 
