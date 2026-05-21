@@ -70,7 +70,7 @@ function normalizeText(value) {
 function shouldCollectText(value) {
   const text = normalizeText(value);
 
-  if (text.length < 2 || text.length > 500) return false;
+  if (text.length < 2 || text.length > 2000) return false;
   if (!/[A-Za-zÄÖÜäöüß]/.test(text)) return false;
   if (/^(https?:|mailto:|tel:|\/|#|\.|_|\{|\[|\(|\)|'|"|,|import |export )/.test(text)) return false;
   if (/^(class|id|href|src|rel|type|data-|aria-|const|let|var)\b/.test(text)) return false;
@@ -158,20 +158,19 @@ function collectHtmlText(content, set) {
     .replace(/<style[\s\S]*?<\/style>/gi, '')
     .replace(/<!--[\s\S]*?-->/g, '');
 
-  stripped.split(/\r?\n/).forEach((line) => {
-    const withoutTags = line
-      .replace(/<br\s*\/?>/gi, ' ')
-      .replace(/<[^>]+>/g, ' ')
-      .replace(/\{[\s\S]*?\}/g, ' ')
-      .replace(/&amp;/g, '&')
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>')
-      .replace(/&quot;/g, '"');
+  const withoutTags = stripped
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/\n\s*\n/g, '|||') // Markdown paragraphs split
+    .replace(/<[^>]+>/g, '|||') // HTML tags
+    .replace(/\{[\s\S]*?\}/g, '|||') // Astro expressions
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"');
 
-    withoutTags
-      .split(/\s{2,}/)
-      .map(normalizeText)
-      .forEach((value) => addCandidate(set, value));
+  withoutTags.split('|||').forEach((block) => {
+    const text = normalizeText(block);
+    addCandidate(set, text);
   });
 }
 

@@ -156,6 +156,12 @@ const calendarEvents = events.map((entry) => {
         </div>
 
         <div class="calendar-days" data-calendar-days></div>
+
+        <div class="calendar-legend" aria-label="Kalenderfarben">
+          <span><i class="event-dot tone-moss"></i>Lehrgang</span>
+          <span><i class="event-dot tone-sage"></i>Training</span>
+          <span><i class="event-dot tone-gold"></i>Besonderes Event</span>
+        </div>
       </article>
 
       <aside class="calendar-detail-panel">
@@ -166,12 +172,6 @@ const calendarEvents = events.map((entry) => {
             ? `${initialDayEvents.length} Termin${initialDayEvents.length > 1 ? 'e' : ''} an diesem Tag`
             : 'Kein Termin an diesem Tag'}
         </p>
-
-        <div class="calendar-legend" aria-label="Kalenderfarben">
-          <span><i class="event-dot tone-moss"></i>Lehrgang</span>
-          <span><i class="event-dot tone-sage"></i>Training</span>
-          <span><i class="event-dot tone-gold"></i>Besonderes Event</span>
-        </div>
 
         <div class="calendar-detail-list" data-detail-list>
           {initialDayEvents.length > 0 ? (
@@ -1038,22 +1038,43 @@ const calendarEvents = events.map((entry) => {
 }
 
 @media (max-width: 768px) {
-  .calendar-toolbar {
+  .calendar-app {
     grid-template-columns: 1fr;
+  }
+
+  .calendar-detail-panel {
+    position: static;
+  }
+
+  .calendar-toolbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.5rem;
   }
 
   .calendar-current {
     order: -1;
+    grid-column: 1 / -1;
+    margin-bottom: 0.8rem;
+  }
+
+  .calendar-toolbar > [data-calendar-prev] {
+    grid-column: 1;
   }
 
   .calendar-toolbar-actions {
-    justify-content: stretch;
+    grid-column: 3;
+    justify-content: flex-end;
   }
 
-  .calendar-nav-btn,
+  .calendar-nav-btn {
+    width: 2.8rem;
+    height: 2.8rem;
+    min-height: auto;
+  }
+
   .calendar-utility-btn {
-    width: 100%;
-    border-radius: 999px;
+    min-height: 2.8rem;
   }
 
   .calendar-weekdays,
@@ -1076,6 +1097,10 @@ const calendarEvents = events.map((entry) => {
   .timeline-actions > *,
   .modal-actions > * {
     width: 100%;
+  }
+
+  .calendar-legend {
+    justify-content: center;
   }
 }
 </style>
