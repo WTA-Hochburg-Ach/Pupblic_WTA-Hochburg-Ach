@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
   max-width: 100vw;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
 }
 
@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   max-width: 100vw;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
   background: var(--gradient-body);
   color: var(--color-text-primary);
@@ -40,7 +40,7 @@ img {
   flex-direction: column;
   max-width: 100vw;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
 }
 
@@ -336,6 +336,12 @@ img {
   border: 1px solid var(--color-border-light);
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(10px);
+}
+
+.hero + .content-block-spacious,
+.hero + .features-section,
+.content-block-spacious + .content-block-spacious {
+  margin-top: clamp(0.7rem, 1.6vw, 1.2rem);
 }
 
 .content-block-spacious h1,

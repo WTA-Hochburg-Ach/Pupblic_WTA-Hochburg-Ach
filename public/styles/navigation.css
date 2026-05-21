@@ -1,10 +1,18 @@
-.utility-bar {
+.site-header {
   position: sticky;
   top: 0;
   z-index: 1100;
+  padding-top: 0;
+  transition: padding 0.22s ease;
+}
+
+.utility-bar {
   border-bottom: 1px solid var(--color-border-light);
   background: var(--color-utility-bg, rgba(242, 245, 237, 0.92));
   backdrop-filter: blur(16px);
+  max-height: 6rem;
+  transition: opacity 0.2s ease, max-height 0.22s ease, border-color 0.22s ease;
+  overflow: hidden;
 }
 
 .utility-inner {
@@ -14,12 +22,10 @@
   justify-content: flex-end;
   gap: 0.85rem;
   padding: 0.65rem 0;
+  transition: padding 0.22s ease;
 }
 
 .nav {
-  position: sticky;
-  top: 5.4rem;
-  z-index: 1000;
   width: min(1480px, calc(100% - 1.2rem));
   margin: 1rem auto 0;
   padding: 0 1.4rem;
@@ -31,6 +37,7 @@
   background-clip: padding-box;
   overflow: visible;
   isolation: isolate;
+  transition: width 0.22s ease, margin 0.22s ease, padding 0.22s ease, border-radius 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .nav::before {
@@ -262,6 +269,27 @@ html.nav-scrolled .nav-inner {
   padding: 0.88rem 0;
 }
 
+html.nav-scrolled .utility-bar {
+  max-height: 0;
+  border-color: transparent;
+  opacity: 0;
+}
+
+html.nav-scrolled .utility-inner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+html.nav-scrolled .nav {
+  width: 100%;
+  margin-top: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-radius: 0 0 28px 28px;
+  box-shadow: var(--shadow-md);
+}
+
 html.nav-scrolled .logo-mark {
   width: clamp(3.5rem, 5vw, 4.7rem);
 }
@@ -429,11 +457,6 @@ html.nav-scrolled .logo-mark {
 }
 
 @media (max-width: 1100px) {
-  .nav {
-    position: relative;
-    top: auto;
-  }
-
   .menu-toggle {
     display: inline-grid;
     place-items: center;
@@ -458,6 +481,10 @@ html.nav-scrolled .logo-mark {
     visibility: hidden;
     transform: translateY(-10px);
     transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+  }
+
+  html.nav-scrolled .nav-links {
+    max-height: calc(100vh - 5.5rem);
   }
 
   .nav-links.open {
@@ -493,6 +520,11 @@ html.nav-scrolled .logo-mark {
   .theme-btn,
   .lang-selector {
     flex: 1 1 14rem;
+  }
+
+  html.nav-scrolled .theme-btn,
+  html.nav-scrolled .lang-selector {
+    min-height: 0;
   }
 
   .lang-selector {

@@ -217,13 +217,14 @@ const calendarEvents = events.map((entry) => {
                   )}
 
                   {entry.data.pdfs?.de && (
-                    <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} target="_blank" rel="noopener">PDF DE</a>
-                  )}
-                  {entry.data.pdfs?.en && (
-                    <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} target="_blank" rel="noopener">PDF EN</a>
-                  )}
-                  {(entry.data.pdfs?.de || entry.data.pdfs?.en) && (
-                    <a class="mini-action" href={withOptionalBasePath(baseUrl, entry.data.pdfs?.de || entry.data.pdfs?.en || '')} target="_blank" rel="noopener">Vorschau</a>
+                    <a class="pdf-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} target="_blank" rel="noopener">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <path d="M7 10l5 5 5-5" />
+                        <path d="M12 15V3" />
+                      </svg>
+                      PDF Deutsch
+                    </a>
                   )}
                 </div>
               </article>
@@ -460,13 +461,16 @@ const calendarEvents = events.map((entry) => {
       }
 
       detailList.innerHTML = dayEvents.map((event) => {
-        const pdfButtons = [
-          event.pdfs?.de ? `<a href="${event.pdfs.de}" class="mini-action" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_short_de', 'PDF DE'))}</a>` : '',
-          event.pdfs?.en ? `<a href="${event.pdfs.en}" class="mini-action" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_short_en', 'PDF EN'))}</a>` : '',
-          event.pdfs?.de || event.pdfs?.en
-            ? `<a href="${event.pdfs.de || event.pdfs.en}" class="mini-action" target="_blank" rel="noopener">${escapeHtml(translate('events.preview', 'Vorschau'))}</a>`
-            : '',
-        ].join('');
+        const pdfButton = event.pdfs?.de
+          ? `<a href="${event.pdfs.de}" class="pdf-download-btn" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <path d="M7 10l5 5 5-5" />
+                <path d="M12 15V3" />
+              </svg>
+              ${escapeHtml(translate('events.pdf_de', 'PDF Deutsch'))}
+            </a>`
+          : '';
         const primaryAction = event.display === 'page'
           ? `<a class="read-more-btn" href="${event.href}">${escapeHtml(translate('events.open_page', 'Seite oeffnen'))}</a>`
           : `<button class="read-more-btn" type="button" data-modal-trigger data-slug="${event.slug}" data-title="${escapeHtml(event.title)}" data-date="${event.start}" data-end-date="${event.hasEnd ? event.end : ''}">${escapeHtml(translate('events.details', 'Details'))}</button>`;
@@ -481,7 +485,7 @@ const calendarEvents = events.map((entry) => {
               <div><dt>${escapeHtml(translate('events.people', 'Personen'))}</dt><dd>${escapeHtml(event.people?.join(', ') || 'WTA Hochburg-Ach')}</dd></div>
             </dl>
             ${event.preview ? `<p>${escapeHtml(event.preview)}</p>` : ''}
-            <div class="calendar-card-actions">${primaryAction}${pdfButtons}</div>
+            <div class="calendar-card-actions">${primaryAction}${pdfButton}</div>
           </article>
         `;
       }).join('');
@@ -534,8 +538,10 @@ const calendarEvents = events.map((entry) => {
             aria-label="${escapeHtml(ariaLabel)}"
             aria-pressed="${isSelected}"
           >
-            <span class="calendar-day-number">${day}</span>
-            <span class="event-dots">${dots}${hasMore}</span>
+            <span class="calendar-day-head">
+              <span class="calendar-day-number">${day}</span>
+              <span class="event-dots">${dots}${hasMore}</span>
+            </span>
           </button>
         `);
       }
@@ -803,7 +809,7 @@ const calendarEvents = events.map((entry) => {
 .calendar-day {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   min-height: 7.2rem;
   padding: 0.72rem;
   border-radius: 18px;
@@ -847,17 +853,25 @@ const calendarEvents = events.map((entry) => {
   color: var(--color-surface-strong);
 }
 
+.calendar-day-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  min-width: 0;
+}
+
 .calendar-day-number {
+  flex: 0 0 auto;
   font-size: 0.94rem;
   font-weight: 900;
 }
 
 .event-dots {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   gap: 0.22rem;
   align-items: center;
-  margin-top: 0.35rem;
+  min-width: 0;
 }
 
 .calendar-day .event-dot {
@@ -930,6 +944,10 @@ const calendarEvents = events.map((entry) => {
   align-items: center;
 }
 
+.calendar-card-actions .pdf-download-btn {
+  margin-left: auto;
+}
+
 .mini-action {
   display: inline-flex;
   align-items: center;
@@ -945,6 +963,39 @@ const calendarEvents = events.map((entry) => {
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   box-shadow: var(--shadow-sm);
+}
+
+.pdf-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.48rem;
+  min-height: 2.9rem;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-button-border);
+  background: rgba(86, 112, 79, 0.08);
+  color: var(--color-button-ink);
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.pdf-download-btn svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+}
+
+.pdf-download-btn:hover,
+.pdf-download-btn:focus-visible {
+  transform: translateY(-2px);
+  background: var(--color-button-hover-fill);
+  border-color: var(--color-button-hover-border);
+  color: var(--color-button-hover-ink);
+  box-shadow: var(--shadow-md);
 }
 
 .mini-action:hover,

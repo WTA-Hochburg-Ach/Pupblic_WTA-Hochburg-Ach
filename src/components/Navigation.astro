@@ -26,94 +26,103 @@ const fallbackLabels = {
 };
 ---
 
-<div class="utility-bar">
-  <div class="utility-inner">
-    <button
-      class="theme-btn"
-      id="theme-toggle"
-      type="button"
-      aria-label="Farbschema wechseln"
-      data-i18n-attr="aria-label:common.theme_toggle"
-    >
-      <span class="theme-track" aria-hidden="true">
-        <span class="theme-thumb">
-          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="4.2" />
-            <path d="M12 2.5v2.2M12 19.3v2.2M4.8 4.8l1.6 1.6M17.6 17.6l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.8 19.2l1.6-1.6M17.6 6.4l1.6-1.6" />
-          </svg>
-          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20 15.5A8.5 8.5 0 1 1 12.5 4a6.5 6.5 0 0 0 7.5 11.5Z" />
-            <path d="M16.5 3.5v2M21 8h-2M18.9 5.1l-1.4 1.4" />
-          </svg>
+<header class="site-header">
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <button
+        class="theme-btn"
+        id="theme-toggle"
+        type="button"
+        aria-label="Farbschema wechseln"
+        data-i18n-attr="aria-label:common.theme_toggle"
+      >
+        <span class="theme-track" aria-hidden="true">
+          <span class="theme-thumb">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2.5v2.2M12 19.3v2.2M4.8 4.8l1.6 1.6M17.6 17.6l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.8 19.2l1.6-1.6M17.6 6.4l1.6-1.6" />
+            </svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 15.5A8.5 8.5 0 1 1 12.5 4a6.5 6.5 0 0 0 7.5 11.5Z" />
+              <path d="M16.5 3.5v2M21 8h-2M18.9 5.1l-1.4 1.4" />
+            </svg>
+          </span>
         </span>
-      </span>
-      <span class="theme-copy">
-        <span class="theme-kicker" data-i18n="common.theme">Theme</span>
-        <span class="theme-label" data-theme-label>Hell</span>
-      </span>
-    </button>
+        <span class="theme-copy">
+          <span class="theme-kicker" data-i18n="common.theme">Theme</span>
+          <span class="theme-label" data-theme-label>Hell</span>
+        </span>
+      </button>
 
-    <div class="lang-selector" role="group" aria-label="Sprache waehlen" data-i18n-attr="aria-label:common.language_toggle">
-      <span class="lang-selector-label" data-i18n="common.language">Sprache</span>
-      <div class="lang-toggle">
-        {activeLanguages.map((lang) => (
-          <button class="lang-option" type="button" data-lang={lang}>{lang.toUpperCase()}</button>
-        ))}
+      <div class="lang-selector" role="group" aria-label="Sprache waehlen" data-i18n-attr="aria-label:common.language_toggle">
+        <span class="lang-selector-label" data-i18n="common.language">Sprache</span>
+        <div class="lang-toggle">
+          {activeLanguages.map((lang) => (
+            <button class="lang-option" type="button" data-lang={lang}>{lang.toUpperCase()}</button>
+          ))}
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a href={withBasePath(baseUrl, siteLinks.home)} class="logo" translate="no">
-      <span class="logo-mark" aria-hidden="true">
-        <img src={logoLight} alt="" class="theme-logo theme-logo-light" />
-        <img src={logoDark} alt="" class="theme-logo theme-logo-dark" />
-      </span>
-      <span class="logo-copy">
-        <span class="logo-kicker">Wanomichi Takemusu</span>
-        <span class="logo-name">Aikido</span>
-        <span class="logo-location">Hochburg-Ach</span>
-      </span>
-    </a>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href={withBasePath(baseUrl, siteLinks.home)} class="logo" translate="no">
+        <span class="logo-mark" aria-hidden="true">
+          <img src={logoLight} alt="" class="theme-logo theme-logo-light" />
+          <img src={logoDark} alt="" class="theme-logo theme-logo-dark" />
+        </span>
+        <span class="logo-copy">
+          <span class="logo-kicker">Wanomichi Takemusu</span>
+          <span class="logo-name">Aikido</span>
+          <span class="logo-location">Hochburg-Ach</span>
+        </span>
+      </a>
 
-    <button
-      class="menu-toggle"
-      type="button"
-      aria-label="Menü öffnen"
-      aria-expanded="false"
-      data-i18n-attr="aria-label:common.menu_open"
-    >
-      <span class="hamburger"></span>
-    </button>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        data-i18n-attr="aria-label:common.menu_open"
+      >
+        <span class="hamburger"></span>
+      </button>
 
-    <ul class="nav-links">
-      {navItems.map((item) => {
-        const isActive = isCurrentSitePath(currentPath, item.href, baseUrl);
-        const hasSummary = item.labelKey !== 'nav.contact';
-        const summary = navSummaries[item.href] || item.summary;
+      <ul class="nav-links">
+        {navItems.map((item) => {
+          const isActive = isCurrentSitePath(currentPath, item.href, baseUrl);
+          const hasSummary = item.labelKey !== 'nav.contact';
+          const summary = navSummaries[item.href] || item.summary;
 
-        return (
-          <li class:list={['nav-item', hasSummary && 'nav-item-with-summary']}>
-            <a
-              href={withBasePath(baseUrl, item.href)}
-              class:list={['nav-link', isActive && 'nav-link-active']}
-              aria-current={isActive ? 'page' : undefined}
-            >
-              <span class="nav-link-label" data-i18n={item.labelKey}>
-                {fallbackLabels[item.labelKey as keyof typeof fallbackLabels]}
-              </span>
-              {hasSummary && (
-                <span class="nav-link-hint" data-i18n-summary>
-                  {summary}
+          return (
+            <li class:list={['nav-item', hasSummary && 'nav-item-with-summary']}>
+              <a
+                href={withBasePath(baseUrl, item.href)}
+                class:list={['nav-link', isActive && 'nav-link-active']}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                <span class="nav-link-label" data-i18n={item.labelKey}>
+                  {fallbackLabels[item.labelKey as keyof typeof fallbackLabels]}
                 </span>
+                {hasSummary && (
+                  <span class="nav-link-hint" data-i18n-summary>
+                    {summary}
+                  </span>
+                )}
+              </a>
+              {hasSummary && (
+                <div class="nav-flyout">
+                  <p data-i18n-summary>{summary}</p>
+                </div>
               )}
-            </a>
-            {hasSummary && (
-              <div class="nav-flyout">
-                <p data-i18n-summary>{summary}</p>
-              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </nav>
+</header>
             )}
           </li>
         );
