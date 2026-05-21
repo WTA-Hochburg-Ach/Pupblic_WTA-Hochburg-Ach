@@ -14,7 +14,7 @@
     "worker:deploy": "npm run build && wrangler deploy"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
+    "@astrojs/check": "^0.9.2",
     "astro": "^6.3.7",
     "typescript": "^5.9.3",
     "wrangler": "^4.14.1"
