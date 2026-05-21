@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "wta",
+  "name": "wta1",
   "main": "./worker/index.js",
   "compatibility_date": "2026-04-30",
   "assets": {
