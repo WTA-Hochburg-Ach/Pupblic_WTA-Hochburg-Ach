@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "node ./scripts/dev.mjs",
-    "translate": "node ./scripts/translate-i18n.mjs",
+    "translate": "tsx ./scripts/translate-i18n.mjs",
     "clean": "node ./scripts/clean-build.mjs",
     "check": "astro check",
     "generate:brochures": "node ./scripts/generate-brochures.mjs",
