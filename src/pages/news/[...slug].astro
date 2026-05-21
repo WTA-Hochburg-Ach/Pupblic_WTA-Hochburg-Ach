@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { formatDateRange, getNewsSlug } from '../../lib/news';
+import { getBaseUrl, withBasePath, withOptionalBasePath } from '../../lib/site';
+
+type NewsPageProps = {
+  entry: CollectionEntry<'news'>;
+};
+
+export async function getStaticPaths() {
+  const entries = await getCollection('news');
+
+  return entries.map((entry) => ({
+    params: { slug: getNewsSlug(entry) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props as NewsPageProps;
+const { Content } = await render(entry);
+const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.preview}>
+  <article class="content-block-spacious news-article">
+    <p class="news-back">
+      <a href={withBasePath(baseUrl, 'news')} class="back-link" data-history-back>
+        <span aria-hidden="true">←</span>
+        Zurueck
+      </a>
+    </p>
+
+    <div class="news-header-meta">
+      <span class="event-date" data-date-start={entry.data.date.toISOString()} data-date-end={entry.data.endDate?.toISOString() ?? ''}>
+        {formatDateRange(entry.data.date, entry.data.endDate)}
+      </span>
+      <span class:list={['entry-type', entry.data.type === 'event' ? 'entry-type-event' : 'entry-type-news']}>
+        {entry.data.type === 'event' ? 'Termin' : 'Aktuelles'}
+      </span>
+    </div>
+
+    <h1>{entry.data.title}</h1>
+    {entry.data.location && <p class="news-location">{entry.data.location}</p>}
+    {entry.data.preview && <p class="lead-text">{entry.data.preview}</p>}
+
+    {(entry.data.pdfs?.de || entry.data.pdfs?.en) && (
+      <div class="news-actions">
+        {entry.data.pdfs?.de && (
+          <a href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} class="button button-primary" target="_blank" rel="noopener">
+            PDF Deutsch
+          </a>
+        )}
+
+        {entry.data.pdfs?.en && (
+          <a href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} class="button button-outline" target="_blank" rel="noopener">
+            PDF English
+          </a>
+        )}
+
+        <a
+          href={withOptionalBasePath(baseUrl, entry.data.pdfs?.de || entry.data.pdfs?.en || '#')}
+          class="button button-outline"
+          target="_blank"
+          rel="noopener"
+        >
+          Vorschau
+        </a>
+      </div>
+    )}
+
+    <div class="news-article-content">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<script>
+  document.querySelector('[data-history-back]')?.addEventListener('click', (event) => {
+    if (window.history.length <= 1) {
+      return;
+    }
+
+    event.preventDefault();
+    window.history.back();
+  });
+</script>
+
+<style>
+.news-article {
+  max-width: 900px;
+}
+
+.news-back {
+  margin-bottom: 1.5rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary-dark);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.back-link span {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: rgba(86, 112, 79, 0.08);
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--color-nav-hover);
+}
+
+.back-link:hover span,
+.back-link:focus-visible span {
+  transform: translateX(-3px);
+  background: var(--color-button-hover-fill);
+  border-color: var(--color-button-hover-border);
+}
+
+.news-header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.news-location {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.entry-type {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.entry-type-event {
+  background: rgba(86, 112, 79, 0.12);
+  color: var(--color-primary-dark);
+}
+
+.entry-type-news {
+  background: rgba(188, 162, 112, 0.16);
+  color: var(--color-accent-dark);
+}
+
+.news-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.15rem;
+  margin: 2rem 0;
+}
+
+.news-actions .button {
+  min-width: 11.5rem;
+}
+
+.news-article-content {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .news-actions .button {
+    width: 100%;
+    min-width: 0;
+  }
+}
+</style>

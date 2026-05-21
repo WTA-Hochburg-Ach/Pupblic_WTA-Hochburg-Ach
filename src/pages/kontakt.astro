@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { boardMembers, contactData, venue } from '../data/site';
+
+const pageTitle = 'Kontakt';
+const pageDescription = 'Kontakt, Ansprechpartner und Anfahrt von Wanomichi Takemusu Aikido Hochburg-Ach.';
+const googleMapsEmbed = `https://www.google.com/maps?q=${encodeURIComponent(venue.mapQuery)}&z=15&output=embed`;
+const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue.mapQuery)}`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <div class="contact-shell">
+    <header class="page-header">
+      <h1>Kontakt</h1>
+      <p class="lead">Fragen zum Training, Verein oder zu kommenden Terminen? Wir freuen uns auf deine Nachricht.</p>
+    </header>
+
+    <section class="content-block-spacious quick-contact-panel">
+      <h2>Schnell erreichbar</h2>
+      <div class="quick-contact-actions">
+        <a href={`mailto:${contactData.email}`} class="button button-primary">E-Mail schreiben</a>
+        <a href={contactData.phone.href} class="button button-outline">Anrufen</a>
+        <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" class="button button-outline">Route öffnen</a>
+      </div>
+    </section>
+
+    <section class="content-block-spacious">
+      <h2>Direkter Kontakt</h2>
+
+      <div class="contact-grid">
+        <article class="contact-card">
+          <div class="contact-icon">Mail</div>
+          <h3>E-Mail</h3>
+          <a href={`mailto:${contactData.email}`} class="contact-link">{contactData.email}</a>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon">Tel</div>
+          <h3>Telefon</h3>
+          <a href={contactData.phone.href} class="contact-link">{contactData.phone.compact}</a>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon">WA</div>
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/${contactData.phone.compact.replace(/\D/g, '')}" target="_blank" rel="noopener noreferrer" class="contact-link">WhatsApp schreiben</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-block-spacious">
+      <h2>Ansprechpartner</h2>
+
+      <div class="contact-grid">
+        {boardMembers.map((person) => (
+          <article class="contact-card person-card">
+            <h3>{person.name}</h3>
+            <p class="contact-role">{person.role}</p>
+            <p>{person.street}<br />{person.cityLine}<br />{person.country}</p>
+
+            <a href={person.phoneHref} class:list={['contact-link', person.splitPhone && 'split-phone']}>
+              {person.splitPhone ? (
+                <>
+                  <span>{contactData.phone.split[0]}</span>
+                  <span>{contactData.phone.split[1]}</span>
+                </>
+              ) : (
+                person.phoneLabel
+              )}
+            </a>
+
+            <a href={`mailto:${person.email}`} class="contact-link">{person.email}</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-block-spacious">
+      <h2>Google Maps</h2>
+
+      <div class="map-panel">
+        <div class="map-copy">
+          <h3>{venue.name}</h3>
+          <p>Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.</p>
+          <p><a href={googleMapsLink} target="_blank" rel="noopener noreferrer" class="button button-primary">In Google Maps öffnen</a></p>
+        </div>
+
+        <div class="map-frame">
+          <iframe
+            src={googleMapsEmbed}
+            width="100%"
+            height="360"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps Standort">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+.contact-shell {
+  display: grid;
+  gap: 2rem;
+}
+
+.quick-contact-panel {
+  padding-top: clamp(2rem, 4vw, 2.8rem);
+}
+
+.quick-contact-actions {
+  display: flex;
+  gap: 0.9rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page-header {
+  padding: 3rem 2rem 0;
+  text-align: center;
+}
+
+.page-header .lead {
+  max-width: 44rem;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.contact-card,
+.map-panel,
+.closing-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-card {
+  padding: 1.5rem;
+  border-radius: 24px;
+  text-align: center;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card h3 {
+  margin-top: 0;
+}
+
+.contact-card p {
+  margin-bottom: 0.75rem;
+}
+
+.contact-role {
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.contact-link {
+  display: block;
+  margin-top: 0.45rem;
+  font-weight: 700;
+}
+
+.split-phone {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-icon {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: rgba(54, 88, 66, 0.08);
+  color: var(--color-primary-dark);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.map-panel {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 28px;
+}
+
+.map-copy h3 {
+  margin-top: 0;
+}
+
+.map-frame iframe {
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.closing-panel {
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .contact-grid,
+  .map-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .quick-contact-actions .button {
+    width: 100%;
+  }
+}
+</style>

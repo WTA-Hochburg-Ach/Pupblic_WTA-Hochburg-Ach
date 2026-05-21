@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Seite nicht gefunden" description="Die gesuchte Seite konnte nicht gefunden werden.">
+  <section class="content-block-spacious not-found">
+    <p class="not-found-code">404</p>
+    <h1>Seite nicht gefunden</h1>
+    <p class="lead-text">Die gesuchte Seite existiert nicht oder wurde verschoben.</p>
+    <p><a href={import.meta.env.BASE_URL || '/'} class="button button-primary">Zur Startseite</a></p>
+  </section>
+</BaseLayout>
+
+<style>
+.not-found {
+  text-align: center;
+}
+
+.not-found-code {
+  margin: 0 0 1rem;
+  font-family: var(--font-serif);
+  font-size: clamp(4.5rem, 14vw, 7rem);
+  line-height: 0.9;
+  color: var(--color-primary);
+}
+</style>
