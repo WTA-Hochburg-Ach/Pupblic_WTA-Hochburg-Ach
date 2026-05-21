@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { navItems, navSummaryFallbacks, siteLinks, summarizeHeadings } from '../data/site';
+import { activeLanguages, navItems, navSummaryFallbacks, siteLinks, summarizeHeadings } from '../data/site';
 import { getBaseUrl, isCurrentSitePath, normalizeSitePath, withBasePath } from '../lib/site';
 
 const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
@@ -56,9 +56,9 @@ const fallbackLabels = {
     <div class="lang-selector" role="group" aria-label="Sprache waehlen" data-i18n-attr="aria-label:common.language_toggle">
       <span class="lang-selector-label" data-i18n="common.language">Sprache</span>
       <div class="lang-toggle">
-        <button class="lang-option" type="button" data-lang="de">DE</button>
-        <button class="lang-option" type="button" data-lang="en">EN</button>
-        <button class="lang-option" type="button" data-lang="fr">FR</button>
+        {activeLanguages.map((lang) => (
+          <button class="lang-option" type="button" data-lang={lang}>{lang.toUpperCase()}</button>
+        ))}
       </div>
     </div>
   </div>
@@ -81,7 +81,7 @@ const fallbackLabels = {
     <button
       class="menu-toggle"
       type="button"
-      aria-label="Menue oeffnen"
+      aria-label="Menü öffnen"
       aria-expanded="false"
       data-i18n-attr="aria-label:common.menu_open"
     >
@@ -105,14 +105,14 @@ const fallbackLabels = {
                 {fallbackLabels[item.labelKey as keyof typeof fallbackLabels]}
               </span>
               {hasSummary && (
-                <span class="nav-link-hint" data-i18n={item.summaryKey}>
+                <span class="nav-link-hint" data-i18n-summary>
                   {summary}
                 </span>
               )}
             </a>
             {hasSummary && (
               <div class="nav-flyout">
-                <p data-i18n={item.summaryKey}>{summary}</p>
+                <p data-i18n-summary>{summary}</p>
               </div>
             )}
           </li>

@@ -11,10 +11,8 @@ const today = new Date();
 today.setHours(23, 59, 59, 999);
 const startOfToday = new Date(today);
 startOfToday.setHours(0, 0, 0, 0);
-const featuredEvents = sortByDateAscending(entries.filter((item) => isEvent(item) && item.data.date.getTime() >= startOfToday.getTime())).slice(0, 3);
 const sevenDaysAgo = new Date(today);
 sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-sevenDaysAgo.setHours(0, 0, 0, 0);
 const recentNews = newestEntries.filter((item) => {
   const itemDate = item.data.date.getTime();
   return isNews(item) && itemDate >= sevenDaysAgo.getTime() && itemDate <= today.getTime();
@@ -22,14 +20,15 @@ const recentNews = newestEntries.filter((item) => {
 const pastEvents = sortByDateDescending(entries.filter((item) => {
   const eventEnd = item.data.endDate ?? item.data.date;
   return isEvent(item) && eventEnd.getTime() < startOfToday.getTime();
-}));
+})).slice(0, 7);
+const recentNewsAndAllEvents = sortByDateDescending([...recentNews, ...pastEvents]).slice(0, 7);
 ---
 
 <BaseLayout title="Aktuelles & Termine">
   <section class="content-block-spacious news-page-intro">
     <h1>Aktuelles & Termine</h1>
-    <p class="lead-text">Kurze Neuigkeiten, kommende Lehrgaenge und die gesamte Chronik findest du hier in einer gemeinsamen Uebersicht.</p>
-    <p>Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.</p>
+    <p class="lead-text">Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Übersicht.</p>
+    <p>Alle Einträge sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.</p>
   </section>
 
   <section class="content-block-spacious">
@@ -43,12 +42,12 @@ const pastEvents = sortByDateDescending(entries.filter((item) => {
             </span>
             <h3>{item.data.title}</h3>
             <p>{item.data.preview}</p>
-            <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiter lesen</a>
+            <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiterlesen</a>
           </article>
         ))}
       </div>
     ) : (
-      <p class="archive-note">Aktuell gibt es keine Kurzmeldung aus den letzten sieben Tagen. Aeltere Beitraege stehen unten in der Chronik.</p>
+      <p class="archive-note">Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.</p>
     )}
   </section>
 
@@ -74,7 +73,7 @@ const pastEvents = sortByDateDescending(entries.filter((item) => {
             </div>
 
             <div class="chronicle-actions">
-              <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiter lesen</a>
+              <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiterlesen</a>
             </div>
           </article>
         ))}

@@ -1,10 +1,12 @@
+export const activeLanguages = ['de', 'en', 'fr', 'ja'];
+
 export const siteMeta = {
   name: 'Wanomichi Takemusu Aikido Hochburg-Ach',
   shortName: 'Aikido Hochburg-Ach',
   browserName: 'WTA-Hochburg-Ach',
   legalName: 'Wanomichi Takemusu Aikido Hochburg-Ach',
   description:
-    'Traditionelles Aikido in Duttendorf mit regelmaessigem Training, Lehrgaengen und einem offenen Vereinsleben.',
+    'Traditionelles Aikido in Duttendorf mit regelmäßigem Training, Lehrgängen und einem offenen Vereinsleben.',
 };
 
 export const siteLegal = {
@@ -12,11 +14,11 @@ export const siteLegal = {
   copyrightNotice: 'Alle Rechte vorbehalten.',
   registrationNumber: '1580789299',
   liabilityNotice:
-    'Trotz sorgfaeltiger inhaltlicher Kontrolle uebernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.',
+    'Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.',
   privacyNotice:
-    'Diese Webseite dient der Information ueber den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.',
+    'Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die übermittelten Angaben ausschließlich zur Bearbeitung der Anfrage verwendet.',
   copyrightText:
-    'Die Inhalte dieser Webseite, einschliesslich Texte, Gestaltung und bereitgestellte Dokumente, unterliegen dem Urheberrecht, soweit nicht anders gekennzeichnet.',
+    'Die Inhalte dieser Webseite, einschließlich Texte, Gestaltung und bereitgestellte Dokumente, unterliegen dem Urheberrecht, soweit nicht anders gekennzeichnet.',
 };
 
 export const siteLinks = {
@@ -55,7 +57,7 @@ export const navItems = [
     href: siteLinks.about,
     labelKey: 'nav.about',
     summaryKey: 'nav.about_summary',
-    summary: 'Trainer, Ettikette.',
+    summary: 'Trainer, Etikette.',
   },
   {
     href: siteLinks.training,
@@ -79,7 +81,7 @@ export const navItems = [
     href: siteLinks.gallery,
     labelKey: 'nav.gallery',
     summaryKey: 'nav.gallery_summary',
-    summary: 'Bilder, Rueckblicke und Impressionen aus dem Dojo.',
+    summary: 'Bilder, Rückblicke und Impressionen aus dem Dojo.',
   },
   {
     href: siteLinks.links,

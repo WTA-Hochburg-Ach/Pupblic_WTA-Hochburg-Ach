@@ -12,6 +12,7 @@
     de: { code: 'DE', htmlLang: 'de', dateLocale: 'de-DE' },
     en: { code: 'EN', htmlLang: 'en', dateLocale: 'en-GB' },
     fr: { code: 'FR', htmlLang: 'fr', dateLocale: 'fr-FR' },
+    ja: { code: 'JA', htmlLang: 'ja', dateLocale: 'ja-JP' },
   };
 
   let currentLang = DEFAULT_LANG;
@@ -270,6 +271,26 @@
     });
   }
 
+  function updateSummaries(root = document) {
+    forEachMatch(root, '[data-i18n-summary]', (element) => {
+      if (!ORIGINAL_TEXT.has(element)) {
+        ORIGINAL_TEXT.set(element, element.textContent || '');
+      }
+
+      const original = ORIGINAL_TEXT.get(element) || '';
+      if (currentLang === DEFAULT_LANG) {
+        element.textContent = original;
+        return;
+      }
+
+      const parts = original.split(',').map((part) => {
+        const trimmed = normalizeText(part);
+        return translateExactText(trimmed);
+      });
+      element.textContent = parts.join(', ');
+    });
+  }
+
   function updateExactTextNodes(root = document.body) {
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
       acceptNode(node) {
@@ -329,6 +350,7 @@
     updateKeyedText(root);
     updateKeyedAttributes(root);
     updateDates(root);
+    updateSummaries(root);
     updateExactAttributes(root);
     updateExactTextNodes(root instanceof Document ? document.body : root);
     updateLanguageSelector();

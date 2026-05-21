@@ -2201,6 +2201,26 @@
     "withOptionalBasePath(baseUrl, entry.galleryHref ?? ''),": {
       "text": "withOptionalBasePath(baseUrl, entry.galleryHref ?? ''),",
       "_source": "withOptionalBasePath(baseUrl, entry.galleryHref ?? ''),"
+    },
+    "Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.": {
+      "text": "Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.",
+      "_source": "Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik."
+    },
+    "Alle Einträge sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
+      "text": "Alle Einträge sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
+      "_source": "Alle Einträge sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
+    },
+    "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort rechts, ohne dass die Seite neu geladen werden muss.": {
+      "text": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort rechts, ohne dass die Seite neu geladen werden muss.",
+      "_source": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort rechts, ohne dass die Seite neu geladen werden muss."
+    },
+    "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Übersicht.": {
+      "text": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Übersicht.",
+      "_source": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Übersicht."
+    },
+    "Weiterlesen": {
+      "text": "Weiterlesen",
+      "_source": "Weiterlesen"
     }
   },
   "attr": {
