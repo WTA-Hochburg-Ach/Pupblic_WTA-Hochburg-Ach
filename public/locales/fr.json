@@ -1,11 +1,11 @@
 {
   "common": {
     "language": {
-      "text": "Langue",
+      "text": "Sprache",
       "_source": "Sprache"
     },
     "language_toggle": {
-      "text": "Choisir la langue",
+      "text": "Sprache waehlen",
       "_source": "Sprache waehlen"
     },
     "theme": {
@@ -13,15 +13,15 @@
       "_source": "Theme"
     },
     "theme_toggle": {
-      "text": "Changer le theme",
+      "text": "Farbschema wechseln",
       "_source": "Farbschema wechseln"
     },
     "theme_light": {
-      "text": "Clair",
+      "text": "Hell",
       "_source": "Hell"
     },
     "theme_dark": {
-      "text": "Sombre",
+      "text": "Dunkel",
       "_source": "Dunkel"
     },
     "menu_open": {
@@ -35,35 +35,35 @@
       "_source": "Über uns"
     },
     "about_summary": {
-      "text": "Club, lieu, cours d essai et enseignant.",
+      "text": "Verein, Trainingsort, Probetraining und Trainer.",
       "_source": "Verein, Trainingsort, Probetraining und Trainer."
     },
     "training": {
-      "text": "Entrainement",
+      "text": "Training",
       "_source": "Training"
     },
     "training_summary": {
-      "text": "Aikido, armes et structure des cours.",
+      "text": "Aikido, Waffentraining und Trainingsaufbau.",
       "_source": "Aikido, Waffentraining und Trainingsaufbau."
     },
     "schedule": {
-      "text": "Horaires",
+      "text": "Trainingsplan",
       "_source": "Trainingsplan"
     },
     "events": {
-      "text": "Evenements",
+      "text": "Termine",
       "_source": "Termine"
     },
     "events_summary": {
-      "text": "Calendrier, timeline, brochures et telechargements PDF.",
+      "text": "Kalender, Timeline, Ausschreibungen und PDF-Downloads.",
       "_source": "Kalender, Timeline, Ausschreibungen und PDF-Downloads."
     },
     "news": {
-      "text": "Actualites",
+      "text": "Aktuelles",
       "_source": "Aktuelles"
     },
     "news_summary": {
-      "text": "Nouvelles breves et historique chronologique.",
+      "text": "Kurze Neuigkeiten und die chronologische Historie.",
       "_source": "Kurze Neuigkeiten und die chronologische Historie."
     },
     "gallery": {
@@ -75,19 +75,19 @@
       "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
     },
     "links": {
-      "text": "Liens",
+      "text": "Links",
       "_source": "Links"
     },
     "links_summary": {
-      "text": "Dojos partenaires, reseau et recommandations utiles.",
+      "text": "Partnerdojos, Netzwerk und hilfreiche Empfehlungen.",
       "_source": "Partnerdojos, Netzwerk und hilfreiche Empfehlungen."
     },
     "contact": {
-      "text": "Contact",
+      "text": "Kontakt",
       "_source": "Kontakt"
     },
     "contact_summary": {
-      "text": "Personnes, adresse, telephone et itineraire.",
+      "text": "Ansprechpartner, Adresse, Telefon und Anfahrt.",
       "_source": "Ansprechpartner, Adresse, Telefon und Anfahrt."
     }
   },
@@ -97,11 +97,11 @@
       "_source": "WTA Hochburg-Ach"
     },
     "updates_title": {
-      "text": "Actualites",
+      "text": "Aktuelles",
       "_source": "Aktuelles"
     },
     "news_and_events": {
-      "text": "Actualites & evenements",
+      "text": "Aktuelles & Termine",
       "_source": "Aktuelles & Termine"
     },
     "event_overview": {
@@ -109,31 +109,31 @@
       "_source": "Terminuebersicht"
     },
     "legal_and_privacy": {
-      "text": "Mentions legales & confidentialite",
+      "text": "Impressum & Datenschutz",
       "_source": "Impressum & Datenschutz"
     },
     "times_title": {
-      "text": "Horaires",
+      "text": "Trainingszeiten",
       "_source": "Trainingszeiten"
     },
     "times_monday": {
-      "text": "Lundi: 18:00 - 19:30 entrainement",
+      "text": "Montag: 18:00 - 19:30 Training",
       "_source": "Montag: 18:00 - 19:30 Training"
     },
     "times_friday_questions": {
-      "text": "Vendredi: 16:00 - 17:00 questions et approfondissement",
+      "text": "Freitag: 16:00 - 17:00 Fragen und Vertiefung",
       "_source": "Freitag: 16:00 - 17:00 Fragen und Vertiefung"
     },
     "times_friday_training": {
-      "text": "Vendredi: 17:00 - 18:30 entrainement",
+      "text": "Freitag: 17:00 - 18:30 Training",
       "_source": "Freitag: 17:00 - 18:30 Training"
     },
     "times_saturday": {
-      "text": "Samedi: 10:00 - 12:00 armes les semaines impaires",
+      "text": "Samstag: 10:00 - 12:00 Waffentraining in ungeraden Wochen",
       "_source": "Samstag: 10:00 - 12:00 Waffentraining in ungeraden Wochen"
     },
     "contact_title": {
-      "text": "Contact",
+      "text": "Kontakt",
       "_source": "Kontakt"
     },
     "address_line1": {
@@ -145,21 +145,21 @@
       "_source": "5122 Duttendorf"
     },
     "network_title": {
-      "text": "Reseau",
+      "text": "Netzwerk",
       "_source": "Netzwerk"
     },
     "copyright": {
-      "text": "Copyright {year} Wanomichi Takemusu Aikido Hochburg-Ach. Tous droits reserves.",
+      "text": "Copyright {year} Wanomichi Takemusu Aikido Hochburg-Ach. Alle Rechte vorbehalten.",
       "_source": "Copyright {year} Wanomichi Takemusu Aikido Hochburg-Ach. Alle Rechte vorbehalten."
     },
     "tagline": {
-      "text": "Aikido - la voie de l harmonie",
+      "text": "Aikido - der Weg der Harmonie",
       "_source": "Aikido - der Weg der Harmonie"
     }
   },
   "meta": {
     "404": {
-      "text": "Page introuvable",
+      "text": "Seite nicht gefunden",
       "_source": "Seite nicht gefunden"
     },
     "home": {
@@ -167,97 +167,93 @@
       "_source": "WTA-Hochburg-Ach"
     },
     "ueber-uns": {
-      "text": "A propos de nous",
+      "text": "Über uns",
       "_source": "Über uns"
     },
     "training": {
-      "text": "Entrainement",
+      "text": "Training",
       "_source": "Training"
     },
     "trainingsplan": {
-      "text": "Horaires",
+      "text": "Trainingsplan",
       "_source": "Trainingsplan"
     },
     "termine": {
-      "text": "Evenements",
+      "text": "Termine",
       "_source": "Termine"
     },
     "news": {
-      "text": "Actualites & evenements",
+      "text": "Aktuelles & Termine",
       "_source": "Aktuelles & Termine"
     },
     "links": {
-      "text": "Liens",
+      "text": "Links",
       "_source": "Links"
     },
     "kontakt": {
-      "text": "Contact",
+      "text": "Kontakt",
       "_source": "Kontakt"
     },
     "legal": {
-      "text": "Mentions legales & contact",
+      "text": "Impressum & Kontakt",
       "_source": "Impressum & Kontakt"
     },
     "impressum": {
-      "text": "Mentions legales & contact",
+      "text": "Impressum & Kontakt",
       "_source": "Impressum & Kontakt"
     },
     "foto-galerie": {
-      "text": "Galerie photo",
+      "text": "Foto-Galerie",
       "_source": "Foto-Galerie"
-    },
-    "über-uns": {
-      "text": "Über uns",
-      "_source": "Über uns"
     }
   },
   "events": {
     "detail_count_one": {
-      "text": "{count} evenement ce jour",
+      "text": "{count} Termin an diesem Tag",
       "_source": "{count} Termin an diesem Tag"
     },
     "detail_count_other": {
-      "text": "{count} evenements ce jour",
+      "text": "{count} Termine an diesem Tag",
       "_source": "{count} Termine an diesem Tag"
     },
     "detail_none": {
-      "text": "Aucun evenement ce jour",
+      "text": "Kein Termin an diesem Tag",
       "_source": "Kein Termin an diesem Tag"
     },
     "empty_day": {
-      "text": "Aucun evenement n est inscrit pour ce jour.",
+      "text": "An diesem Tag ist kein Termin eingetragen.",
       "_source": "An diesem Tag ist kein Termin eingetragen."
     },
     "time": {
-      "text": "Heure",
+      "text": "Zeit",
       "_source": "Zeit"
     },
     "place": {
-      "text": "Lieu",
+      "text": "Ort",
       "_source": "Ort"
     },
     "people": {
-      "text": "Personnes",
+      "text": "Personen",
       "_source": "Personen"
     },
     "tba": {
-      "text": "sera annonce",
+      "text": "wird bekanntgegeben",
       "_source": "wird bekanntgegeben"
     },
     "modal_loading": {
-      "text": "Chargement...",
+      "text": "Laden...",
       "_source": "Laden..."
     },
     "modal_error": {
-      "text": "Le contenu ne peut pas etre charge pour le moment.",
+      "text": "Der Inhalt konnte gerade nicht geladen werden.",
       "_source": "Der Inhalt konnte gerade nicht geladen werden."
     },
     "pdf_de": {
-      "text": "PDF allemand",
+      "text": "PDF Deutsch",
       "_source": "PDF Deutsch"
     },
     "pdf_en": {
-      "text": "PDF anglais",
+      "text": "PDF English",
       "_source": "PDF English"
     },
     "pdf_short_de": {
@@ -269,11 +265,11 @@
       "_source": "PDF EN"
     },
     "preview": {
-      "text": "Apercu",
+      "text": "Vorschau",
       "_source": "Vorschau"
     },
     "open_page": {
-      "text": "Ouvrir la page",
+      "text": "Seite oeffnen",
       "_source": "Seite oeffnen"
     },
     "details": {
@@ -281,15 +277,15 @@
       "_source": "Details"
     },
     "aria_count_one": {
-      "text": "{count} evenement",
+      "text": "{count} Termin",
       "_source": "{count} Termin"
     },
     "aria_count_other": {
-      "text": "{count} evenements",
+      "text": "{count} Termine",
       "_source": "{count} Termine"
     },
     "aria_none": {
-      "text": "aucun evenement",
+      "text": "kein Termin",
       "_source": "kein Termin"
     }
   },
@@ -306,6 +302,10 @@
       "text": "- Montag: 18:00 bis 19:30",
       "_source": "- Montag: 18:00 bis 19:30"
     },
+    "- Montag: 18:00 bis 19:30 - Freitag: 16:00 bis 17:00 Fragen und Vertiefung - Freitag: 17:00 bis 18:30 Training - Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen": {
+      "text": "- Montag: 18:00 bis 19:30 - Freitag: 16:00 bis 17:00 Fragen und Vertiefung - Freitag: 17:00 bis 18:30 Training - Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen",
+      "_source": "- Montag: 18:00 bis 19:30 - Freitag: 16:00 bis 17:00 Fragen und Vertiefung - Freitag: 17:00 bis 18:30 Training - Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen"
+    },
     "- Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen": {
       "text": "- Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen",
       "_source": "- Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen"
@@ -319,11 +319,11 @@
       "_source": "1 Termin an diesem Tag"
     },
     "2. Vorstand": {
-      "text": "Vice-president",
+      "text": "2. Vorstand",
       "_source": "2. Vorstand"
     },
     "2. Vorstand:": {
-      "text": "Vice-president :",
+      "text": "2. Vorstand:",
       "_source": "2. Vorstand:"
     },
     "3. Dan Wanomichi Takemusu Aiki": {
@@ -342,17 +342,29 @@
       "text": "84503 Altoetting",
       "_source": "84503 Altoetting"
     },
+    "84503 Altötting": {
+      "text": "84503 Altötting",
+      "_source": "84503 Altötting"
+    },
     "84577 Tuessling": {
       "text": "84577 Tuessling",
       "_source": "84577 Tuessling"
     },
+    "84577 Tüssling": {
+      "text": "84577 Tüssling",
+      "_source": "84577 Tüssling"
+    },
     "Ab 2026 gelten folgende Trainingszeiten:": {
-      "text": "Les horaires suivants s appliquent a partir de 2026 :",
+      "text": "Ab 2026 gelten folgende Trainingszeiten:",
       "_source": "Ab 2026 gelten folgende Trainingszeiten:"
     },
     "Abgerundet wird das Training durch Buki Waza, also das Ueben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar.": {
-      "text": "L entrainement est complete par le Buki Waza, c est-a-dire la pratique avec sabre en bois, baton et couteau en bois. Cela rend la distance, la posture et le lien encore plus tangibles.",
+      "text": "Abgerundet wird das Training durch Buki Waza, also das Ueben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar.",
       "_source": "Abgerundet wird das Training durch Buki Waza, also das Ueben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar."
+    },
+    "Abgerundet wird das Training, das der Lehre von Saito Morihiro Sensei folgt, durch das Waffentraining (buki waza). Indem man den Umgang mit dem Holzschwert (ken) im Aikiken, dem Holzstab (jo) im Aikijo und dem Holzmesser (tanto) erlernt, lernt man seinen Körper besser kennen.": {
+      "text": "Abgerundet wird das Training, das der Lehre von Saito Morihiro Sensei folgt, durch das Waffentraining (buki waza). Indem man den Umgang mit dem Holzschwert (ken) im Aikiken, dem Holzstab (jo) im Aikijo und dem Holzmesser (tanto) erlernt, lernt man seinen Körper besser kennen.",
+      "_source": "Abgerundet wird das Training, das der Lehre von Saito Morihiro Sensei folgt, durch das Waffentraining (buki waza). Indem man den Umgang mit dem Holzschwert (ken) im Aikiken, dem Holzstab (jo) im Aikijo und dem Holzmesser (tanto) erlernt, lernt man seinen Körper besser kennen."
     },
     "Aikido": {
       "text": "Aikido",
@@ -374,24 +386,44 @@
       "text": "Aikido Hochburg-Ach",
       "_source": "Aikido Hochburg-Ach"
     },
+    "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.": {
+      "text": "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.",
+      "_source": "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen."
+    },
     "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er ueber Winkel, Distanz und Kreisbewegungen aufgenommen.": {
-      "text": "L Aikido est un art martial japonais dont les techniques corporelles reposent sur des ecoles classiques comme le Yagyu-ryu et le Daito-ryu Jujutsu. Au lieu d affronter une attaque de front, elle est recue par les angles, la distance et les mouvements circulaires.",
+      "text": "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er ueber Winkel, Distanz und Kreisbewegungen aufgenommen.",
       "_source": "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er ueber Winkel, Distanz und Kreisbewegungen aufgenommen."
     },
+    "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.": {
+      "text": "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.",
+      "_source": "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde."
+    },
+    "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.": {
+      "text": "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.",
+      "_source": "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen."
+    },
+    "Aikido ist eine japanische Kampfkunst, die von O’Sensei Ueshiba Morihei (*1883,+1969) um 1920 entwickelt wurde und die er bis zu seinem Tod 1969 stetig weiterentwickelt hat.": {
+      "text": "Aikido ist eine japanische Kampfkunst, die von O’Sensei Ueshiba Morihei (*1883,+1969) um 1920 entwickelt wurde und die er bis zu seinem Tod 1969 stetig weiterentwickelt hat.",
+      "_source": "Aikido ist eine japanische Kampfkunst, die von O’Sensei Ueshiba Morihei (*1883,+1969) um 1920 entwickelt wurde und die er bis zu seinem Tod 1969 stetig weiterentwickelt hat."
+    },
     "Aikido ist eine japanische Kampfkunst, in der Bewegung, Timing und Koerperzentrum wichtiger sind als Kraft oder Konkurrenz.": {
-      "text": "L Aikido est un art martial japonais dans lequel le mouvement, le timing et le centre du corps sont plus importants que la force ou la concurrence.",
+      "text": "Aikido ist eine japanische Kampfkunst, in der Bewegung, Timing und Koerperzentrum wichtiger sind als Kraft oder Konkurrenz.",
       "_source": "Aikido ist eine japanische Kampfkunst, in der Bewegung, Timing und Koerperzentrum wichtiger sind als Kraft oder Konkurrenz."
     },
     "Aikido ist fuer Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit.": {
-      "text": "L Aikido convient aux personnes de tout age. Il ne faut aucune experience prealable, seulement de la curiosite et de l ouverture.",
+      "text": "Aikido ist fuer Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit.",
       "_source": "Aikido ist fuer Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit."
     },
+    "Aikido ist für Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit.": {
+      "text": "Aikido ist für Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit.",
+      "_source": "Aikido ist für Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit."
+    },
     "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt fuer viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren.": {
-      "text": "L Aikido considere technique, attention et posture comme une unite. C est justement ce qui fait son attrait pour beaucoup de personnes : un art martial a la forme claire et en meme temps un chemin pour entrainer presence, lien et calme.",
+      "text": "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt fuer viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren.",
       "_source": "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt fuer viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren."
     },
     "Aikido wurde von Ueshiba Morihei entwickelt und verbindet Kampfkunst, Koerperarbeit und einen Weg der inneren Haltung.": {
-      "text": "L Aikido a ete developpe par Ueshiba Morihei et unit art martial, travail du corps et cheminement interieur.",
+      "text": "Aikido wurde von Ueshiba Morihei entwickelt und verbindet Kampfkunst, Koerperarbeit und einen Weg der inneren Haltung.",
       "_source": "Aikido wurde von Ueshiba Morihei entwickelt und verbindet Kampfkunst, Koerperarbeit und einen Weg der inneren Haltung."
     },
     "Aikido, Dojo, Kampfkunst, Braunau, Training, Hochburg-Ach": {
@@ -403,51 +435,67 @@
       "_source": "Aikido, Waffentraining und Trainingsaufbau."
     },
     "Aktuell gibt es keine Kurzmeldung aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.": {
-      "text": "Il n y a actuellement aucune breve des sept derniers jours. Les publications plus anciennes se trouvent plus bas dans la chronologie.",
+      "text": "Aktuell gibt es keine Kurzmeldung aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.",
       "_source": "Aktuell gibt es keine Kurzmeldung aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik."
     },
+    "Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.": {
+      "text": "Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.",
+      "_source": "Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik."
+    },
     "Aktuelles": {
-      "text": "Actualite",
+      "text": "Aktuelles",
       "_source": "Aktuelles"
     },
     "Aktuelles & Termine": {
-      "text": "Actualites & evenements",
+      "text": "Aktuelles & Termine",
       "_source": "Aktuelles & Termine"
     },
     "Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
       "text": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
       "_source": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine fuehren zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
     },
+    "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
+      "text": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
+      "_source": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
+    },
+    "Alle Einträge sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
+      "text": "Alle Einträge sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
+      "_source": "Alle Einträge sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
+    },
     "Alle Rechte vorbehalten.": {
       "text": "Alle Rechte vorbehalten.",
       "_source": "Alle Rechte vorbehalten."
     },
     "Alle regulaeren Einheiten finden derzeit wie geplant statt.": {
-      "text": "Toutes les seances regulieres ont actuellement lieu comme prevu.",
+      "text": "Alle regulaeren Einheiten finden derzeit wie geplant statt.",
       "_source": "Alle regulaeren Einheiten finden derzeit wie geplant statt."
     },
     "Alle regulaeren Einheiten in Duttendorf finden derzeit wie geplant statt.": {
-      "text": "Toutes les seances regulieres a Duttendorf ont actuellement lieu comme prevu.",
+      "text": "Alle regulaeren Einheiten in Duttendorf finden derzeit wie geplant statt.",
       "_source": "Alle regulaeren Einheiten in Duttendorf finden derzeit wie geplant statt."
     },
+    "Als Nächstes": {
+      "text": "Als Nächstes",
+      "_source": "Als Nächstes"
+    },
     "Als Naechstes": {
-      "text": "A venir",
+      "text": "Als Naechstes",
       "_source": "Als Naechstes"
     },
     "Am 12. und 13. September 2026 findet in Hochburg-Ach ein Lehrgang mit Daniel und Sonia Toutain statt.": {
-      "text": "Les 12 et 13 septembre 2026, un stage avec Daniel et Sonia Toutain aura lieu a Hochburg-Ach.",
+      "text": "Am 12. und 13. September 2026 findet in Hochburg-Ach ein Lehrgang mit Daniel und Sonia Toutain statt.",
       "_source": "Am 12. und 13. September 2026 findet in Hochburg-Ach ein Lehrgang mit Daniel und Sonia Toutain statt."
     },
     "An diesem Tag ist kein Termin eingetragen.": {
-      "text": "Aucun evenement n est inscrit pour ce jour.",
+      "text": "An diesem Tag ist kein Termin eingetragen.",
       "_source": "An diesem Tag ist kein Termin eingetragen."
     },
     "Anrufen": {
-      "text": "Appeler",
+      "text": "Anrufen",
       "_source": "Anrufen"
     },
     "Ansprechpartner": {
-      "text": "Contacts",
+      "text": "Ansprechpartner",
       "_source": "Ansprechpartner"
     },
     "Ansprechpartner, Adresse, Telefon und Anfahrt.": {
@@ -470,24 +518,28 @@
       "text": "Athaler Strasse 1, 5122 Duttendorf",
       "_source": "Athaler Strasse 1, 5122 Duttendorf"
     },
+    "Ausschreibung": {
+      "text": "Ausschreibung",
+      "_source": "Ausschreibung"
+    },
     "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain.": {
       "text": "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain.",
       "_source": "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain."
     },
     "Balance und Stabilitaet": {
-      "text": "Equilibre et stabilite",
+      "text": "Balance und Stabilitaet",
       "_source": "Balance und Stabilitaet"
     },
     "Besonderes Event": {
-      "text": "Evenement special",
+      "text": "Besonderes Event",
       "_source": "Besonderes Event"
     },
     "Bewegung": {
-      "text": "Mouvement",
+      "text": "Bewegung",
       "_source": "Bewegung"
     },
     "Bewegung ohne Druck": {
-      "text": "Mouvement sans pression",
+      "text": "Bewegung ohne Druck",
       "_source": "Bewegung ohne Druck"
     },
     "Bilder, Rückblicke und Impressionen aus dem Dojo.": {
@@ -503,16 +555,24 @@
       "_source": "Birkenweg 29"
     },
     "Bitte melde dich vor einem ersten Besuch kurz bei uns, damit wir dich gut empfangen koennen.": {
-      "text": "Merci de nous contacter avant une premiere visite afin que nous puissions bien t accueillir.",
+      "text": "Bitte melde dich vor einem ersten Besuch kurz bei uns, damit wir dich gut empfangen koennen.",
       "_source": "Bitte melde dich vor einem ersten Besuch kurz bei uns, damit wir dich gut empfangen koennen."
     },
     "Bitte nimm vor einem ersten Besuch Kontakt mit uns auf, damit wir dich gut einplanen koennen.": {
-      "text": "Merci de nous contacter avant une premiere visite afin que nous puissions bien t integrer a l organisation.",
+      "text": "Bitte nimm vor einem ersten Besuch Kontakt mit uns auf, damit wir dich gut einplanen koennen.",
       "_source": "Bitte nimm vor einem ersten Besuch Kontakt mit uns auf, damit wir dich gut einplanen koennen."
     },
     "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Fuer das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.": {
-      "text": "Merci de nous contacter avant afin que nous puissions bien t accueillir. Pour le premier entrainement, une tenue de sport longue ou un survetement ainsi que des chaussures d interieur suffisent. L entrainement se fait pieds nus ou avec des chaussettes antiderapantes.",
+      "text": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Fuer das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.",
       "_source": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Fuer das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken."
+    },
+    "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.": {
+      "text": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.",
+      "_source": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken."
+    },
+    "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen können. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.": {
+      "text": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen können. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.",
+      "_source": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen können. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken."
     },
     "Boolean(entry.data.endDate),": {
       "text": "Boolean(entry.data.endDate),",
@@ -531,19 +591,23 @@
       "_source": "button button-secondary"
     },
     "Christian begann seine Aikido-Laufbahn 2004 in Steyr. In Hochburg-Ach begleitet er das Training mit ruhiger, genauer Arbeit an Grundlagen, Haltung und Verbindung.": {
-      "text": "Christian a commence son parcours d Aikido en 2004 a Steyr. A Hochburg-Ach, il accompagne l entrainement avec un travail calme et precis sur les bases, la posture et le lien.",
+      "text": "Christian begann seine Aikido-Laufbahn 2004 in Steyr. In Hochburg-Ach begleitet er das Training mit ruhiger, genauer Arbeit an Grundlagen, Haltung und Verbindung.",
       "_source": "Christian begann seine Aikido-Laufbahn 2004 in Steyr. In Hochburg-Ach begleitet er das Training mit ruhiger, genauer Arbeit an Grundlagen, Haltung und Verbindung."
     },
     "Christian Dostal": {
       "text": "Christian Dostal",
       "_source": "Christian Dostal"
     },
+    "Christian Dostal Birkenweg 29 5122 Hochburg-Ach Österreich": {
+      "text": "Christian Dostal Birkenweg 29 5122 Hochburg-Ach Österreich",
+      "_source": "Christian Dostal Birkenweg 29 5122 Hochburg-Ach Österreich"
+    },
     "Christian Dostal im Dojo": {
       "text": "Christian Dostal im Dojo",
       "_source": "Christian Dostal im Dojo"
     },
     "Chronik": {
-      "text": "Chronologie",
+      "text": "Chronik",
       "_source": "Chronik"
     },
     "color: z.enum(['moss', 'sage', 'gold']).default('moss'),": {
@@ -607,7 +671,7 @@
       "_source": "date: z.coerce.date(),"
     },
     "Datenschutz": {
-      "text": "Confidentialite",
+      "text": "Datenschutz",
       "_source": "Datenschutz"
     },
     "DE": {
@@ -631,16 +695,32 @@
       "_source": "de: z.string().optional(),"
     },
     "Demnaechst geplant": {
-      "text": "Bientot prevu",
+      "text": "Demnaechst geplant",
       "_source": "Demnaechst geplant"
     },
+    "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt oeffnen.": {
+      "text": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt oeffnen.",
+      "_source": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt oeffnen."
+    },
     "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen.": {
-      "text": "Le lieu d entrainement se trouve a Duttendorf dans la commune de Hochburg-Ach. Tu peux ouvrir directement l itineraire via Google Maps.",
+      "text": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen.",
       "_source": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen."
     },
+    "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt öffnen.": {
+      "text": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt öffnen.",
+      "_source": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt öffnen."
+    },
     "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.": {
-      "text": "Le club a ete fonde le 10 fevrier 2026 et represente un Aikido traditionnel avec une culture d entrainement calme et precise.",
+      "text": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.",
       "_source": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur."
+    },
+    "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, präziser Trainingskultur.": {
+      "text": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, präziser Trainingskultur.",
+      "_source": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, präziser Trainingskultur."
+    },
+    "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur.": {
+      "text": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur.",
+      "_source": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur."
     },
     "description:": {
       "text": "description:",
@@ -659,15 +739,19 @@
       "_source": "Deutsche Ausschreibung fuer die intensive Trainingswoche in Birach."
     },
     "Deutschland": {
-      "text": "Allemagne",
+      "text": "Deutschland",
       "_source": "Deutschland"
     },
     "Di": {
-      "text": "Ma",
+      "text": "Di",
       "_source": "Di"
     },
+    "Die Angriffe werden durch Kreisbewegungen umgelenkt anstelle sich ihnen direkt entgegenzustellen und auf Konfrontation zu gehen. Zudem beinhaltet das Körper-Technik-Programm (taijutsu) auch viele Verhebelungen. Dies ermöglicht es, körperlich überlegene Gegner zu kontrollieren.": {
+      "text": "Die Angriffe werden durch Kreisbewegungen umgelenkt anstelle sich ihnen direkt entgegenzustellen und auf Konfrontation zu gehen. Zudem beinhaltet das Körper-Technik-Programm (taijutsu) auch viele Verhebelungen. Dies ermöglicht es, körperlich überlegene Gegner zu kontrollieren.",
+      "_source": "Die Angriffe werden durch Kreisbewegungen umgelenkt anstelle sich ihnen direkt entgegenzustellen und auf Konfrontation zu gehen. Zudem beinhaltet das Körper-Technik-Programm (taijutsu) auch viele Verhebelungen. Dies ermöglicht es, körperlich überlegene Gegner zu kontrollieren."
+    },
     "Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geöffnet oder heruntergeladen werden.": {
-      "text": "La brochure est deja liee en allemand et en anglais et peut etre ouverte ou telechargee directement en PDF.",
+      "text": "Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geöffnet oder heruntergeladen werden.",
       "_source": "Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geöffnet oder heruntergeladen werden."
     },
     "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden.": {
@@ -679,7 +763,7 @@
       "_source": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen."
     },
     "Die gesuchte Seite existiert nicht oder wurde verschoben.": {
-      "text": "La page recherchee n existe pas ou a ete deplacee.",
+      "text": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
       "_source": "Die gesuchte Seite existiert nicht oder wurde verschoben."
     },
     "Die gesuchte Seite konnte nicht gefunden werden.": {
@@ -690,16 +774,48 @@
       "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen.",
       "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt oeffnen."
     },
+    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.": {
+      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.",
+      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen."
+    },
+    "Die Idee der kreisförmigen Bewegungen ermöglicht es, körperlich überlegene Gegner zu kontrollieren. Wie bei einer Kugel ist das Zentrum stabil und die Bewegung entsteht aus dem Ruhepunkt. Diese kreisförmige Bewegung kann jede Gegenkraft durch Techniken aus ihrem Zentrum heraus umlenken und damit neutralisieren.": {
+      "text": "Die Idee der kreisförmigen Bewegungen ermöglicht es, körperlich überlegene Gegner zu kontrollieren. Wie bei einer Kugel ist das Zentrum stabil und die Bewegung entsteht aus dem Ruhepunkt. Diese kreisförmige Bewegung kann jede Gegenkraft durch Techniken aus ihrem Zentrum heraus umlenken und damit neutralisieren.",
+      "_source": "Die Idee der kreisförmigen Bewegungen ermöglicht es, körperlich überlegene Gegner zu kontrollieren. Wie bei einer Kugel ist das Zentrum stabil und die Bewegung entsteht aus dem Ruhepunkt. Diese kreisförmige Bewegung kann jede Gegenkraft durch Techniken aus ihrem Zentrum heraus umlenken und damit neutralisieren."
+    },
     "Die Inhalte dieser Webseite, einschliesslich Texte, Gestaltung und bereitgestellte Dokumente, unterliegen dem Urheberrecht, soweit nicht anders gekennzeichnet.": {
-      "text": "Les contenus de ce site, y compris les textes, la mise en page et les documents fournis, sont proteges par le droit d auteur sauf indication contraire.",
+      "text": "Die Inhalte dieser Webseite, einschliesslich Texte, Gestaltung und bereitgestellte Dokumente, unterliegen dem Urheberrecht, soweit nicht anders gekennzeichnet.",
       "_source": "Die Inhalte dieser Webseite, einschliesslich Texte, Gestaltung und bereitgestellte Dokumente, unterliegen dem Urheberrecht, soweit nicht anders gekennzeichnet."
     },
+    "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können.": {
+      "text": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können.",
+      "_source": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können."
+    },
+    "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.": {
+      "text": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.",
+      "_source": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde."
+    },
+    "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. br Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.": {
+      "text": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. br Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.",
+      "_source": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. br Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde."
+    },
+    "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. brAikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.": {
+      "text": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. brAikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.",
+      "_source": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. brAikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde."
+    },
+    "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die übermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.": {
+      "text": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die übermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.",
+      "_source": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die übermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet."
+    },
+    "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.": {
+      "text": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.",
+      "_source": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet."
+    },
     "Diese Webseite dient der Information ueber den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.": {
-      "text": "Ce site sert a informer sur le club. En cas de prise de contact par e-mail ou telephone, les donnees transmises sont utilisees exclusivement pour traiter la demande.",
+      "text": "Diese Webseite dient der Information ueber den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.",
       "_source": "Diese Webseite dient der Information ueber den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet."
     },
     "Direkter Kontakt": {
-      "text": "Contact direct",
+      "text": "Direkter Kontakt",
       "_source": "Direkter Kontakt"
     },
     "display: z.enum(['modal', 'page']).default('page'),": {
@@ -707,11 +823,11 @@
       "_source": "display: z.enum(['modal', 'page']).default('page'),"
     },
     "Do": {
-      "text": "Je",
+      "text": "Do",
       "_source": "Do"
     },
     "Dojo-Kultur erleben": {
-      "text": "Decouvrir la culture du dojo",
+      "text": "Dojo-Kultur erleben",
       "_source": "Dojo-Kultur erleben"
     },
     "dojo@aikido-hochburg-ach.at": {
@@ -735,23 +851,27 @@
       "_source": "E-Mail"
     },
     "E-Mail schreiben": {
-      "text": "Ecrire un e-mail",
+      "text": "E-Mail schreiben",
       "_source": "E-Mail schreiben"
     },
     "E-Mail:": {
-      "text": "E-mail :",
+      "text": "E-Mail:",
       "_source": "E-Mail:"
     },
     "Ein konzentrierter Gegenpol zu einem hektischen Tagesrhythmus.": {
-      "text": "Un contrepoint concentre a un rythme de journee agite.",
+      "text": "Ein konzentrierter Gegenpol zu einem hektischen Tagesrhythmus.",
       "_source": "Ein konzentrierter Gegenpol zu einem hektischen Tagesrhythmus."
     },
     "Ein Probetraining ist nach kurzer Anmeldung jederzeit moeglich.": {
-      "text": "Un cours d essai est possible a tout moment apres une courte inscription.",
+      "text": "Ein Probetraining ist nach kurzer Anmeldung jederzeit moeglich.",
       "_source": "Ein Probetraining ist nach kurzer Anmeldung jederzeit moeglich."
     },
+    "Ein Probetraining ist nach kurzer Anmeldung jederzeit möglich.": {
+      "text": "Ein Probetraining ist nach kurzer Anmeldung jederzeit möglich.",
+      "_source": "Ein Probetraining ist nach kurzer Anmeldung jederzeit möglich."
+    },
     "Einblicke ins Dojo, in Lehrgänge und in unser gemeinsames Training.": {
-      "text": "Apercus du dojo, des stages et de notre entrainement commun.",
+      "text": "Einblicke ins Dojo, in Lehrgänge und in unser gemeinsames Training.",
       "_source": "Einblicke ins Dojo, in Lehrgänge und in unser gemeinsames Training."
     },
     "email: contactData.email,": {
@@ -826,16 +946,32 @@
       "text": "entry.data.title,",
       "_source": "entry.data.title,"
     },
+    "entry.description || linkedNews?.data.preview || '',": {
+      "text": "entry.description || linkedNews?.data.preview || '',",
+      "_source": "entry.description || linkedNews?.data.preview || '',"
+    },
     "Ergaenzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar.": {
-      "text": "Le Taijutsu est complete par le Buki Waza avec sabre en bois, baton et couteau en bois. Les lignes, le timing et le centrage deviennent ainsi encore plus perceptibles.",
+      "text": "Ergaenzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar.",
       "_source": "Ergaenzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar."
+    },
+    "Ergänzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar.": {
+      "text": "Ergänzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar.",
+      "_source": "Ergänzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar."
+    },
+    "Es gibt noch keine vergangenen Beiträge in der Chronik.": {
+      "text": "Es gibt noch keine vergangenen Beiträge in der Chronik.",
+      "_source": "Es gibt noch keine vergangenen Beiträge in der Chronik."
+    },
+    "Es gibt noch keine vergangenen Termine in der Chronik.": {
+      "text": "Es gibt noch keine vergangenen Termine in der Chronik.",
+      "_source": "Es gibt noch keine vergangenen Termine in der Chronik."
     },
     "Escape": {
       "text": "Escape",
       "_source": "Escape"
     },
     "Etikette": {
-      "text": "Etiquette",
+      "text": "Etikette",
       "_source": "Etikette"
     },
     "event-dot tone-gold": {
@@ -855,7 +991,7 @@
       "_source": "external: true,"
     },
     "Externe Links": {
-      "text": "Liens externes",
+      "text": "Externe Links",
       "_source": "Externe Links"
     },
     "Facebook": {
@@ -879,23 +1015,35 @@
       "_source": "feature-grid featured-event-grid"
     },
     "Foerdert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.": {
-      "text": "Favorise la conscience du corps, la presence et un mouvement clair et droit.",
+      "text": "Foerdert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.",
       "_source": "Foerdert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung."
     },
     "Fokus": {
       "text": "Fokus",
       "_source": "Fokus"
     },
+    "Fördert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.": {
+      "text": "Fördert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.",
+      "_source": "Fördert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung."
+    },
+    "Fördert Körperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.": {
+      "text": "Fördert Körperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.",
+      "_source": "Fördert Körperbewusstsein, Praesenz und eine klare, aufrechte Bewegung."
+    },
     "formatDateRange(entry.data.date, entry.data.endDate),": {
       "text": "formatDateRange(entry.data.date, entry.data.endDate),",
       "_source": "formatDateRange(entry.data.date, entry.data.endDate),"
     },
     "Foto-Galerie": {
-      "text": "Galerie photo",
+      "text": "Foto-Galerie",
       "_source": "Foto-Galerie"
     },
+    "Fotogalerie": {
+      "text": "Fotogalerie",
+      "_source": "Fotogalerie"
+    },
     "Fr": {
-      "text": "Ve",
+      "text": "Fr",
       "_source": "Fr"
     },
     "FR": {
@@ -903,11 +1051,11 @@
       "_source": "FR"
     },
     "Fragen und Vertiefung": {
-      "text": "Questions et approfondissement",
+      "text": "Fragen und Vertiefung",
       "_source": "Fragen und Vertiefung"
     },
     "Fragen zum Training, Verein oder zu kommenden Terminen? Wir freuen uns auf deine Nachricht.": {
-      "text": "Des questions sur l entrainement, le club ou les evenements a venir ? Nous nous rejouissons de ton message.",
+      "text": "Fragen zum Training, Verein oder zu kommenden Terminen? Wir freuen uns auf deine Nachricht.",
       "_source": "Fragen zum Training, Verein oder zu kommenden Terminen? Wir freuen uns auf deine Nachricht."
     },
     "Franziskanerstrasse 2": {
@@ -915,35 +1063,47 @@
       "_source": "Franziskanerstrasse 2"
     },
     "Freitag": {
-      "text": "Vendredi",
+      "text": "Freitag",
       "_source": "Freitag"
     },
     "Freitag: 16:00 bis 17:00 Fragen und Vertiefung": {
-      "text": "Vendredi : 16:00 a 17:00 questions et approfondissement",
+      "text": "Freitag: 16:00 bis 17:00 Fragen und Vertiefung",
       "_source": "Freitag: 16:00 bis 17:00 Fragen und Vertiefung"
     },
     "Freitag: 17:00 bis 18:30 Training": {
-      "text": "Vendredi : 17:00 a 18:30 entrainement",
+      "text": "Freitag: 17:00 bis 18:30 Training",
       "_source": "Freitag: 17:00 bis 18:30 Training"
     },
     "Fuer wen ist Aikido?": {
-      "text": "Pour qui est l Aikido ?",
+      "text": "Fuer wen ist Aikido?",
       "_source": "Fuer wen ist Aikido?"
+    },
+    "Für wen ist Aikido?": {
+      "text": "Für wen ist Aikido?",
+      "_source": "Für wen ist Aikido?"
     },
     "Galerie": {
       "text": "Galerie",
       "_source": "Galerie"
     },
+    "Galerie folgt": {
+      "text": "Galerie folgt",
+      "_source": "Galerie folgt"
+    },
+    "Galerien & Ausschreibungen": {
+      "text": "Galerien & Ausschreibungen",
+      "_source": "Galerien & Ausschreibungen"
+    },
     "Gemeinsames Abschlusstraining mit anschliessender Feier.": {
-      "text": "Entrainement commun de fin d annee avec fete ensuite.",
+      "text": "Gemeinsames Abschlusstraining mit anschliessender Feier.",
       "_source": "Gemeinsames Abschlusstraining mit anschliessender Feier."
     },
     "Gemeinsames Abschlusstraining mit anschliessender kleiner Feier zum Jahresabschluss.": {
-      "text": "Entrainement commun de fin d annee avec petite fete ensuite.",
+      "text": "Gemeinsames Abschlusstraining mit anschliessender kleiner Feier zum Jahresabschluss.",
       "_source": "Gemeinsames Abschlusstraining mit anschliessender kleiner Feier zum Jahresabschluss."
     },
     "Geplant ist eine intensive Trainingswoche mit taeglichen Einheiten und gemeinsamer Zeit vor Ort.": {
-      "text": "Une semaine intensive d entrainement avec des seances quotidiennes et du temps partage sur place est prevue.",
+      "text": "Geplant ist eine intensive Trainingswoche mit taeglichen Einheiten und gemeinsamer Zeit vor Ort.",
       "_source": "Geplant ist eine intensive Trainingswoche mit taeglichen Einheiten und gemeinsamer Zeit vor Ort."
     },
     "Google Maps": {
@@ -959,11 +1119,11 @@
       "_source": "Google Maps Trainingsort"
     },
     "Google Maps:": {
-      "text": "Google Maps :",
+      "text": "Google Maps:",
       "_source": "Google Maps:"
     },
     "Haftungshinweis": {
-      "text": "Avis de responsabilite",
+      "text": "Haftungshinweis",
       "_source": "Haftungshinweis"
     },
     "Haltung": {
@@ -979,7 +1139,7 @@
       "_source": "hero hero-home"
     },
     "Heute": {
-      "text": "Aujourd hui",
+      "text": "Heute",
       "_source": "Heute"
     },
     "Hier findest du die derzeit verfuegbaren Ausschreibungen und Unterlagen direkt als PDF.": {
@@ -999,15 +1159,19 @@
       "_source": "horizontal-timeline news-rail"
     },
     "Ideal fuer alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen.": {
-      "text": "Ideal pour toutes les personnes qui cherchent un mouvement harmonieux sans competition.",
+      "text": "Ideal fuer alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen.",
       "_source": "Ideal fuer alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen."
+    },
+    "Ideal für alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen.": {
+      "text": "Ideal für alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen.",
+      "_source": "Ideal für alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen."
     },
     "if (": {
       "text": "if (",
       "_source": "if ("
     },
     "Im Training arbeiten wir mit Partneruebungen, Falltechnik, Hebeln, Wuerfen und klaren Grundformen. Angriffe werden nicht frontal geblockt, sondern ueber Linien, Winkel und Kreisbewegungen aufgenommen.": {
-      "text": "A l entrainement, nous travaillons avec des exercices a deux, des chutes, des clefs, des projections et des bases claires. Les attaques ne sont pas bloquees de face, mais recues par des lignes, des angles et des mouvements circulaires.",
+      "text": "Im Training arbeiten wir mit Partneruebungen, Falltechnik, Hebeln, Wuerfen und klaren Grundformen. Angriffe werden nicht frontal geblockt, sondern ueber Linien, Winkel und Kreisbewegungen aufgenommen.",
       "_source": "Im Training arbeiten wir mit Partneruebungen, Falltechnik, Hebeln, Wuerfen und klaren Grundformen. Angriffe werden nicht frontal geblockt, sondern ueber Linien, Winkel und Kreisbewegungen aufgenommen."
     },
     "image/svg+xml": {
@@ -1015,16 +1179,28 @@
       "_source": "image/svg+xml"
     },
     "Impressionen aus Begegnung, Austausch und gemeinsamen Momenten neben der Matte.": {
-      "text": "Impressions de rencontres, d echanges et de moments partages hors du tatami.",
+      "text": "Impressionen aus Begegnung, Austausch und gemeinsamen Momenten neben der Matte.",
       "_source": "Impressionen aus Begegnung, Austausch und gemeinsamen Momenten neben der Matte."
     },
     "Impressum & Datenschutz": {
-      "text": "Mentions legales & confidentialite",
+      "text": "Impressum & Datenschutz",
       "_source": "Impressum & Datenschutz"
     },
+    "In Entwicklung": {
+      "text": "In Entwicklung",
+      "_source": "In Entwicklung"
+    },
     "In Google Maps oeffnen": {
-      "text": "Ouvrir dans Google Maps",
+      "text": "In Google Maps oeffnen",
       "_source": "In Google Maps oeffnen"
+    },
+    "In Google Maps öffnen": {
+      "text": "In Google Maps öffnen",
+      "_source": "In Google Maps öffnen"
+    },
+    "In zunehmendem Alter verschob sich der Fokus von O’Sensei weg von der Wildheit und Kraft hin zur liebenden Natur des Aikido (Das Schriftzeichen Ai, das Harmonie bedeutet, klingt gleich, wie das Schriftzeichen für Liebe. Mit zunehmendem Alter hat O’Sensei die Gleichheit dieser beiden Bedeutungen betont).": {
+      "text": "In zunehmendem Alter verschob sich der Fokus von O’Sensei weg von der Wildheit und Kraft hin zur liebenden Natur des Aikido (Das Schriftzeichen Ai, das Harmonie bedeutet, klingt gleich, wie das Schriftzeichen für Liebe. Mit zunehmendem Alter hat O’Sensei die Gleichheit dieser beiden Bedeutungen betont).",
+      "_source": "In zunehmendem Alter verschob sich der Fokus von O’Sensei weg von der Wildheit und Kraft hin zur liebenden Natur des Aikido (Das Schriftzeichen Ai, das Harmonie bedeutet, klingt gleich, wie das Schriftzeichen für Liebe. Mit zunehmendem Alter hat O’Sensei die Gleichheit dieser beiden Bedeutungen betont)."
     },
     "initialDate.getFullYear(),": {
       "text": "initialDate.getFullYear(),",
@@ -1051,7 +1227,7 @@
       "_source": "Jahr auswaehlen"
     },
     "Kalender": {
-      "text": "Calendrier",
+      "text": "Kalender",
       "_source": "Kalender"
     },
     "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.": {
@@ -1070,12 +1246,16 @@
       "text": "Karin Sturm",
       "_source": "Karin Sturm"
     },
+    "Karin Sturm Sternstrasse 11 84577 Tüssling Deutschland": {
+      "text": "Karin Sturm Sternstrasse 11 84577 Tüssling Deutschland",
+      "_source": "Karin Sturm Sternstrasse 11 84577 Tüssling Deutschland"
+    },
     "Kassier": {
-      "text": "Tresorier",
+      "text": "Kassier",
       "_source": "Kassier"
     },
     "Kassier:": {
-      "text": "Tresorier :",
+      "text": "Kassier:",
       "_source": "Kassier:"
     },
     "kein Termin": {
@@ -1090,16 +1270,20 @@
       "text": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss.",
       "_source": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort links, ohne dass die Seite neu geladen werden muss."
     },
+    "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort rechts, ohne dass die Seite neu geladen werden muss.": {
+      "text": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort rechts, ohne dass die Seite neu geladen werden muss.",
+      "_source": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort rechts, ohne dass die Seite neu geladen werden muss."
+    },
     "Kommende Termine": {
-      "text": "Evenements a venir",
+      "text": "Kommende Termine",
       "_source": "Kommende Termine"
     },
     "Kontakt": {
-      "text": "Contact",
+      "text": "Kontakt",
       "_source": "Kontakt"
     },
     "Kontakt aufnehmen": {
-      "text": "Prendre contact",
+      "text": "Kontakt aufnehmen",
       "_source": "Kontakt aufnehmen"
     },
     "Kontakt, Ansprechpartner und Anfahrt von Wanomichi Takemusu Aikido Hochburg-Ach.": {
@@ -1110,28 +1294,32 @@
       "text": "Kurze Neuigkeiten und die chronologische Historie.",
       "_source": "Kurze Neuigkeiten und die chronologische Historie."
     },
+    "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.": {
+      "text": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.",
+      "_source": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht."
+    },
+    "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Übersicht.": {
+      "text": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Übersicht.",
+      "_source": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Übersicht."
+    },
     "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Uebersicht.": {
-      "text": "Tu trouveras ici, dans une vue commune, les nouvelles breves, les stages a venir et toute la chronologie.",
+      "text": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Uebersicht.",
       "_source": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Uebersicht."
     },
     "Kurzmeldungen": {
-      "text": "Breves",
+      "text": "Kurzmeldungen",
       "_source": "Kurzmeldungen"
     },
     "Laden...": {
-      "text": "Chargement...",
+      "text": "Laden...",
       "_source": "Laden..."
     },
     "languageChanged": {
       "text": "languageChanged",
       "_source": "languageChanged"
     },
-    "Lehrgänge": {
-      "text": "Stages",
-      "_source": "Lehrgänge"
-    },
     "Lehrgang": {
-      "text": "Stage",
+      "text": "Lehrgang",
       "_source": "Lehrgang"
     },
     "Lehrgang Hochburg-Ach": {
@@ -1139,15 +1327,23 @@
       "_source": "Lehrgang Hochburg-Ach"
     },
     "Lehrgang mit Daniel und Sonia Toutain": {
-      "text": "Stage avec Daniel et Sonia Toutain",
+      "text": "Lehrgang mit Daniel und Sonia Toutain",
       "_source": "Lehrgang mit Daniel und Sonia Toutain"
+    },
+    "Lehrgänge": {
+      "text": "Lehrgänge",
+      "_source": "Lehrgänge"
     },
     "light dark": {
       "text": "light dark",
       "_source": "light dark"
     },
+    "linkedNews?.data.title ?? entry.title,": {
+      "text": "linkedNews?.data.title ?? entry.title,",
+      "_source": "linkedNews?.data.title ?? entry.title,"
+    },
     "Links": {
-      "text": "Liens",
+      "text": "Links",
       "_source": "Links"
     },
     "location: entry.data.location,": {
@@ -1203,12 +1399,16 @@
       "_source": "Mail"
     },
     "Markierte Tage enthalten einen oder mehrere Termine.": {
-      "text": "Les jours marques contiennent un ou plusieurs evenements.",
+      "text": "Markierte Tage enthalten einen oder mehrere Termine.",
       "_source": "Markierte Tage enthalten einen oder mehrere Termine."
     },
     "Mehrzweckhalle der neuen Mittelschule": {
-      "text": "Salle polyvalente de la nouvelle ecole moyenne",
+      "text": "Mehrzweckhalle der neuen Mittelschule",
       "_source": "Mehrzweckhalle der neuen Mittelschule"
+    },
+    "Mehrzweckhalle der neuen Mittelschule Athaler Strasse 1 5122 Duttendorf": {
+      "text": "Mehrzweckhalle der neuen Mittelschule Athaler Strasse 1 5122 Duttendorf",
+      "_source": "Mehrzweckhalle der neuen Mittelschule Athaler Strasse 1 5122 Duttendorf"
     },
     "Mehrzweckhalle der neuen Mittelschule, Duttendorf": {
       "text": "Mehrzweckhalle der neuen Mittelschule, Duttendorf",
@@ -1219,15 +1419,15 @@
       "_source": "Menue oeffnen"
     },
     "Mi": {
-      "text": "Me",
+      "text": "Mi",
       "_source": "Mi"
     },
     "Mo": {
-      "text": "Lu",
+      "text": "Mo",
       "_source": "Mo"
     },
     "Momentaufnahmen aus regulaeren Einheiten und Grundlagenarbeit.": {
-      "text": "Instantanes de seances regulieres et du travail des bases.",
+      "text": "Momentaufnahmen aus regulaeren Einheiten und Grundlagenarbeit.",
       "_source": "Momentaufnahmen aus regulaeren Einheiten und Grundlagenarbeit."
     },
     "Monat auswaehlen": {
@@ -1235,23 +1435,27 @@
       "_source": "Monat auswaehlen"
     },
     "Montag": {
-      "text": "Lundi",
+      "text": "Montag",
       "_source": "Montag"
     },
     "Montag 18:00-19:30, Freitag mit Vertiefung ab 16:00 und Samstag Waffen in ungeraden Wochen.": {
-      "text": "Lundi 18:00-19:30, vendredi avec approfondissement a partir de 16:00 et samedi armes les semaines impaires.",
+      "text": "Montag 18:00-19:30, Freitag mit Vertiefung ab 16:00 und Samstag Waffen in ungeraden Wochen.",
       "_source": "Montag 18:00-19:30, Freitag mit Vertiefung ab 16:00 und Samstag Waffen in ungeraden Wochen."
     },
     "Montag: 18:00 bis 19:30": {
-      "text": "Lundi : 18:00 a 19:30",
+      "text": "Montag: 18:00 bis 19:30",
       "_source": "Montag: 18:00 bis 19:30"
+    },
+    "Nach Jahren intensiven Trainings und einigen persönlichen Erfahrungen, änderte O’Sensei den Namen Aiki-Bujutsu (der sich hauptsächlich auf das technische Können bezieht), im Jahr 1925 auf Aiki-Budō (Dō bedeutet, dass es sich vor allem auch um philosophische Prinzipien handelt). Um 1942 beschloss O’Sensei sein System Aikido (Weg der Harmonie und Liebe) zu nennen.": {
+      "text": "Nach Jahren intensiven Trainings und einigen persönlichen Erfahrungen, änderte O’Sensei den Namen Aiki-Bujutsu (der sich hauptsächlich auf das technische Können bezieht), im Jahr 1925 auf Aiki-Budō (Dō bedeutet, dass es sich vor allem auch um philosophische Prinzipien handelt). Um 1942 beschloss O’Sensei sein System Aikido (Weg der Harmonie und Liebe) zu nennen.",
+      "_source": "Nach Jahren intensiven Trainings und einigen persönlichen Erfahrungen, änderte O’Sensei den Namen Aiki-Bujutsu (der sich hauptsächlich auf das technische Können bezieht), im Jahr 1925 auf Aiki-Budō (Dō bedeutet, dass es sich vor allem auch um philosophische Prinzipien handelt). Um 1942 beschloss O’Sensei sein System Aikido (Weg der Harmonie und Liebe) zu nennen."
     },
     "Nach oben": {
       "text": "Nach oben",
       "_source": "Nach oben"
     },
     "nach Trainingsplan": {
-      "text": "selon les horaires",
+      "text": "nach Trainingsplan",
       "_source": "nach Trainingsplan"
     },
     "Naechster Monat": {
@@ -1263,11 +1467,11 @@
       "_source": "Netzwerk"
     },
     "Neue Trainingszeiten": {
-      "text": "Nouveaux horaires d entrainement",
+      "text": "Neue Trainingszeiten",
       "_source": "Neue Trainingszeiten"
     },
     "Neugierig geworden?": {
-      "text": "Curieux ?",
+      "text": "Neugierig geworden?",
       "_source": "Neugierig geworden?"
     },
     "news,": {
@@ -1287,19 +1491,23 @@
       "_source": "numeric',"
     },
     "O-Sensei Ueshiba Morihei (1883 bis 1969) hat Aikido ab den 1920er Jahren aus verschiedenen traditionellen Budo- und Jujutsu-Schulen heraus entwickelt. Die heute bekannte Form entstand nicht auf einmal, sondern durch jahrzehntelanges Training, Forschen und Verfeinern.": {
-      "text": "O-Sensei Ueshiba Morihei (1883 a 1969) a developpe l Aikido a partir des annees 1920 en s appuyant sur plusieurs ecoles traditionnelles de Budo et de Jujutsu. La forme connue aujourd hui n est pas apparue d un seul coup, mais par des decennies d entrainement, de recherche et d affinage.",
+      "text": "O-Sensei Ueshiba Morihei (1883 bis 1969) hat Aikido ab den 1920er Jahren aus verschiedenen traditionellen Budo- und Jujutsu-Schulen heraus entwickelt. Die heute bekannte Form entstand nicht auf einmal, sondern durch jahrzehntelanges Training, Forschen und Verfeinern.",
       "_source": "O-Sensei Ueshiba Morihei (1883 bis 1969) hat Aikido ab den 1920er Jahren aus verschiedenen traditionellen Budo- und Jujutsu-Schulen heraus entwickelt. Die heute bekannte Form entstand nicht auf einmal, sondern durch jahrzehntelanges Training, Forschen und Verfeinern."
     },
+    "O’Sensei hat in seinem Leben unterschiedliche Kampfschulen gemeistert. Unter anderem Sumo, Jūjutsu (Yagyu-ryū und Daitō-ryū), Kenjutsu, Judo, Bajonett und Speerkampf. Die Körper Techniken des Aikido basieren hauptsächlich auf den Formen des Yagyu-ryū und Daitō-ryū Jūjutsu, in denen O’Sensei ein Diplom erhielt. Im Laufe der Zeit änderte O’Sensei die Form von der geradlinigen hin zur kreisförmigen Aufnahme der Angriffe und ergänzte die Techniken um Aspekte des Kotodama. Wodurch die Wurzeln des Aikido geboren wurden, die um 1922 unter dem Namen Aiki-Bujutsu bekannt wurden.": {
+      "text": "O’Sensei hat in seinem Leben unterschiedliche Kampfschulen gemeistert. Unter anderem Sumo, Jūjutsu (Yagyu-ryū und Daitō-ryū), Kenjutsu, Judo, Bajonett und Speerkampf. Die Körper Techniken des Aikido basieren hauptsächlich auf den Formen des Yagyu-ryū und Daitō-ryū Jūjutsu, in denen O’Sensei ein Diplom erhielt. Im Laufe der Zeit änderte O’Sensei die Form von der geradlinigen hin zur kreisförmigen Aufnahme der Angriffe und ergänzte die Techniken um Aspekte des Kotodama. Wodurch die Wurzeln des Aikido geboren wurden, die um 1922 unter dem Namen Aiki-Bujutsu bekannt wurden.",
+      "_source": "O’Sensei hat in seinem Leben unterschiedliche Kampfschulen gemeistert. Unter anderem Sumo, Jūjutsu (Yagyu-ryū und Daitō-ryū), Kenjutsu, Judo, Bajonett und Speerkampf. Die Körper Techniken des Aikido basieren hauptsächlich auf den Formen des Yagyu-ryū und Daitō-ryū Jūjutsu, in denen O’Sensei ein Diplom erhielt. Im Laufe der Zeit änderte O’Sensei die Form von der geradlinigen hin zur kreisförmigen Aufnahme der Angriffe und ergänzte die Techniken um Aspekte des Kotodama. Wodurch die Wurzeln des Aikido geboren wurden, die um 1922 unter dem Namen Aiki-Bujutsu bekannt wurden."
+    },
     "Obmann": {
-      "text": "President",
+      "text": "Obmann",
       "_source": "Obmann"
     },
     "Obmann:": {
-      "text": "President :",
+      "text": "Obmann:",
       "_source": "Obmann:"
     },
     "Oesterreich": {
-      "text": "Autriche",
+      "text": "Oesterreich",
       "_source": "Oesterreich"
     },
     "Open PDF": {
@@ -1311,8 +1519,12 @@
       "_source": "order: z.number(),"
     },
     "Ort": {
-      "text": "Lieu",
+      "text": "Ort",
       "_source": "Ort"
+    },
+    "Österreich": {
+      "text": "Österreich",
+      "_source": "Österreich"
     },
     "pages,": {
       "text": "pages,",
@@ -1327,7 +1539,7 @@
       "_source": "Partnerdojos, Netzwerk und hilfreiche Empfehlungen."
     },
     "Partnerdojos, Wegbegleiter und hilfreiche externe Seiten rund um unser Netzwerk.": {
-      "text": "Dojos partenaires, compagnons de route et pages externes utiles autour de notre reseau.",
+      "text": "Partnerdojos, Wegbegleiter und hilfreiche externe Seiten rund um unser Netzwerk.",
       "_source": "Partnerdojos, Wegbegleiter und hilfreiche externe Seiten rund um unser Netzwerk."
     },
     "PDF DE": {
@@ -1335,7 +1547,7 @@
       "_source": "PDF DE"
     },
     "PDF Deutsch": {
-      "text": "PDF allemand",
+      "text": "PDF Deutsch",
       "_source": "PDF Deutsch"
     },
     "PDF EN": {
@@ -1367,7 +1579,7 @@
       "_source": "person.phoneLabel"
     },
     "Personen": {
-      "text": "Personnes",
+      "text": "Personen",
       "_source": "Personen"
     },
     "Popup": {
@@ -1375,11 +1587,15 @@
       "_source": "Popup"
     },
     "Popup oeffnen": {
-      "text": "Ouvrir le popup",
+      "text": "Popup oeffnen",
       "_source": "Popup oeffnen"
     },
+    "Popup öffnen": {
+      "text": "Popup öffnen",
+      "_source": "Popup öffnen"
+    },
     "Praesenz": {
-      "text": "Presence",
+      "text": "Praesenz",
       "_source": "Praesenz"
     },
     "preview: z.string().optional(),": {
@@ -1387,7 +1603,7 @@
       "_source": "preview: z.string().optional(),"
     },
     "Probetraining": {
-      "text": "Cours d essai",
+      "text": "Probetraining",
       "_source": "Probetraining"
     },
     "props:": {
@@ -1403,19 +1619,27 @@
       "_source": "return new Response("
     },
     "Route oeffnen": {
-      "text": "Ouvrir l itineraire",
+      "text": "Route oeffnen",
       "_source": "Route oeffnen"
     },
+    "Route öffnen": {
+      "text": "Route öffnen",
+      "_source": "Route öffnen"
+    },
     "Rückblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden.": {
-      "text": "Retours sur les seminaires, les enseignant:e:s invites et les week-ends particuliers.",
+      "text": "Rückblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden.",
       "_source": "Rückblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden."
     },
+    "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.": {
+      "text": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.",
+      "_source": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt."
+    },
     "Ruhe": {
-      "text": "Calme",
+      "text": "Ruhe",
       "_source": "Ruhe"
     },
     "Ruhe im Alltag": {
-      "text": "Calme au quotidien",
+      "text": "Ruhe im Alltag",
       "_source": "Ruhe im Alltag"
     },
     "Sa": {
@@ -1423,27 +1647,31 @@
       "_source": "Sa"
     },
     "Samstag": {
-      "text": "Samedi",
+      "text": "Samstag",
       "_source": "Samstag"
     },
     "Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen": {
-      "text": "Samedi : 10:00 a 12:00 armes les semaines impaires",
+      "text": "Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen",
       "_source": "Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen"
     },
     "Sandra Solaja-Pelzer": {
       "text": "Sandra Solaja-Pelzer",
       "_source": "Sandra Solaja-Pelzer"
     },
+    "Sandra Solaja-Pelzer Franziskanerstrasse 2 84503 Altötting Deutschland": {
+      "text": "Sandra Solaja-Pelzer Franziskanerstrasse 2 84503 Altötting Deutschland",
+      "_source": "Sandra Solaja-Pelzer Franziskanerstrasse 2 84503 Altötting Deutschland"
+    },
     "Schnell erreichbar": {
-      "text": "Contact rapide",
+      "text": "Schnell erreichbar",
       "_source": "Schnell erreichbar"
     },
     "Schnellansicht": {
-      "text": "Vue rapide",
+      "text": "Schnellansicht",
       "_source": "Schnellansicht"
     },
     "Schreib uns": {
-      "text": "Ecris-nous",
+      "text": "Schreib uns",
       "_source": "Schreib uns"
     },
     "scrollTop": {
@@ -1451,32 +1679,40 @@
       "_source": "scrollTop"
     },
     "Seite": {
-      "text": "Page",
+      "text": "Seite",
       "_source": "Seite"
     },
     "Seite nicht gefunden": {
-      "text": "Page introuvable",
+      "text": "Seite nicht gefunden",
       "_source": "Seite nicht gefunden"
     },
     "Seite oeffnen": {
-      "text": "Ouvrir la page",
+      "text": "Seite oeffnen",
       "_source": "Seite oeffnen"
+    },
+    "Seite öffnen": {
+      "text": "Seite öffnen",
+      "_source": "Seite öffnen"
     },
     "Seminar Hochburg-Ach": {
       "text": "Seminar Hochburg-Ach",
       "_source": "Seminar Hochburg-Ach"
     },
     "siehe Ausschreibung": {
-      "text": "voir la brochure",
+      "text": "siehe Ausschreibung",
       "_source": "siehe Ausschreibung"
     },
     "So": {
-      "text": "Di",
+      "text": "So",
       "_source": "So"
     },
     "Spannend fuer Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition.": {
-      "text": "Passionnant pour les personnes interessees par les arts martiaux japonais, l etiquette et la tradition.",
+      "text": "Spannend fuer Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition.",
       "_source": "Spannend fuer Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition."
+    },
+    "Spannend für Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition.": {
+      "text": "Spannend für Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition.",
+      "_source": "Spannend für Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition."
     },
     "split: ['+43 650', '4600020'],": {
       "text": "split: ['+43 650', '4600020'],",
@@ -1511,19 +1747,19 @@
       "_source": "Tel"
     },
     "Telefon": {
-      "text": "Telephone",
+      "text": "Telefon",
       "_source": "Telefon"
     },
     "Telefon:": {
-      "text": "Telephone :",
+      "text": "Telefon:",
       "_source": "Telefon:"
     },
     "Termin": {
-      "text": "Evenement",
+      "text": "Termin",
       "_source": "Termin"
     },
     "Termin Details": {
-      "text": "Details de l evenement",
+      "text": "Termin Details",
       "_source": "Termin Details"
     },
     "Termin$": {
@@ -1531,7 +1767,7 @@
       "_source": "Termin$"
     },
     "Termine": {
-      "text": "Evenements",
+      "text": "Termine",
       "_source": "Termine"
     },
     "Terminuebersicht": {
@@ -1578,44 +1814,60 @@
       "text": "Traditionelles Aikido in Duttendorf mit regelmäßigem Training, Lehrgängen und einem offenen Vereinsleben.",
       "_source": "Traditionelles Aikido in Duttendorf mit regelmäßigem Training, Lehrgängen und einem offenen Vereinsleben."
     },
+    "Traditionelles Aikido in Duttendorf. Offen fuer Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
+      "text": "Traditionelles Aikido in Duttendorf. Offen fuer Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
+      "_source": "Traditionelles Aikido in Duttendorf. Offen fuer Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen."
+    },
     "Traditionelles Aikido in Duttendorf. Offen fuer Einsteiger:innen, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
-      "text": "Aikido traditionnel a Duttendorf. Ouvert aux debutant:e:s, aux pratiquant:e:s de retour et a toutes les personnes qui cherchent mouvement, concentration et calme ensemble.",
+      "text": "Traditionelles Aikido in Duttendorf. Offen fuer Einsteiger:innen, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
       "_source": "Traditionelles Aikido in Duttendorf. Offen fuer Einsteiger:innen, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen."
     },
+    "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
+      "text": "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
+      "_source": "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen."
+    },
+    "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
+      "text": "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
+      "_source": "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen."
+    },
     "Trainer": {
-      "text": "Enseignant",
+      "text": "Trainer",
       "_source": "Trainer"
     },
     "Trainiert wird in der Mehrzweckhalle der neuen Mittelschule in Duttendorf.": {
-      "text": "L entrainement aura lieu dans la salle polyvalente de la nouvelle ecole moyenne a Duttendorf.",
+      "text": "Trainiert wird in der Mehrzweckhalle der neuen Mittelschule in Duttendorf.",
       "_source": "Trainiert wird in der Mehrzweckhalle der neuen Mittelschule in Duttendorf."
     },
     "Training": {
-      "text": "Entrainement",
+      "text": "Training",
       "_source": "Training"
     },
     "Training im Dojo": {
-      "text": "Entrainement au dojo",
+      "text": "Training im Dojo",
       "_source": "Training im Dojo"
     },
     "Trainingsbetrieb findet statt": {
-      "text": "Les entrainements ont lieu",
+      "text": "Trainingsbetrieb findet statt",
       "_source": "Trainingsbetrieb findet statt"
     },
     "Trainingsort": {
-      "text": "Lieu d entrainement",
+      "text": "Trainingsort",
       "_source": "Trainingsort"
     },
     "Trainingsort & Kontakt": {
-      "text": "Lieu d entrainement & contact",
+      "text": "Trainingsort & Kontakt",
       "_source": "Trainingsort & Kontakt"
     },
     "Trainingsort oeffnen": {
-      "text": "Ouvrir le lieu d entrainement",
+      "text": "Trainingsort oeffnen",
       "_source": "Trainingsort oeffnen"
     },
+    "Trainingsort öffnen": {
+      "text": "Trainingsort öffnen",
+      "_source": "Trainingsort öffnen"
+    },
     "Trainingsort:": {
-      "text": "Lieu d entrainement :",
+      "text": "Trainingsort:",
       "_source": "Trainingsort:"
     },
     "Trainingsplan": {
@@ -1623,35 +1875,75 @@
       "_source": "Trainingsplan"
     },
     "Trainingszeiten": {
-      "text": "Horaires d entrainement",
+      "text": "Trainingszeiten",
       "_source": "Trainingszeiten"
     },
+    "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
+      "text": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
+      "_source": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
+    },
+    "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
+      "text": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
+      "_source": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
+    },
     "Trotz sorgfaeltiger inhaltlicher Kontrolle uebernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
-      "text": "Malgre un controle soigneux du contenu, nous n assumons aucune responsabilite pour le contenu des liens externes. Les exploitants des pages liees en sont seuls responsables.",
+      "text": "Trotz sorgfaeltiger inhaltlicher Kontrolle uebernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
       "_source": "Trotz sorgfaeltiger inhaltlicher Kontrolle uebernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
+    },
+    "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
+      "text": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
+      "_source": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
+    },
+    "Trotz sorgfültiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
+      "text": "Trotz sorgfültiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
+      "_source": "Trotz sorgfültiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
     },
     "Über uns": {
       "text": "Über uns",
       "_source": "Über uns"
     },
+    "Under Cons": {
+      "text": "Under Cons",
+      "_source": "Under Cons"
+    },
+    "Under Construction": {
+      "text": "Under Construction",
+      "_source": "Under Construction"
+    },
     "Unser Dojo orientiert sich an der Lehre von Saito Morihiro Sensei und pflegt eine ruhige, konzentrierte Trainingskultur ohne Leistungsdruck.": {
-      "text": "Notre dojo suit l enseignement de Saito Morihiro Sensei et cultive une pratique calme et concentree sans pression de performance.",
+      "text": "Unser Dojo orientiert sich an der Lehre von Saito Morihiro Sensei und pflegt eine ruhige, konzentrierte Trainingskultur ohne Leistungsdruck.",
       "_source": "Unser Dojo orientiert sich an der Lehre von Saito Morihiro Sensei und pflegt eine ruhige, konzentrierte Trainingskultur ohne Leistungsdruck."
     },
     "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Koerperarbeit, Aufmerksamkeit und Waffentraining.": {
-      "text": "Notre entrainement suit l enseignement de Saito Morihiro Sensei et unit travail du corps, attention et armes.",
+      "text": "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Koerperarbeit, Aufmerksamkeit und Waffentraining.",
       "_source": "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Koerperarbeit, Aufmerksamkeit und Waffentraining."
     },
+    "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Körperarbeit, Aufmerksamkeit und Waffentraining.": {
+      "text": "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Körperarbeit, Aufmerksamkeit und Waffentraining.",
+      "_source": "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Körperarbeit, Aufmerksamkeit und Waffentraining."
+    },
     "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain gepraegt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte.": {
-      "text": "Notre orientation est marquee par le travail, l echange et l inspiration d Edmund Kern et de Daniel Toutain. Au centre se trouvent des bases propres, le lien, la posture et une atmosphere amicale sur et hors du tatami.",
+      "text": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain gepraegt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte.",
       "_source": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain gepraegt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte."
     },
+    "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt.": {
+      "text": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt.",
+      "_source": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt."
+    },
+    "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte.": {
+      "text": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte.",
+      "_source": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte."
+    },
     "Unsere regulaeren Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt.": {
-      "text": "Nos seances regulieres ont lieu dans la salle polyvalente de la nouvelle ecole moyenne a Duttendorf.",
+      "text": "Unsere regulaeren Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt.",
       "_source": "Unsere regulaeren Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt."
     },
+    "Unsere regulären Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt.": {
+      "text": "Unsere regulären Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt.",
+      "_source": "Unsere regulären Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt."
+    },
     "Urheberrecht": {
-      "text": "Droit d auteur",
+      "text": "Urheberrecht",
       "_source": "Urheberrecht"
     },
     "Ushi Deshi Birach": {
@@ -1659,11 +1951,11 @@
       "_source": "Ushi Deshi Birach"
     },
     "Ushi Deshi in Birach vom 14. bis 18. September 2026.": {
-      "text": "Ushi Deshi a Birach du 14 au 18 septembre 2026.",
+      "text": "Ushi Deshi in Birach vom 14. bis 18. September 2026.",
       "_source": "Ushi Deshi in Birach vom 14. bis 18. September 2026."
     },
     "Ushi Deshi mit Daniel und Sonia Toutain": {
-      "text": "Ushi Deshi avec Daniel et Sonia Toutain",
+      "text": "Ushi Deshi mit Daniel und Sonia Toutain",
       "_source": "Ushi Deshi mit Daniel und Sonia Toutain"
     },
     "UTF-8": {
@@ -1671,11 +1963,11 @@
       "_source": "UTF-8"
     },
     "Verantwortliche Personen": {
-      "text": "Personnes responsables",
+      "text": "Verantwortliche Personen",
       "_source": "Verantwortliche Personen"
     },
     "Verein": {
-      "text": "Club",
+      "text": "Verein",
       "_source": "Verein"
     },
     "Verein, Trainingsort, Probetraining und Trainer.": {
@@ -1683,11 +1975,11 @@
       "_source": "Verein, Trainingsort, Probetraining und Trainer."
     },
     "Vereinsleben": {
-      "text": "Vie du club",
+      "text": "Vereinsleben",
       "_source": "Vereinsleben"
     },
     "Vom 14. bis 18. September 2026 findet in Birach ein Ushi Deshi mit Daniel und Sonia Toutain statt.": {
-      "text": "Du 14 au 18 septembre 2026, un Ushi Deshi avec Daniel et Sonia Toutain aura lieu a Birach.",
+      "text": "Vom 14. bis 18. September 2026 findet in Birach ein Ushi Deshi mit Daniel und Sonia Toutain statt.",
       "_source": "Vom 14. bis 18. September 2026 findet in Birach ein Ushi Deshi mit Daniel und Sonia Toutain statt."
     },
     "Vorheriger Monat": {
@@ -1695,11 +1987,15 @@
       "_source": "Vorheriger Monat"
     },
     "Vorschau": {
-      "text": "Apercu",
+      "text": "Vorschau",
       "_source": "Vorschau"
     },
+    "WA": {
+      "text": "WA",
+      "_source": "WA"
+    },
     "Waffentraining in ungeraden Wochen": {
-      "text": "Entrainement aux armes les semaines impaires",
+      "text": "Waffentraining in ungeraden Wochen",
       "_source": "Waffentraining in ungeraden Wochen"
     },
     "Wanomichi Frankreich": {
@@ -1719,48 +2015,80 @@
       "_source": "Wanomichi United Kingdom"
     },
     "Was erwartet dich?": {
-      "text": "Qu est-ce qui t attend ?",
+      "text": "Was erwartet dich?",
       "_source": "Was erwartet dich?"
     },
     "Was ist Aikido?": {
-      "text": "Qu est-ce que l Aikido ?",
+      "text": "Was ist Aikido?",
       "_source": "Was ist Aikido?"
     },
     "Weiter lesen": {
-      "text": "Lire la suite",
+      "text": "Weiter lesen",
       "_source": "Weiter lesen"
     },
     "Weitere Formulare und vereinsinterne Unterlagen koennen bei Bedarf direkt ueber das Dojo angefragt werden.": {
       "text": "Weitere Formulare und vereinsinterne Unterlagen koennen bei Bedarf direkt ueber das Dojo angefragt werden.",
       "_source": "Weitere Formulare und vereinsinterne Unterlagen koennen bei Bedarf direkt ueber das Dojo angefragt werden."
     },
+    "Weiterlesen": {
+      "text": "Weiterlesen",
+      "_source": "Weiterlesen"
+    },
     "Wenn du bei einem Training vorbeischauen oder Fragen zu Lehrgängen hast, melde dich einfach direkt per E-Mail.": {
-      "text": "Si tu veux assister a un entrainement ou si tu as des questions sur les stages, contacte-nous simplement par e-mail.",
+      "text": "Wenn du bei einem Training vorbeischauen oder Fragen zu Lehrgängen hast, melde dich einfach direkt per E-Mail.",
       "_source": "Wenn du bei einem Training vorbeischauen oder Fragen zu Lehrgängen hast, melde dich einfach direkt per E-Mail."
     },
+    "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren über-uns- und Kontaktseiten.": {
+      "text": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren über-uns- und Kontaktseiten.",
+      "_source": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren über-uns- und Kontaktseiten."
+    },
+    "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten.": {
+      "text": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten.",
+      "_source": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten."
+    },
     "Wenn du ein Probetraining machen moechtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten.": {
-      "text": "Si tu souhaites faire un cours d essai, envoie-nous simplement un message. Tu trouveras le lieu, le deroulement et les premieres informations sur nos pages A propos et Contact.",
+      "text": "Wenn du ein Probetraining machen moechtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten.",
       "_source": "Wenn du ein Probetraining machen moechtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten."
     },
     "Wenn sich an Uhrzeiten oder Orten etwas aendert, aktualisieren wir den Hinweis direkt in der Chronik.": {
-      "text": "Si des horaires ou des lieux changent, nous mettrons l information a jour directement dans la chronologie.",
+      "text": "Wenn sich an Uhrzeiten oder Orten etwas aendert, aktualisieren wir den Hinweis direkt in der Chronik.",
       "_source": "Wenn sich an Uhrzeiten oder Orten etwas aendert, aktualisieren wir den Hinweis direkt in der Chronik."
     },
     "Wesentlich ist die Idee, einen Angriff nicht hart gegen hart zu stoppen, sondern ihn aufzunehmen, umzulenken und in eine kreisfoermige Bewegung zu ueberfuehren. Dadurch entsteht Kontrolle ohne unnoetige Haerte.": {
-      "text": "L idee essentielle est de ne pas stopper une attaque par la durete contre la durete, mais de la recevoir, de la rediriger et de la conduire dans un mouvement circulaire. Cela cree du controle sans durete inutile.",
+      "text": "Wesentlich ist die Idee, einen Angriff nicht hart gegen hart zu stoppen, sondern ihn aufzunehmen, umzulenken und in eine kreisfoermige Bewegung zu ueberfuehren. Dadurch entsteht Kontrolle ohne unnoetige Haerte.",
       "_source": "Wesentlich ist die Idee, einen Angriff nicht hart gegen hart zu stoppen, sondern ihn aufzunehmen, umzulenken und in eine kreisfoermige Bewegung zu ueberfuehren. Dadurch entsteht Kontrolle ohne unnoetige Haerte."
     },
+    "WhatsApp": {
+      "text": "WhatsApp",
+      "_source": "WhatsApp"
+    },
+    "WhatsApp schreiben": {
+      "text": "WhatsApp schreiben",
+      "_source": "WhatsApp schreiben"
+    },
+    "WhatsApp:": {
+      "text": "WhatsApp:",
+      "_source": "WhatsApp:"
+    },
     "Wir freuen uns auf das Training am Montag, die Einheiten am Freitag und das Waffentraining in den ungeraden Wochen.": {
-      "text": "Nous nous rejouissons de l entrainement du lundi, des seances du vendredi et des armes les semaines impaires.",
+      "text": "Wir freuen uns auf das Training am Montag, die Einheiten am Freitag und das Waffentraining in den ungeraden Wochen.",
       "_source": "Wir freuen uns auf das Training am Montag, die Einheiten am Freitag und das Waffentraining in den ungeraden Wochen."
     },
     "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte gruessen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen.": {
-      "text": "Nous nous entrainons avec attention, respect et sans pression de performance. Avant d entrer sur le tatami, nous saluons brievement, les bijoux sont retires et les questions sont toujours bienvenues.",
+      "text": "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte gruessen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen.",
       "_source": "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte gruessen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen."
     },
+    "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte grüssen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen.": {
+      "text": "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte grüssen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen.",
+      "_source": "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte grüssen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen."
+    },
     "wird bekanntgegeben": {
-      "text": "sera annonce",
+      "text": "wird bekanntgegeben",
       "_source": "wird bekanntgegeben"
+    },
+    "withOptionalBasePath(baseUrl, entry.coverImage ?? ''),": {
+      "text": "withOptionalBasePath(baseUrl, entry.coverImage ?? ''),",
+      "_source": "withOptionalBasePath(baseUrl, entry.coverImage ?? ''),"
     },
     "withOptionalBasePath(baseUrl, entry.data.pdfs?.de ?? ''),": {
       "text": "withOptionalBasePath(baseUrl, entry.data.pdfs?.de ?? ''),",
@@ -1770,12 +2098,20 @@
       "text": "withOptionalBasePath(baseUrl, entry.data.pdfs?.en ?? ''),",
       "_source": "withOptionalBasePath(baseUrl, entry.data.pdfs?.en ?? ''),"
     },
+    "withOptionalBasePath(baseUrl, entry.galleryHref ?? ''),": {
+      "text": "withOptionalBasePath(baseUrl, entry.galleryHref ?? ''),",
+      "_source": "withOptionalBasePath(baseUrl, entry.galleryHref ?? ''),"
+    },
+    "Wochenübersicht": {
+      "text": "Wochenübersicht",
+      "_source": "Wochenübersicht"
+    },
     "Wochenuebersicht": {
-      "text": "Vue hebdomadaire",
+      "text": "Wochenuebersicht",
       "_source": "Wochenuebersicht"
     },
     "Woher kommt Aikido?": {
-      "text": "D ou vient l Aikido ?",
+      "text": "Woher kommt Aikido?",
       "_source": "Woher kommt Aikido?"
     },
     "WTA Hochburg-Ach": {
@@ -1791,168 +2127,24 @@
       "_source": "www.aikido-braunau.at"
     },
     "Zeit": {
-      "text": "Heure",
+      "text": "Zeit",
       "_source": "Zeit"
-    },
-    "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Haerte einzusetzen.": {
-      "text": "L entrainement comprend des bases, du travail a deux, des chutes, des clefs et des projections. L objectif est de developper controle et lien sans durete inutile.",
-      "_source": "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Haerte einzusetzen."
-    },
-    "Zum Trainingsort": {
-      "text": "Vers le lieu d entrainement",
-      "_source": "Zum Trainingsort"
-    },
-    "Zur Ausschreibung": {
-      "text": "Voir la brochure",
-      "_source": "Zur Ausschreibung"
-    },
-    "Zur Startseite": {
-      "text": "Retour a l accueil",
-      "_source": "Zur Startseite"
-    },
-    "Zur Uebersicht": {
-      "text": "Retour a la vue d ensemble",
-      "_source": "Zur Uebersicht"
-    },
-    "ZVR-Zahl:": {
-      "text": "Numero d association :",
-      "_source": "ZVR-Zahl:"
-    },
-    "Zweitaegiger Lehrgang in Hochburg-Ach am 12. und 13. September 2026.": {
-      "text": "Stage de deux jours a Hochburg-Ach les 12 et 13 septembre 2026.",
-      "_source": "Zweitaegiger Lehrgang in Hochburg-Ach am 12. und 13. September 2026."
-    },
-    "Traditionelles Aikido in Duttendorf. Offen fuer Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
-      "text": "Traditionelles Aikido in Duttendorf. Offen fuer Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
-      "_source": "Traditionelles Aikido in Duttendorf. Offen fuer Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen."
-    },
-    "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
-      "text": "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
-      "_source": "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger:innen und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen."
-    },
-    "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
-      "text": "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
-      "_source": "Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen."
-    },
-    "Aikido ist eine japanische Kampfkunst, die von O’Sensei Ueshiba Morihei (*1883,+1969) um 1920 entwickelt wurde und die er bis zu seinem Tod 1969 stetig weiterentwickelt hat.": {
-      "text": "Aikido ist eine japanische Kampfkunst, die von O’Sensei Ueshiba Morihei (*1883,+1969) um 1920 entwickelt wurde und die er bis zu seinem Tod 1969 stetig weiterentwickelt hat.",
-      "_source": "Aikido ist eine japanische Kampfkunst, die von O’Sensei Ueshiba Morihei (*1883,+1969) um 1920 entwickelt wurde und die er bis zu seinem Tod 1969 stetig weiterentwickelt hat."
-    },
-    "Die Idee der kreisförmigen Bewegungen ermöglicht es, körperlich überlegene Gegner zu kontrollieren. Wie bei einer Kugel ist das Zentrum stabil und die Bewegung entsteht aus dem Ruhepunkt. Diese kreisförmige Bewegung kann jede Gegenkraft durch Techniken aus ihrem Zentrum heraus umlenken und damit neutralisieren.": {
-      "text": "Die Idee der kreisförmigen Bewegungen ermöglicht es, körperlich überlegene Gegner zu kontrollieren. Wie bei einer Kugel ist das Zentrum stabil und die Bewegung entsteht aus dem Ruhepunkt. Diese kreisförmige Bewegung kann jede Gegenkraft durch Techniken aus ihrem Zentrum heraus umlenken und damit neutralisieren.",
-      "_source": "Die Idee der kreisförmigen Bewegungen ermöglicht es, körperlich überlegene Gegner zu kontrollieren. Wie bei einer Kugel ist das Zentrum stabil und die Bewegung entsteht aus dem Ruhepunkt. Diese kreisförmige Bewegung kann jede Gegenkraft durch Techniken aus ihrem Zentrum heraus umlenken und damit neutralisieren."
-    },
-    "In zunehmendem Alter verschob sich der Fokus von O’Sensei weg von der Wildheit und Kraft hin zur liebenden Natur des Aikido (Das Schriftzeichen Ai, das Harmonie bedeutet, klingt gleich, wie das Schriftzeichen für Liebe. Mit zunehmendem Alter hat O’Sensei die Gleichheit dieser beiden Bedeutungen betont).": {
-      "text": "In zunehmendem Alter verschob sich der Fokus von O’Sensei weg von der Wildheit und Kraft hin zur liebenden Natur des Aikido (Das Schriftzeichen Ai, das Harmonie bedeutet, klingt gleich, wie das Schriftzeichen für Liebe. Mit zunehmendem Alter hat O’Sensei die Gleichheit dieser beiden Bedeutungen betont).",
-      "_source": "In zunehmendem Alter verschob sich der Fokus von O’Sensei weg von der Wildheit und Kraft hin zur liebenden Natur des Aikido (Das Schriftzeichen Ai, das Harmonie bedeutet, klingt gleich, wie das Schriftzeichen für Liebe. Mit zunehmendem Alter hat O’Sensei die Gleichheit dieser beiden Bedeutungen betont)."
-    },
-    "Nach Jahren intensiven Trainings und einigen persönlichen Erfahrungen, änderte O’Sensei den Namen Aiki-Bujutsu (der sich hauptsächlich auf das technische Können bezieht), im Jahr 1925 auf Aiki-Budō (Dō bedeutet, dass es sich vor allem auch um philosophische Prinzipien handelt). Um 1942 beschloss O’Sensei sein System Aikido (Weg der Harmonie und Liebe) zu nennen.": {
-      "text": "Nach Jahren intensiven Trainings und einigen persönlichen Erfahrungen, änderte O’Sensei den Namen Aiki-Bujutsu (der sich hauptsächlich auf das technische Können bezieht), im Jahr 1925 auf Aiki-Budō (Dō bedeutet, dass es sich vor allem auch um philosophische Prinzipien handelt). Um 1942 beschloss O’Sensei sein System Aikido (Weg der Harmonie und Liebe) zu nennen.",
-      "_source": "Nach Jahren intensiven Trainings und einigen persönlichen Erfahrungen, änderte O’Sensei den Namen Aiki-Bujutsu (der sich hauptsächlich auf das technische Können bezieht), im Jahr 1925 auf Aiki-Budō (Dō bedeutet, dass es sich vor allem auch um philosophische Prinzipien handelt). Um 1942 beschloss O’Sensei sein System Aikido (Weg der Harmonie und Liebe) zu nennen."
-    },
-    "Abgerundet wird das Training, das der Lehre von Saito Morihiro Sensei folgt, durch das Waffentraining (buki waza). Indem man den Umgang mit dem Holzschwert (ken) im Aikiken, dem Holzstab (jo) im Aikijo und dem Holzmesser (tanto) erlernt, lernt man seinen Körper besser kennen.": {
-      "text": "Abgerundet wird das Training, das der Lehre von Saito Morihiro Sensei folgt, durch das Waffentraining (buki waza). Indem man den Umgang mit dem Holzschwert (ken) im Aikiken, dem Holzstab (jo) im Aikijo und dem Holzmesser (tanto) erlernt, lernt man seinen Körper besser kennen.",
-      "_source": "Abgerundet wird das Training, das der Lehre von Saito Morihiro Sensei folgt, durch das Waffentraining (buki waza). Indem man den Umgang mit dem Holzschwert (ken) im Aikiken, dem Holzstab (jo) im Aikijo und dem Holzmesser (tanto) erlernt, lernt man seinen Körper besser kennen."
-    },
-    "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.": {
-      "text": "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.",
-      "_source": "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde."
-    },
-    "Die Angriffe werden durch Kreisbewegungen umgelenkt anstelle sich ihnen direkt entgegenzustellen und auf Konfrontation zu gehen. Zudem beinhaltet das Körper-Technik-Programm (taijutsu) auch viele Verhebelungen. Dies ermöglicht es, körperlich überlegene Gegner zu kontrollieren.": {
-      "text": "Die Angriffe werden durch Kreisbewegungen umgelenkt anstelle sich ihnen direkt entgegenzustellen und auf Konfrontation zu gehen. Zudem beinhaltet das Körper-Technik-Programm (taijutsu) auch viele Verhebelungen. Dies ermöglicht es, körperlich überlegene Gegner zu kontrollieren.",
-      "_source": "Die Angriffe werden durch Kreisbewegungen umgelenkt anstelle sich ihnen direkt entgegenzustellen und auf Konfrontation zu gehen. Zudem beinhaltet das Körper-Technik-Programm (taijutsu) auch viele Verhebelungen. Dies ermöglicht es, körperlich überlegene Gegner zu kontrollieren."
-    },
-    "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können.": {
-      "text": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können.",
-      "_source": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können."
     },
     "Ziel ist es, dass weder dem Angreifer (uke, der Gebende), noch dem Angegriffenen (nage, der Empfangende) Schaden entsteht.": {
       "text": "Ziel ist es, dass weder dem Angreifer (uke, der Gebende), noch dem Angegriffenen (nage, der Empfangende) Schaden entsteht.",
       "_source": "Ziel ist es, dass weder dem Angreifer (uke, der Gebende), noch dem Angegriffenen (nage, der Empfangende) Schaden entsteht."
     },
-    "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.": {
-      "text": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.",
-      "_source": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde."
-    },
-    "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. brAikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.": {
-      "text": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. brAikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.",
-      "_source": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. brAikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde."
-    },
-    "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. br Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.": {
-      "text": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. br Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde.",
-      "_source": "Dies ist eine sehr schwierige Frage, die auch erfahrene Aikidoka nicht so ohne weiteres beantworten können. br Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf den Schulen des Yagyu-ryū und Daitō-ryū Jūjutsu basieren, wobei der Tötungsgedanke herausgenommen wurde."
-    },
-    "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, präziser Trainingskultur.": {
-      "text": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, präziser Trainingskultur.",
-      "_source": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, präziser Trainingskultur."
-    },
-    "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte.": {
-      "text": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte.",
-      "_source": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt. Im Mittelpunkt stehen saubere Grundlagen, Verbindung, Haltung und ein freundliches Miteinander auf und neben der Matte."
-    },
-    "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte grüssen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen.": {
-      "text": "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte grüssen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen.",
-      "_source": "Wir trainieren aufmerksam, respektvoll und ohne Leistungsdruck. Vor dem Betreten der Matte grüssen wir kurz an, Schmuck wird abgelegt und Fragen sind jederzeit willkommen."
-    },
-    "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur.": {
-      "text": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur.",
-      "_source": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur."
-    },
-    "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt oeffnen.": {
-      "text": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt oeffnen.",
-      "_source": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt oeffnen."
-    },
-    "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt öffnen.": {
-      "text": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt öffnen.",
-      "_source": "Der Trainingsort liegt in Duttendorf in der Gemeinde Hochburg-Ach. über Google Maps kannst du die Route direkt öffnen."
-    },
-    "In Google Maps öffnen": {
-      "text": "In Google Maps öffnen",
-      "_source": "In Google Maps öffnen"
-    },
-    "Wochenübersicht": {
-      "text": "Wochenübersicht",
-      "_source": "Wochenübersicht"
-    },
-    "Unsere regulären Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt.": {
-      "text": "Unsere regulären Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt.",
-      "_source": "Unsere regulären Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt."
-    },
-    "Ergänzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar.": {
-      "text": "Ergänzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar.",
-      "_source": "Ergänzt wird das Taijutsu durch Buki Waza mit Holzschwert, Stock und Holzmesser. Dadurch werden Linien, Timing und Zentrierung noch klarer erfahrbar."
+    "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Haerte einzusetzen.": {
+      "text": "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Haerte einzusetzen.",
+      "_source": "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Haerte einzusetzen."
     },
     "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.": {
       "text": "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.",
       "_source": "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Wuerfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen."
     },
-    "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.": {
-      "text": "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.",
-      "_source": "Aikido ist eine japanische Kampfkunst, deren Koerpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen."
-    },
-    "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.": {
-      "text": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.",
-      "_source": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen koennen. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken."
-    },
     "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.": {
       "text": "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.",
       "_source": "Zum Training gehoeren Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen."
-    },
-    "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen können. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.": {
-      "text": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen können. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken.",
-      "_source": "Bitte nimm vorher Kontakt mit uns auf, damit wir dich gut empfangen können. Für das erste Training reichen lange Sportbekleidung oder ein Trainingsanzug sowie Hausschuhe. Trainiert wird barfuss oder in rutschfesten Socken."
-    },
-    "Ein Probetraining ist nach kurzer Anmeldung jederzeit möglich.": {
-      "text": "Ein Probetraining ist nach kurzer Anmeldung jederzeit möglich.",
-      "_source": "Ein Probetraining ist nach kurzer Anmeldung jederzeit möglich."
-    },
-    "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Körperarbeit, Aufmerksamkeit und Waffentraining.": {
-      "text": "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Körperarbeit, Aufmerksamkeit und Waffentraining.",
-      "_source": "Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Körperarbeit, Aufmerksamkeit und Waffentraining."
-    },
-    "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.": {
-      "text": "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen.",
-      "_source": "Aikido ist eine japanische Kampfkunst, deren Körpertechniken auf klassischen Schulen wie Yagyu-ryu und Daito-ryu Jujutsu beruhen. Statt sich einem Angriff frontal entgegenzustellen, wird er über Winkel, Distanz und Kreisbewegungen aufgenommen."
     },
     "Zum Training gehören Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.": {
       "text": "Zum Training gehören Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnoetige Härte einzusetzen.",
@@ -1962,290 +2154,54 @@
       "text": "Zum Training gehören Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnötige Härte einzusetzen.",
       "_source": "Zum Training gehören Grundformen, Partnerarbeit, Falltechnik, Hebel und Würfe. Ziel ist es, Kontrolle und Verbindung zu entwickeln, ohne unnötige Härte einzusetzen."
     },
-    "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten.": {
-      "text": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten.",
-      "_source": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren Ueber-uns- und Kontaktseiten."
-    },
-    "Fördert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.": {
-      "text": "Fördert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.",
-      "_source": "Fördert Koerperbewusstsein, Praesenz und eine klare, aufrechte Bewegung."
-    },
-    "Fördert Körperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.": {
-      "text": "Fördert Körperbewusstsein, Praesenz und eine klare, aufrechte Bewegung.",
-      "_source": "Fördert Körperbewusstsein, Praesenz und eine klare, aufrechte Bewegung."
-    },
-    "Spannend für Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition.": {
-      "text": "Spannend für Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition.",
-      "_source": "Spannend für Menschen mit Interesse an japanischer Kampfkunst, Etikette und Tradition."
-    },
-    "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren über-uns- und Kontaktseiten.": {
-      "text": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren über-uns- und Kontaktseiten.",
-      "_source": "Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren über-uns- und Kontaktseiten."
-    },
-    "Für wen ist Aikido?": {
-      "text": "Für wen ist Aikido?",
-      "_source": "Für wen ist Aikido?"
-    },
-    "Aikido ist für Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit.": {
-      "text": "Aikido ist für Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit.",
-      "_source": "Aikido ist für Menschen jeden Alters geeignet. Du brauchst keine Vorkenntnisse, nur Neugier und Offenheit."
-    },
-    "Ideal für alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen.": {
-      "text": "Ideal für alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen.",
-      "_source": "Ideal für alle, die harmonische Bewegung ohne Wettkampf oder Konkurrenz suchen."
-    },
-    "84577 Tüssling": {
-      "text": "84577 Tüssling",
-      "_source": "84577 Tüssling"
-    },
-    "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
-      "text": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
-      "_source": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
-    },
-    "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
-      "text": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
-      "_source": "Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
-    },
-    "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.": {
-      "text": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.",
-      "_source": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die uebermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet."
-    },
-    "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die übermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.": {
-      "text": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die übermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet.",
-      "_source": "Diese Webseite dient der Information über den Verein. Bei einer Kontaktaufnahme per E-Mail oder Telefon werden die übermittelten Angaben ausschliesslich zur Bearbeitung der Anfrage verwendet."
-    },
-    "Trotz sorgfültiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
-      "text": "Trotz sorgfültiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
-      "_source": "Trotz sorgfültiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
-    },
-    "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.": {
-      "text": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
-      "_source": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich."
-    },
-    "Österreich": {
-      "text": "Österreich",
-      "_source": "Österreich"
-    },
-    "84503 Altötting": {
-      "text": "84503 Altötting",
-      "_source": "84503 Altötting"
-    },
-    "Trainingsort öffnen": {
-      "text": "Trainingsort öffnen",
-      "_source": "Trainingsort öffnen"
-    },
-    "Route öffnen": {
-      "text": "Route öffnen",
-      "_source": "Route öffnen"
-    },
-    "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.": {
-      "text": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.",
-      "_source": "Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen."
-    },
-    "Seite öffnen": {
-      "text": "Seite öffnen",
-      "_source": "Seite öffnen"
-    },
-    "Popup öffnen": {
-      "text": "Popup öffnen",
-      "_source": "Popup öffnen"
-    },
-    "Als Nächstes": {
-      "text": "Als Nächstes",
-      "_source": "Als Nächstes"
-    },
-    "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.": {
-      "text": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.",
-      "_source": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht."
-    },
-    "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
-      "text": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
-      "_source": "Alle Eintraege sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
-    },
-    "Abgerundet wird das Training durch Buki Waza, also das üben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar.": {
-      "text": "Abgerundet wird das Training durch Buki Waza, also das üben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar.",
-      "_source": "Abgerundet wird das Training durch Buki Waza, also das üben mit Holzschwert, Stock und Holzmesser. Dadurch werden Distanz, Haltung und Verbindung noch klarer erfahrbar."
-    },
-    "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt für viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren.": {
-      "text": "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt für viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren.",
-      "_source": "Aikido versteht Technik, Aufmerksamkeit und Haltung als Einheit. Genau darin liegt für viele Menschen der besondere Reiz: Es ist eine Kampfkunst mit klarer Form und zugleich ein Weg, Praesenz, Verbindung und Ruhe zu trainieren."
-    },
-    "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain.": {
-      "text": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain.",
-      "_source": "Ausschreibung für den Lehrgang mit Daniel und Sonia Toutain."
-    },
-    "Der Verein wurde am 10. Februar 2026 gegründet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.": {
-      "text": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur.",
-      "_source": "Der Verein wurde am 10. Februar 2026 gegruendet und steht fuer traditionelles Aikido mit ruhiger, praeziser Trainingskultur."
-    },
-    "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, praeziser Trainingskultur.": {
-      "text": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, praeziser Trainingskultur.",
-      "_source": "Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, praeziser Trainingskultur."
-    },
-    "Deutsche Ausschreibung für die intensive Trainingswoche in Birach.": {
-      "text": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach.",
-      "_source": "Deutsche Ausschreibung für die intensive Trainingswoche in Birach."
-    },
-    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geöffnet werden.": {
-      "text": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geöffnet werden.",
-      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. über die Vorschau kann sie direkt im Browser geöffnet werden."
-    },
-    "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen RÜckblicken und Kontext zu den jeweiligen Veranstaltungen.": {
-      "text": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen.",
-      "_source": "Die Galerie wird gerade kuratiert. Sobald die ersten Bildserien vorbereitet sind, findest du sie hier gesammelt mit kurzen Rückblicken und Kontext zu den jeweiligen Veranstaltungen."
-    },
-    "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt.": {
-      "text": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt.",
-      "_source": "Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt."
-    },
-    "Whatsapp": {
-      "text": "Whatsapp",
-      "_source": "Whatsapp"
-    },
-    "WhatsApp": {
-      "text": "WhatsApp",
-      "_source": "WhatsApp"
-    },
-    "WhatsApp anrufen": {
-      "text": "WhatsApp anrufen",
-      "_source": "WhatsApp anrufen"
-    },
-    "WhatsApp schreiben": {
-      "text": "WhatsApp schreiben",
-      "_source": "WhatsApp schreiben"
-    },
-    "WA": {
-      "text": "WA",
-      "_source": "WA"
-    },
-    "Ausschreibung": {
-      "text": "Ausschreibung",
-      "_source": "Ausschreibung"
-    },
-    "entry.description || linkedNews?.data.preview || '',": {
-      "text": "entry.description || linkedNews?.data.preview || '',",
-      "_source": "entry.description || linkedNews?.data.preview || '',"
-    },
-    "Es gibt noch keine vergangenen Termine in der Chronik.": {
-      "text": "Es gibt noch keine vergangenen Termine in der Chronik.",
-      "_source": "Es gibt noch keine vergangenen Termine in der Chronik."
-    },
-    "Fotogalerie": {
-      "text": "Fotogalerie",
-      "_source": "Fotogalerie"
-    },
-    "Galerie folgt": {
-      "text": "Galerie folgt",
-      "_source": "Galerie folgt"
-    },
-    "Galerien & Ausschreibungen": {
-      "text": "Galerien & Ausschreibungen",
-      "_source": "Galerien & Ausschreibungen"
-    },
-    "linkedNews?.data.title ?? entry.title,": {
-      "text": "linkedNews?.data.title ?? entry.title,",
-      "_source": "linkedNews?.data.title ?? entry.title,"
-    },
-    "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.": {
-      "text": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.",
-      "_source": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt."
-    },
-    "WhatsApp:": {
-      "text": "WhatsApp:",
-      "_source": "WhatsApp:"
-    },
-    "withOptionalBasePath(baseUrl, entry.coverImage ?? ''),": {
-      "text": "withOptionalBasePath(baseUrl, entry.coverImage ?? ''),",
-      "_source": "withOptionalBasePath(baseUrl, entry.coverImage ?? ''),"
-    },
-    "withOptionalBasePath(baseUrl, entry.galleryHref ?? ''),": {
-      "text": "withOptionalBasePath(baseUrl, entry.galleryHref ?? ''),",
-      "_source": "withOptionalBasePath(baseUrl, entry.galleryHref ?? ''),"
-    },
-    "Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.": {
-      "text": "Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.",
-      "_source": "Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik."
-    },
-    "Alle Einträge sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.": {
-      "text": "Alle Einträge sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar.",
-      "_source": "Alle Einträge sind chronologisch nach Datum geordnet. Termine führen zu ihrer Ausschreibung oder zu einer Detailseite, kurze News bleiben kompakt und schnell lesbar."
-    },
-    "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort rechts, ohne dass die Seite neu geladen werden muss.": {
-      "text": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort rechts, ohne dass die Seite neu geladen werden muss.",
-      "_source": "Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort rechts, ohne dass die Seite neu geladen werden muss."
-    },
-    "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Übersicht.": {
-      "text": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Übersicht.",
-      "_source": "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen Übersicht."
-    },
-    "Weiterlesen": {
-      "text": "Weiterlesen",
-      "_source": "Weiterlesen"
-    },
-    "Es gibt noch keine vergangenen Beiträge in der Chronik.": {
-      "text": "Es gibt noch keine vergangenen Beiträge in der Chronik.",
-      "_source": "Es gibt noch keine vergangenen Beiträge in der Chronik."
-    },
-    "- Montag: 18:00 bis 19:30 - Freitag: 16:00 bis 17:00 Fragen und Vertiefung - Freitag: 17:00 bis 18:30 Training - Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen": {
-      "text": "- Montag: 18:00 bis 19:30 - Freitag: 16:00 bis 17:00 Fragen und Vertiefung - Freitag: 17:00 bis 18:30 Training - Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen",
-      "_source": "- Montag: 18:00 bis 19:30 - Freitag: 16:00 bis 17:00 Fragen und Vertiefung - Freitag: 17:00 bis 18:30 Training - Samstag: 10:00 bis 12:00 Waffentraining in den ungeraden Wochen"
-    },
-    "Christian Dostal Birkenweg 29 5122 Hochburg-Ach Österreich": {
-      "text": "Christian Dostal Birkenweg 29 5122 Hochburg-Ach Österreich",
-      "_source": "Christian Dostal Birkenweg 29 5122 Hochburg-Ach Österreich"
-    },
-    "Karin Sturm Sternstrasse 11 84577 Tüssling Deutschland": {
-      "text": "Karin Sturm Sternstrasse 11 84577 Tüssling Deutschland",
-      "_source": "Karin Sturm Sternstrasse 11 84577 Tüssling Deutschland"
-    },
-    "Mehrzweckhalle der neuen Mittelschule Athaler Strasse 1 5122 Duttendorf": {
-      "text": "Mehrzweckhalle der neuen Mittelschule Athaler Strasse 1 5122 Duttendorf",
-      "_source": "Mehrzweckhalle der neuen Mittelschule Athaler Strasse 1 5122 Duttendorf"
-    },
-    "O’Sensei hat in seinem Leben unterschiedliche Kampfschulen gemeistert. Unter anderem Sumo, Jūjutsu (Yagyu-ryū und Daitō-ryū), Kenjutsu, Judo, Bajonett und Speerkampf. Die Körper Techniken des Aikido basieren hauptsächlich auf den Formen des Yagyu-ryū und Daitō-ryū Jūjutsu, in denen O’Sensei ein Diplom erhielt. Im Laufe der Zeit änderte O’Sensei die Form von der geradlinigen hin zur kreisförmigen Aufnahme der Angriffe und ergänzte die Techniken um Aspekte des Kotodama. Wodurch die Wurzeln des Aikido geboren wurden, die um 1922 unter dem Namen Aiki-Bujutsu bekannt wurden.": {
-      "text": "O’Sensei hat in seinem Leben unterschiedliche Kampfschulen gemeistert. Unter anderem Sumo, Jūjutsu (Yagyu-ryū und Daitō-ryū), Kenjutsu, Judo, Bajonett und Speerkampf. Die Körper Techniken des Aikido basieren hauptsächlich auf den Formen des Yagyu-ryū und Daitō-ryū Jūjutsu, in denen O’Sensei ein Diplom erhielt. Im Laufe der Zeit änderte O’Sensei die Form von der geradlinigen hin zur kreisförmigen Aufnahme der Angriffe und ergänzte die Techniken um Aspekte des Kotodama. Wodurch die Wurzeln des Aikido geboren wurden, die um 1922 unter dem Namen Aiki-Bujutsu bekannt wurden.",
-      "_source": "O’Sensei hat in seinem Leben unterschiedliche Kampfschulen gemeistert. Unter anderem Sumo, Jūjutsu (Yagyu-ryū und Daitō-ryū), Kenjutsu, Judo, Bajonett und Speerkampf. Die Körper Techniken des Aikido basieren hauptsächlich auf den Formen des Yagyu-ryū und Daitō-ryū Jūjutsu, in denen O’Sensei ein Diplom erhielt. Im Laufe der Zeit änderte O’Sensei die Form von der geradlinigen hin zur kreisförmigen Aufnahme der Angriffe und ergänzte die Techniken um Aspekte des Kotodama. Wodurch die Wurzeln des Aikido geboren wurden, die um 1922 unter dem Namen Aiki-Bujutsu bekannt wurden."
-    },
-    "Sandra Solaja-Pelzer Franziskanerstrasse 2 84503 Altötting Deutschland": {
-      "text": "Sandra Solaja-Pelzer Franziskanerstrasse 2 84503 Altötting Deutschland",
-      "_source": "Sandra Solaja-Pelzer Franziskanerstrasse 2 84503 Altötting Deutschland"
-    },
-    "Under Cons": {
-      "text": "Under Cons",
-      "_source": "Under Cons"
-    },
-    "Under Construction": {
-      "text": "Under Construction",
-      "_source": "Under Construction"
-    },
-    "In Entwicklung": {
-      "text": "In Entwicklung",
-      "_source": "In Entwicklung"
+    "Zum Trainingsort": {
+      "text": "Zum Trainingsort",
+      "_source": "Zum Trainingsort"
+    },
+    "Zur Ausschreibung": {
+      "text": "Zur Ausschreibung",
+      "_source": "Zur Ausschreibung"
+    },
+    "Zur Startseite": {
+      "text": "Zur Startseite",
+      "_source": "Zur Startseite"
+    },
+    "Zur Uebersicht": {
+      "text": "Zur Uebersicht",
+      "_source": "Zur Uebersicht"
+    },
+    "ZVR-Zahl:": {
+      "text": "ZVR-Zahl:",
+      "_source": "ZVR-Zahl:"
+    },
+    "Zweitaegiger Lehrgang in Hochburg-Ach am 12. und 13. September 2026.": {
+      "text": "Zweitaegiger Lehrgang in Hochburg-Ach am 12. und 13. September 2026.",
+      "_source": "Zweitaegiger Lehrgang in Hochburg-Ach am 12. und 13. September 2026."
     }
   },
   "attr": {
     "Google Maps Standort": {
-      "text": "Position Google Maps",
+      "text": "Google Maps Standort",
       "_source": "Google Maps Standort"
     },
     "Google Maps Trainingsort": {
-      "text": "Lieu d entrainement Google Maps",
+      "text": "Google Maps Trainingsort",
       "_source": "Google Maps Trainingsort"
     },
     "Jahr auswaehlen": {
-      "text": "Choisir l annee",
+      "text": "Jahr auswaehlen",
       "_source": "Jahr auswaehlen"
     },
     "Monat auswaehlen": {
-      "text": "Choisir le mois",
+      "text": "Monat auswaehlen",
       "_source": "Monat auswaehlen"
     },
     "Naechster Monat": {
-      "text": "Mois suivant",
+      "text": "Naechster Monat",
       "_source": "Naechster Monat"
     },
     "Vorheriger Monat": {
-      "text": "Mois precedent",
+      "text": "Vorheriger Monat",
       "_source": "Vorheriger Monat"
     }
   }
