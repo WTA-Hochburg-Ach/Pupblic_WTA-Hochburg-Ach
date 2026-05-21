@@ -155,7 +155,7 @@ export const boardMembers = [
     email: contactData.email,
   },
   {
-    role: '2. Vorstand',
+    role: 'Obmannstellvertreterin',
     name: 'Karin Sturm',
     street: 'Sternstrasse 11',
     cityLine: '84577 Tuessling',
@@ -166,8 +166,8 @@ export const boardMembers = [
     email: contactData.email,
   },
   {
-    role: 'Kassier',
-    name: 'Sandra Solaja-Pelzer',
+    role: 'Kassierin',
+    name: 'Sandra Šolaja-Pelzer',
     street: 'Franziskanerstrasse 2',
     cityLine: '84503 Altoetting',
     country: 'Deutschland',
