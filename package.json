@@ -16,6 +16,8 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.2",
     "astro": "^6.3.7",
+    "astro-compress": "^2.4.1",
+    "rollup-plugin-visualizer": "^7.0.1",
     "tsx": "^4.22.3",
     "typescript": "^5.9.3",
     "wrangler": "^4.14.1"

@@ -1,75 +1,73 @@
-# Anleitung - Aikido Website bearbeiten
+# ANLEITUNG — Inhalte pflegen (Posts, Galerie, Assets, Übersetzungen)
 
-## Inhalt
-1. Neue Eintraege fuer Aktuelles und Termine
-2. Wichtige Inhalte bearbeiten
-3. Lokale Befehle
-4. Deployment auf Cloudflare Workers
+Diese Anleitung beschreibt, wie neue Beiträge (News/Termine), Galerieeinträge, Bilder und Downloads strukturiert werden müssen, damit die Website korrekt funktioniert.
 
-## Neue Eintraege fuer Aktuelles und Termine
+**Inhalt (kurz):**
+- Wo Inhalte liegen
+- Dateinamens- und Ordnerkonventionen
+- Frontmatter-Felder für `news`
+- Galerieeinträge (`src/data/gallery.ts`)
+- Bilder, PDFs und Assets
+- Übersetzungen / i18n
+- Wichtige Befehle
 
-Neue Eintraege liegen in `src/content/news/`.
-
-### Dateiname
-
-Nutze sprechende Dateinamen in Kleinbuchstaben mit Bindestrichen.
-
-- `sommer-lehrgang-2026.md`
-- `trainingsinfo-mai-2026.md`
-
-### Frontmatter
-
-Jeder Eintrag braucht mindestens diese Felder:
-
-```md
 ---
-title: Titel des Eintrags
-date: 2026-05-10
-preview: Kurzer Vorschautext fuer Karten und Timeline.
-type: news
-display: page
-color: sage
+
+## Wo liegen die Inhalte?
+
+- News / Termine: `src/content/news/` (Unterordner: `YYYY/MM/nnn-slug.md` empfohlen)
+- Statische Seiten: `src/content/pages/` (z.B. `index.md`, `ueber-uns.md`)
+- Galerie-Index: `src/data/gallery.ts`
+- Öffentliche Assets (Bilder, PDFs): `public/assets/` und `public/downloads/`
+- Lokale Übersetzungsdateien: `src/locales/` und `public/locales/`
+
 ---
-```
 
-### Verfuegbare Felder
+## Beiträge (News / Termine)
 
-- `title`: Ueberschrift des Eintrags
-- `date`: Startdatum im Format `JJJJ-MM-TT`
-- `endDate`: optionales Enddatum fuer mehrtaegige Termine
-- `preview`: kurzer Teasertext
-- `type`: `news` oder `event`
-- `display`: `page` oder `modal`
-- `location`: optionaler Ort
-- `color`: `moss`, `sage` oder `gold`
-- `pdfs.de`: optionaler Link zu einer deutschen PDF
-- `pdfs.en`: optionaler Link zu einer englischen PDF
+Datei-Standort und -Name
+- Lege Beiträge unter `src/content/news/` an. Verwende eine Jahres-/Monats-Struktur, z.B.:
+  `src/content/news/2026/09/001-lehrgang-daniel-sonia-toutain.md`
+- Dateinamen: Kleinbuchstaben, Bindestriche, optional führende Nummern (`001_`) zur Sortierung.
 
-### Typische Beispiele
+Erforderliches Frontmatter
+Das Projekt validiert Frontmatter über `src/content.config.ts`. Mindestens diese Felder sind relevant:
 
-Kurze Neuigkeit:
+- `title` (string) — Überschrift
+- `date` (Datum, Format `YYYY-MM-DD`) — Startdatum
+- `endDate` (optional, Datum) — Enddatum für mehrtägige Events
+- `preview` (optional, string) — Teasertext für Karten/Listen
+- `type` (`news` | `event`) — Standard: `news`
+- `display` (`page` | `modal`) — Standard: `page`
+- `location` (optional, string)
+- `time` (optional, string)
+- `people` (optional, array of strings)
+- `color` (`moss` | `sage` | `gold`) — Standard: `moss`
+- `pdfs` (optional object) — `{ de?: '/downloads/file-de.pdf', en?: '/downloads/file-en.pdf' }`
 
-```md
+Beispiel — einfache News:
+
 ---
+````md
 title: Trainingsbetrieb findet statt
 date: 2026-04-23
-preview: Alle regulaeren Einheiten finden derzeit wie geplant statt.
+preview: Alle regulären Einheiten finden derzeit wie geplant statt.
 type: news
 display: page
 color: sage
+````
 ---
 
-Kurzer Infotext fuer die Detailseite.
-```
+Kurzer Fließtext mit Details.
 
-Termin mit PDF:
+Beispiel — Event mit Zeitraum und PDFs:
 
-```md
 ---
+````md
 title: Lehrgang mit Daniel und Sonia Toutain
 date: 2026-09-12
 endDate: 2026-09-13
-preview: Zweitaegiger Lehrgang in Hochburg-Ach.
+preview: Zweitägiger Lehrgang in Hochburg-Ach.
 type: event
 location: Mehrzweckhalle der neuen Mittelschule, Duttendorf
 display: modal
@@ -77,78 +75,126 @@ color: moss
 pdfs:
   de: /downloads/lehrgang-hochburg-ach-de.pdf
   en: /downloads/lehrgang-hochburg-ach-en.pdf
+````
 ---
 
 Weitere Details zum Lehrgang.
+
+Hinweise
+- `date` und `endDate` werden als echte `Date`-Objekte verarbeitet — gültiges ISO-Datum verwenden.
+- `preview` wird für Karten/Listen genutzt; halte ihn kurz (1–2 Sätze).
+- Verlinke PDFs in `public/downloads/` und referenziere sie mit absoluten Pfaden ab Root (`/downloads/...`).
+
+---
+
+## Galerieeinträge (`src/data/gallery.ts`)
+
+Die Galerie-Liste wird von `src/data/gallery.ts` geliefert. Jeder Eintrag hat diesen Typ:
+
+```ts
+export type GalleryEntry = {
+  title: string;
+  date: string; // 'YYYY-MM-DD'
+  description: string;
+  newsSlug?: string; // z.B. '2026/09/001-lehrgang-daniel-sonia-toutain'
+  galleryHref?: string; // Pfad zu einer Fotogalerie (extern oder /assets/...) 
+  coverImage?: string; // z.B. /assets/images/gallery/<slug>/cover.jpg
+};
 ```
 
-## Wichtige Inhalte bearbeiten
+Bearbeitungsschritte
+- Wenn ein Beitrag (Ausschreibung) existiert, setze `newsSlug` auf den Pfad ohne `.md` (Format: `YYYY/MM/nnn-slug`).
+- `galleryHref` kann auf eine spezielle Galerie-URL oder ein Album verweisen.
+- `coverImage` sollte ein Pfad in `public/assets/images/...` sein (relative Root-URL, also `/assets/…`).
 
-Statische Seiteninhalte liegen in `src/content/pages/`.
+Beispiel:
 
-- `index.md`: Startseite
-- `ueber-uns.md`: Verein, Trainingsort, Probetraining, Trainer
-- `training.md`: Trainingsinhalt
-- `trainingsplan.md`: Wochenuebersicht
-- `impressum.md`: Impressum und Ansprechpartner
+```ts
+{
+  title: 'Lehrgang mit Daniel und Sonia Toutain',
+  date: '2026-09-12',
+  description: 'Ausschreibung und spätere Eindrücke zum Lehrgang in Hochburg-Ach.',
+  newsSlug: '2026/09/001-lehrgang-daniel-sonia-toutain',
+  coverImage: '/assets/images/gallery/lehrgang-2026/cover.jpg',
+  galleryHref: '/assets/images/gallery/lehrgang-2026/index.html'
+}
+```
 
-Navigation, Footer und Kontaktseite liegen direkt in Astro-Dateien:
+Hinweis: Die Galerie-Komponente erzeugt Links zu `eventHref` (auf Basis von `newsSlug`) und zu `galleryHref`.
 
-- `src/components/Navigation.astro`
-- `src/components/Footer.astro`
-- `src/pages/kontakt.astro`
+---
 
-Zentrale Daten liegen in:
+## Bilder, PDFs und sonstige Assets
 
-- `src/data/site.ts`
-- `src/lib/news.ts`
+- Bilder: Lege alle Bilder in `public/assets/images/` ab. Für Galerien empfehle ich Unterordner pro Event, z. B.:
+  `public/assets/images/gallery/lehrgang-2026/cover.jpg`, `.../01.jpg`, `.../02.jpg`
+- PDF-Downloads: `public/downloads/` — referenziere sie in Beiträgen mit `/downloads/DATEINAME.pdf`.
+- Logos/Icons: `public/assets/images/logo/` oder bestehende Ordner verwenden.
 
-## Lokale Befehle
+Best Practices
+- Dateinamen: Kleinbuchstaben, Bindestriche, keine Leerzeichen.
+- Bildgrößen: Für Gallerie-Cover ca. 1600px breit, optimiert (WebP/JPEG) und `loading="lazy"` verwenden.
+- Verwende sinnvolle `alt`-Texte, besonders für Inline-Bilder.
+
+---
+
+## Übersetzungen (i18n)
+
+- Lokale Übersetzungen befinden sich in `src/locales/` (Quelltexte) und `public/locales/` (lokale JSON für die App).
+- Wenn du UI-Texte ändern willst: `src/locales/{de,en,fr,ja}.json` anpassen.
+- Automatische Übersetzungen / Helpers: `scripts/translate-i18n.mjs` prüfen.
+
+Hinweis: Inhaltsübersetzungen (Posts) werden aktuell durch separate Beiträge/Zweige verwaltet — überprüfe, ob du zusätzliche `news`-Einträge für `en`/`fr` benötigst.
+
+---
+
+## Wichtige Befehle
+
+Lokale Entwicklung:
 
 ```bash
 npm run dev
 ```
 
-Startet die Astro-Entwicklung.
+Build (inkl. PDFs und Vorbereitung für Deploy):
+
+```bash
+npm run build
+npm run preview
+```
+
+PDFs/Broschüren erzeugen:
 
 ```bash
 npm run generate:brochures
 ```
 
-Erzeugt die PDF-Dateien in `public/downloads/`.
+Übersetzungen (falls vorhanden):
 
 ```bash
-npm run build
+npm run translate-i18n
 ```
 
-Raeumt den Build-Ordner auf, erzeugt die PDF-Dateien neu und baut die Website nach `dist/`.
-
-```bash
-npm run preview
-```
-
-Lokale Vorschau des Astro-Builds.
+Cloudflare Workers (Dev / Deploy):
 
 ```bash
 npm run worker:dev
-```
-
-Startet die Cloudflare-Workers-Vorschau ueber Wrangler.
-
-```bash
 npm run worker:deploy
 ```
 
-Deployt die Website auf Cloudflare Workers.
+---
 
-## Deployment auf Cloudflare Workers
+## Pflegehinweise & Checkliste vor Veröffentlichung
 
-Die Website wird jetzt fuer `dist/` gebaut und ueber `wrangler.jsonc` plus `worker/index.js` ausgeliefert.
+- Dateiname & Ordnerstruktur prüfen: `src/content/news/YYYY/MM/nnn-slug.md`
+- Frontmatter validieren: alle Pflichtfelder vorhanden (`title`, `date`, ggf. `type`).
+- Bilder/PDFs in `public/` ablegen und Pfade prüfen (`/assets/...`, `/downloads/...`).
+- `src/data/gallery.ts` anpassen, wenn Galerie vorhanden sein soll.
+- `npm run dev` starten und Beitrag lokal prüfen (Seite `/news` bzw. `news/<slug>` aufrufen).
+- Bei Übersetzungen: entsprechende Locale-Dateien updaten.
 
-Wichtige Dateien:
+---
 
-- `astro.config.mjs`
-- `wrangler.jsonc`
-- `worker/index.js`
+Wenn du möchtest, kann ich einen neuen Beitrag / Galerieneintrag als Template anlegen oder die Datei `gallery.ts` für einen neuen Event aktualisieren. Sage mir einfach welches Event/Datum/Titel und ich erledige das.
 
-Der Worker liefert statische Dateien aus `dist/` aus und loest saubere URLs wie `/news` automatisch auf die passende HTML-Datei auf.
+© Team — Anleitung zur Pflege der Website
