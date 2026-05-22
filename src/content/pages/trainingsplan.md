@@ -3,7 +3,7 @@ title: Trainingsplan
 order: 5
 ---
 
-<section class="content-block-spacious">
+<section class="page-header">
   <h1>Trainingsplan</h1>
   <p class="lead-text">Unsere regulären Einheiten finden in der Mehrzweckhalle der neuen Mittelschule in Duttendorf statt.</p>
 </section>

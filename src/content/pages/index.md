@@ -78,7 +78,7 @@ order: 1
     <h2>Neugierig geworden?</h2>
     <p>Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren über-uns- und Kontaktseiten.</p>
     <div class="cta-buttons">
-      <a href="ueber-uns" class="button button-primary">Zum Trainingsort</a>
+      <a href="training" class="button button-primary">Zum Trainingsort</a>
       <a href="kontakt" class="button button-outline">Kontakt</a>
     </div>
   </div>

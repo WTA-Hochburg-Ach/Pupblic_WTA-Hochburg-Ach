@@ -3,10 +3,11 @@ title: Downloads & Materialien
 order: 10
 ---
 
-<section class="content-block-spacious">
+<section class="page-header">
   <h1>Downloads & Materialien</h1>
   <p class="lead-text">Hier findest du die derzeit verfuegbaren Ausschreibungen und Unterlagen direkt als PDF.</p>
-
+</section>
+<section class="content-block-spacious">
   <div class="feature-grid">
     <article class="feature-card">
       <span class="event-date">Deutsch</span>

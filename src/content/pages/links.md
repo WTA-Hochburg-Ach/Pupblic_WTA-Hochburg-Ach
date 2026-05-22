@@ -3,7 +3,7 @@ title: Links
 order: 8
 ---
 
-<section class="content-block-spacious">
+<section class="page-header">
   <h1>Links</h1>
   <p class="lead-text">Partnerdojos, Wegbegleiter und hilfreiche externe Seiten rund um unser Netzwerk.</p>
 </section>

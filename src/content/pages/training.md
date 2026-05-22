@@ -3,7 +3,7 @@ title: Training
 order: 3
 ---
 
-<section class="content-block-spacious">
+<section class="page-header">
   <h1>Training</h1>
   <p class="lead-text">Unser Training folgt der Lehre von Saito Morihiro Sensei und verbindet Körperarbeit, Aufmerksamkeit und Waffentraining.</p>
 </section>

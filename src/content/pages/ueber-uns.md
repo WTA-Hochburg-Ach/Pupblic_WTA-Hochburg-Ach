@@ -3,9 +3,9 @@ title: Über uns
 order: 4
 ---
 
-<section class="content-block-spacious">
+<section class="page-header">
   <h1>Über uns</h1>
-  <p class="lead-text">Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur.</p>
+  <p class="lead">Der Verein wurde am 10. Februar 2026 gegründet und steht für traditionelles Aikido mit ruhiger, präziser Trainingskultur.</p>
   <p>Unsere Ausrichtung ist durch die Arbeit, den Austausch und die Inspiration von Edmund Kern sowie Daniel Toutain geprägt.</p>
 </section>
 
