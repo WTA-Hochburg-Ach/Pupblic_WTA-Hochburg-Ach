@@ -12,8 +12,8 @@ people:
 display: page
 color: gold
 pdfs:
-  de: downloads/ushi-deshi-birach-de.pdf
-  en: downloads/ushi-deshi-birach-en.pdf
+  de: downloads/2026_Ausschreibung-Birach-Daniel_de.pdf
+  en: downloads/2026_Ausschreibung-Birach-Daniel_en.pdf
 ---
 
 Vom 14. bis 18. September 2026 findet in Birach ein Ushi Deshi mit Daniel und Sonia Toutain statt.
