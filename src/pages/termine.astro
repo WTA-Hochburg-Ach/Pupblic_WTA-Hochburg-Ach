@@ -522,7 +522,7 @@ const calendarEvents = events.map((entry) => {
 
         cells.push(`
           <button
-            class="calendar-day ${dayEvents.length ? 'calendar-day-active' : ''} ${isSelected ? 'calendar-day-selected' : ''} ${isToday ? 'calendar-day-today' : ''}"
+            class="calendar-day ${dayEvents.length ? 'calendar-day-active' : ''} ${isSelected ? 'calendar-day-selected' : ''} ${isToday ? 'calendar-day-today' : ''} ${dayEvents.length ? `event-color-${dayEvents[0].color}` : ''}"
             type="button"
             data-date="${date.toISOString()}"
             aria-label="${escapeHtml(ariaLabel)}"
@@ -840,6 +840,37 @@ const calendarEvents = events.map((entry) => {
   height: 1.9rem;
   border-radius: 50%;
   background: var(--color-primary-dark);
+  color: var(--color-surface-strong);
+}
+
+/* Event color indicators for calendar days */
+.calendar-day.event-color-moss .calendar-day-number {
+  display: inline-grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: #56704f;
+  color: var(--color-surface-strong);
+}
+
+.calendar-day.event-color-sage .calendar-day-number {
+  display: inline-grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: #90a388;
+  color: var(--color-surface-strong);
+}
+
+.calendar-day.event-color-gold .calendar-day-number {
+  display: inline-grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: #bca270;
   color: var(--color-surface-strong);
 }
 

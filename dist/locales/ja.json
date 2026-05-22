@@ -1608,6 +1608,41 @@
       "text": "さらなる資料や文書は追って発表される。",
       "_source": "Weiteres Material und Dokumente folgen in Kürze.",
       "_target": "JA"
+    },
+    "Aktuelles &": {
+      "text": "ニュース",
+      "_source": "Aktuelles &",
+      "_target": "JA"
+    },
+    "Aktuelles & Ver": {
+      "text": "ニュース＆イベント",
+      "_source": "Aktuelles & Ver",
+      "_target": "JA"
+    },
+    "Aktuelles & Vergangenes": {
+      "text": "ニュース＆過去",
+      "_source": "Aktuelles & Vergangenes",
+      "_target": "JA"
+    },
+    "Aktuelles & Vergangene": {
+      "text": "ニュース＆過去",
+      "_source": "Aktuelles & Vergangene",
+      "_target": "JA"
+    },
+    "Aktuelles & Vergangene Ereignisse": {
+      "text": "現在と過去のイベント",
+      "_source": "Aktuelles & Vergangene Ereignisse",
+      "_target": "JA"
+    },
+    "Kurze Neuigkeiten und die Chronik findest du hier in einer gemeinsamen Übersicht.": {
+      "text": "短いニュースとクロニクルは、共通の概要でここで見ることができる。",
+      "_source": "Kurze Neuigkeiten und die Chronik findest du hier in einer gemeinsamen Übersicht.",
+      "_target": "JA"
+    },
+    "Zurück": {
+      "text": "バック",
+      "_source": "Zurück",
+      "_target": "JA"
     }
   },
   "attr": {

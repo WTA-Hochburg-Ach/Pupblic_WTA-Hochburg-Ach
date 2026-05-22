@@ -1637,6 +1637,41 @@
       "text": "D'autres matériels et documents suivront prochainement.",
       "_source": "Weiteres Material und Dokumente folgen in Kürze.",
       "_target": "FR"
+    },
+    "Aktuelles &": {
+      "text": "Actualités &",
+      "_source": "Aktuelles &",
+      "_target": "FR"
+    },
+    "Aktuelles & Ver": {
+      "text": "Actualités & Ver",
+      "_source": "Aktuelles & Ver",
+      "_target": "FR"
+    },
+    "Aktuelles & Vergangenes": {
+      "text": "Actualités & passé",
+      "_source": "Aktuelles & Vergangenes",
+      "_target": "FR"
+    },
+    "Aktuelles & Vergangene": {
+      "text": "Actualités & passé",
+      "_source": "Aktuelles & Vergangene",
+      "_target": "FR"
+    },
+    "Aktuelles & Vergangene Ereignisse": {
+      "text": "Actualités & événements passés",
+      "_source": "Aktuelles & Vergangene Ereignisse",
+      "_target": "FR"
+    },
+    "Kurze Neuigkeiten und die Chronik findest du hier in einer gemeinsamen Übersicht.": {
+      "text": "Tu trouveras ici de brèves nouvelles et la chronique dans un aperçu commun.",
+      "_source": "Kurze Neuigkeiten und die Chronik findest du hier in einer gemeinsamen Übersicht.",
+      "_target": "FR"
+    },
+    "Zurück": {
+      "text": "Retour",
+      "_source": "Zurück",
+      "_target": "FR"
     }
   },
   "attr": {

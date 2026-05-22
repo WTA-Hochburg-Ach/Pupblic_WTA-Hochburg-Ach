@@ -1678,6 +1678,41 @@
       "text": "Further material and documents will follow shortly.",
       "_source": "Weiteres Material und Dokumente folgen in Kürze.",
       "_target": "EN-US"
+    },
+    "Aktuelles &": {
+      "text": "News &",
+      "_source": "Aktuelles &",
+      "_target": "EN-US"
+    },
+    "Aktuelles & Ver": {
+      "text": "News & Events",
+      "_source": "Aktuelles & Ver",
+      "_target": "EN-US"
+    },
+    "Aktuelles & Vergangenes": {
+      "text": "News & past",
+      "_source": "Aktuelles & Vergangenes",
+      "_target": "EN-US"
+    },
+    "Aktuelles & Vergangene": {
+      "text": "Current & past",
+      "_source": "Aktuelles & Vergangene",
+      "_target": "EN-US"
+    },
+    "Aktuelles & Vergangene Ereignisse": {
+      "text": "Current & past events",
+      "_source": "Aktuelles & Vergangene Ereignisse",
+      "_target": "EN-US"
+    },
+    "Kurze Neuigkeiten und die Chronik findest du hier in einer gemeinsamen Übersicht.": {
+      "text": "Short news and the chronicle can be found here in a common overview.",
+      "_source": "Kurze Neuigkeiten und die Chronik findest du hier in einer gemeinsamen Übersicht.",
+      "_target": "EN-US"
+    },
+    "Zurück": {
+      "text": "Back",
+      "_source": "Zurück",
+      "_target": "EN-US"
     }
   },
   "attr": {
