@@ -216,8 +216,14 @@
   position: relative;
   flex: 0 0 auto;
   width: clamp(4.75rem, 8vw, 7rem);
-  aspect-ratio: 1;
-  transition: width 0.22s ease, transform 0.22s ease;
+  height: clamp(4.75rem, 8vw, 7rem);
+  border-radius: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.22s ease, height 0.22s ease, transform 0.22s ease;
 }
 
 .logo-copy {
@@ -228,11 +234,11 @@
 }
 
 .theme-logo {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
 }
 
 .theme-logo-dark {
@@ -292,6 +298,7 @@ html.nav-scrolled .nav {
 
 html.nav-scrolled .logo-mark {
   width: clamp(3.5rem, 5vw, 4.7rem);
+  height: clamp(3.5rem, 5vw, 4.7rem);
 }
 
 .menu-toggle {
@@ -555,6 +562,7 @@ html.nav-scrolled .logo-mark {
 
   .logo-mark {
     width: 3.7rem;
+    height: 3.7rem;
   }
 
   .logo-kicker {

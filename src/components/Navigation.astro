@@ -1,12 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import { activeLanguages, navItems, navSummaryFallbacks, siteLinks, summarizeHeadings } from '../data/site';
 import { getBaseUrl, isCurrentSitePath, normalizeSitePath, withBasePath } from '../lib/site';
+import logoLight from '../assets/logo_light.png';
+import logoDark from '../assets/logo_dark.svg';
 
 const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
 const currentPath = normalizeSitePath(Astro.url.pathname, baseUrl);
-const logoLight = withBasePath(baseUrl, 'images/logo/logo_light.png');
-const logoDark = withBasePath(baseUrl, 'images/logo/logo_dark.svg');
 const contentPages = await getCollection('pages');
 const navSummaries = Object.fromEntries(
   contentPages.map((page) => [
@@ -69,8 +70,8 @@ const fallbackLabels = {
     <div class="nav-inner">
       <a href={withBasePath(baseUrl, siteLinks.home)} class="logo" translate="no">
         <span class="logo-mark" aria-hidden="true">
-          <img src={logoLight} alt="" class="theme-logo theme-logo-light" />
-          <img src={logoDark} alt="" class="theme-logo theme-logo-dark" />
+          <Image src={logoLight} alt="" class="theme-logo theme-logo-light" loading="eager" width={500} height={500} />
+          <Image src={logoDark} alt="" class="theme-logo theme-logo-dark" loading="eager" width={500} height={500} />
         </span>
         <span class="logo-copy">
           <span class="logo-kicker">Wanomichi Takemusu</span>

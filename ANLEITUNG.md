@@ -136,6 +136,50 @@ Best Practices
 - Bildgrößen: Für Gallerie-Cover ca. 1600px breit, optimiert (WebP/JPEG) und `loading="lazy"` verwenden.
 - Verwende sinnvolle `alt`-Texte, besonders für Inline-Bilder.
 
+### Astro Image Component verwenden
+
+Für bessere Performance solltest du lokale Bilder in `src/assets/` ablegen und über die Astro `Image`-Komponente importieren.
+
+1. Datei in `src/assets/` ablegen.
+2. In einer Astro-Komponente importieren:
+
+```astro
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/hero.jpg';
+---
+
+<Image src={heroImage} alt="Hero-Bild" width={1200} height={600} />
+```
+
+3. Für Logos und Icons funktioniert das genauso:
+
+```astro
+import { Image } from 'astro:assets';
+import logoDark from '../assets/logo_dark.svg';
+
+<Image src={logoDark} alt="Logo" class="theme-logo" />
+```
+
+4. Für dekorative Grafiken nutze `loading="lazy"`:
+
+```astro
+import brush from '../assets/brush.svg';
+
+<Image src={brush} alt="" class="footer-brush" loading="lazy" />
+```
+
+5. Für kritische Header-Bilder oder Logos kannst du `loading="eager"` setzen.
+
+6. Wenn du ein bestehendes `<img src="/...">` findest, tausche es aus gegen:
+
+```astro
+import someImage from '../assets/some-image.jpg';
+<Image src={someImage} alt="..." width={800} height={500} />
+```
+
+> Wichtig: Nutze `public/` nur für Dateien, die nicht von Astro optimiert werden müssen. Alle Bilder, die du optimieren willst, sollten idealerweise in `src/assets/` landen.
+
 ---
 
 ## Übersetzungen (i18n)

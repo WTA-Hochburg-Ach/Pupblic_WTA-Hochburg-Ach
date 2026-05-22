@@ -8,8 +8,10 @@ import {
   siteMeta,
   venue,
 } from '../data/site';
+import { Image } from 'astro:assets';
 import { getBaseUrl, withBasePath } from '../lib/site';
 import SocialIcon from './SocialIcon.astro';
+import brush from '../assets/brush.svg';
 
 const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
 const currentYear = new Date().getFullYear();
@@ -93,7 +95,7 @@ const footerTitleFallbacks = {
     </div>
   </div>
 
-  <img src={withBasePath(baseUrl, 'assets/brush.svg')} alt="" class="footer-brush" />
+  <Image src={brush} alt="" class="footer-brush" loading="lazy" />
 
   <div class="footer-bottom">
     <p data-i18n="footer.copyright" data-year={currentYear}>
