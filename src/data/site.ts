@@ -216,7 +216,7 @@ export const partnerLinks = [
   },
   {
     label: 'ASKOe Ried Aikido',
-    href: 'https://www.askoeried.at/aikido/',
+    href: 'https://www.askoeried.at/allgemein-3/',
   },
   {
     label: 'Takemusu Aikido Jena',
