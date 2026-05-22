@@ -5,6 +5,7 @@ import { activeLanguages, navItems, navSummaryFallbacks, siteLinks, summarizeHea
 import { getBaseUrl, isCurrentSitePath, normalizeSitePath, withBasePath } from '../lib/site';
 import logoLight from '../assets/logo_light.png';
 import logoDark from '../assets/logo_dark.svg';
+import logo from '../assets/logo.png';
 
 const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
 const currentPath = normalizeSitePath(Astro.url.pathname, baseUrl);
@@ -70,8 +71,8 @@ const fallbackLabels = {
     <div class="nav-inner">
       <a href={withBasePath(baseUrl, siteLinks.home)} class="logo" translate="no">
         <span class="logo-mark" aria-hidden="true">
-          <Image src={logoLight} alt="" class="theme-logo theme-logo-light" loading="eager" width={500} height={500} />
-          <Image src={logoDark} alt="" class="theme-logo theme-logo-dark" loading="eager" width={500} height={500} />
+          <Image src={logo} alt="" class="theme-logo theme-logo-light" loading="eager" width={500} height={500} />
+          <Image src={logo} alt="" class="theme-logo theme-logo-dark" loading="eager" width={500} height={500} />
         </span>
         <span class="logo-copy">
           <span class="logo-kicker">Wanomichi Takemusu</span>
