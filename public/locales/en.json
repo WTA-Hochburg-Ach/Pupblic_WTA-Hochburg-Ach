@@ -1703,6 +1703,16 @@
       "text": "Current & past events",
       "_source": "Aktuelles & Vergangene Ereignisse",
       "_target": "EN-US"
+    },
+    "Kurze Neuigkeiten und die Chronik findest du hier in einer gemeinsamen Übersicht.": {
+      "text": "Short news and the chronicle can be found here in a common overview.",
+      "_source": "Kurze Neuigkeiten und die Chronik findest du hier in einer gemeinsamen Übersicht.",
+      "_target": "EN-US"
+    },
+    "Zurück": {
+      "text": "Back",
+      "_source": "Zurück",
+      "_target": "EN-US"
     }
   },
   "attr": {

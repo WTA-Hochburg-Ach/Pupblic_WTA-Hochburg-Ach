@@ -338,8 +338,10 @@
 .footer-brush {
   display: block;
   width: 100%;
-  height: 4px;
+  height: 64px;
   opacity: 0.55;
+  margin: 0 auto;
+  object-fit: cover;
 }
 
 .footer-bottom {

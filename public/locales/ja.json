@@ -1633,6 +1633,16 @@
       "text": "現在と過去のイベント",
       "_source": "Aktuelles & Vergangene Ereignisse",
       "_target": "JA"
+    },
+    "Kurze Neuigkeiten und die Chronik findest du hier in einer gemeinsamen Übersicht.": {
+      "text": "短いニュースとクロニクルは、共通の概要でここで見ることができる。",
+      "_source": "Kurze Neuigkeiten und die Chronik findest du hier in einer gemeinsamen Übersicht.",
+      "_target": "JA"
+    },
+    "Zurück": {
+      "text": "バック",
+      "_source": "Zurück",
+      "_target": "JA"
     }
   },
   "attr": {
