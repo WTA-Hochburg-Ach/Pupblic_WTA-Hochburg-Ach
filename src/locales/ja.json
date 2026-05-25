@@ -1643,6 +1643,11 @@
       "text": "バック",
       "_source": "Zurück",
       "_target": "JA"
+    },
+    "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.": {
+      "text": "色付きの数字と点は、この日に1つ以上の予定が入力されていることを示します。",
+      "_source": "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.",
+      "_target": "JA"
     }
   },
   "attr": {

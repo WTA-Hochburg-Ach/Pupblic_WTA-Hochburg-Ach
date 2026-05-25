@@ -1713,6 +1713,11 @@
       "text": "Back",
       "_source": "Zurück",
       "_target": "EN-US"
+    },
+    "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.": {
+      "text": "Colored numbers and dots indicate that one or more appointments have been entered on this day.",
+      "_source": "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.",
+      "_target": "EN-US"
     }
   },
   "attr": {

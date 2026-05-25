@@ -139,10 +139,17 @@ const fallbackLabels = {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   const nav = document.querySelector('.nav');
+  const NAV_SCROLL_ENTER = 96;
+  const NAV_SCROLL_EXIT = 32;
+  const NAV_COLLAPSE_BREAKPOINT = 1240;
 
   function updateNavState() {
-    const isScrolled = window.scrollY > 28;
-    html.classList.toggle('nav-scrolled', isScrolled);
+    const isScrolled = html.classList.contains('nav-scrolled');
+    const nextScrolled = isScrolled
+      ? window.scrollY > NAV_SCROLL_EXIT
+      : window.scrollY >= NAV_SCROLL_ENTER;
+
+    html.classList.toggle('nav-scrolled', nextScrolled);
   }
 
   function closeMenu() {
@@ -207,7 +214,7 @@ const fallbackLabels = {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 1100) {
+    if (window.innerWidth > NAV_COLLAPSE_BREAKPOINT) {
       closeMenu();
     }
 

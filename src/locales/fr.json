@@ -1672,6 +1672,11 @@
       "text": "Retour",
       "_source": "Zurück",
       "_target": "FR"
+    },
+    "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.": {
+      "text": "Un nombre et des points de couleur indiquent qu'un ou plusieurs rendez-vous sont inscrits ce jour-là.",
+      "_source": "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.",
+      "_target": "FR"
     }
   },
   "attr": {
