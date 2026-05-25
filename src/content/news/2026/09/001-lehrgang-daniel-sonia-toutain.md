@@ -12,8 +12,8 @@ people:
 display: modal
 color: moss
 pdfs:
-  de: downloads/lehrgang-hochburg-ach-de.pdf
-  en: downloads/lehrgang-hochburg-ach-en.pdf
+  de: downloads/Ausschreibung/2026-09-12_Daniel-Toutain_de.pdf
+  en: downloads/Ausschreibung/2026-09-12_Daniel-Toutain_en.pdf
 ---
 
 Am 12. und 13. September 2026 findet in Hochburg-Ach ein Lehrgang mit Daniel und Sonia Toutain statt.
