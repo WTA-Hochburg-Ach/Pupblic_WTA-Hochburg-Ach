@@ -8,7 +8,7 @@ order: 1
 
   <div class="hero-content">
     <h1>Wanomichi Takemusu<br />Aikido<br />Hochburg-Ach</h1>
-    <p>Traditionelles Aikido in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.</p>
+    <p>Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.</p>
     <div class="hero-cta-group">
       <a href="ueber-uns" class="button button-primary">Über uns</a>
       <a href="kontakt" class="button button-secondary">Kontakt</a>
