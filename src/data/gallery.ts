@@ -20,6 +20,13 @@ export const galleryEntries: GalleryEntry[] = [
     description: 'Ausschreibung und spaetere Galerie zur intensiven Trainingswoche in Birach.',
     newsSlug: '2026/09/002-ushi-deshi-birach',
   },
+  {
+    title: '1. Training',
+    date: '2026-03-09',
+    description: 'Das erste Training unseres neuen Dojo\'s fand voll motiviert am 9. März 2026, mit bester Aussicht auf die Burg, statt.',
+    galleryHref: 'images/gallery/2026_03_09/1st_trainingsession.jpeg',
+    coverImage: 'images/gallery/2026_03_09/1st_trainingsession.jpeg',
+  },
 ];
 
 export function sortGalleryNewestFirst(entries: GalleryEntry[]) {

@@ -1,11 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import { Image } from 'astro:assets';
 import { activeLanguages, navItems, navSummaryFallbacks, siteLinks, summarizeHeadings } from '../data/site';
 import { getBaseUrl, isCurrentSitePath, normalizeSitePath, withBasePath } from '../lib/site';
-import logoLight from '../assets/logo_light.png';
-import logoDark from '../assets/logo_dark.svg';
-import logo from '../assets/logo.png';
 
 const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
 const currentPath = normalizeSitePath(Astro.url.pathname, baseUrl);
@@ -71,8 +67,7 @@ const fallbackLabels = {
     <div class="nav-inner">
       <a href={withBasePath(baseUrl, siteLinks.home)} class="logo" translate="no">
         <span class="logo-mark" aria-hidden="true">
-          <Image src={logo} alt="" class="theme-logo theme-logo-light" loading="eager" width={500} height={500} />
-          <Image src={logo} alt="" class="theme-logo theme-logo-dark" loading="eager" width={500} height={500} />
+          <img src={withBasePath(baseUrl, 'images/logo/logo_.png')} alt="" class="theme-logo" loading="eager" />
         </span>
         <span class="logo-copy">
           <span class="logo-kicker">Wanomichi Takemusu</span>
@@ -140,8 +135,9 @@ const fallbackLabels = {
   const navLinks = document.querySelector('.nav-links');
   const nav = document.querySelector('.nav');
   const NAV_SCROLL_ENTER = 96;
-  const NAV_SCROLL_EXIT = 32;
+  const NAV_SCROLL_EXIT = 48;
   const NAV_COLLAPSE_BREAKPOINT = 1240;
+  let navScrollTicking = false;
 
   function updateNavState() {
     const isScrolled = html.classList.contains('nav-scrolled');
@@ -149,7 +145,21 @@ const fallbackLabels = {
       ? window.scrollY > NAV_SCROLL_EXIT
       : window.scrollY >= NAV_SCROLL_ENTER;
 
-    html.classList.toggle('nav-scrolled', nextScrolled);
+    if (nextScrolled !== isScrolled) {
+      html.classList.toggle('nav-scrolled', nextScrolled);
+    }
+  }
+
+  function requestNavStateUpdate() {
+    if (navScrollTicking) {
+      return;
+    }
+
+    navScrollTicking = true;
+    window.requestAnimationFrame(() => {
+      updateNavState();
+      navScrollTicking = false;
+    });
   }
 
   function closeMenu() {
@@ -218,8 +228,8 @@ const fallbackLabels = {
       closeMenu();
     }
 
-    updateNavState();
+    requestNavStateUpdate();
   });
 
-  window.addEventListener('scroll', updateNavState, { passive: true });
+  window.addEventListener('scroll', requestNavStateUpdate, { passive: true });
 </script>

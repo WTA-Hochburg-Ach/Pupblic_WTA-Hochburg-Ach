@@ -75,13 +75,13 @@ export const navItems = [
     href: siteLinks.news,
     labelKey: 'nav.news',
     summaryKey: 'nav.news_summary',
-    summary: 'Kurze Neuigkeiten und Chronik.',
+    summary: 'Kurze Neuigkeiten und chronologische Rückblicke.',
   },
   {
     href: siteLinks.gallery,
     labelKey: 'nav.gallery',
     summaryKey: 'nav.gallery_summary',
-    summary: 'Bilder, Rückblicke und Impressionen aus dem Dojo.',
+    summary: 'Fotos, Rückblicke und Impressionen aus dem Dojo.',
   },
   {
     href: siteLinks.links,

@@ -1,4 +1,7 @@
 .site-header {
+  --nav-edge: clamp(0.7rem, 2vw, 1.2rem);
+  --nav-max-width: 1480px;
+  --nav-width: min(var(--nav-max-width), calc(100% - (var(--nav-edge) * 2)));
   position: sticky;
   top: 0;
   z-index: 1100;
@@ -16,8 +19,8 @@
 }
 
 .utility-inner {
-  width: min(1480px, calc(100% - 1.2rem));
-  margin: 0 auto;
+  width: var(--nav-width);
+  margin-inline: auto;
   display: flex;
   justify-content: flex-end;
   gap: 0.85rem;
@@ -26,7 +29,7 @@
 }
 
 .nav {
-  width: min(1480px, calc(100% - 1.2rem));
+  width: var(--nav-width);
   margin: 1rem auto 0;
   padding: 0 1.4rem;
   background: var(--color-nav-bg);
@@ -313,11 +316,9 @@ html.nav-scrolled .utility-inner {
 }
 
 html.nav-scrolled .nav {
-  width: 100%;
+  width: var(--nav-width);
   margin-top: 0;
   border-top-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
   border-radius: 0 0 28px 28px;
   box-shadow: var(--shadow-md);
 }
@@ -441,6 +442,7 @@ html.nav-scrolled .logo-mark {
   top: calc(100% + 0.7rem);
   right: 0;
   width: min(18rem, 65vw);
+  max-width: calc(100vw - (var(--nav-edge) * 2));
   padding: 0.95rem 1rem;
   border-radius: 18px;
   background: var(--color-surface-strong);
@@ -500,9 +502,8 @@ html.nav-scrolled .logo-mark {
     position: absolute;
     top: calc(100% + 0.8rem);
     left: 50%;
-    right: auto;
-    width: min(24rem, calc(100vw - 1.4rem));
-    max-width: calc(100vw - 1.4rem);
+    width: min(24rem, calc(100vw - (var(--nav-edge) * 2)));
+    max-width: calc(100vw - (var(--nav-edge) * 2));
     max-height: calc(100vh - 8rem);
     padding: 1rem;
     flex-direction: column;
@@ -543,9 +544,8 @@ html.nav-scrolled .logo-mark {
 }
 
 @media (max-width: 768px) {
-  .utility-inner,
-  .nav {
-    width: min(100% - 0.7rem, 1480px);
+  .site-header {
+    --nav-edge: 0.45rem;
   }
 
   .utility-inner {
@@ -605,8 +605,8 @@ html.nav-scrolled .logo-mark {
   }
 
   .nav-links {
-    width: min(26rem, calc(100vw - 0.9rem));
-    max-width: calc(100vw - 0.9rem);
+    width: min(26rem, calc(100vw - (var(--nav-edge) * 2)));
+    max-width: calc(100vw - (var(--nav-edge) * 2));
   }
 
   .lang-option {

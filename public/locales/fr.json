@@ -39,7 +39,7 @@
       "_source": "Verein, Trainingsort, Probetraining und Trainer."
     },
     "training": {
-      "text": "Formation",
+      "text": "Entraînement",
       "_source": "Training"
     },
     "training_summary": {
@@ -51,11 +51,11 @@
       "_source": "Trainingsplan"
     },
     "events": {
-      "text": "Dates",
+      "text": "Événements",
       "_source": "Termine"
     },
     "events_summary": {
-      "text": "Calendrier, chronologie, appels d'offres et téléchargements PDF.",
+      "text": "Calendrier, chronologie, annonces et téléchargements PDF.",
       "_source": "Kalender, Timeline, Ausschreibungen und PDF-Downloads."
     },
     "news": {
@@ -63,8 +63,9 @@
       "_source": "Aktuelles"
     },
     "news_summary": {
-      "text": "Brèves actualités et historique chronologique.",
-      "_source": "Kurze Neuigkeiten und die chronologische Historie."
+      "text": "Brèves actualités et rétrospectives chronologiques.",
+      "_source": "Kurze Neuigkeiten und chronologische Rückblicke.",
+      "_target": "FR"
     },
     "gallery": {
       "text": "Galerie",
@@ -73,7 +74,8 @@
     },
     "gallery_summary": {
       "text": "Photos, rétrospectives et impressions du dojo.",
-      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
+      "_source": "Fotos, Rückblicke und Impressionen aus dem Dojo.",
+      "_target": "FR"
     },
     "links": {
       "text": "Liens",
@@ -465,7 +467,7 @@
       "_source": "Athaler Strasse 1, 5122 Duttendorf"
     },
     "Ausschreibung": {
-      "text": "Appel d'offres",
+      "text": "Annonce",
       "_source": "Ausschreibung"
     },
     "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain.": {
@@ -478,7 +480,8 @@
     },
     "Bilder, Rückblicke und Impressionen aus dem Dojo.": {
       "text": "Photos, rétrospectives et impressions du dojo.",
-      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
+      "_source": "Fotos, Rückblicke und Impressionen aus dem Dojo.",
+      "_target": "FR"
     },
     "Birach": {
       "text": "Birach",
@@ -793,7 +796,7 @@
       "_source": "Fördert Körperbewusstsein, Praesenz und eine klare, aufrechte Bewegung."
     },
     "Fotogalerie": {
-      "text": "Galerie de photos",
+      "text": "Galerie photo",
       "_source": "Fotogalerie"
     },
     "Fr": {
@@ -835,7 +838,7 @@
       "_target": "FR"
     },
     "Galerien & Ausschreibungen": {
-      "text": "Galeries & appels d'offres",
+      "text": "Galeries & annonces",
       "_source": "Galerien & Ausschreibungen"
     },
     "Gemeinsames Abschlusstraining mit anschliessender Feier.": {
@@ -949,7 +952,7 @@
       "_source": "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite."
     },
     "Kalender, Timeline, Ausschreibungen und PDF-Downloads.": {
-      "text": "Calendrier, chronologie, appels d'offres et téléchargements PDF.",
+      "text": "Calendrier, chronologie, annonces et téléchargements PDF.",
       "_source": "Kalender, Timeline, Ausschreibungen und PDF-Downloads."
     },
     "Kalenderfarben": {
@@ -985,8 +988,9 @@
       "_source": "Kontakt, Ansprechpartner und Anfahrt von Wanomichi Takemusu Aikido Hochburg-Ach."
     },
     "Kurze Neuigkeiten und die chronologische Historie.": {
-      "text": "Brèves actualités et historique chronologique.",
-      "_source": "Kurze Neuigkeiten und die chronologische Historie."
+      "text": "Brèves actualités et rétrospectives chronologiques.",
+      "_source": "Kurze Neuigkeiten und chronologische Rückblicke.",
+      "_target": "FR"
     },
     "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.": {
       "text": "Tu trouveras ici les dernières nouvelles, les cours à venir et la chronique complète dans une vue d'ensemble commune.",
@@ -1227,7 +1231,7 @@
       "_source": "Rückblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden."
     },
     "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.": {
-      "text": "Rétrospectives, appels d'offres et séries de photos sont rassemblés ici à plat et par ordre chronologique.",
+      "text": "Rétrospectives, annonces et séries de photos sont rassemblées ici dans un aperçu chronologique clair.",
       "_source": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt."
     },
     "Ruhe": {
@@ -1677,6 +1681,23 @@
       "text": "Un nombre et des points de couleur indiquent qu'un ou plusieurs rendez-vous sont inscrits ce jour-là.",
       "_source": "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.",
       "_target": "FR"
+    },
+    "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
+      "text": "Wanomichi Iwama Aiki à Duttendorf. Ouvert aux débutants, aux personnes qui reprennent le travail et à tous ceux qui recherchent le mouvement, la concentration et la cohabitation tranquille.",
+      "_source": "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
+      "_target": "FR"
+    },
+    "Am 9. März 2026 fand unser erstes gemeinsames Training statt. Ein ruhiger Auftakt auf der Matte und der Beginn unserer Trainingschronik in Hochburg-Ach.": {
+      "text": "Le 9 mars 2026, nous avons eu notre premier entraînement ensemble. Un début calme sur le tatami et le commencement de notre chronique d’entraînement à Hochburg-Ach.",
+      "_source": "Am 9. März 2026 fand unser erstes gemeinsames Training statt. Ein ruhiger Auftakt auf der Matte und der Beginn unserer Trainingschronik in Hochburg-Ach."
+    },
+    "Fotos, Rückblicke und Impressionen aus dem Dojo.": {
+      "text": "Photos, rétrospectives et impressions du dojo.",
+      "_source": "Fotos, Rückblicke und Impressionen aus dem Dojo."
+    },
+    "Kurze Neuigkeiten und chronologische Rückblicke.": {
+      "text": "Brèves nouvelles et rétrospectives chronologiques.",
+      "_source": "Kurze Neuigkeiten und chronologische Rückblicke."
     }
   },
   "attr": {
@@ -1703,6 +1724,32 @@
     "Vorheriger Monat": {
       "text": "Mois précédent",
       "_source": "Vorheriger Monat"
+    }
+  },
+  "gallery": {
+    "title": {
+      "text": "Galerie photo",
+      "_source": "Foto-Galerie"
+    },
+    "lead": {
+      "text": "Rétrospectives, annonces et séries de photos sont rassemblées ici dans un aperçu chronologique clair.",
+      "_source": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt."
+    },
+    "section_title": {
+      "text": "Galeries & annonces",
+      "_source": "Galerien & Ausschreibungen"
+    },
+    "announcement": {
+      "text": "Annonce",
+      "_source": "Ausschreibung"
+    },
+    "photo_gallery": {
+      "text": "Galerie photo",
+      "_source": "Fotogalerie"
+    },
+    "pending": {
+      "text": "Galerie à venir",
+      "_source": "Galerie folgt"
     }
   }
 }

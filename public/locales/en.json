@@ -53,28 +53,30 @@
       "_source": "Trainingsplan"
     },
     "events": {
-      "text": "Dates",
+      "text": "Events",
       "_source": "Termine"
     },
     "events_summary": {
-      "text": "Calendar, timeline, tenders and PDF downloads.",
+      "text": "Calendar, timeline, announcements and PDF downloads.",
       "_source": "Kalender, Timeline, Ausschreibungen und PDF-Downloads."
     },
     "news": {
-      "text": "Latest news",
+      "text": "News",
       "_source": "Aktuelles"
     },
     "news_summary": {
-      "text": "Brief news and the chronological history.",
-      "_source": "Kurze Neuigkeiten und die chronologische Historie."
+      "text": "Brief news and chronological reviews.",
+      "_source": "Kurze Neuigkeiten und chronologische Rückblicke.",
+      "_target": "EN-US"
     },
     "gallery": {
       "text": "Gallery",
       "_source": "Galerie"
     },
     "gallery_summary": {
-      "text": "Pictures, reviews and impressions from the dojo.",
-      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
+      "text": "Photos, reviews and impressions from the dojo.",
+      "_source": "Fotos, Rückblicke und Impressionen aus dem Dojo.",
+      "_target": "EN-US"
     },
     "links": {
       "text": "Links",
@@ -472,7 +474,7 @@
       "_target": "EN-US"
     },
     "Ausschreibung": {
-      "text": "Invitation to tender",
+      "text": "Announcement",
       "_source": "Ausschreibung"
     },
     "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain.": {
@@ -484,8 +486,9 @@
       "_source": "Bewegung"
     },
     "Bilder, Rückblicke und Impressionen aus dem Dojo.": {
-      "text": "Pictures, reviews and impressions from the dojo.",
-      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
+      "text": "Photos, reviews and impressions from the dojo.",
+      "_source": "Fotos, Rückblicke und Impressionen aus dem Dojo.",
+      "_target": "EN-US"
     },
     "Birach": {
       "text": "Birach",
@@ -853,7 +856,7 @@
       "_source": "Galerie"
     },
     "Galerien & Ausschreibungen": {
-      "text": "Galleries & tenders",
+      "text": "Galleries & announcements",
       "_source": "Galerien & Ausschreibungen"
     },
     "Gemeinsames Abschlusstraining mit anschliessender Feier.": {
@@ -969,7 +972,7 @@
       "_source": "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite."
     },
     "Kalender, Timeline, Ausschreibungen und PDF-Downloads.": {
-      "text": "Calendar, timeline, tenders and PDF downloads.",
+      "text": "Calendar, timeline, announcements and PDF downloads.",
       "_source": "Kalender, Timeline, Ausschreibungen und PDF-Downloads."
     },
     "Kalenderfarben": {
@@ -1005,8 +1008,9 @@
       "_source": "Kontakt, Ansprechpartner und Anfahrt von Wanomichi Takemusu Aikido Hochburg-Ach."
     },
     "Kurze Neuigkeiten und die chronologische Historie.": {
-      "text": "Brief news and the chronological history.",
-      "_source": "Kurze Neuigkeiten und die chronologische Historie."
+      "text": "Brief news and chronological reviews.",
+      "_source": "Kurze Neuigkeiten und chronologische Rückblicke.",
+      "_target": "EN-US"
     },
     "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.": {
       "text": "Short news, upcoming courses and the entire chronicle can be found here in a common overview.",
@@ -1257,7 +1261,7 @@
       "_source": "Rückblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden."
     },
     "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.": {
-      "text": "Reviews, announcements and picture series are collected here flat and chronologically.",
+      "text": "Recaps, announcements and photo series are collected here in a clear chronological overview.",
       "_source": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt."
     },
     "Ruhe": {
@@ -1718,6 +1722,23 @@
       "text": "Colored numbers and dots indicate that one or more appointments have been entered on this day.",
       "_source": "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.",
       "_target": "EN-US"
+    },
+    "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
+      "text": "Wanomichi Iwama Aiki in Duttendorf. Open to beginners, returners and anyone looking for movement, concentration and peaceful togetherness.",
+      "_source": "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
+      "_target": "EN-US"
+    },
+    "Am 9. März 2026 fand unser erstes gemeinsames Training statt. Ein ruhiger Auftakt auf der Matte und der Beginn unserer Trainingschronik in Hochburg-Ach.": {
+      "text": "On 9 March 2026, we held our first training session together. A calm beginning on the mat and the start of our training chronicle in Hochburg-Ach.",
+      "_source": "Am 9. März 2026 fand unser erstes gemeinsames Training statt. Ein ruhiger Auftakt auf der Matte und der Beginn unserer Trainingschronik in Hochburg-Ach."
+    },
+    "Fotos, Rückblicke und Impressionen aus dem Dojo.": {
+      "text": "Photos, recaps and impressions from the dojo.",
+      "_source": "Fotos, Rückblicke und Impressionen aus dem Dojo."
+    },
+    "Kurze Neuigkeiten und chronologische Rückblicke.": {
+      "text": "Brief updates and chronological recaps.",
+      "_source": "Kurze Neuigkeiten und chronologische Rückblicke."
     }
   },
   "attr": {
@@ -1744,6 +1765,32 @@
     "Vorheriger Monat": {
       "text": "Previous month",
       "_source": "Vorheriger Monat"
+    }
+  },
+  "gallery": {
+    "title": {
+      "text": "Photo gallery",
+      "_source": "Foto-Galerie"
+    },
+    "lead": {
+      "text": "Recaps, announcements and photo series are collected here in a clear chronological overview.",
+      "_source": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt."
+    },
+    "section_title": {
+      "text": "Galleries & announcements",
+      "_source": "Galerien & Ausschreibungen"
+    },
+    "announcement": {
+      "text": "Announcement",
+      "_source": "Ausschreibung"
+    },
+    "photo_gallery": {
+      "text": "Photo gallery",
+      "_source": "Fotogalerie"
+    },
+    "pending": {
+      "text": "Gallery coming soon",
+      "_source": "Galerie folgt"
     }
   }
 }

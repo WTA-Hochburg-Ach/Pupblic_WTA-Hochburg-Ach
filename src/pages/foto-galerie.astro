@@ -26,12 +26,12 @@ const entries = sortGalleryNewestFirst(galleryEntries).map((entry) => {
 
 <BaseLayout title="Foto-Galerie">
   <section class="page-header gallery-intro">
-    <h1>Foto-Galerie</h1>
-    <p class="lead-text">Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.</p>
+    <h1 data-i18n="gallery.title">Foto-Galerie</h1>
+    <p class="lead-text" data-i18n="gallery.lead">Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.</p>
   </section>
 
   <section class="content-block-spacious gallery-list-section">
-    <h2>Galerien & Ausschreibungen</h2>
+    <h2 data-i18n="gallery.section_title">Galerien & Ausschreibungen</h2>
 
     <div class="gallery-list">
       {entries.map((entry) => (
@@ -55,13 +55,13 @@ const entries = sortGalleryNewestFirst(galleryEntries).map((entry) => {
 
           <div class="gallery-row-actions">
             {entry.eventHref && (
-              <a class="read-more-btn" href={entry.eventHref}>Ausschreibung</a>
+              <a class="read-more-btn" href={entry.eventHref} data-i18n="gallery.announcement">Ausschreibung</a>
             )}
 
             {entry.galleryHref ? (
-              <a class="mini-action" href={entry.galleryHref}>Fotogalerie</a>
+              <a class="mini-action" href={entry.galleryHref} data-i18n="gallery.photo_gallery">Fotogalerie</a>
             ) : (
-              <span class="gallery-pending">Galerie folgt</span>
+              <span class="gallery-pending" data-i18n="gallery.pending">Galerie folgt</span>
             )}
           </div>
         </article>

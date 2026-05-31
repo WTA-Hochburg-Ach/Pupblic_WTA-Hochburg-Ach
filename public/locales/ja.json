@@ -31,7 +31,7 @@
   },
   "nav": {
     "about": {
-      "text": "会社概要",
+      "text": "私たちについて",
       "_source": "Über uns"
     },
     "about_summary": {
@@ -47,24 +47,25 @@
       "_source": "Aikido, Waffentraining und Trainingsaufbau."
     },
     "schedule": {
-      "text": "トレーニング計画",
+      "text": "稽古予定",
       "_source": "Trainingsplan"
     },
     "events": {
-      "text": "日付",
+      "text": "行事予定",
       "_source": "Termine"
     },
     "events_summary": {
-      "text": "カレンダー、年表、入札案内、PDFダウンロード。",
+      "text": "カレンダー、時系列、案内、PDFダウンロード。",
       "_source": "Kalender, Timeline, Ausschreibungen und PDF-Downloads."
     },
     "news": {
-      "text": "最新ニュース",
+      "text": "お知らせ",
       "_source": "Aktuelles"
     },
     "news_summary": {
       "text": "簡単なニュースと年表。",
-      "_source": "Kurze Neuigkeiten und die chronologische Historie."
+      "_source": "Kurze Neuigkeiten und chronologische Rückblicke.",
+      "_target": "JA"
     },
     "gallery": {
       "text": "ギャラリー",
@@ -72,7 +73,8 @@
     },
     "gallery_summary": {
       "text": "写真、レビュー、道場の感想など。",
-      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
+      "_source": "Fotos, Rückblicke und Impressionen aus dem Dojo.",
+      "_target": "JA"
     },
     "links": {
       "text": "リンク",
@@ -463,7 +465,7 @@
       "_source": "Athaler Strasse 1, 5122 Duttendorf"
     },
     "Ausschreibung": {
-      "text": "入札のご案内",
+      "text": "案内",
       "_source": "Ausschreibung"
     },
     "Ausschreibung fuer den Lehrgang mit Daniel und Sonia Toutain.": {
@@ -476,7 +478,8 @@
     },
     "Bilder, Rückblicke und Impressionen aus dem Dojo.": {
       "text": "写真、レビュー、道場の感想など。",
-      "_source": "Bilder, Rückblicke und Impressionen aus dem Dojo."
+      "_source": "Fotos, Rückblicke und Impressionen aus dem Dojo.",
+      "_target": "JA"
     },
     "Birach": {
       "text": "ビラッハ",
@@ -823,7 +826,7 @@
       "_source": "Galerie"
     },
     "Galerien & Ausschreibungen": {
-      "text": "ギャラリーと入札",
+      "text": "ギャラリーと案内",
       "_source": "Galerien & Ausschreibungen"
     },
     "Gemeinsames Abschlusstraining mit anschliessender Feier.": {
@@ -933,7 +936,7 @@
       "_source": "Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite."
     },
     "Kalender, Timeline, Ausschreibungen und PDF-Downloads.": {
-      "text": "カレンダー、年表、入札案内、PDFダウンロード。",
+      "text": "カレンダー、時系列、案内、PDFダウンロード。",
       "_source": "Kalender, Timeline, Ausschreibungen und PDF-Downloads."
     },
     "Kalenderfarben": {
@@ -970,7 +973,8 @@
     },
     "Kurze Neuigkeiten und die chronologische Historie.": {
       "text": "簡単なニュースと年表。",
-      "_source": "Kurze Neuigkeiten und die chronologische Historie."
+      "_source": "Kurze Neuigkeiten und chronologische Rückblicke.",
+      "_target": "JA"
     },
     "Kurze Neuigkeiten, kommende Lehrgänge und die gesamte Chronik findest du hier in einer gemeinsamen übersicht.": {
       "text": "短いニュース、今後のコース、クロニクル全体は、ここで共通の概要で見ることができる。",
@@ -1201,7 +1205,7 @@
       "_source": "Rückblicke auf Seminare, Gasttrainer:innen und besondere Wochenenden."
     },
     "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt.": {
-      "text": "レビュー、アナウンスメント、ピクチャー・シリーズは、平易かつ時系列でここに集められている。",
+      "text": "振り返り、案内、写真シリーズを時系列で見やすくまとめています。",
       "_source": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt."
     },
     "Ruhe": {
@@ -1648,6 +1652,23 @@
       "text": "色付きの数字と点は、この日に1つ以上の予定が入力されていることを示します。",
       "_source": "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.",
       "_target": "JA"
+    },
+    "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
+      "text": "デュッテンドルフにある岩間和道合気道場。初心者、再入門者、運動、集中、平和的な一体感を求める人なら誰でも参加できます。",
+      "_source": "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
+      "_target": "JA"
+    },
+    "Am 9. März 2026 fand unser erstes gemeinsames Training statt. Ein ruhiger Auftakt auf der Matte und der Beginn unserer Trainingschronik in Hochburg-Ach.": {
+      "text": "2026年3月9日、私たちは初めて一緒に稽古を行いました。畳の上での静かな始まりであり、Hochburg-Achでの稽古記録の第一歩です。",
+      "_source": "Am 9. März 2026 fand unser erstes gemeinsames Training statt. Ein ruhiger Auftakt auf der Matte und der Beginn unserer Trainingschronik in Hochburg-Ach."
+    },
+    "Fotos, Rückblicke und Impressionen aus dem Dojo.": {
+      "text": "道場での写真、振り返り、稽古の印象。",
+      "_source": "Fotos, Rückblicke und Impressionen aus dem Dojo."
+    },
+    "Kurze Neuigkeiten und chronologische Rückblicke.": {
+      "text": "短いお知らせと時系列の記録。",
+      "_source": "Kurze Neuigkeiten und chronologische Rückblicke."
     }
   },
   "attr": {
@@ -1674,6 +1695,32 @@
     "Vorheriger Monat": {
       "text": "前月",
       "_source": "Vorheriger Monat"
+    }
+  },
+  "gallery": {
+    "title": {
+      "text": "フォトギャラリー",
+      "_source": "Foto-Galerie"
+    },
+    "lead": {
+      "text": "振り返り、案内、写真シリーズを時系列で見やすくまとめています。",
+      "_source": "Rückblicke, Ausschreibungen und Bildserien sind hier flach und chronologisch gesammelt."
+    },
+    "section_title": {
+      "text": "ギャラリーと案内",
+      "_source": "Galerien & Ausschreibungen"
+    },
+    "announcement": {
+      "text": "案内",
+      "_source": "Ausschreibung"
+    },
+    "photo_gallery": {
+      "text": "フォトギャラリー",
+      "_source": "Fotogalerie"
+    },
+    "pending": {
+      "text": "ギャラリー準備中",
+      "_source": "Galerie folgt"
     }
   }
 }
