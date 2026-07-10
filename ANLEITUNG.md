@@ -45,6 +45,12 @@ Das Projekt validiert Frontmatter über `src/content.config.ts`. Mindestens dies
 - `color` (`moss` | `sage` | `gold`) — Standard: `moss`
 - `pdfs` (optional object) — `{ de?: '/downloads/file-de.pdf', en?: '/downloads/file-en.pdf' }`
 
+Kurzmeldungen
+- Kurzmeldungen sind normale News-Beiträge mit `type: news` und einem aktuellen Datum innerhalb der letzten sieben Tage.
+- Sie erscheinen automatisch auf der Seite `/news` im Abschnitt „Kurzmeldungen“.
+- Wichtig ist ein kurzes `preview`, denn dieser Text wird auf der Übersicht angezeigt.
+- Wenn das Datum älter als sieben Tage ist, landet der Beitrag stattdessen in der Chronik.
+
 Beispiel — einfache News:
 
 ---
