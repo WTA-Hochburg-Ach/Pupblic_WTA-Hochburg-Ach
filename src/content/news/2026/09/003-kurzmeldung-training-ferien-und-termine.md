@@ -1,7 +1,7 @@
 ---
 title: "Kurzmeldung: Trainingsbetrieb und Termine"
 date: 2026-07-10
-preview: Während der Schulferien trainieren wir Buki Waza zu den normalen Zeiten. Das Waffen-Training am Samstag findet im Zuge des Lehrgangs statt, Mo 14.9. und Fr 18.9. entfällt das Training.
+preview: Anpassungen im Trainingsbetrieb während der Ferien und Termine für Lehrgang und Ushi Deshi.
 type: news
 display: page
 color: sage

@@ -1723,6 +1723,11 @@
       "text": "Pendant les vacances scolaires, nous nous entraînons au Buki Waza aux horaires habituels. L'entraînement aux armes du samedi aura lieu dans le cadre du stage ; il n'y aura pas d'entraînement le lundi 14 septembre ni le vendredi 18 septembre.",
       "_source": "Während der Schulferien trainieren wir Buki Waza zu den normalen Zeiten. Das Waffen-Training am Samstag findet im Zuge des Lehrgangs statt, Mo 14.9. und Fr 18.9. entfällt das Training.",
       "_target": "FR"
+    },
+    "Anpassungen im Trainingsbetrieb während der Ferien und Termine für Lehrgang und Ushi Deshi.": {
+      "text": "Modifications du programme d'entraînement pendant les vacances et dates des stages et du programme Ushi Deshi.",
+      "_source": "Anpassungen im Trainingsbetrieb während der Ferien und Termine für Lehrgang und Ushi Deshi.",
+      "_target": "FR"
     }
   },
   "attr": {

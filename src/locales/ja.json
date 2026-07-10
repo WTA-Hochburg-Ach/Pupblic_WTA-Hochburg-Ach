@@ -1694,6 +1694,11 @@
       "text": "学校が休み期間中も、通常通り武技の稽古を行います。土曜日の武器稽古は講習会の一環として行われますが、9月14日（月）と9月18日（金）は稽古が休みとなります。",
       "_source": "Während der Schulferien trainieren wir Buki Waza zu den normalen Zeiten. Das Waffen-Training am Samstag findet im Zuge des Lehrgangs statt, Mo 14.9. und Fr 18.9. entfällt das Training.",
       "_target": "JA"
+    },
+    "Anpassungen im Trainingsbetrieb während der Ferien und Termine für Lehrgang und Ushi Deshi.": {
+      "text": "休暇期間中のトレーニング運営に関する変更点、および講習会と「ウシ・デシ」のスケジュールについて。",
+      "_source": "Anpassungen im Trainingsbetrieb während der Ferien und Termine für Lehrgang und Ushi Deshi.",
+      "_target": "JA"
     }
   },
   "attr": {
