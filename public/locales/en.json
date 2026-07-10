@@ -1739,6 +1739,31 @@
     "Kurze Neuigkeiten und chronologische Rückblicke.": {
       "text": "Brief updates and chronological recaps.",
       "_source": "Kurze Neuigkeiten und chronologische Rückblicke."
+    },
+    "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.": {
+      "text": "Starting September 21, practice will resume as usual in the gym.",
+      "_source": "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.",
+      "_target": "EN-US"
+    },
+    "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).": {
+      "text": "The weapons training on Saturday, September 12, will take place as part of the course (see schedule).",
+      "_source": "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).",
+      "_target": "EN-US"
+    },
+    "Kurzmeldung: Trainingsbetrieb und Termine": {
+      "text": "News Brief: Training Schedule and Dates",
+      "_source": "Kurzmeldung: Trainingsbetrieb und Termine",
+      "_target": "EN-US"
+    },
+    "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).": {
+      "text": "There will be no practice on Monday, September 14, and Friday, September 18, due to Ushi Deshi in Birach (see schedule).",
+      "_source": "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).",
+      "_target": "EN-US"
+    },
+    "Während der Schulferien trainieren wir Buki Waza zu den normalen Zeiten. Das Waffen-Training am Samstag findet im Zuge des Lehrgangs statt, Mo 14.9. und Fr 18.9. entfällt das Training.": {
+      "text": "During school breaks, we will practice Buki Waza at the usual times. Saturday’s weapons training will take place as part of the seminar; there will be no training on Monday, September 14, and Friday, September 18.",
+      "_source": "Während der Schulferien trainieren wir Buki Waza zu den normalen Zeiten. Das Waffen-Training am Samstag findet im Zuge des Lehrgangs statt, Mo 14.9. und Fr 18.9. entfällt das Training.",
+      "_target": "EN-US"
     }
   },
   "attr": {

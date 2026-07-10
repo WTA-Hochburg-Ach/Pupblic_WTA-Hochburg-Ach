@@ -1698,6 +1698,31 @@
     "Kurze Neuigkeiten und chronologische Rückblicke.": {
       "text": "Brèves nouvelles et rétrospectives chronologiques.",
       "_source": "Kurze Neuigkeiten und chronologische Rückblicke."
+    },
+    "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.": {
+      "text": "À partir du 21 septembre, l'entraînement reprendra comme d'habitude dans la salle.",
+      "_source": "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.",
+      "_target": "FR"
+    },
+    "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).": {
+      "text": "L'entraînement au maniement des armes du samedi 12 septembre aura lieu dans le cadre du stage (voir le calendrier).",
+      "_source": "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).",
+      "_target": "FR"
+    },
+    "Kurzmeldung: Trainingsbetrieb und Termine": {
+      "text": "Brève : Entraînements et calendrier",
+      "_source": "Kurzmeldung: Trainingsbetrieb und Termine",
+      "_target": "FR"
+    },
+    "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).": {
+      "text": "Lundi 14 septembre et vendredi 18 septembre, l'entraînement est annulé en raison de l'Ushi Deshi à Birach (voir le calendrier).",
+      "_source": "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).",
+      "_target": "FR"
+    },
+    "Während der Schulferien trainieren wir Buki Waza zu den normalen Zeiten. Das Waffen-Training am Samstag findet im Zuge des Lehrgangs statt, Mo 14.9. und Fr 18.9. entfällt das Training.": {
+      "text": "Pendant les vacances scolaires, nous nous entraînons au Buki Waza aux horaires habituels. L'entraînement aux armes du samedi aura lieu dans le cadre du stage ; il n'y aura pas d'entraînement le lundi 14 septembre ni le vendredi 18 septembre.",
+      "_source": "Während der Schulferien trainieren wir Buki Waza zu den normalen Zeiten. Das Waffen-Training am Samstag findet im Zuge des Lehrgangs statt, Mo 14.9. und Fr 18.9. entfällt das Training.",
+      "_target": "FR"
     }
   },
   "attr": {

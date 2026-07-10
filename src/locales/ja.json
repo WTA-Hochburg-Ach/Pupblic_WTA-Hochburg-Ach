@@ -1669,6 +1669,31 @@
     "Kurze Neuigkeiten und chronologische Rückblicke.": {
       "text": "短いお知らせと時系列の記録。",
       "_source": "Kurze Neuigkeiten und chronologische Rückblicke."
+    },
+    "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.": {
+      "text": "9月21日から、練習は再び通常通り体育館で行われます。",
+      "_source": "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.",
+      "_target": "JA"
+    },
+    "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).": {
+      "text": "9月12日（土）の武器訓練は、講習会の一環として行われます（日程を参照）。",
+      "_source": "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).",
+      "_target": "JA"
+    },
+    "Kurzmeldung: Trainingsbetrieb und Termine": {
+      "text": "【速報】練習の実施状況と日程",
+      "_source": "Kurzmeldung: Trainingsbetrieb und Termine",
+      "_target": "JA"
+    },
+    "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).": {
+      "text": "9月14日（月）および9月18日（金）は、ビラッハでの「ウシ・デシ」開催のため、練習は中止となります（日程参照）。",
+      "_source": "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).",
+      "_target": "JA"
+    },
+    "Während der Schulferien trainieren wir Buki Waza zu den normalen Zeiten. Das Waffen-Training am Samstag findet im Zuge des Lehrgangs statt, Mo 14.9. und Fr 18.9. entfällt das Training.": {
+      "text": "学校が休み期間中も、通常通り武技の稽古を行います。土曜日の武器稽古は講習会の一環として行われますが、9月14日（月）と9月18日（金）は稽古が休みとなります。",
+      "_source": "Während der Schulferien trainieren wir Buki Waza zu den normalen Zeiten. Das Waffen-Training am Samstag findet im Zuge des Lehrgangs statt, Mo 14.9. und Fr 18.9. entfällt das Training.",
+      "_target": "JA"
     }
   },
   "attr": {
