@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { formatDateRange, getNewsSlug, isEvent, isNews, sortByDateAscending, sortByDateDescending } from '../lib/news';
 import { getBaseUrl, withBasePath } from '../lib/site';
 
@@ -30,6 +30,8 @@ const pastEvents = entries.filter((item) => {
 });
 
 const chronicleEntries = sortByDateDescending([...olderNews, ...pastEvents]).slice(0, 7);
+const featuredNewsItem = recentNews[0];
+const FeaturedNewsContent = featuredNewsItem ? (await render(featuredNewsItem)).Content : undefined;
 ---
 
 <BaseLayout title="Aktuelles & Termine">
@@ -43,16 +45,28 @@ const chronicleEntries = sortByDateDescending([...olderNews, ...pastEvents]).sli
     <h2>Kurzmeldungen</h2>
     {recentNews.length > 0 ? (
       <div class="feature-grid featured-event-grid">
-        {recentNews.map((item) => (
-          <article class:list={['feature-card', 'featured-event-card', `tone-${item.data.color}`]}>
-            <span class="event-date" data-date-start={item.data.date.toISOString()} data-date-end={item.data.endDate?.toISOString() ?? ''}>
-              {formatDateRange(item.data.date, item.data.endDate)}
-            </span>
-            <h3>{item.data.title}</h3>
-            <p>{item.data.preview}</p>
-            <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiterlesen</a>
-          </article>
-        ))}
+        {recentNews.map((item, index) => {
+          const isFeatured = index === 0 && !!FeaturedNewsContent;
+
+          return (
+            <article class:list={['feature-card', 'featured-event-card', `tone-${item.data.color}`]}>
+              <span class="event-date" data-date-start={item.data.date.toISOString()} data-date-end={item.data.endDate?.toISOString() ?? ''}>
+                {formatDateRange(item.data.date, item.data.endDate)}
+              </span>
+              <h3>{item.data.title}</h3>
+              {isFeatured ? (
+                <div class="featured-entry-content">
+                  <FeaturedNewsContent />
+                </div>
+              ) : (
+                <>
+                  <p>{item.data.preview}</p>
+                  <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiterlesen</a>
+                </>
+              )}
+            </article>
+          );
+        })}
       </div>
     ) : (
       <p class="archive-note">Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.</p>
@@ -106,6 +120,16 @@ const chronicleEntries = sortByDateDescending([...olderNews, ...pastEvents]).sli
 .featured-event-card,
 .chronicle-card {
   border-left: 4px solid transparent;
+}
+
+.featured-entry-content {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.4rem;
+}
+
+.featured-entry-content :global(p) {
+  margin: 0;
 }
 
 .chronicle-list {
