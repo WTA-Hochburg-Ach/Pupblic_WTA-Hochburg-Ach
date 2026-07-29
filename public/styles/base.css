@@ -169,25 +169,30 @@ img {
 }
 
 .hero-home {
-  padding: 4.2rem clamp(1.5rem, 4vw, 4rem);
+  padding: 4.2rem clamp(1.5rem, 4vw, 4rem) 0 clamp(1.5rem, 4vw, 4rem);
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
-  gap: 2.8rem;
+  grid-template-columns: minmax(0, 1.1fr) minmax(12rem, auto);
+  gap: 0;
+  align-items: center;
 }
 
 .hero-kanji {
   position: absolute;
-  left: clamp(1rem, 3vw, 2.2rem);
+  left: clamp(-0.4rem, 1.2vw, 0.4rem);
   top: 50%;
-  z-index: 1;
+  z-index: 0;
   writing-mode: vertical-rl;
+  text-orientation: upright;
   transform: translateY(-50%);
   font-family: var(--font-jp);
-  font-size: clamp(3.8rem, 9vw, 8rem);
+  font-size: clamp(5.8rem, 13vw, 11.2rem);
   font-weight: 600;
-  line-height: 0.9;
-  color: rgba(248, 251, 246, 0.18);
+  line-height: 1.2;
+  letter-spacing: clamp(0.4rem, 1vw, 0.8rem);
+  color: rgba(248, 251, 246, 0.11);
   pointer-events: none;
+  opacity: 0.8;
+  filter: blur(0.2px);
 }
 
 .hero-content,
@@ -197,18 +202,29 @@ img {
 }
 
 .hero-content {
-  max-width: 640px;
-  padding-left: clamp(2.5rem, 8vw, 6rem);
+  max-width: 900px;
+  padding-left: clamp(3.2rem, 8vw, 6.8rem);
+  padding-right: clamp(1.5rem, 3vw, 2.4rem);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
-  column-gap: 2rem;
-  row-gap: 1.5rem;
-  align-items: start;
+  grid-template-columns: minmax(0, 1.7fr) minmax(12rem, 18rem);
+  column-gap: clamp(1.2rem, 2.5vw, 2rem);
+  row-gap: 1.4rem;
+  align-items: center;
 }
 
 .hero-copy {
   grid-column: 1;
   grid-row: 1;
+  max-width: 38rem;
+}
+
+.hero-copy h1 {
+  max-width: 12ch;
+}
+
+.hero-copy p {
+  max-width: 34rem;
+  line-height: 1.7;
 }
 
 .hero-cta-group {
@@ -221,11 +237,14 @@ img {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: clamp(18rem, 32vw, 24rem);
+  min-height: clamp(18rem, 32vw, 28rem);
   padding: clamp(0.35rem, 1vw, 0.7rem);
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
+  justify-self: stretch;
+  width: 100%;
+  padding-right: clamp(1.5rem, 4vw, 4rem);
 }
 
 .hero-portrait::before {
@@ -242,7 +261,7 @@ img {
 .hero-portrait-frame {
   position: relative;
   z-index: 1;
-  width: min(100%, 25rem);
+  width: min(100%, 26rem);
   padding: 0.85rem;
   border-radius: 30px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.05));
@@ -304,6 +323,7 @@ img {
 .cta-buttons {
   display: flex;
   gap: 1rem;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -1019,11 +1039,13 @@ img {
   .hero-cta-group,
   .cta-buttons {
     width: 100%;
+    flex-direction: column;
   }
 
   .hero-cta-group .button,
   .cta-buttons .button {
     min-width: 0;
+    width: 100%;
   }
 }
 
