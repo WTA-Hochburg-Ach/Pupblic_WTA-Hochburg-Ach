@@ -178,21 +178,19 @@ img {
 
 .hero-kanji {
   position: absolute;
-  left: clamp(-0.4rem, 1.2vw, 0.4rem);
+  left: clamp(-1rem, 0.5vw, 0.2rem);
   top: 50%;
   z-index: 0;
   writing-mode: vertical-rl;
-  text-orientation: upright;
   transform: translateY(-50%);
   font-family: var(--font-jp);
-  font-size: clamp(5.8rem, 13vw, 11.2rem);
+  font-size: clamp(5.2rem, 11vw, 9.8rem);
   font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: clamp(0.4rem, 1vw, 0.8rem);
-  color: rgba(248, 251, 246, 0.11);
+  line-height: 1.15;
+  color: rgba(248, 251, 246, 0.1);
   pointer-events: none;
-  opacity: 0.8;
-  filter: blur(0.2px);
+  opacity: 0.75;
+  filter: blur(0.25px);
 }
 
 .hero-content,
