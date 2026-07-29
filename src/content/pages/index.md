@@ -7,8 +7,15 @@ order: 1
   <div class="hero-kanji" aria-hidden="true">合気道</div>
 
   <div class="hero-content">
-    <h1>Wanomichi Takemusu<br />Aikido<br />Hochburg-Ach</h1>
-    <p>Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.</p>
+    <div class="hero-copy">
+      <h1>Wanomichi Takemusu<br />Aikido<br />Hochburg-Ach</h1>
+      <p>Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.</p>
+    </div>
+    <div class="hero-portrait" aria-label="Morihei Ueshiba">
+      <div class="hero-portrait-frame">
+        <img src="/images/homepage/morihei-ueshiba.JPG" alt="Morihei Ueshiba" loading="eager" />
+      </div>
+    </div>
     <div class="hero-cta-group">
       <a href="ueber-uns" class="button button-primary">Über uns</a>
       <a href="kontakt" class="button button-secondary">Kontakt</a>
