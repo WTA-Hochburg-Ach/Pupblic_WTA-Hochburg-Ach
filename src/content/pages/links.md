@@ -1,6 +1,7 @@
 ---
 title: Links
 order: 8
+kanji: 合気道
 ---
 
 <section class="page-header">

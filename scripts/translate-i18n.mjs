@@ -6,17 +6,40 @@ const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const sourceLocaleDir = path.join(rootDir, 'src', 'locales');
 const publicLocaleDir = path.join(rootDir, 'public', 'locales');
 const sourceLocalePath = path.join(sourceLocaleDir, 'de.json');
+const contentRoots = [
+  path.join(rootDir, 'src', 'content', 'pages'),
+  path.join(rootDir, 'src', 'content', 'news'),
+  path.join(rootDir, 'src', 'pages'),
+];
 
 const { activeLanguages } = await import('../src/data/site.ts');
 
 const targetLanguages = Object.fromEntries(
   activeLanguages
     .filter((lang) => lang !== 'de')
-    .map((lang) => {
-      if (lang === 'en') return ['en', 'EN-US'];
-      return [lang, lang.toUpperCase()];
-    }),
+    .map((lang) => [lang, lang === 'en' ? 'EN-US' : lang.toUpperCase()]),
 );
+
+const PROTECTED_TERMS = [
+  'Aikido',
+  'Wanomichi',
+  'Takemusu',
+  'Ueshiba Morihei',
+  'Morihei Ueshiba',
+  'Saito Morihiro Sensei',
+  'Hochburg-Ach',
+  'Duttendorf',
+  'Dojo',
+  'O-Sensei',
+  'Uke',
+  'Nage',
+];
+
+const CONTEXT_HINT = [
+  'Translate content for a traditional Aikido dojo website.',
+  'Keep proper names and dojo terminology consistent.',
+  `Protected terms: ${PROTECTED_TERMS.join(', ')}.`,
+].join(' ');
 
 let warnedMissingApiKey = false;
 
@@ -24,25 +47,27 @@ async function readEnvFile() {
   const envFiles = ['.env', 'deepl.env'];
 
   await Promise.all(
-    envFiles.map((fileName) => fs
-      .readFile(path.join(rootDir, fileName), 'utf8')
-      .then((content) => {
-      content.split(/\r?\n/).forEach((line) => {
-        const trimmed = line.trim();
-        if (!trimmed || trimmed.startsWith('#') || !trimmed.includes('=')) {
-          return;
-        }
+    envFiles.map(async (fileName) => {
+      try {
+        const content = await fs.readFile(path.join(rootDir, fileName), 'utf8');
+        content.split(/\r?\n/).forEach((line) => {
+          const trimmed = line.trim();
+          if (!trimmed || trimmed.startsWith('#') || !trimmed.includes('=')) {
+            return;
+          }
 
-        const [rawKey, ...rawValue] = trimmed.split('=');
-        const key = rawKey.trim();
-        const value = rawValue.join('=').trim().replace(/^['"]|['"]$/g, '');
+          const [rawKey, ...rawValue] = trimmed.split('=');
+          const key = rawKey.trim();
+          const value = rawValue.join('=').trim().replace(/^['"]|['"]$/g, '');
 
-        if (key && process.env[key] === undefined) {
-          process.env[key] = value;
-        }
-      });
-      })
-      .catch(() => {})),
+          if (key && process.env[key] === undefined) {
+            process.env[key] = value;
+          }
+        });
+      } catch {
+        // Optional local env file.
+      }
+    }),
   );
 }
 
@@ -64,22 +89,21 @@ async function writeJson(filePath, data) {
 }
 
 function isPlainObject(value) {
-  return value && typeof value === 'object' && !Array.isArray(value);
+  return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
 }
 
 function normalizeText(value) {
   return String(value ?? '').replace(/\s+/g, ' ').trim();
 }
 
-function shouldCollectText(value) {
-  const text = normalizeText(value);
-
-  if (text.length < 2 || text.length > 2000) return false;
-  if (!/[A-Za-zÄÖÜäöüß]/.test(text)) return false;
+function looksLikeTranslatableText(text) {
+  if (!text) return false;
+  if (text.length < 2 || text.length > 3000) return false;
+  if (!/[A-Za-zÄÖÜäöüß\u3040-\u30ff\u3400-\u9fff]/.test(text)) return false;
   if (/^(https?:|mailto:|tel:|\/|#|\.|_|\{|\[|\(|\)|'|"|,|import |export )/.test(text)) return false;
   if (/^(class|id|href|src|rel|type|data-|aria-|const|let|var)\b/.test(text)) return false;
-  if (/^(common|nav|footer|meta|events|text|attr)\./.test(text)) return false;
-  if (/\b(entry|item|linkedNews|baseUrl)\b/.test(text)) return false;
+  if (/^(common|nav|footer|meta|events|text|attr|gallery)\./.test(text)) return false;
+  if (/\b(entry|item|linkedNews|baseUrl|window|document|Astro|props)\b/.test(text)) return false;
   if (/[?.]{2}|=>|\|\||&&|\?\?/.test(text)) return false;
   if (/\bwith[A-Z]\w+\(/.test(text)) return false;
   if (/\.(astro|css|js|ts|svg|png|jpe?g|webp|pdf|md|json|mjs)\b/i.test(text)) return false;
@@ -120,57 +144,90 @@ async function listFiles(dir, extensions, files = []) {
 
 function addCandidate(set, value) {
   const text = normalizeText(value);
-  if (shouldCollectText(text)) {
+  if (looksLikeTranslatableText(text)) {
     set.add(text);
   }
 }
 
-function collectYamlStrings(content, set) {
-  const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
-  if (!match) return;
+function extractFrontmatter(content) {
+  const match = content.match(/^---\s*\n([\s\S]*?)\n---\s*/);
+  return match ? match[1] : '';
+}
 
-  match[1].split(/\r?\n/).forEach((line) => {
-    const value = line.match(/^\s*[\w-]+:\s*(.+?)\s*$/)?.[1];
-    if (!value) return;
+function collectFrontmatterStrings(content, set) {
+  const frontmatter = extractFrontmatter(content);
+  if (!frontmatter) return;
 
-    addCandidate(set, value.replace(/^['"]|['"]$/g, ''));
+  frontmatter.split(/\r?\n/).forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('//') || trimmed.startsWith('#')) {
+      return;
+    }
+
+    const namedLiteral = trimmed.match(
+      /^(?:const|let|var)\s+[A-Za-z_$][\w$]*\s*=\s*(['"])(.*?)\1\s*;?\s*$/,
+    );
+    if (namedLiteral) {
+      addCandidate(set, namedLiteral[2]);
+      return;
+    }
+
+    const objectLiteral = trimmed.match(/^[A-Za-z0-9_-]+\s*:\s*(['"])(.*?)\1\s*,?\s*$/);
+    if (objectLiteral) {
+      addCandidate(set, objectLiteral[2]);
+      return;
+    }
+
+    const frontmatterField = trimmed.match(/^(title|description|preview|summary|kanji|kicker|label|headline)\s*:\s*(['"])(.*?)\2\s*$/i);
+    if (frontmatterField) {
+      addCandidate(set, frontmatterField[3]);
+    }
   });
 }
 
-function collectHtmlText(content, set) {
-  const stripped = content
-    .replace(/^---[\s\S]*?---/, '')
-    .replace(/<script[\s\S]*?<\/script>/gi, '')
-    .replace(/<style[\s\S]*?<\/style>/gi, '')
-    .replace(/<!--[\s\S]*?-->/g, '');
-
-  const withoutTags = stripped
-    .replace(/<br\s*\/?>/gi, ' ')
-    .replace(/\n\s*\n/g, '|||') // Markdown paragraphs split
-    .replace(/<[^>]+>/g, '|||') // HTML tags
-    .replace(/\{[\s\S]*?\}/g, '|||') // Astro expressions
+function decodeHtmlEntities(value) {
+  return value
+    .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"');
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'");
+}
 
-  withoutTags.split('|||').forEach((block) => {
-    const text = normalizeText(block);
-    addCandidate(set, text);
-  });
+function collectRenderableText(content, set) {
+  const body = content
+    .replace(/^---[\s\S]*?---\s*/, '')
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/(p|h1|h2|h3|h4|h5|h6|li|dt|dd|blockquote|figcaption|button|label|legend|summary|small|strong|em|span|td|th)>/gi, '\n')
+    .replace(/<\/(div|section|article|header|footer|aside|main|nav|figure|ul|ol|dl|table|thead|tbody|tr)>/gi, '\n\n')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\{[\s\S]*?\}/g, ' ')
+    .replace(/\r/g, '');
+
+  body
+    .split(/\n{2,}/)
+    .map((block) => normalizeText(decodeHtmlEntities(block)))
+    .filter(Boolean)
+    .forEach((block) => addCandidate(set, block));
 }
 
 async function collectSourceTexts() {
-  const files = await listFiles(path.join(rootDir, 'src'), ['.astro', '.md', '.ts']);
+  const files = [
+    ...(await listFiles(contentRoots[0], ['.md'])),
+    ...(await listFiles(contentRoots[1], ['.md'])),
+    ...(await listFiles(contentRoots[2], ['.astro'])),
+  ];
+
   const texts = new Set();
 
   for (const filePath of files) {
     const content = await fs.readFile(filePath, 'utf8');
-
-    if (filePath.endsWith('.md') || filePath.endsWith('.astro')) {
-      collectYamlStrings(content, texts);
-      collectHtmlText(content, texts);
-    }
+    collectFrontmatterStrings(content, texts);
+    collectRenderableText(content, texts);
   }
 
   return [...texts].sort((a, b) => a.localeCompare(b, 'de'));
@@ -181,11 +238,12 @@ async function syncGermanSourceTexts(de) {
   de.attr = isPlainObject(de.attr) ? de.attr : {};
 
   const texts = await collectSourceTexts();
+  const sourceSet = new Set(texts);
   let removed = 0;
   let added = 0;
 
   for (const key of Object.keys(de.text)) {
-    if (!shouldCollectText(key)) {
+    if (!sourceSet.has(key)) {
       delete de.text[key];
       removed += 1;
     }
@@ -205,10 +263,10 @@ async function syncGermanSourceTexts(de) {
   }
 
   if (removed > 0) {
-    console.log(`[i18n] ${removed} technische Texte aus src/locales/de.json entfernt.`);
+    console.log(`[i18n] ${removed} technische oder veraltete Texte aus src/locales/de.json entfernt.`);
   }
 
-  return added + removed;
+  return sourceSet;
 }
 
 function getTargetRecord(value) {
@@ -217,7 +275,7 @@ function getTargetRecord(value) {
   }
 
   if (typeof value === 'string') {
-    return { text: value, _source: undefined };
+    return { text: value };
   }
 
   return null;
@@ -226,7 +284,7 @@ function getTargetRecord(value) {
 function shouldRefreshUntranslatedRecord(source, record) {
   if (!record || record.text !== source) return false;
   if (record._target) return false;
-  if (!/[A-Za-zÄÖÜäöüß]/.test(source)) return false;
+  if (!/[A-Za-zÄÖÜäöüß\u3040-\u30ff\u3400-\u9fff]/.test(source)) return false;
 
   const shortTechnicalOrBrand = /^(Aikido|WTA|PDF|DE|EN|FR|JA|\d|[A-Z0-9\s/+-]+$)/;
   if (shortTechnicalOrBrand.test(source) && source.split(/\s+/).length <= 2) {
@@ -236,58 +294,40 @@ function shouldRefreshUntranslatedRecord(source, record) {
   return true;
 }
 
-function collectMissingTranslations(source, target, trail = [], missing = [], lang = 'de') {
-  for (const [key, value] of Object.entries(source)) {
-    if (key.startsWith('_')) continue;
+function collectMissingTranslations(sourceMap, targetMap, lang = 'de') {
+  const missing = [];
 
-    const nextTrail = [...trail, key];
+  for (const [source, value] of Object.entries(sourceMap)) {
+    if (source.startsWith('_')) continue;
 
-    if (typeof value === 'string') {
-      const record = getTargetRecord(target?.[key]);
-
-      if (!record || record._source !== value || !record.text || (lang !== 'de' && shouldRefreshUntranslatedRecord(value, record))) {
-        missing.push({ path: nextTrail, source: value });
-      }
-
-      continue;
-    }
-
-    if (isPlainObject(value)) {
-      collectMissingTranslations(value, isPlainObject(target?.[key]) ? target[key] : {}, nextTrail, missing, lang);
+    const record = getTargetRecord(targetMap?.[source]);
+    if (!record || record._source !== value || !record.text || (lang !== 'de' && shouldRefreshUntranslatedRecord(source, record))) {
+      missing.push({ source, value });
     }
   }
 
   return missing;
 }
 
-function setNestedRecord(target, trail, record) {
-  let cursor = target;
-
-  trail.slice(0, -1).forEach((part) => {
-    if (!isPlainObject(cursor[part]) || 'text' in cursor[part]) {
-      cursor[part] = {};
-    }
-
-    cursor = cursor[part];
-  });
-
-  cursor[trail.at(-1)] = record;
+function setTranslationRecord(target, source, record) {
+  target.text = isPlainObject(target.text) ? target.text : {};
+  target.text[source] = record;
 }
 
-function pruneTechnicalTextEntries(locale, lang) {
+function pruneTechnicalTextEntries(locale, sourceKeys, lang) {
   if (!isPlainObject(locale.text)) return 0;
 
   let removed = 0;
 
   for (const key of Object.keys(locale.text)) {
-    if (!shouldCollectText(key)) {
+    if (!sourceKeys.has(key)) {
       delete locale.text[key];
       removed += 1;
     }
   }
 
   if (removed > 0) {
-    console.log(`[i18n] ${lang}: ${removed} technische Texte entfernt.`);
+    console.log(`[i18n] ${lang}: ${removed} veraltete Texte entfernt.`);
   }
 
   return removed;
@@ -301,6 +341,60 @@ function deeplEndpoint() {
   return process.env.DEEPL_API_KEY?.endsWith(':fx')
     ? 'https://api-free.deepl.com/v2/translate'
     : 'https://api.deepl.com/v2/translate';
+}
+
+function normalizeTranslationText(text, lang) {
+  let normalized = normalizeText(text);
+  normalized = normalized.replace(/\s+([,.;:!?%])/g, '$1');
+  normalized = normalized.replace(/([,.;:!?%])(?=\S)/g, '$1 ');
+  normalized = normalized.replace(/\s{2,}/g, ' ');
+
+  if (lang === 'ja') {
+    normalized = normalized
+      .replace(/\s+([、。！？：；])/g, '$1')
+      .replace(/([、。！？：；])(?=\S)/g, '$1 ');
+  }
+
+  for (const term of PROTECTED_TERMS) {
+    const termPattern = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    normalized = normalized.replace(termPattern, term);
+  }
+
+  return normalized.trim();
+}
+
+function buildTranslationDiagnostics(source, translated, lang) {
+  const issues = [];
+
+  if (!translated) {
+    issues.push('leere Übersetzung');
+  }
+
+  if (/[ÃÂ]|â€|�/.test(translated)) {
+    issues.push('Encoding-Reste entdeckt');
+  }
+
+  const sourcePlaceholders = source.match(/\{[\w-]+\}/g) ?? [];
+  const translatedPlaceholders = translated.match(/\{[\w-]+\}/g) ?? [];
+  if (sourcePlaceholders.length !== translatedPlaceholders.length) {
+    issues.push('Platzhalter-Anzahl passt nicht');
+  }
+
+  if (lang !== 'de' && translated === source) {
+    issues.push('unübersetzt');
+  }
+
+  if (source.length > 40 && translated.length < Math.max(10, Math.floor(source.length * 0.35))) {
+    issues.push('zu kurz für einen Absatz');
+  }
+
+  return issues;
+}
+
+function applyTranslationQualityGuards(source, translated, lang) {
+  const cleaned = normalizeTranslationText(translated, lang);
+  const issues = buildTranslationDiagnostics(source, cleaned, lang);
+  return { text: cleaned, issues };
 }
 
 async function translateBatch(texts, targetLang) {
@@ -319,49 +413,75 @@ async function translateBatch(texts, targetLang) {
   body.set('source_lang', 'DE');
   body.set('target_lang', targetLang);
   body.set('preserve_formatting', '1');
+  body.set('context', CONTEXT_HINT);
   texts.forEach((text) => body.append('text', text));
 
-  const response = await fetch(deeplEndpoint(), {
-    method: 'POST',
-    headers: {
-      authorization: `DeepL-Auth-Key ${apiKey}`,
-      'content-type': 'application/x-www-form-urlencoded',
-    },
-    body,
-  });
+  try {
+    const response = await fetch(deeplEndpoint(), {
+      method: 'POST',
+      headers: {
+        authorization: `DeepL-Auth-Key ${apiKey}`,
+        'content-type': 'application/x-www-form-urlencoded',
+      },
+      body,
+    });
 
-  if (!response.ok) {
-    const details = await response.text();
-    throw new Error(`DeepL ${response.status}: ${details}`);
+    if (!response.ok) {
+      const details = await response.text();
+      throw new Error(`DeepL ${response.status}: ${details}`);
+    }
+
+    const data = await response.json();
+    return data.translations.map((item) => item.text);
+  } catch (error) {
+    console.warn(`[i18n] DeepL nicht erreichbar (${targetLang}): ${error.message}. Fallback auf Quelltexte.`);
+    return texts;
   }
-
-  const data = await response.json();
-  return data.translations.map((item) => item.text);
 }
 
-async function translateMissingForLanguage(de, target, lang, targetLang) {
-  const removed = pruneTechnicalTextEntries(target, lang);
-  const missing = collectMissingTranslations(de, target, [], [], lang);
+async function translateMissingForLanguage(de, target, lang, targetLang, sourceKeys) {
+  pruneTechnicalTextEntries(target, sourceKeys, lang);
+  const missing = collectMissingTranslations(de.text, target.text, lang);
 
   if (missing.length === 0) {
     console.log(`[i18n] ${lang}: alles aktuell.`);
-    return removed > 0;
+    return false;
   }
 
-  console.log(`[i18n] ${lang}: ${missing.length} fehlende/geänderte Texte.`);
+  console.log(`[i18n] ${lang}: ${missing.length} fehlende oder geänderte Texte.`);
 
+  const diagnostics = [];
   const chunkSize = 40;
+
   for (let index = 0; index < missing.length; index += chunkSize) {
     const chunk = missing.slice(index, index + chunkSize);
     const translated = await translateBatch(chunk.map((item) => item.source), targetLang);
 
     chunk.forEach((item, chunkIndex) => {
-      setNestedRecord(target, item.path, {
-        text: translated[chunkIndex] ?? item.source,
-        _source: item.source,
+      const source = item.source;
+      const rawTranslation = translated[chunkIndex] ?? source;
+      const guarded = applyTranslationQualityGuards(source, rawTranslation, lang);
+
+      if (guarded.issues.length > 0) {
+        diagnostics.push({ source, issues: guarded.issues });
+      }
+
+      setTranslationRecord(target, source, {
+        text: guarded.text || source,
+        _source: source,
         _target: targetLang,
       });
     });
+  }
+
+  if (diagnostics.length > 0) {
+    console.warn(`[i18n] ${lang}: Qualitätswarnungen für ${diagnostics.length} Einträge.`);
+    diagnostics.slice(0, 20).forEach((entry) => {
+      console.warn(`  - ${entry.issues.join(', ')} :: ${entry.source}`);
+    });
+    if (diagnostics.length > 20) {
+      console.warn(`  - ... und ${diagnostics.length - 20} weitere`);
+    }
   }
 
   return true;
@@ -380,18 +500,16 @@ export async function runTranslation() {
   await fs.mkdir(sourceLocaleDir, { recursive: true });
 
   const de = await readJson(sourceLocalePath, {});
-  const addedGermanTexts = await syncGermanSourceTexts(de);
+  const sourceKeys = await syncGermanSourceTexts(de);
 
-  if (addedGermanTexts > 0) {
-    await writeJson(sourceLocalePath, de);
-  }
+  await writeJson(sourceLocalePath, de);
 
   const locales = { de };
 
   for (const [lang, targetLang] of Object.entries(targetLanguages)) {
     const targetPath = path.join(sourceLocaleDir, `${lang}.json`);
     const target = await readJson(targetPath, {});
-    const changed = await translateMissingForLanguage(de, target, lang, targetLang);
+    const changed = await translateMissingForLanguage(de, target, lang, targetLang, sourceKeys);
 
     if (changed) {
       await writeJson(targetPath, target);

@@ -237,6 +237,8 @@
   margin-top: auto;
   background: var(--color-footer-bg);
   border-top: 1px solid var(--color-footer-border);
+  position: relative;
+  z-index: 2;
 }
 
 .footer-content {

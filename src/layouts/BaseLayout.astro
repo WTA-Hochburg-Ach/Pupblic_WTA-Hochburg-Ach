@@ -2,19 +2,21 @@
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import ScrollTop from '../components/ScrollTop.astro';
-import { siteMeta, contactData } from '../data/site';
+import { siteMeta } from '../data/site';
 import { getBaseUrl, withBasePath } from '../lib/site';
 
 interface Props {
   title: string;
   description?: string;
   content?: string;
+  kanji?: string;
 }
 
 const {
   title,
   description = siteMeta.description,
   content,
+  kanji = '合気道',
 } = Astro.props;
 
 const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : null;
@@ -71,7 +73,7 @@ const documentTitle = title === siteMeta.name ? siteTitle : `${title} | ${siteTi
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..700,50&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <script is:inline src={withBasePath(baseUrl, 'scripts/i18n.js')}></script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" is:inline>
   {
   "@context":"https://schema.org",
   "@type":"SportsActivityLocation",
@@ -85,7 +87,7 @@ const documentTitle = title === siteMeta.name ? siteTitle : `${title} | ${siteTi
   </script>
 </head>
 
-<body>
+<body data-kanji={kanji}>
   <div class="site-wrapper">
     <Navigation />
 

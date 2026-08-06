@@ -8,6 +8,9 @@
     "order": {
       "type": "number"
     },
+    "kanji": {
+      "type": "string"
+    },
     "$schema": {
       "type": "string"
     }

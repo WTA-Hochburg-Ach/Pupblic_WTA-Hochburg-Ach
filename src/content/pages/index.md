@@ -1,11 +1,10 @@
 ---
 title: Wanomichi Takemusu Aikido Hochburg-Ach
 order: 1
+kanji: 合気道
 ---
 
 <section class="hero hero-home">
-  <div class="hero-kanji" aria-hidden="true">合気道</div>
-
   <div class="hero-content">
     <div class="hero-copy">
       <h1>Wanomichi Takemusu<br />Aikido<br />Hochburg-Ach</h1>
@@ -14,13 +13,13 @@ order: 1
 
   <div class="hero-portrait" aria-label="Morihei Ueshiba">
       <div class="hero-portrait-frame">
-        <img src="/images/homepage/morihei-ueshiba.JPG" alt="Morihei Ueshiba" loading="eager" />
+        <img class="content-image content-image--hero" src="/images/homepage/morihei-ueshiba.JPG" alt="Morihei Ueshiba" loading="eager" />
       </div>
     </div>
 
   <div class="hero-cta-group">
-      <a href="ueber-uns" class="button button-primary">Über uns</a>
-      <a href="kontakt" class="button button-secondary">Kontakt</a>
+      <a href="ueber-uns" class="button button-primary" data-i18n="nav.about">Über uns</a>
+      <a href="kontakt" class="button button-secondary" data-i18n="nav.contact">Kontakt</a>
     </div>
   </div>
 </section>
@@ -87,8 +86,8 @@ order: 1
     <h2>Neugierig geworden?</h2>
     <p>Wenn du ein Probetraining machen möchtest, melde dich kurz bei uns. Trainingsort, Ablauf und erste Hinweise findest du auf unseren über-uns- und Kontaktseiten.</p>
     <div class="cta-buttons">
-      <a href="training" class="button button-primary">Zum Trainingsort</a>
-      <a href="kontakt" class="button button-outline">Kontakt</a>
+      <a href="training" class="button button-primary" data-i18n="home.training_location_cta">Zum Trainingsort</a>
+      <a href="kontakt" class="button button-outline" data-i18n="nav.contact">Kontakt</a>
     </div>
   </div>
 </section>

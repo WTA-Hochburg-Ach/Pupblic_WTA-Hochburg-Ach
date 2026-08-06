@@ -1,6 +1,7 @@
 ---
 title: Impressum & Datenschutz
 order: 99
+kanji: 合気道
 ---
 
 <div class="legal-container">

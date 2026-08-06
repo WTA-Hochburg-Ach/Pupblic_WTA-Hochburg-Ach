@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
-import { formatDateRange, getNewsSlug, isEvent, isNews, sortByDateAscending, sortByDateDescending } from '../lib/news';
+import { formatDateRange, getNewsSlug, isEvent, isNews, sortByDateDescending } from '../lib/news';
 import { getBaseUrl, withBasePath } from '../lib/site';
 
 const baseUrl = getBaseUrl(import.meta.env.BASE_URL);

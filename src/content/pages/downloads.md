@@ -1,6 +1,7 @@
 ---
 title: Downloads & Materialien
 order: 10
+kanji: 合気道
 ---
 
 <section class="page-header">

@@ -1,6 +1,7 @@
 ---
 title: Über uns
 order: 4
+kanji: 合気道
 ---
 
 <section class="page-header">

@@ -12,20 +12,20 @@ const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encode
   <div class="contact-shell">
     <header class="page-header">
       <h1>Kontakt</h1>
-      <p class="lead">Fragen zum Training, Verein oder zu kommenden Terminen? Wir freuen uns auf deine Nachricht.</p>
+      <p class="lead" data-i18n="contact.lead">Fragen zum Training, Verein oder zu kommenden Terminen? Wir freuen uns auf deine Nachricht.</p>
     </header>
 
     <section class="content-block-spacious quick-contact-panel">
-      <h2>Schnell erreichbar</h2>
+      <h2 data-i18n="contact.quick_reachable">Schnell erreichbar</h2>
       <div class="quick-contact-actions">
-        <a href={`mailto:${contactData.email}`} class="button button-primary">E-Mail schreiben</a>
-        <a href={contactData.phone.href} class="button button-outline">Anrufen</a>
-        <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" class="button button-outline">Route öffnen</a>
+        <a href={`mailto:${contactData.email}`} class="button button-primary" data-i18n="contact.write_email">E-Mail schreiben</a>
+        <a href={contactData.phone.href} class="button button-outline" data-i18n="contact.call">Anrufen</a>
+        <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" class="button button-outline" data-i18n="contact.open_route">Route öffnen</a>
       </div>
     </section>
 
     <section class="content-block-spacious">
-      <h2>Direkter Kontakt</h2>
+      <h2 data-i18n="contact.direct_contact">Direkter Kontakt</h2>
 
       <div class="contact-grid">
         <article class="contact-card">
@@ -49,7 +49,7 @@ const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encode
     </section>
 
     <section class="content-block-spacious">
-      <h2>Ansprechpartner</h2>
+      <h2 data-i18n="contact.contacts">Ansprechpartner</h2>
 
       <div class="contact-grid">
         {boardMembers.map((person) => (
@@ -76,13 +76,13 @@ const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encode
     </section>
 
     <section class="content-block-spacious">
-      <h2>Google Maps</h2>
+      <h2 data-i18n="contact.google_maps">Google Maps</h2>
 
       <div class="map-panel">
         <div class="map-copy">
           <h3>{venue.name}</h3>
-          <p>Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.</p>
-          <p><a href={googleMapsLink} target="_blank" rel="noopener noreferrer" class="button button-primary">In Google Maps öffnen</a></p>
+          <p data-i18n="contact.map_description">Die Halle liegt in Duttendorf in der Gemeinde Hochburg-Ach. Über Google Maps kannst du die Route direkt öffnen.</p>
+          <p><a href={googleMapsLink} target="_blank" rel="noopener noreferrer" class="button button-primary" data-i18n="contact.open_in_maps">In Google Maps öffnen</a></p>
         </div>
 
         <div class="map-frame">

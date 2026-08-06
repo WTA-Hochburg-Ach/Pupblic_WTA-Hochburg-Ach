@@ -74,13 +74,13 @@ const calendarEvents = events.map((entry) => {
 <BaseLayout title="Termine">
   <section class="page-header news-page-intro">
     <h1>Termine</h1>
-    <p class="lead">Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.</p>
-    <p>Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort rechts, ohne dass die Seite neu geladen werden muss.</p>
+    <p class="lead" data-i18n="events.lead">Kalender, Timeline und Ausschreibungen für Lehrgänge und besondere Trainings findest du gesammelt auf dieser Seite.</p>
+    <p data-i18n="events.hint">Klicke auf einen markierten Tag. Die passende Terminbeschreibung öffnet sich sofort rechts, ohne dass die Seite neu geladen werden muss.</p>
   </section>
 
   {upcomingHighlights.length > 0 && (
     <section class="content-block-spacious event-highlight-section">
-      <h2>Als Naechstes</h2>
+      <h2 data-i18n="events.upcoming">Als Naechstes</h2>
       <div class="feature-grid event-highlight-grid">
         {upcomingHighlights.map((entry) => {
           const slug = getNewsSlug(entry);
@@ -118,7 +118,7 @@ const calendarEvents = events.map((entry) => {
   )}
 
   <section class="content-block-spacious">
-    <h2>Kalender</h2>
+    <h2 data-i18n="events.calendar_title">Kalender</h2>
 
     <div
       class="calendar-app"
@@ -136,7 +136,7 @@ const calendarEvents = events.map((entry) => {
               <select id="calendar-year-select" data-calendar-year aria-label="Jahr auswählen"></select>
             </div>
             <h3 data-calendar-label></h3>
-            <p>Markierte Tage enthalten einen oder mehrere Termine.</p>
+            <p data-i18n="events.calendar_hint">Markierte Tage enthalten einen oder mehrere Termine.</p>
           </div>
 
           <div class="calendar-toolbar-actions">
@@ -158,7 +158,7 @@ const calendarEvents = events.map((entry) => {
         <div class="calendar-days" data-calendar-days></div>
 
         <div class="calendar-legend" aria-label="Kalenderfarben">
-          <p class="calendar-legend-caption">Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.</p>
+          <p class="calendar-legend-caption" data-i18n="events.calendar_legend">Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.</p>
           <div class="calendar-legend-items">
             <span><i class="event-dot tone-moss"></i>Lehrgang</span>
             <span><i class="event-dot tone-sage"></i>Training</span>
@@ -168,7 +168,7 @@ const calendarEvents = events.map((entry) => {
       </article>
 
       <aside class="calendar-detail-panel">
-        <p class="calendar-detail-kicker">Termin Details</p>
+        <p class="calendar-detail-kicker" data-i18n="events.detail_title">Termin Details</p>
         <h3 data-detail-title>{initialLabel}</h3>
         <p class="calendar-detail-summary" data-calendar-selected>
           {initialDayEvents.length > 0
@@ -886,8 +886,9 @@ const calendarEvents = events.map((entry) => {
 }
 
 .calendar-day-active {
-  background: linear-gradient(180deg, rgba(49, 86, 62, 0.12), rgba(255, 252, 245, 0.88));
-  border-color: rgba(49, 86, 62, 0.18);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--calendar-day-accent) 16%, rgba(255, 252, 245, 0.95)), rgba(255, 252, 245, 0.88));
+  border-color: color-mix(in srgb, var(--calendar-day-accent) 32%, rgba(49, 86, 62, 0.18));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--calendar-day-accent) 18%, transparent);
 }
 
 .calendar-day-selected {

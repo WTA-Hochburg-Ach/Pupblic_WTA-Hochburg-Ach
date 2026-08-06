@@ -1,6 +1,7 @@
 ---
 title: Training
 order: 3
+kanji: 合気道
 ---
 
 <section class="page-header">

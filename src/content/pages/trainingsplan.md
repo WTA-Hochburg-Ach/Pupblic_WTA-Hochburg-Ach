@@ -1,6 +1,7 @@
 ---
 title: Trainingsplan
 order: 5
+kanji: 合気道
 ---
 
 <section class="page-header">

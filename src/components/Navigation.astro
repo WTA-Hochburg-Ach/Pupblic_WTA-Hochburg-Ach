@@ -134,19 +134,21 @@ const fallbackLabels = {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   const nav = document.querySelector('.nav');
-  const NAV_SCROLL_ENTER = 96;
-  const NAV_SCROLL_EXIT = 48;
+  const NAV_SCROLL_COMPACT_AT = 10;
+  const NAV_SCROLL_EXPAND_AT_TOP = 0;
   const NAV_COLLAPSE_BREAKPOINT = 1240;
   let navScrollTicking = false;
+  let navIsCompact = html.classList.contains('nav-scrolled');
 
   function updateNavState() {
-    const isScrolled = html.classList.contains('nav-scrolled');
-    const nextScrolled = isScrolled
-      ? window.scrollY > NAV_SCROLL_EXIT
-      : window.scrollY >= NAV_SCROLL_ENTER;
+    const scrollY = Math.max(0, window.scrollY || 0);
+    const shouldCompact = navIsCompact
+      ? scrollY > NAV_SCROLL_EXPAND_AT_TOP
+      : scrollY >= NAV_SCROLL_COMPACT_AT;
 
-    if (nextScrolled !== isScrolled) {
-      html.classList.toggle('nav-scrolled', nextScrolled);
+    if (shouldCompact !== navIsCompact) {
+      navIsCompact = shouldCompact;
+      html.classList.toggle('nav-scrolled', navIsCompact);
     }
   }
 

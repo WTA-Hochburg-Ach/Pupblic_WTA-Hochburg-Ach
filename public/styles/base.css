@@ -6,6 +6,10 @@ html {
   position: relative;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -34,6 +38,25 @@ img {
   display: block;
 }
 
+.content-image {
+  display: block;
+  width: min(100%, var(--image-max-width, 32rem));
+  max-width: 100%;
+  height: auto;
+  max-height: min(70vh, 36rem);
+  margin-inline: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.content-image--small { --image-max-width: 16rem; }
+.content-image--medium { --image-max-width: 24rem; }
+.content-image--large { --image-max-width: 32rem; }
+.content-image--full { --image-max-width: 100%; }
+.content-image--hero { --image-max-width: clamp(18rem, 36vw, 30rem); }
+
 .site-wrapper {
   min-height: 100vh;
   display: flex;
@@ -42,6 +65,24 @@ img {
   width: 100%;
   overflow-x: clip;
   position: relative;
+  z-index: 1;
+}
+
+.site-wrapper::before {
+  content: '';
+  position: fixed;
+  right: clamp(0.5rem, 1.5vw, 2.5rem);
+  top: clamp(10rem, 16vw, 14rem);
+  width: clamp(9rem, 13vw, 13rem);
+  height: clamp(9rem, 13vw, 13rem);
+  background-image: url('/src/assets/flower.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: 0;
+  filter: saturate(0.9) blur(0.2px);
 }
 
 .content {
@@ -49,6 +90,43 @@ img {
   margin: 2.5rem auto 4rem;
   color: var(--color-text-primary);
   position: relative;
+}
+
+.content > * {
+  position: relative;
+  z-index: 1;
+}
+
+body[data-kanji]::before {
+  content: attr(data-kanji);
+  position: fixed;
+  left: clamp(-0.75rem, 0.8vw, 0.5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: -1;
+  font-family: var(--font-jp);
+  font-size: clamp(5.5rem, 15vw, 13rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-orientation: upright;
+  writing-mode: vertical-rl;
+  font-feature-settings: 'vert' 1;
+  white-space: nowrap;
+  color: rgba(67, 89, 68, 0.06);
+  opacity: 0.82;
+  user-select: none;
+}
+
+body[data-kanji]::after {
+  /* Temporarily disabled while we keep the background focused on the vertical kanji. */
+  content: none;
+}
+
+[data-theme='dark'] body[data-kanji]::before {
+  color: rgba(227, 214, 188, 0.08);
+  opacity: 0.65;
 }
 
 .content h1,
@@ -174,6 +252,9 @@ img {
   grid-template-columns: minmax(0, 1.1fr) minmax(12rem, auto);
   gap: 0;
   align-items: center;
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(34rem, 78vh, 48rem);
 }
 
 .hero-kanji {
@@ -201,10 +282,10 @@ img {
 
 .hero-content {
   max-width: 900px;
-  padding-left: clamp(3.2rem, 8vw, 6.8rem);
+  padding-left: clamp(1.8rem, 4vw, 4.4rem);
   padding-right: clamp(1.5rem, 3vw, 2.4rem);
   display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(12rem, 18rem);
+  grid-template-columns: minmax(0, 1.1fr) minmax(15rem, 24rem);
   column-gap: clamp(1.2rem, 2.5vw, 2rem);
   row-gap: 1.4rem;
   align-items: center;
@@ -235,20 +316,21 @@ img {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: clamp(18rem, 32vw, 28rem);
-  padding: clamp(0.35rem, 1vw, 0.7rem);
+  min-height: clamp(20rem, 48vh, 32rem);
+  padding: clamp(0.5rem, 1.3vw, 1.1rem);
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
-  justify-self: stretch;
-  width: 100%;
-  padding-right: clamp(1.5rem, 4vw, 4rem);
+  justify-self: end;
+  width: min(100%, clamp(18rem, 38vw, 30rem));
+  max-width: clamp(18rem, 38vw, 30rem);
+  padding-right: clamp(1rem, 3vw, 2rem);
 }
 
 .hero-portrait::before {
   content: '';
   position: absolute;
-  inset: 8% 3% 6% 6%;
+  inset: 8% 1% 10% 8%;
   border-radius: 38px;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.24), transparent 68%);
   filter: blur(28px);
@@ -259,8 +341,10 @@ img {
 .hero-portrait-frame {
   position: relative;
   z-index: 1;
-  width: min(100%, 26rem);
-  padding: 0.85rem;
+  width: min(100%, clamp(19rem, 35vw, 29rem));
+  max-width: min(100%, clamp(19rem, 35vw, 29rem));
+  aspect-ratio: 4 / 5;
+  padding: 0.95rem;
   border-radius: 30px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.05));
   border: 1px solid rgba(255, 255, 255, 0.26);
@@ -283,8 +367,8 @@ img {
 .hero-portrait img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
+  height: 100%;
+  max-height: none;
   object-fit: cover;
   object-position: center top;
   border-radius: 22px;
@@ -378,6 +462,11 @@ img {
   color: var(--color-button-ink);
   font-weight: 800;
   letter-spacing: 0.02em;
+  text-align: center;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
   text-decoration: none;
   transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease, border-color 0.22s ease, color 0.22s ease;
   box-shadow: var(--shadow-sm);
@@ -441,6 +530,15 @@ img {
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(10px);
   overflow: hidden;
+}
+
+:where(.content-block-spacious, .features-section, .schedule-section, .suitability-section, .horizontal-timeline-section, .cta-section) > * {
+  min-width: 0;
+}
+
+:where(.content-block-spacious, .features-section, .schedule-section, .suitability-section, .horizontal-timeline-section, .cta-section) :is(.button, .read-more-btn, .mini-action, .pdf-download-btn, .calendar-nav-btn, .calendar-utility-btn, .calendar-selects select) {
+  max-width: 100%;
+  min-width: 0;
 }
 
 .content-block-spacious::before,
@@ -945,6 +1043,21 @@ img {
   .content {
     width: min(100% - 1.25rem, 980px);
     margin-top: 1.5rem;
+  }
+
+  body[data-kanji]::before {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(6rem, 28vw, 10rem);
+    opacity: 0.14;
+    filter: blur(0.1px);
+  }
+
+  .content p,
+  .content li,
+  .content blockquote {
+    color: color-mix(in srgb, var(--color-text-secondary) 86%, transparent);
   }
 
   .content h1 {
