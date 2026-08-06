@@ -75,7 +75,7 @@ img {
   top: clamp(10rem, 16vw, 14rem);
   width: clamp(9rem, 13vw, 13rem);
   height: clamp(9rem, 13vw, 13rem);
-  background-image: url('/src/assets/flower.png');
+  background-image: url('/public/assets/flower.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
