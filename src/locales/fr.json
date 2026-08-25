@@ -876,26 +876,6 @@
       "_source": "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
       "_target": "FR"
     },
-    "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.": {
-      "text": "À partir du 21 septembre, l'entraînement reprendra comme d'habitude dans la salle.",
-      "_source": "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.",
-      "_target": "FR"
-    },
-    "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).": {
-      "text": "L'entraînement au maniement des armes du samedi 12 septembre aura lieu dans le cadre du stage (voir le calendrier).",
-      "_source": "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).",
-      "_target": "FR"
-    },
-    "Kurzmeldung: Trainingsbetrieb und Termine": {
-      "text": "Brève : Entraînements et calendrier",
-      "_source": "Kurzmeldung: Trainingsbetrieb und Termine",
-      "_target": "FR"
-    },
-    "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).": {
-      "text": "Lundi 14 septembre et vendredi 18 septembre, l'entraînement est annulé en raison de l'Ushi Deshi à Birach (voir le calendrier).",
-      "_source": "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).",
-      "_target": "FR"
-    },
     "2. Vorstand: Karin Sturm": {
       "text": "2. Vorstand: Karin Sturm",
       "_source": "2. Vorstand: Karin Sturm",
@@ -971,9 +951,14 @@
       "_source": "ZVR-Zahl: 1580789299",
       "_target": "FR"
     },
-    "合気道": {
-      "text": "合気道",
-      "_source": "合気道",
+    "Am Freitag, 28. August, und Samstag, 29. August, findet kein Training statt.": {
+      "text": "Il n'y aura pas d'entraînement le vendredi 28 août ni le samedi 29 août.",
+      "_source": "Am Freitag, 28. August, und Samstag, 29. August, findet kein Training statt.",
+      "_target": "FR"
+    },
+    "Kurzmeldung: Kein Training am 28. und 29. August": {
+      "text": "Brève: pas d'entraînement les 28 et 29 août",
+      "_source": "Kurzmeldung: Kein Training am 28. und 29. August",
       "_target": "FR"
     }
   },

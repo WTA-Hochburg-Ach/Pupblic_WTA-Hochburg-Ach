@@ -890,26 +890,6 @@
       "_source": "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
       "_target": "EN-US"
     },
-    "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.": {
-      "text": "Starting September 21, practice will resume as usual in the gym.",
-      "_source": "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.",
-      "_target": "EN-US"
-    },
-    "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).": {
-      "text": "The weapons training on Saturday, September 12, will take place as part of the course (see schedule).",
-      "_source": "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).",
-      "_target": "EN-US"
-    },
-    "Kurzmeldung: Trainingsbetrieb und Termine": {
-      "text": "News Brief: Training Schedule and Dates",
-      "_source": "Kurzmeldung: Trainingsbetrieb und Termine",
-      "_target": "EN-US"
-    },
-    "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).": {
-      "text": "There will be no practice on Monday, September 14, and Friday, September 18, due to Ushi Deshi in Birach (see schedule).",
-      "_source": "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).",
-      "_target": "EN-US"
-    },
     "2. Vorstand: Karin Sturm": {
       "text": "2. Vorstand: Karin Sturm",
       "_source": "2. Vorstand: Karin Sturm",
@@ -985,9 +965,14 @@
       "_source": "ZVR-Zahl: 1580789299",
       "_target": "EN-US"
     },
-    "合気道": {
-      "text": "合気道",
-      "_source": "合気道",
+    "Am Freitag, 28. August, und Samstag, 29. August, findet kein Training statt.": {
+      "text": "There will be no training on Friday, August 28, and Saturday, August 29.",
+      "_source": "Am Freitag, 28. August, und Samstag, 29. August, findet kein Training statt.",
+      "_target": "EN-US"
+    },
+    "Kurzmeldung: Kein Training am 28. und 29. August": {
+      "text": "Brief announcement: No training on August 28 and 29",
+      "_source": "Kurzmeldung: Kein Training am 28. und 29. August",
       "_target": "EN-US"
     }
   },

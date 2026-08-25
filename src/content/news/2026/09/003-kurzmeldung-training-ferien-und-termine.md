@@ -1,16 +1,10 @@
 ---
-title: "Kurzmeldung: Trainingsbetrieb und Termine"
-date: 2026-07-10
-preview: Anpassungen im Trainingsbetrieb während der Ferien und Termine für Lehrgang und Ushi Deshi.
+title: "Kurzmeldung: Kein Training am 28. und 29. August"
+date: 2026-08-23
+preview: Am Freitag, 28. August, und Samstag, 29. August, findet kein Training statt.
 type: news
 display: page
 color: sage
 ---
 
-Während der Schulferien trainieren wir Buki Waza zu den normalen Zeiten (siehe Training -> Trainingszeiten).
-
-Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).
-
-Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).
-
-Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.
+Am Freitag, 28. August, und Samstag, 29. August, findet kein Training statt.
