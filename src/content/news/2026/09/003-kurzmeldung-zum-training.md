@@ -3,6 +3,7 @@ title: "Kurzmeldung: Trainingsbetrieb und Termine"
 date: 2026-07-10
 preview: Anpassungen im Trainingsbetrieb während der Ferien und Termine für Lehrgang und Ushi Deshi.
 type: news
+expiresAt: 2026-09-21
 display: page
 color: sage
 ---

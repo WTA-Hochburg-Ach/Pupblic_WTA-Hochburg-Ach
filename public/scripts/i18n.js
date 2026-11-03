@@ -16,6 +16,7 @@
   };
 
   let currentLang = DEFAULT_LANG;
+  let languageRequest = 0;
 
   function normalizeText(value) {
     return String(value ?? '').replace(/\s+/g, ' ').trim();
@@ -29,7 +30,8 @@
       return fromQuery;
     }
 
-    const stored = localStorage.getItem(STORAGE_KEY);
+    let stored;
+    try { stored = localStorage.getItem(STORAGE_KEY); } catch { stored = null; }
     if (stored && LANGUAGES[stored]) {
       return stored;
     }
@@ -73,7 +75,7 @@
       TRANSLATIONS[lang] = await response.json();
     } catch (error) {
       console.warn(`[i18n] ${lang}.json konnte nicht geladen werden: ${error.message}`);
-      TRANSLATIONS[lang] = {};
+      return null;
     }
 
     return TRANSLATIONS[lang];
@@ -372,10 +374,12 @@
   async function switchLanguage(lang) {
     if (!LANGUAGES[lang]) return;
 
+    const request = ++languageRequest;
+    const translations = await loadTranslations(lang);
+    if (request !== languageRequest || (lang !== DEFAULT_LANG && !translations)) return;
     currentLang = lang;
-    localStorage.setItem(STORAGE_KEY, lang);
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch {}
     updateLanguageInUrl();
-    await loadTranslations(lang);
     applyTranslations(document);
     document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: currentLang } }));
   }
@@ -408,11 +412,13 @@
   }
 
   async function init() {
-    currentLang = getInitialLanguage();
-    await Promise.all([loadTranslations(DEFAULT_LANG), loadTranslations(currentLang)]);
+    const requestedLang = getInitialLanguage();
+    const [, requestedTranslations] = await Promise.all([loadTranslations(DEFAULT_LANG), loadTranslations(requestedLang)]);
+    currentLang = requestedLang === DEFAULT_LANG || requestedTranslations ? requestedLang : DEFAULT_LANG;
     initLanguageSelector();
     applyTranslations(document);
     initMutationObserver();
+    document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: currentLang } }));
   }
 
   if (document.readyState === 'loading') {

@@ -48,24 +48,20 @@ const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
       <div class="news-actions">
         {entry.data.pdfs?.de && (
           <a href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} class="button button-primary" target="_blank" rel="noopener">
-            PDF Deutsch
+            PDF Deutsch öffnen
           </a>
         )}
 
         {entry.data.pdfs?.en && (
           <a href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} class="button button-outline" target="_blank" rel="noopener">
-            PDF English
+            PDF Englisch öffnen
           </a>
         )}
-
-        <a
-          href={withOptionalBasePath(baseUrl, entry.data.pdfs?.de || entry.data.pdfs?.en || '#')}
-          class="button button-outline"
-          target="_blank"
-          rel="noopener"
-        >
-          Vorschau
-        </a>
+        {entry.data.pdfs?.bundle && (
+          <a href={withOptionalBasePath(baseUrl, entry.data.pdfs.bundle)} class="button document-bundle-btn" download aria-label="Beide PDFs herunterladen" title="Beide PDFs herunterladen">
+            <span aria-hidden="true">↓</span>
+          </a>
+        )}
       </div>
     )}
 
@@ -174,6 +170,15 @@ const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
   min-width: 11.5rem;
 }
 
+.news-actions .document-bundle-btn {
+  min-width: 3rem;
+  width: 3rem;
+  padding: 0;
+  border-radius: 50%;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
 .news-article-content {
   margin-top: 2rem;
 }
@@ -182,6 +187,10 @@ const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
   .news-actions .button {
     width: 100%;
     min-width: 0;
+  }
+
+  .news-actions .document-bundle-btn {
+    width: 3rem;
   }
 }
 </style>

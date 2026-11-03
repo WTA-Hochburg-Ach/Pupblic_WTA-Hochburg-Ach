@@ -283,7 +283,7 @@ function getTargetRecord(value) {
 
 function shouldRefreshUntranslatedRecord(source, record) {
   if (!record || record.text !== source) return false;
-  if (record._target) return false;
+  if (record._target && !record._fallback) return false;
   if (!/[A-Za-zÄÖÜäöüß\u3040-\u30ff\u3400-\u9fff]/.test(source)) return false;
 
   const shortTechnicalOrBrand = /^(Aikido|WTA|PDF|DE|EN|FR|JA|\d|[A-Z0-9\s/+-]+$)/;
@@ -466,10 +466,13 @@ async function translateMissingForLanguage(de, target, lang, targetLang, sourceK
         diagnostics.push({ source, issues: guarded.issues });
       }
 
+      const existing = getTargetRecord(target.text?.[source]);
+      if (guarded.text === source && existing?.text && existing.text !== source) return;
       setTranslationRecord(target, source, {
         text: guarded.text || source,
         _source: source,
         _target: targetLang,
+        ...(guarded.text === source ? { _fallback: true } : {}),
       });
     });
   }

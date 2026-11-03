@@ -686,3 +686,45 @@ html.nav-scrolled .logo-name {
     font-size: clamp(1.35rem, 8vw, 1.8rem);
   }
 }
+
+@media (max-width: 1240px) {
+  .nav-links {
+    display: none;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    max-height: min(70dvh, 38rem);
+    overscroll-behavior: contain;
+    transform: translateY(-10px);
+  }
+  .nav-links.open {
+    display: flex;
+    transform: translateY(0);
+  }
+  .nav-link { min-height: 3.25rem; }
+  .nav-link-hint, .nav-flyout { display: none; }
+}
+@media (max-width: 768px) {
+  .utility-inner { flex-wrap: wrap; }
+  .theme-btn { flex: 0 0 auto; }
+  .lang-selector { flex: 1 1 auto; }
+  .lang-toggle { width: auto; }
+  .nav-links { top: calc(100% + 0.4rem); }
+}
+@media (max-width: 420px) {
+  .theme-track { width: 3.5rem; }
+  .theme-btn[data-theme='dark'] .theme-thumb { transform: translateX(1rem); }
+  .lang-option { min-width: 2rem; padding-inline: 0.35rem; }
+  .logo-mark { width: 3rem; height: 3rem; }
+  .logo-location { font-size: 0.65rem; }
+}
+
+/* Mehr Deckkraft mit wachsender Bildschirmbreite, ohne den Stil zu ändern. */
+.site-header { --header-opacity: 0.8; }
+.utility-bar { background: rgba(245, 245, 239, var(--header-opacity)); }
+.nav { background: rgba(248, 250, 245, var(--header-opacity)); }
+[data-theme='dark'] .utility-bar { background: rgba(12, 17, 15, var(--header-opacity)); }
+[data-theme='dark'] .nav { background: rgba(14, 19, 17, var(--header-opacity)); }
+@media (min-width: 600px) { .site-header { --header-opacity: 0.86; } }
+@media (min-width: 1000px) { .site-header { --header-opacity: 0.92; } }
+@media (min-width: 1400px) { .site-header { --header-opacity: 0.96; } }

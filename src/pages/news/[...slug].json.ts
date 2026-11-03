@@ -35,6 +35,7 @@ export async function GET({ props }: { props: NewsEntryProps }) {
       pdfs: {
         de: withOptionalBasePath(baseUrl, entry.data.pdfs?.de ?? ''),
         en: withOptionalBasePath(baseUrl, entry.data.pdfs?.en ?? ''),
+        bundle: withOptionalBasePath(baseUrl, entry.data.pdfs?.bundle ?? ''),
       },
       content,
     }),

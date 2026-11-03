@@ -81,12 +81,13 @@ const fallbackLabels = {
         type="button"
         aria-label="Menü öffnen"
         aria-expanded="false"
+        aria-controls="primary-navigation"
         data-i18n-attr="aria-label:common.menu_open"
       >
         <span class="hamburger"></span>
       </button>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation">
         {navItems.map((item) => {
           const isActive = isCurrentSitePath(currentPath, item.href, baseUrl);
           const hasSummary = item.labelKey !== 'nav.contact';
@@ -168,6 +169,7 @@ const fallbackLabels = {
     navLinks?.classList.remove('open');
     menuToggle?.classList.remove('open');
     menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', appWindow.i18n?.t('common.menu_open', 'Menü öffnen') ?? 'Menü öffnen');
   }
 
   function updateThemeUi(theme: string) {
@@ -195,12 +197,14 @@ const fallbackLabels = {
 
   document.addEventListener('languageChanged', () => {
     updateThemeUi(html.dataset.theme || 'light');
+    menuToggle?.setAttribute('aria-label', appWindow.i18n?.t(navLinks?.classList.contains('open') ? 'common.menu_close' : 'common.menu_open', navLinks?.classList.contains('open') ? 'Menü schließen' : 'Menü öffnen') ?? 'Menü öffnen');
   });
 
   menuToggle?.addEventListener('click', () => {
     const isOpen = navLinks?.classList.toggle('open');
     menuToggle.classList.toggle('open', Boolean(isOpen));
     menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', appWindow.i18n?.t(isOpen ? 'common.menu_close' : 'common.menu_open', isOpen ? 'Menü schließen' : 'Menü öffnen') ?? (isOpen ? 'Menü schließen' : 'Menü öffnen'));
   });
 
   document.querySelectorAll('.nav-links a').forEach((link) => {

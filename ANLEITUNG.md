@@ -36,6 +36,7 @@ Das Projekt validiert Frontmatter über `src/content.config.ts`. Mindestens dies
 - `title` (string) — Überschrift
 - `date` (Datum, Format `YYYY-MM-DD`) — Startdatum
 - `endDate` (optional, Datum) — Enddatum für mehrtägige Events
+- `expiresAt` (optional, Datum) — letzter Tag einer Meldung oder eines Termins; danach erscheint der Eintrag in der Chronik
 - `preview` (optional, string) — Teasertext für Karten/Listen
 - `type` (`news` | `event`) — Standard: `news`
 - `display` (`page` | `modal`) — Standard: `page`
@@ -43,13 +44,14 @@ Das Projekt validiert Frontmatter über `src/content.config.ts`. Mindestens dies
 - `time` (optional, string)
 - `people` (optional, array of strings)
 - `color` (`moss` | `sage` | `gold`) — Standard: `moss`
-- `pdfs` (optional object) — `{ de?: '/downloads/file-de.pdf', en?: '/downloads/file-en.pdf' }`
+- `pdfs` (optional object) — `{ de?: '/downloads/file-de.pdf', en?: '/downloads/file-en.pdf', bundle?: '/downloads/beide-dateien.zip' }`. Deutsch und Englisch öffnen im Browser; `bundle` ist der gemeinsame Download.
 
 Kurzmeldungen
-- Kurzmeldungen sind normale News-Beiträge mit `type: news` und einem aktuellen Datum innerhalb der letzten sieben Tage.
-- Sie erscheinen automatisch auf der Seite `/news` im Abschnitt „Kurzmeldungen“.
+- Kurzmeldungen sind normale News-Beiträge mit `type: news`. Sie erscheinen ab `date` auf `/news` im Abschnitt „Kurzmeldungen“.
+- Bei Meldungen zu einem Ereignis `expiresAt: YYYY-MM-DD` auf dessen letzten Tag setzen. Die Meldung bleibt an diesem Tag sichtbar und erscheint ab dem Folgetag in der Chronik.
+- Ohne `expiresAt` bleibt eine Meldung einschließlich des siebten Tages ab `date` sichtbar und wandert danach in die Chronik.
 - Wichtig ist ein kurzes `preview`, denn dieser Text wird auf der Übersicht angezeigt.
-- Wenn das Datum älter als sieben Tage ist, landet der Beitrag stattdessen in der Chronik.
+- Der Worker berechnet die Anzeige bei jedem Seitenaufruf nach Wiener Ortszeit neu. Dafür ist kein täglicher Neubau der Website nötig.
 
 Beispiel — einfache News:
 

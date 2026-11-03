@@ -247,8 +247,8 @@
       "_source": "Markierte Tage enthalten einen oder mehrere Termine。"
     },
     "calendar_legend": {
-      "text": "色付きの数字と点は、その日に 1 件以上の予定があることを示します。",
-      "_source": "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind。"
+      "text": "日付の点は予定のカテゴリーを示します。",
+      "_source": "Die Punkte im Datum zeigen die Kategorien der Termine an."
     },
     "detail_title": {
       "text": "予定の詳細",
@@ -279,12 +279,12 @@
       "_source": "Der Inhalt konnte gerade nicht geladen werden."
     },
     "pdf_de": {
-      "text": "PDF Deutsch",
-      "_source": "PDF Deutsch"
+      "text": "ドイツ語PDFを開く",
+      "_source": "PDF Deutsch öffnen"
     },
     "pdf_en": {
-      "text": "PDF English",
-      "_source": "PDF English"
+      "text": "英語PDFを開く",
+      "_source": "PDF Englisch öffnen"
     },
     "pdf_short_de": {
       "text": "PDF DE",
@@ -317,7 +317,10 @@
     "aria_none": {
       "text": "日付なし",
       "_source": "kein Termin"
-    }
+    },
+    "category_moss": "講習会",
+    "category_sage": "稽古",
+    "category_gold": "特別イベント"
   },
   "contact": {
     "lead": "稽古や道場、今後の予定についてご質問がありますか。メッセージをお待ちしています。",
@@ -446,14 +449,6 @@
     "Die Angriffe werden durch Kreisbewegungen umgelenkt anstelle sich ihnen direkt entgegenzustellen und auf Konfrontation zu gehen. Zudem beinhaltet das Körper-Technik-Programm (taijutsu) auch viele Verhebelungen. Dies ermöglicht es, körperlich überlegene Gegner zu kontrollieren.": {
       "text": "攻撃は直接対峙するのではなく、円運動でそらす。さらに、体術プログラム（太極術）には多数のレバーも含まれている。これにより、身体的に優れた相手をコントロールすることが可能になる。",
       "_source": "Die Angriffe werden durch Kreisbewegungen umgelenkt anstelle sich ihnen direkt entgegenzustellen und auf Konfrontation zu gehen. Zudem beinhaltet das Körper-Technik-Programm (taijutsu) auch viele Verhebelungen. Dies ermöglicht es, körperlich überlegene Gegner zu kontrollieren."
-    },
-    "Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geöffnet oder heruntergeladen werden.": {
-      "text": "発表はすでにドイツ語と英語でリンクされており、PDFとして直接開くかダウンロードすることができる。",
-      "_source": "Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geöffnet oder heruntergeladen werden."
-    },
-    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden.": {
-      "text": "入札案内は、ドイツ語と英語でPDFとして提供されています。プレビューからブラウザで直接開くことができます。",
-      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden."
     },
     "Die gesuchte Seite existiert nicht oder wurde verschoben.": {
       "text": "お探しのページは存在しないか、移動されました。",
@@ -759,10 +754,6 @@
       "text": "2026年9月14日から18日まで、ビラッハでダニエルとソニア・トゥータンによるウシ・デシが開催される。",
       "_source": "Vom 14. bis 18. September 2026 findet in Birach ein Ushi Deshi mit Daniel und Sonia Toutain statt."
     },
-    "Vorschau": {
-      "text": "プレビュー",
-      "_source": "Vorschau"
-    },
     "WA": {
       "text": "WA",
       "_source": "WA"
@@ -858,11 +849,6 @@
       "_source": "Zurück",
       "_target": "JA"
     },
-    "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.": {
-      "text": "色付きの数字と点は、この日に1つ以上の予定が入力されていることを示します。",
-      "_source": "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.",
-      "_target": "JA"
-    },
     "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
       "text": "デュッテンドルフにある岩間和道合気道場。初心者、再入門者、運動、集中、平和的な一体感を求める人なら誰でも参加できます。",
       "_source": "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
@@ -951,6 +937,51 @@
     "Kurzmeldung: Kein Training am 28. und 29. August": {
       "text": "お知らせ： 8月28日および29日は稽古をお休みします",
       "_source": "Kurzmeldung: Kein Training am 28. und 29. August",
+      "_target": "JA"
+    },
+    "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.": {
+      "text": "9月21日より、 練習は通常通り体育館で行われます。",
+      "_source": "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.",
+      "_target": "JA"
+    },
+    "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).": {
+      "text": "9月12日（土）の武器稽古は、 講習会の一環として行われます（日程を参照）。",
+      "_source": "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).",
+      "_target": "JA"
+    },
+    "Kurzmeldung: Trainingsbetrieb und Termine": {
+      "text": "【お知らせ】稽古の運営とスケジュール",
+      "_source": "Kurzmeldung: Trainingsbetrieb und Termine",
+      "_target": "JA"
+    },
+    "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).": {
+      "text": "9月14日（月）および9月18日（金）は、 ビラッハでの「牛弟子」研修のため、 稽古は休講となります（日程参照）。",
+      "_source": "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).",
+      "_target": "JA"
+    },
+    "Die Punkte im Datum zeigen die Kategorien der Termine an.": {
+      "text": "日付の横にある点は、 イベントのカテゴリーを示しています。",
+      "_source": "Die Punkte im Datum zeigen die Kategorien der Termine an.",
+      "_target": "JA"
+    },
+    "Aktuell gibt es keine Kurzmeldungen. Ältere Beiträge stehen unten in der Chronik.": {
+      "text": "現在、 ニュースはありません。 過去の投稿は下部の「沿革」に掲載されています。",
+      "_source": "Aktuell gibt es keine Kurzmeldungen. Ältere Beiträge stehen unten in der Chronik.",
+      "_target": "JA"
+    },
+    "Es gibt noch keine vergangenen Beiträge in der Chronik.": {
+      "text": "「クロニクル」にはまだ過去の投稿がありません。",
+      "_source": "Es gibt noch keine vergangenen Beiträge in der Chronik.",
+      "_target": "JA"
+    },
+    "Die Ausschreibung ist bereits auf Deutsch und Englisch als PDF zum Herunterladen verlinkt.": {
+      "text": "この募集要項は、 すでにドイツ語と英語のPDFファイルとしてダウンロード可能なリンクが掲載されています。",
+      "_source": "Die Ausschreibung ist bereits auf Deutsch und Englisch als PDF zum Herunterladen verlinkt.",
+      "_target": "JA"
+    },
+    "Die Ausschreibung steht auf Deutsch und Englisch als PDF zum Herunterladen bereit.": {
+      "text": "募集要項は、 ドイツ語と英語のPDFファイルとしてダウンロード可能です。",
+      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF zum Herunterladen bereit.",
       "_target": "JA"
     }
   },

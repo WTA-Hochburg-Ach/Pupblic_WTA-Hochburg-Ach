@@ -1,6 +1,7 @@
 ---
 title: Trainingsbetrieb findet statt
 date: 2026-04-23
+expiresAt: 2026-04-29
 preview: Alle regulaeren Einheiten finden derzeit wie geplant statt.
 type: news
 display: page

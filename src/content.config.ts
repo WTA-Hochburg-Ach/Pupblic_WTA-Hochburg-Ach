@@ -23,6 +23,7 @@ const news = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     endDate: z.coerce.date().optional(),
+    expiresAt: z.coerce.date().optional(),
     preview: z.string().optional(),
     type: z.enum(['news', 'event']).default('news'),
     location: z.string().optional(),
@@ -34,6 +35,7 @@ const news = defineCollection({
       .object({
         de: z.string().optional(),
         en: z.string().optional(),
+        bundle: z.string().optional(),
       })
       .optional(),
   }),

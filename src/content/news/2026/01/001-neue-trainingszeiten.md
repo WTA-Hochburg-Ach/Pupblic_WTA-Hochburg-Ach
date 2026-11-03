@@ -1,6 +1,7 @@
 ---
 title: Neue Trainingszeiten
 date: 2026-01-15
+expiresAt: 2026-01-21
 preview: Montag 18:00-19:30, Freitag mit Vertiefung ab 16:00 und Samstag Waffen in ungeraden Wochen.
 type: news
 display: page

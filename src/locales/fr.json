@@ -248,8 +248,8 @@
       "_source": "Markierte Tage enthalten einen oder mehrere Termine."
     },
     "calendar_legend": {
-      "text": "Les chiffres et points colorés indiquent qu'un ou plusieurs rendez-vous sont inscrits ce jour-là.",
-      "_source": "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind."
+      "text": "Les points dans chaque date indiquent les catégories des événements.",
+      "_source": "Die Punkte im Datum zeigen die Kategorien der Termine an."
     },
     "detail_title": {
       "text": "Détails du rendez-vous",
@@ -280,12 +280,12 @@
       "_source": "Der Inhalt konnte gerade nicht geladen werden."
     },
     "pdf_de": {
-      "text": "PDF Deutsch",
-      "_source": "PDF Deutsch"
+      "text": "Ouvrir le PDF en allemand",
+      "_source": "PDF Deutsch öffnen"
     },
     "pdf_en": {
-      "text": "PDF English",
-      "_source": "PDF English"
+      "text": "Ouvrir le PDF en anglais",
+      "_source": "PDF Englisch öffnen"
     },
     "pdf_short_de": {
       "text": "PDF DE",
@@ -318,7 +318,10 @@
     "aria_none": {
       "text": "pas de rendez-vous",
       "_source": "kein Termin"
-    }
+    },
+    "category_moss": "Stage",
+    "category_sage": "Entraînement",
+    "category_gold": "Événement spécial"
   },
   "contact": {
     "lead": "Des questions sur l'entraînement, le club ou les prochains rendez-vous ? Nous serions ravis de recevoir votre message.",
@@ -449,14 +452,6 @@
     "Die Angriffe werden durch Kreisbewegungen umgelenkt anstelle sich ihnen direkt entgegenzustellen und auf Konfrontation zu gehen. Zudem beinhaltet das Körper-Technik-Programm (taijutsu) auch viele Verhebelungen. Dies ermöglicht es, körperlich überlegene Gegner zu kontrollieren.": {
       "text": "Les attaques sont déviées par des mouvements circulaires au lieu de s'y opposer directement et d'aller à la confrontation. De plus, le programme de techniques corporelles (taijutsu) comprend également de nombreux enchaînements. Cela permet de contrôler des adversaires physiquement supérieurs.",
       "_source": "Die Angriffe werden durch Kreisbewegungen umgelenkt anstelle sich ihnen direkt entgegenzustellen und auf Konfrontation zu gehen. Zudem beinhaltet das Körper-Technik-Programm (taijutsu) auch viele Verhebelungen. Dies ermöglicht es, körperlich überlegene Gegner zu kontrollieren."
-    },
-    "Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geöffnet oder heruntergeladen werden.": {
-      "text": "L'appel à candidatures est déjà lié en allemand et en anglais et peut être ouvert ou téléchargé directement en format PDF.",
-      "_source": "Die Ausschreibung ist bereits auf Deutsch und Englisch verlinkt und kann direkt als PDF geöffnet oder heruntergeladen werden."
-    },
-    "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden.": {
-      "text": "L'appel à candidatures est disponible en allemand et en anglais au format PDF. L'aperçu permet de l'ouvrir directement dans le navigateur.",
-      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF bereit. Über die Vorschau kann sie direkt im Browser geöffnet werden."
     },
     "Die gesuchte Seite existiert nicht oder wurde verschoben.": {
       "text": "La page recherchée n'existe pas ou a été déplacée.",
@@ -866,11 +861,6 @@
       "_source": "Zurück",
       "_target": "FR"
     },
-    "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.": {
-      "text": "Un nombre et des points de couleur indiquent qu'un ou plusieurs rendez-vous sont inscrits ce jour-là.",
-      "_source": "Farbige Zahl und Punkte zeigen, dass an diesem Tag ein oder mehrere Termine eingetragen sind.",
-      "_target": "FR"
-    },
     "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.": {
       "text": "Wanomichi Iwama Aiki à Duttendorf. Ouvert aux débutants, aux personnes qui reprennent le travail et à tous ceux qui recherchent le mouvement, la concentration et la cohabitation tranquille.",
       "_source": "Wanomichi Iwama Aiki in Duttendorf. Offen für Einsteiger, Wiedereinsteiger und alle, die Bewegung, Konzentration und ruhiges Miteinander suchen.",
@@ -959,6 +949,51 @@
     "Kurzmeldung: Kein Training am 28. und 29. August": {
       "text": "Brève: pas d'entraînement les 28 et 29 août",
       "_source": "Kurzmeldung: Kein Training am 28. und 29. August",
+      "_target": "FR"
+    },
+    "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.": {
+      "text": "À partir du 21 septembre, les entraînements reprendront comme d'habitude dans la salle.",
+      "_source": "Ab 21.9. findet das Training wieder wie gewohnt in der Halle statt.",
+      "_target": "FR"
+    },
+    "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).": {
+      "text": "L'entraînement aux armes du samedi 12 septembre aura lieu dans le cadre du stage (voir le calendrier).",
+      "_source": "Das Waffen Training am Samstag 12.9. findet im Zuge des Lehrgangs statt (siehe Termine).",
+      "_target": "FR"
+    },
+    "Kurzmeldung: Trainingsbetrieb und Termine": {
+      "text": "Brève: Entraînements et calendrier",
+      "_source": "Kurzmeldung: Trainingsbetrieb und Termine",
+      "_target": "FR"
+    },
+    "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).": {
+      "text": "Lundi 14 septembre et vendredi 18 septembre: l'entraînement est annulé en raison de la présence d'Ushi Deshi à Birach (voir le calendrier).",
+      "_source": "Mo 14.9. und Fr 18.9. entfällt das Training wegen Ushi Deshi in Birach (siehe Termine).",
+      "_target": "FR"
+    },
+    "Die Punkte im Datum zeigen die Kategorien der Termine an.": {
+      "text": "Les points dans la date indiquent les catégories des événements.",
+      "_source": "Die Punkte im Datum zeigen die Kategorien der Termine an.",
+      "_target": "FR"
+    },
+    "Aktuell gibt es keine Kurzmeldungen. Ältere Beiträge stehen unten in der Chronik.": {
+      "text": "Il n'y a actuellement aucune brève. Les articles plus anciens se trouvent ci-dessous dans la chronique.",
+      "_source": "Aktuell gibt es keine Kurzmeldungen. Ältere Beiträge stehen unten in der Chronik.",
+      "_target": "FR"
+    },
+    "Es gibt noch keine vergangenen Beiträge in der Chronik.": {
+      "text": "Il n'y a pas encore d'articles passés dans la chronique.",
+      "_source": "Es gibt noch keine vergangenen Beiträge in der Chronik.",
+      "_target": "FR"
+    },
+    "Die Ausschreibung ist bereits auf Deutsch und Englisch als PDF zum Herunterladen verlinkt.": {
+      "text": "L'appel d'offres est déjà disponible en allemand et en anglais sous forme de fichier PDF téléchargeable.",
+      "_source": "Die Ausschreibung ist bereits auf Deutsch und Englisch als PDF zum Herunterladen verlinkt.",
+      "_target": "FR"
+    },
+    "Die Ausschreibung steht auf Deutsch und Englisch als PDF zum Herunterladen bereit.": {
+      "text": "L'appel d'offres est disponible en allemand et en anglais au format PDF à télécharger.",
+      "_source": "Die Ausschreibung steht auf Deutsch und Englisch als PDF zum Herunterladen bereit.",
       "_target": "FR"
     }
   },

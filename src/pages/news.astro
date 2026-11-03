@@ -1,37 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 import { formatDateRange, getNewsSlug, isEvent, isNews, sortByDateDescending } from '../lib/news';
 import { getBaseUrl, withBasePath } from '../lib/site';
 
 const baseUrl = getBaseUrl(import.meta.env.BASE_URL);
 const entries = await getCollection('news');
-const newestEntries = sortByDateDescending(entries);
-const today = new Date();
-today.setHours(23, 59, 59, 999);
-const startOfToday = new Date(today);
-startOfToday.setHours(0, 0, 0, 0);
-const sevenDaysAgo = new Date(today);
-sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+const shortNews = sortByDateDescending(entries.filter(isNews));
+const chronicleEntries = sortByDateDescending(entries.filter((item) => isNews(item) || isEvent(item)));
 
-const recentNews = newestEntries.filter((item) => {
-  const itemDate = item.data.date.getTime();
-  return isNews(item) && itemDate >= sevenDaysAgo.getTime() && itemDate <= today.getTime();
-});
+function dateKey(date: Date) {
+  return date.toISOString().slice(0, 10);
+}
 
-const olderNews = entries.filter((item) => {
-  const itemDate = item.data.date.getTime();
-  return isNews(item) && itemDate < sevenDaysAgo.getTime();
-});
+function expiryDate(item: typeof entries[number]) {
+  if (item.data.expiresAt) return dateKey(item.data.expiresAt);
+  const expiry = new Date(item.data.date);
+  expiry.setUTCDate(expiry.getUTCDate() + 6);
+  return dateKey(expiry);
+}
 
-const pastEvents = entries.filter((item) => {
-  const eventEnd = item.data.endDate ?? item.data.date;
-  return isEvent(item) && eventEnd.getTime() < startOfToday.getTime();
-});
-
-const chronicleEntries = sortByDateDescending([...olderNews, ...pastEvents]).slice(0, 7);
-const featuredNewsItem = recentNews[0];
-const FeaturedNewsContent = featuredNewsItem ? (await render(featuredNewsItem)).Content : undefined;
+function archiveAfter(item: typeof entries[number]) {
+  return item.data.expiresAt ? dateKey(item.data.expiresAt) : isEvent(item) ? dateKey(item.data.endDate ?? item.data.date) : expiryDate(item);
+}
 ---
 
 <BaseLayout title="Aktuelles & Termine">
@@ -43,72 +34,65 @@ const FeaturedNewsContent = featuredNewsItem ? (await render(featuredNewsItem)).
 
   <section class="content-block-spacious">
     <h2>Kurzmeldungen</h2>
-    {recentNews.length > 0 ? (
-      <div class="feature-grid featured-event-grid">
-        {recentNews.map((item, index) => {
-          const isFeatured = index === 0 && !!FeaturedNewsContent;
-
-          return (
-            <article class:list={['feature-card', 'featured-event-card', `tone-${item.data.color}`]}>
-              <span class="event-date" data-date-start={item.data.date.toISOString()} data-date-end={item.data.endDate?.toISOString() ?? ''}>
-                {formatDateRange(item.data.date, item.data.endDate)}
-              </span>
-              <h3>{item.data.title}</h3>
-              {isFeatured ? (
-                <div class="featured-entry-content">
-                  <FeaturedNewsContent />
-                </div>
-              ) : (
-                <>
-                  <p>{item.data.preview}</p>
-                  <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiterlesen</a>
-                </>
-              )}
-            </article>
-          );
-        })}
-      </div>
-    ) : (
-      <p class="archive-note">Aktuell gibt es keine Kurzmeldungen aus den letzten sieben Tagen. Ältere Beiträge stehen unten in der Chronik.</p>
-    )}
+    <div class="feature-grid featured-event-grid">
+      {shortNews.map((item) => (
+        <article
+          class:list={['feature-card', 'featured-event-card', `tone-${item.data.color}`]}
+          data-short-news
+          data-publish-date={dateKey(item.data.date)}
+          data-expire-date={expiryDate(item)}
+          hidden
+        >
+          <span class="event-date" data-date-start={item.data.date.toISOString()} data-date-end={item.data.endDate?.toISOString() ?? ''}>
+            {formatDateRange(item.data.date, item.data.endDate)}
+          </span>
+          <h3>{item.data.title}</h3>
+          <p>{item.data.preview}</p>
+          <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiterlesen</a>
+        </article>
+      ))}
+    </div>
+    <p class="archive-note" data-short-empty>Aktuell gibt es keine Kurzmeldungen. Ältere Beiträge stehen unten in der Chronik.</p>
   </section>
 
   <section class="content-block-spacious">
     <h2>Chronik</h2>
-    {chronicleEntries.length > 0 ? (
-      <div class="chronicle-list">
-        {chronicleEntries.map((item) => (
-          <article class:list={['chronicle-card', `tone-${item.data.color}`]}>
-            <div>
-              <div class="chronicle-meta">
-                <span class="event-date" data-date-start={item.data.date.toISOString()} data-date-end={item.data.endDate?.toISOString() ?? ''}>
-                  {formatDateRange(item.data.date, item.data.endDate)}
-                </span>
-                <span class:list={['entry-type', isEvent(item) ? 'entry-type-event' : 'entry-type-news']}>
-                  {isEvent(item) ? 'Termin' : 'News'}
-                </span>
-              </div>
-
-              <div class="chronicle-copy">
-                <h3>{item.data.title}</h3>
-                {item.data.location && <p class="event-location">{item.data.location}</p>}
-                <p>{item.data.preview}</p>
-              </div>
+    <div class="chronicle-list">
+      {chronicleEntries.map((item) => (
+        <article
+          class:list={['chronicle-card', `tone-${item.data.color}`]}
+          data-chronicle-news
+          data-archive-after={archiveAfter(item)}
+          hidden
+        >
+          <div>
+            <div class="chronicle-meta">
+              <span class="event-date" data-date-start={item.data.date.toISOString()} data-date-end={item.data.endDate?.toISOString() ?? ''}>
+                {formatDateRange(item.data.date, item.data.endDate)}
+              </span>
+              <span class:list={['entry-type', isEvent(item) ? 'entry-type-event' : 'entry-type-news']}>
+                {isEvent(item) ? 'Termin' : 'News'}
+              </span>
             </div>
-
-            <div class="chronicle-actions">
-              <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiterlesen</a>
+            <div class="chronicle-copy">
+              <h3>{item.data.title}</h3>
+              {item.data.location && <p class="event-location">{item.data.location}</p>}
+              <p>{item.data.preview}</p>
             </div>
-          </article>
-        ))}
-      </div>
-    ) : (
-      <p class="archive-note">Es gibt noch keine vergangenen Beiträge in der Chronik.</p>
-    )}
+          </div>
+          <div class="chronicle-actions">
+            <a class="read-more-btn" href={withBasePath(baseUrl, `news/${getNewsSlug(item)}`)}>Weiterlesen</a>
+          </div>
+        </article>
+      ))}
+    </div>
+    <p class="archive-note" data-chronicle-empty>Es gibt noch keine vergangenen Beiträge in der Chronik.</p>
   </section>
+  <script is:inline type="module" src={withBasePath(baseUrl, 'scripts/news-visibility.js')}></script>
 </BaseLayout>
 
-<style>
+<style is:global>
+[data-short-news][hidden], [data-chronicle-news][hidden], [data-short-empty][hidden], [data-chronicle-empty][hidden] { display: none !important; }
 .news-page-intro {
   padding-bottom: 0;
 }
