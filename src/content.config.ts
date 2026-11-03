@@ -35,7 +35,6 @@ const news = defineCollection({
       .object({
         de: z.string().optional(),
         en: z.string().optional(),
-        bundle: z.string().optional(),
       })
       .optional(),
   }),

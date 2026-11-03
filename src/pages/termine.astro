@@ -66,7 +66,6 @@ const calendarEvents = events.map((entry) => {
   pdfs: {
     de: withOptionalBasePath(baseUrl, entry.data.pdfs?.de ?? ''),
     en: withOptionalBasePath(baseUrl, entry.data.pdfs?.en ?? ''),
-    bundle: withOptionalBasePath(baseUrl, entry.data.pdfs?.bundle ?? ''),
   },
   };
 });
@@ -110,14 +109,21 @@ const calendarEvents = events.map((entry) => {
                     Schnellansicht
                   </button>
                 )}
-                {entry.data.pdfs?.de && (
-                  <a class="pdf-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} target="_blank" rel="noopener">PDF Deutsch öffnen</a>
-                )}
-                {entry.data.pdfs?.en && (
-                  <a class="pdf-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} target="_blank" rel="noopener">PDF Englisch öffnen</a>
-                )}
-                {entry.data.pdfs?.bundle && (
-                  <a class="pdf-download-btn document-bundle-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.bundle)} download aria-label="Beide PDFs herunterladen" title="Beide PDFs herunterladen"><span aria-hidden="true">↓</span></a>
+                {(entry.data.pdfs?.de || entry.data.pdfs?.en) && (
+                  <div class="document-actions">
+                    {entry.data.pdfs?.de && (
+                      <div class="document-action-row">
+                        <a class="pdf-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} target="_blank" rel="noopener">PDF Deutsch öffnen</a>
+                        <a class="pdf-download-btn document-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} download aria-label="PDF Deutsch herunterladen" title="PDF Deutsch herunterladen"><span aria-hidden="true">↓</span></a>
+                      </div>
+                    )}
+                    {entry.data.pdfs?.en && (
+                      <div class="document-action-row">
+                        <a class="pdf-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} target="_blank" rel="noopener">PDF Englisch öffnen</a>
+                        <a class="pdf-download-btn document-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} download aria-label="PDF Englisch herunterladen" title="PDF Englisch herunterladen"><span aria-hidden="true">↓</span></a>
+                      </div>
+                    )}
+                  </div>
                 )}
               </div>
             </article>
@@ -229,18 +235,21 @@ const calendarEvents = events.map((entry) => {
                     </button>
                   )}
 
-                  {entry.data.pdfs?.de && (
-                    <a class="pdf-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} target="_blank" rel="noopener">
-                      PDF Deutsch öffnen
-                    </a>
-                  )}
-                  {entry.data.pdfs?.en && (
-                    <a class="pdf-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} target="_blank" rel="noopener">
-                      PDF Englisch öffnen
-                    </a>
-                  )}
-                  {entry.data.pdfs?.bundle && (
-                    <a class="pdf-download-btn document-bundle-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.bundle)} download aria-label="Beide PDFs herunterladen" title="Beide PDFs herunterladen"><span aria-hidden="true">↓</span></a>
+                  {(entry.data.pdfs?.de || entry.data.pdfs?.en) && (
+                    <div class="document-actions">
+                      {entry.data.pdfs?.de && (
+                        <div class="document-action-row">
+                          <a class="pdf-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} target="_blank" rel="noopener">PDF Deutsch öffnen</a>
+                          <a class="pdf-download-btn document-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.de)} download aria-label="PDF Deutsch herunterladen" title="PDF Deutsch herunterladen"><span aria-hidden="true">↓</span></a>
+                        </div>
+                      )}
+                      {entry.data.pdfs?.en && (
+                        <div class="document-action-row">
+                          <a class="pdf-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} target="_blank" rel="noopener">PDF Englisch öffnen</a>
+                          <a class="pdf-download-btn document-download-btn" href={withOptionalBasePath(baseUrl, entry.data.pdfs.en)} download aria-label="PDF Englisch herunterladen" title="PDF Englisch herunterladen"><span aria-hidden="true">↓</span></a>
+                        </div>
+                      )}
+                    </div>
                   )}
                 </div>
               </article>
@@ -349,14 +358,11 @@ const calendarEvents = events.map((entry) => {
       const actions = [];
 
       if (news.pdfs?.de) {
-        actions.push(`<a href="${news.pdfs.de}" class="button button-primary" target="_blank" rel="noopener">${translate('events.pdf_de', 'PDF Deutsch öffnen')}</a>`);
+        actions.push(`<div class="document-action-row"><a href="${news.pdfs.de}" class="button button-primary" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_de', 'PDF Deutsch öffnen'))}</a><a href="${news.pdfs.de}" class="button document-download-btn" download aria-label="PDF Deutsch herunterladen" title="PDF Deutsch herunterladen"><span aria-hidden="true">↓</span></a></div>`);
       }
 
       if (news.pdfs?.en) {
-        actions.push(`<a href="${news.pdfs.en}" class="button button-outline" target="_blank" rel="noopener">${translate('events.pdf_en', 'PDF Englisch öffnen')}</a>`);
-      }
-      if (news.pdfs?.bundle) {
-        actions.push(`<a href="${news.pdfs.bundle}" class="button document-bundle-btn" download aria-label="Beide PDFs herunterladen" title="Beide PDFs herunterladen"><span aria-hidden="true">↓</span></a>`);
+        actions.push(`<div class="document-action-row"><a href="${news.pdfs.en}" class="button button-outline" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_en', 'PDF Englisch öffnen'))}</a><a href="${news.pdfs.en}" class="button document-download-btn" download aria-label="PDF Englisch herunterladen" title="PDF Englisch herunterladen"><span aria-hidden="true">↓</span></a></div>`);
       }
 
 
@@ -481,10 +487,9 @@ const calendarEvents = events.map((entry) => {
 
       detailList.innerHTML = dayEvents.map((event) => {
         const pdfButtons = [
-          event.pdfs?.de ? `<a href="${event.pdfs.de}" class="pdf-download-btn" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_de', 'PDF Deutsch öffnen'))}</a>` : '',
-          event.pdfs?.en ? `<a href="${event.pdfs.en}" class="pdf-download-btn" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_en', 'PDF Englisch öffnen'))}</a>` : '',
-          event.pdfs?.bundle ? `<a href="${event.pdfs.bundle}" class="pdf-download-btn document-bundle-btn" download aria-label="Beide PDFs herunterladen" title="Beide PDFs herunterladen"><span aria-hidden="true">↓</span></a>` : '',
-        ].join('');
+          event.pdfs?.de ? `<div class="document-action-row"><a href="${event.pdfs.de}" class="pdf-download-btn" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_de', 'PDF Deutsch öffnen'))}</a><a href="${event.pdfs.de}" class="pdf-download-btn document-download-btn" download aria-label="PDF Deutsch herunterladen" title="PDF Deutsch herunterladen"><span aria-hidden="true">↓</span></a></div>` : '',
+          event.pdfs?.en ? `<div class="document-action-row"><a href="${event.pdfs.en}" class="pdf-download-btn" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_en', 'PDF Englisch öffnen'))}</a><a href="${event.pdfs.en}" class="pdf-download-btn document-download-btn" download aria-label="PDF Englisch herunterladen" title="PDF Englisch herunterladen"><span aria-hidden="true">↓</span></a></div>` : '',
+        ].filter(Boolean).join('');
         const primaryAction = event.display === 'page'
           ? `<a class="read-more-btn" href="${event.href}">${escapeHtml(translate('events.open_page', 'Seite oeffnen'))}</a>`
           : `<button class="read-more-btn" type="button" data-modal-trigger data-slug="${event.slug}" data-title="${escapeHtml(event.title)}" data-date="${event.start}" data-end-date="${event.hasEnd ? event.end : ''}">${escapeHtml(translate('events.details', 'Details'))}</button>`;
@@ -499,7 +504,7 @@ const calendarEvents = events.map((entry) => {
               <div><dt>${escapeHtml(translate('events.people', 'Personen'))}</dt><dd>${escapeHtml(event.people?.join(', ') || 'WTA Hochburg-Ach')}</dd></div>
             </dl>
             ${event.preview ? `<p>${escapeHtml(event.preview)}</p>` : ''}
-            <div class="calendar-card-actions">${primaryAction}${pdfButtons}</div>
+            <div class="calendar-card-actions">${primaryAction}${pdfButtons ? `<div class="document-actions">${pdfButtons}</div>` : ''}</div>
           </article>
         `;
       }).join('');
@@ -1042,8 +1047,23 @@ const calendarEvents = events.map((entry) => {
   align-items: center;
 }
 
-.calendar-card-actions .pdf-download-btn {
-  margin-left: auto;
+
+.document-actions {
+  display: grid;
+  width: 100%;
+  gap: 0.7rem;
+}
+
+.document-action-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 3rem;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.document-action-row > a:first-child {
+  width: 100%;
+  min-width: 0;
 }
 
 .mini-action {
@@ -1089,7 +1109,7 @@ const calendarEvents = events.map((entry) => {
   box-shadow: var(--shadow-md);
 }
 
-:global(.document-bundle-btn) {
+.document-download-btn {
   width: 3rem;
   min-width: 3rem;
   min-height: 3rem;
@@ -1099,7 +1119,7 @@ const calendarEvents = events.map((entry) => {
   font-size: 1.5rem;
 }
 
-:global(.modal-actions .document-bundle-btn) {
+.modal-actions .document-download-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1149,9 +1169,9 @@ const calendarEvents = events.map((entry) => {
 }
 
 .modal-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 1.15rem;
+  display: grid;
+  width: min(100%, 28rem);
+  gap: 0.7rem;
   margin-bottom: 1.5rem;
 }
 
@@ -1257,10 +1277,6 @@ const calendarEvents = events.map((entry) => {
     width: 100%;
   }
 
-  :global(.calendar-card-actions > .document-bundle-btn),
-  :global(.modal-actions > .document-bundle-btn) {
-    width: 3rem;
-  }
 
   .calendar-legend {
     justify-content: center;

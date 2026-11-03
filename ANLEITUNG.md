@@ -44,7 +44,7 @@ Das Projekt validiert Frontmatter über `src/content.config.ts`. Mindestens dies
 - `time` (optional, string)
 - `people` (optional, array of strings)
 - `color` (`moss` | `sage` | `gold`) — Standard: `moss`
-- `pdfs` (optional object) — `{ de?: '/downloads/file-de.pdf', en?: '/downloads/file-en.pdf', bundle?: '/downloads/beide-dateien.zip' }`. Deutsch und Englisch öffnen im Browser; `bundle` ist der gemeinsame Download.
+- `pdfs` (optional object) — `{ de?: '/downloads/file-de.pdf', en?: '/downloads/file-en.pdf' }`. Jede Sprachversion lässt sich im Browser öffnen oder einzeln herunterladen.
 
 Kurzmeldungen
 - Kurzmeldungen sind normale News-Beiträge mit `type: news`. Sie erscheinen ab `date` auf `/news` im Abschnitt „Kurzmeldungen“.
