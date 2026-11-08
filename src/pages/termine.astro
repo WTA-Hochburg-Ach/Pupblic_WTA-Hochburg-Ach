@@ -343,7 +343,7 @@ const calendarEvents = events.map((entry) => {
     modalDate.textContent = formatModalDate(date, endDate);
     modal.dataset.activeDate = date;
     modal.dataset.activeEndDate = endDate || '';
-    modalBody.innerHTML = `<div class="loader">${translate('events.modal_loading', 'Laden...')}</div>`;
+    modalBody.innerHTML = `<div class="loader">${escapeHtml(translate('events.modal_loading', 'Laden...'))}</div>`;
     modalBody.classList.remove('content-visible');
     modal.classList.add('show');
     modal.setAttribute('aria-hidden', 'false');
@@ -358,23 +358,23 @@ const calendarEvents = events.map((entry) => {
       const actions = [];
 
       if (news.pdfs?.de) {
-        actions.push(`<div class="document-action-row"><a href="${news.pdfs.de}" class="button button-primary" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_de', 'PDF Deutsch öffnen'))}</a><a href="${news.pdfs.de}" class="button document-download-btn" download aria-label="PDF Deutsch herunterladen" title="PDF Deutsch herunterladen"><span aria-hidden="true">↓</span></a></div>`);
+        actions.push(`<div class="document-action-row"><a href="${safeLocalUrl(news.pdfs.de)}" class="button button-primary" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_de', 'PDF Deutsch öffnen'))}</a><a href="${safeLocalUrl(news.pdfs.de)}" class="button document-download-btn" download aria-label="PDF Deutsch herunterladen" title="PDF Deutsch herunterladen"><span aria-hidden="true">↓</span></a></div>`);
       }
 
       if (news.pdfs?.en) {
-        actions.push(`<div class="document-action-row"><a href="${news.pdfs.en}" class="button button-outline" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_en', 'PDF Englisch öffnen'))}</a><a href="${news.pdfs.en}" class="button document-download-btn" download aria-label="PDF Englisch herunterladen" title="PDF Englisch herunterladen"><span aria-hidden="true">↓</span></a></div>`);
+        actions.push(`<div class="document-action-row"><a href="${safeLocalUrl(news.pdfs.en)}" class="button button-outline" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_en', 'PDF Englisch öffnen'))}</a><a href="${safeLocalUrl(news.pdfs.en)}" class="button document-download-btn" download aria-label="PDF Englisch herunterladen" title="PDF Englisch herunterladen"><span aria-hidden="true">↓</span></a></div>`);
       }
 
 
       modalBody.innerHTML = `
-        ${news.location ? `<p class="modal-location">${news.location}</p>` : ''}
+        ${news.location ? `<p class="modal-location">${escapeHtml(news.location)}</p>` : ''}
         ${actions.length > 0 ? `<div class="modal-actions">${actions.join('')}</div>` : ''}
         <div class="prose-lg">${news.content}</div>
       `;
       modalBody.classList.add('content-visible');
     } catch (error) {
       console.error(error);
-      modalBody.innerHTML = `<p>${translate('events.modal_error', 'Der Inhalt konnte gerade nicht geladen werden.')}</p>`;
+      modalBody.innerHTML = `<p>${escapeHtml(translate('events.modal_error', 'Der Inhalt konnte gerade nicht geladen werden.'))}</p>`;
       modalBody.classList.add('content-visible');
     }
   }
@@ -388,6 +388,15 @@ const calendarEvents = events.map((entry) => {
     modal.setAttribute('aria-hidden', 'true');
     modalBody.classList.remove('content-visible');
     document.body.style.overflow = '';
+  }
+
+  function safeLocalUrl(value) {
+    try {
+      const url = new URL(String(value ?? ''), window.location.href);
+      return url.origin === window.location.origin ? escapeHtml(url.pathname + url.search + url.hash) : '#';
+    } catch {
+      return '#';
+    }
   }
 
   function escapeHtml(value) {
@@ -481,21 +490,21 @@ const calendarEvents = events.map((entry) => {
         : translate('events.detail_none', 'Kein Termin an diesem Tag');
 
       if (dayEvents.length === 0) {
-        detailList.innerHTML = `<p class="calendar-empty-state">${translate('events.empty_day', 'An diesem Tag ist kein Termin eingetragen.')}</p>`;
+        detailList.innerHTML = `<p class="calendar-empty-state">${escapeHtml(translate('events.empty_day', 'An diesem Tag ist kein Termin eingetragen.'))}</p>`;
         return;
       }
 
       detailList.innerHTML = dayEvents.map((event) => {
         const pdfButtons = [
-          event.pdfs?.de ? `<div class="document-action-row"><a href="${event.pdfs.de}" class="pdf-download-btn" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_de', 'PDF Deutsch öffnen'))}</a><a href="${event.pdfs.de}" class="pdf-download-btn document-download-btn" download aria-label="PDF Deutsch herunterladen" title="PDF Deutsch herunterladen"><span aria-hidden="true">↓</span></a></div>` : '',
-          event.pdfs?.en ? `<div class="document-action-row"><a href="${event.pdfs.en}" class="pdf-download-btn" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_en', 'PDF Englisch öffnen'))}</a><a href="${event.pdfs.en}" class="pdf-download-btn document-download-btn" download aria-label="PDF Englisch herunterladen" title="PDF Englisch herunterladen"><span aria-hidden="true">↓</span></a></div>` : '',
+          event.pdfs?.de ? `<div class="document-action-row"><a href="${safeLocalUrl(event.pdfs.de)}" class="pdf-download-btn" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_de', 'PDF Deutsch öffnen'))}</a><a href="${safeLocalUrl(event.pdfs.de)}" class="pdf-download-btn document-download-btn" download aria-label="PDF Deutsch herunterladen" title="PDF Deutsch herunterladen"><span aria-hidden="true">↓</span></a></div>` : '',
+          event.pdfs?.en ? `<div class="document-action-row"><a href="${safeLocalUrl(event.pdfs.en)}" class="pdf-download-btn" target="_blank" rel="noopener">${escapeHtml(translate('events.pdf_en', 'PDF Englisch öffnen'))}</a><a href="${safeLocalUrl(event.pdfs.en)}" class="pdf-download-btn document-download-btn" download aria-label="PDF Englisch herunterladen" title="PDF Englisch herunterladen"><span aria-hidden="true">↓</span></a></div>` : '',
         ].filter(Boolean).join('');
         const primaryAction = event.display === 'page'
-          ? `<a class="read-more-btn" href="${event.href}">${escapeHtml(translate('events.open_page', 'Seite oeffnen'))}</a>`
-          : `<button class="read-more-btn" type="button" data-modal-trigger data-slug="${event.slug}" data-title="${escapeHtml(event.title)}" data-date="${event.start}" data-end-date="${event.hasEnd ? event.end : ''}">${escapeHtml(translate('events.details', 'Details'))}</button>`;
+          ? `<a class="read-more-btn" href="${safeLocalUrl(event.href)}">${escapeHtml(translate('events.open_page', 'Seite oeffnen'))}</a>`
+          : `<button class="read-more-btn" type="button" data-modal-trigger data-slug="${escapeHtml(event.slug)}" data-title="${escapeHtml(event.title)}" data-date="${escapeHtml(event.start)}" data-end-date="${escapeHtml(event.hasEnd ? event.end : '')}">${escapeHtml(translate('events.details', 'Details'))}</button>`;
 
         return `
-          <article class="calendar-detail-card tone-${event.color}">
+          <article class="calendar-detail-card tone-${['moss', 'sage', 'gold'].includes(event.color) ? event.color : 'moss'}">
             <span class="event-date">${escapeHtml(formatDisplayRange(event.start, event.hasEnd ? event.end : ''))}</span>
             <h4>${escapeHtml(event.title)}</h4>
             <dl>

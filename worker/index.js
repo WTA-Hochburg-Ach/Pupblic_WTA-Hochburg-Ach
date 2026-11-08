@@ -1,7 +1,25 @@
 import { isChronicleVisible, isShortNewsVisible, viennaDateKey } from '../public/scripts/news-visibility.js';
 
+const securityHeaders = {
+  'content-security-policy': "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; upgrade-insecure-requests",
+  'referrer-policy': 'strict-origin-when-cross-origin',
+  'x-content-type-options': 'nosniff',
+  'x-frame-options': 'DENY',
+  'permissions-policy': 'camera=(), microphone=(), geolocation=()',
+};
+
+function secure(response) {
+  const headers = new Headers(response.headers);
+  for (const [name, value] of Object.entries(securityHeaders)) headers.set(name, value);
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+}
+
 async function serveNotFound(request, env) {
-  return env.ASSETS.fetch(new Request(new URL('/404.html', request.url), request));
+  const page = await env.ASSETS.fetch(new Request(new URL('/404.html', request.url), request));
+  return new Response(request.method === 'HEAD' ? null : page.body, {
+    status: 404,
+    headers: page.headers,
+  });
 }
 
 async function tryAsset(request, env, pathname) {
@@ -59,25 +77,25 @@ function updateNewsResponse(response, request) {
 export default {
   async fetch(request, env) {
     if (request.method !== 'GET' && request.method !== 'HEAD') {
-      return env.ASSETS.fetch(request);
+      return secure(await env.ASSETS.fetch(request));
     }
 
     const url = new URL(request.url);
     const directResponse = await env.ASSETS.fetch(request);
 
     if (directResponse.status !== 404) {
-      return url.pathname === '/news' || url.pathname === '/news.html'
+      return secure(url.pathname === '/news' || url.pathname === '/news.html'
         ? updateNewsResponse(directResponse, request)
-        : directResponse;
+        : directResponse);
     }
 
     if (url.pathname !== '/' && !url.pathname.endsWith('.html')) {
       const htmlResponse = await tryAsset(request, env, `${url.pathname}.html`);
       if (htmlResponse.status !== 404) {
-        return url.pathname === '/news' ? updateNewsResponse(htmlResponse, request) : htmlResponse;
+        return secure(url.pathname === '/news' ? updateNewsResponse(htmlResponse, request) : htmlResponse);
       }
     }
 
-    return serveNotFound(request, env);
+    return secure(await serveNotFound(request, env));
   },
 };

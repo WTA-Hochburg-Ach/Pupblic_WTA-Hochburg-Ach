@@ -71,15 +71,16 @@ img {
 .site-wrapper::before {
   content: '';
   position: fixed;
-  right: clamp(-2.5rem, 0.5vw, 1rem);
-  top: 34vh;
-  width: clamp(10rem, 18vw, 16rem);
-  height: clamp(10rem, 18vw, 16rem);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(7rem, 13vw, 12rem);
+  height: clamp(7rem, 13vw, 12rem);
   background-image: url('/assets/flower.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  opacity: 0.24;
+  opacity: 0.42;
   pointer-events: none;
   z-index: 2;
   filter: saturate(0.85);
@@ -100,13 +101,13 @@ img {
 body[data-kanji]::before {
   content: attr(data-kanji);
   position: fixed;
-  left: clamp(-1.5rem, 0.5vw, 0.5rem);
-  top: 55%;
+  left: 0;
+  top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
   z-index: 2;
   font-family: var(--font-jp);
-  font-size: clamp(5.5rem, 15vw, 13rem);
+  font-size: clamp(4.5rem, 10vw, 9rem);
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.14em;
@@ -114,7 +115,7 @@ body[data-kanji]::before {
   writing-mode: vertical-rl;
   font-feature-settings: 'vert' 1;
   white-space: nowrap;
-  color: rgba(67, 89, 68, 0.095);
+  color: rgba(40, 76, 48, 0.24);
   opacity: 1;
   user-select: none;
 }
@@ -125,11 +126,11 @@ body[data-kanji]::after {
 }
 
 [data-theme='dark'] body[data-kanji]::before {
-  color: rgba(227, 214, 188, 0.085);
+  color: rgba(227, 214, 188, 0.25);
 }
 
 [data-theme='dark'] .site-wrapper::before {
-  opacity: 0.24;
+  opacity: 0.38;
 }
 
 .content h1,
@@ -1049,19 +1050,19 @@ body[data-kanji]::after {
   }
 
   body[data-kanji]::before {
-    left: -1.9rem;
-    top: 55%;
+    left: 0;
+    top: 50%;
     transform: translateY(-50%);
-    font-size: clamp(5.5rem, 24vw, 9rem);
-    opacity: 0.7;
+    font-size: clamp(3rem, 11vw, 5.5rem);
+    opacity: 0.8;
   }
 
   .site-wrapper::before {
-    right: -1.5rem;
-    top: 30vh;
-    width: clamp(9rem, 32vw, 13rem);
-    height: clamp(9rem, 32vw, 13rem);
-    opacity: 0.2;
+    right: 0;
+    top: 50%;
+    width: clamp(5rem, 17vw, 8rem);
+    height: clamp(5rem, 17vw, 8rem);
+    opacity: 0.35;
   }
 
   .content p,
