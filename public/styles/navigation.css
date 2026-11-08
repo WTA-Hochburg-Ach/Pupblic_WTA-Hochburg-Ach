@@ -380,34 +380,17 @@ html.nav-scrolled .settings-toggle {
 }
 
 html.nav-scrolled.settings-open .utility-bar {
-  position: absolute;
-  top: calc(100% + 0.35rem);
-  right: clamp(0.5rem, 1vw, 0.75rem);
-  width: max-content;
-  max-width: calc(100vw - 1rem);
-  max-height: 8rem;
-  padding: 0.3rem;
-  border: 1px solid var(--color-border);
-  border-radius: 1.6rem;
-  box-shadow: var(--shadow-lg);
+  max-height: 6rem;
+  border-color: var(--color-border-light);
   opacity: 1;
-  overflow: visible;
-  animation: settings-panel-appear 0.25s ease both;
 }
 
 html.nav-scrolled.settings-open .utility-inner {
-  width: auto;
-  padding: 0;
-}
-
-@keyframes settings-panel-appear {
-  from { opacity: 0; transform: translateY(-0.45rem) scale(0.96); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  padding: 0.6rem 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html.nav-scrolled .settings-toggle,
-  html.nav-scrolled.settings-open .utility-bar { animation: none; }
+  html.nav-scrolled .settings-toggle { animation: none; }
 }
 
 .hamburger,
@@ -717,20 +700,6 @@ html.nav-scrolled.settings-open .utility-inner {
 }
 
 @media (max-width: 520px) {
-  html.nav-scrolled.settings-open .utility-bar {
-    width: min(22rem, calc(100vw - 1rem));
-  }
-
-  html.nav-scrolled.settings-open .utility-inner {
-    flex-wrap: wrap;
-  }
-
-  html.nav-scrolled.settings-open .theme-btn,
-  html.nav-scrolled.settings-open .lang-selector {
-    flex: 1 1 100%;
-    justify-content: center;
-  }
-
   .theme-kicker,
   .lang-selector-label {
     display: none;
