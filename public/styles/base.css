@@ -529,7 +529,7 @@ img {
   background: var(--gradient-card);
   border: 1px solid var(--color-border-light);
   box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(10px);
+  backdrop-filter: none;
   overflow: hidden;
 }
 
@@ -758,7 +758,7 @@ img {
   margin: 0 auto;
   padding: clamp(2rem, 4vw, 3rem);
   border-radius: 30px;
-  background: var(--color-surface-strong);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   text-align: center;
   box-shadow: var(--shadow-md);
