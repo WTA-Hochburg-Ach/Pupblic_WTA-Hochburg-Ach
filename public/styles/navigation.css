@@ -19,7 +19,7 @@
 }
 
 .utility-inner {
-  width: var(--nav-width);
+  width: calc(100% - 2 * clamp(0.5rem, 1vw, 0.75rem));
   margin-inline: auto;
   display: flex;
   justify-content: flex-end;
@@ -553,6 +553,7 @@ html.nav-scrolled .logo-name {
   }
 
   .utility-inner {
+    width: calc(100% - 0.5rem);
     align-items: stretch;
     justify-content: space-between;
     flex-wrap: nowrap;
