@@ -156,13 +156,9 @@ const fallbackLabels = {
   const NAV_COLLAPSE_BREAKPOINT = 1240;
   let navScrollTicking = false;
   let navIsCompact = html.classList.contains('nav-scrolled');
-  let settingsOpenedAtScrollY = 0;
 
   function updateNavState() {
     const scrollY = Math.max(0, window.scrollY || 0);
-    if (html.classList.contains('settings-open') && Math.abs(scrollY - settingsOpenedAtScrollY) > 1) {
-      closeSettings();
-    }
     const shouldCompact = navIsCompact
       ? scrollY > NAV_SCROLL_EXPAND_AT_TOP
       : scrollY >= NAV_SCROLL_COMPACT_AT;
@@ -221,7 +217,6 @@ const fallbackLabels = {
 
   settingsToggle?.addEventListener('click', () => {
     const isOpen = html.classList.toggle('settings-open');
-    if (isOpen) settingsOpenedAtScrollY = Math.max(0, window.scrollY || 0);
     settingsToggle.setAttribute('aria-expanded', String(isOpen));
     settingsToggle.setAttribute('aria-label', isOpen ? 'Einstellungen schließen' : 'Einstellungen öffnen');
     if (settingsPanel) settingsPanel.inert = !isOpen;
@@ -266,8 +261,13 @@ const fallbackLabels = {
     if (event.key === 'Escape') {
       closeMenu();
       closeSettings();
+    } else if (['PageDown', 'PageUp', 'ArrowDown', 'ArrowUp', 'Home', 'End', ' '].includes(event.key)) {
+      closeSettings();
     }
   });
+
+  window.addEventListener('wheel', closeSettings, { passive: true });
+  window.addEventListener('touchmove', closeSettings, { passive: true });
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > NAV_COLLAPSE_BREAKPOINT) {
