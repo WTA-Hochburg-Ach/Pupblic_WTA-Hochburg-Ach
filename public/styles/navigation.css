@@ -344,6 +344,72 @@ html.nav-scrolled .logo-name {
   cursor: pointer;
 }
 
+.nav-actions {
+  display: flex;
+  order: 2;
+  align-items: center;
+  gap: 0.55rem;
+  margin-left: auto;
+}
+
+.settings-toggle {
+  display: none;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.65rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface-strong);
+  color: var(--color-primary);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.settings-toggle svg { width: 100%; height: 100%; }
+
+html.nav-scrolled .settings-toggle {
+  display: grid;
+  animation: settings-icon-appear 0.28s ease both;
+}
+
+@keyframes settings-icon-appear {
+  from { opacity: 0; transform: translateY(-0.5rem) scale(0.8); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+html.nav-scrolled.settings-open .utility-bar {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: clamp(0.5rem, 1vw, 0.75rem);
+  width: max-content;
+  max-width: calc(100vw - 1rem);
+  max-height: 8rem;
+  padding: 0.3rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1.6rem;
+  box-shadow: var(--shadow-lg);
+  opacity: 1;
+  overflow: visible;
+  animation: settings-panel-appear 0.25s ease both;
+}
+
+html.nav-scrolled.settings-open .utility-inner {
+  width: auto;
+  padding: 0;
+}
+
+@keyframes settings-panel-appear {
+  from { opacity: 0; transform: translateY(-0.45rem) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.nav-scrolled .settings-toggle,
+  html.nav-scrolled.settings-open .utility-bar { animation: none; }
+}
+
 .hamburger,
 .hamburger::before,
 .hamburger::after {
@@ -389,6 +455,7 @@ html.nav-scrolled .logo-name {
 
 .nav-links {
   display: flex;
+  order: 1;
   align-items: stretch;
   gap: 0.45rem;
   list-style: none;
@@ -555,14 +622,14 @@ html.nav-scrolled .logo-name {
   .utility-inner {
     width: calc(100% - 0.5rem);
     align-items: stretch;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-wrap: nowrap;
     gap: 0.55rem;
   }
 
   .theme-btn,
   .lang-selector {
-    flex: 1 1 0;
+    flex: 0 1 auto;
     min-width: 0;
   }
 
@@ -582,7 +649,7 @@ html.nav-scrolled .logo-name {
 
   .lang-selector {
     gap: 0.45rem;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 0.4rem 0.45rem 0.4rem 0.7rem;
     min-width: 0;
   }
@@ -615,7 +682,7 @@ html.nav-scrolled .logo-name {
   }
 
   .lang-option {
-    flex: 1 1 0;
+    flex: 0 0 auto;
   }
 
   .nav-inner {
@@ -650,6 +717,20 @@ html.nav-scrolled .logo-name {
 }
 
 @media (max-width: 520px) {
+  html.nav-scrolled.settings-open .utility-bar {
+    width: min(22rem, calc(100vw - 1rem));
+  }
+
+  html.nav-scrolled.settings-open .utility-inner {
+    flex-wrap: wrap;
+  }
+
+  html.nav-scrolled.settings-open .theme-btn,
+  html.nav-scrolled.settings-open .lang-selector {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
   .theme-kicker,
   .lang-selector-label {
     display: none;
@@ -671,9 +752,7 @@ html.nav-scrolled .logo-name {
     padding-left: 0.45rem;
   }
 
-  .lang-toggle {
-    width: 100%;
-  }
+  .lang-toggle { width: auto; }
 
   .lang-option {
     min-width: 2.2rem;
@@ -706,9 +785,9 @@ html.nav-scrolled .logo-name {
   .nav-link-hint, .nav-flyout { display: none; }
 }
 @media (max-width: 768px) {
-  .utility-inner { flex-wrap: wrap; }
+  .utility-inner { flex-wrap: nowrap; }
   .theme-btn { flex: 0 0 auto; }
-  .lang-selector { flex: 1 1 auto; }
+  .lang-selector { flex: 0 1 auto; }
   .lang-toggle { width: auto; }
   .nav-links { top: calc(100% + 0.4rem); }
 }
