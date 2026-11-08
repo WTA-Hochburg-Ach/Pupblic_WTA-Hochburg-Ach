@@ -501,11 +501,8 @@
 }
 
 .footer {
-  --footer-opacity: 0.8;
+  --footer-opacity: 1;
   background: rgba(228, 235, 225, var(--footer-opacity));
   backdrop-filter: blur(12px);
 }
 [data-theme='dark'] .footer { background: rgba(12, 17, 15, var(--footer-opacity)); }
-@media (min-width: 600px) { .footer { --footer-opacity: 0.86; } }
-@media (min-width: 1000px) { .footer { --footer-opacity: 0.92; } }
-@media (min-width: 1400px) { .footer { --footer-opacity: 0.96; } }

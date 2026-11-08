@@ -80,9 +80,9 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  opacity: 0.42;
+  opacity: 0.32;
   pointer-events: none;
-  z-index: 2;
+  z-index: 0;
   filter: saturate(0.85);
 }
 
@@ -91,6 +91,7 @@ img {
   margin: 2.5rem auto 4rem;
   color: var(--color-text-primary);
   position: relative;
+  z-index: 1;
 }
 
 .content > * {
@@ -98,14 +99,14 @@ img {
   z-index: 1;
 }
 
-body[data-kanji]::before {
+.site-wrapper[data-kanji]::after {
   content: attr(data-kanji);
   position: fixed;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  z-index: 2;
+  z-index: 0;
   font-family: var(--font-jp);
   font-size: clamp(4.5rem, 10vw, 9rem);
   font-weight: 700;
@@ -115,22 +116,18 @@ body[data-kanji]::before {
   writing-mode: vertical-rl;
   font-feature-settings: 'vert' 1;
   white-space: nowrap;
-  color: rgba(40, 76, 48, 0.24);
+  color: rgba(40, 76, 48, 0.3);
   opacity: 1;
   user-select: none;
 }
 
-body[data-kanji]::after {
-  /* Temporarily disabled while we keep the background focused on the vertical kanji. */
-  content: none;
-}
-
-[data-theme='dark'] body[data-kanji]::before {
-  color: rgba(227, 214, 188, 0.25);
+[data-theme='dark'] .site-wrapper[data-kanji]::after {
+  color: rgba(227, 214, 188, 0.32);
+  text-shadow: 0 0 0.35em rgba(227, 214, 188, 0.22);
 }
 
 [data-theme='dark'] .site-wrapper::before {
-  opacity: 0.38;
+  opacity: 0.3;
 }
 
 .content h1,
@@ -1049,7 +1046,7 @@ body[data-kanji]::after {
     margin-top: 1.5rem;
   }
 
-  body[data-kanji]::before {
+  .site-wrapper[data-kanji]::after {
     left: 0;
     top: 50%;
     transform: translateY(-50%);

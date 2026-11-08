@@ -13,6 +13,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "expiresAt": {
+      "type": "string",
+      "format": "date-time"
+    },
     "preview": {
       "type": "string"
     },

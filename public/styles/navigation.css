@@ -720,11 +720,8 @@ html.nav-scrolled .logo-name {
 }
 
 /* Mehr Deckkraft mit wachsender Bildschirmbreite, ohne den Stil zu ändern. */
-.site-header { --header-opacity: 0.8; }
+.site-header { --header-opacity: 1; }
 .utility-bar { background: rgba(245, 245, 239, var(--header-opacity)); }
 .nav { background: rgba(248, 250, 245, var(--header-opacity)); }
 [data-theme='dark'] .utility-bar { background: rgba(12, 17, 15, var(--header-opacity)); }
 [data-theme='dark'] .nav { background: rgba(14, 19, 17, var(--header-opacity)); }
-@media (min-width: 600px) { .site-header { --header-opacity: 0.86; } }
-@media (min-width: 1000px) { .site-header { --header-opacity: 0.92; } }
-@media (min-width: 1400px) { .site-header { --header-opacity: 0.96; } }
